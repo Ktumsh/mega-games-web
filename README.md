@@ -2,5 +2,5 @@
 
 Colaboradores:
 
-Josué Barra
+Josué Barra <br>
 Renato Rivera
