@@ -19,8 +19,9 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg">
-      <div class="container bg-transparent">
+    <!-- HEADER 🔴 -->
+    <header class="navbar navbar-dark navbar-expand-lg my-3">
+      <nav class="container">
         <button
           class="navbar-toggler"
           type="button"
@@ -30,7 +31,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand mx-0" href="#">
           <svg
             height="36px"
             width="36px"
@@ -158,29 +159,207 @@
         <div class="collapse navbar-collapse" id="navbarButtonsExample">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Dashboard</a>
+              <a class="nav-link grotesk text-p1" aria-current="page" href="#"
+                >Mega Games</a
+              >
             </li>
           </ul>
           <div class="d-flex align-items-center ms-auto">
-            <button type="button" class="btn btn-default px-3 me-2">
-              Login
+            <ul class="navbar-nav me-2">
+              <li class="nav-item">
+                <a class="nav-link position-relative" href="#">
+                  <span
+                    class="badge position-absolute top-0 end-0 text-bg-danger"
+                    >1</span
+                  >
+                  <span><i class="fas fa-shopping-cart text-white"></i></span>
+                </a>
+              </li>
+            </ul>
+            <button
+              type="button"
+              class="btn btn-p0 btn-hover-p0 px-3 me-2 border-0 text-white"
+            >
+              Iniciar sesión
             </button>
-            <button type="button" class="btn btn-primary me-3">
-              Sign up for free
+            <button
+              type="button"
+              class="btn btn-primary btn-p2 btn-hover-p2 border-0 me-3"
+            >
+              Registrarse
             </button>
             <a
-              class="btn btn-subtle px-3"
-              href="https://github.com/mdbootstrap/mdb-ui-kit"
+              class="btn btn-hover-p0 px-3 text-white"
+              href="https://github.com/Ktumsh/mega-games-web"
+              target="_blank"
               role="button"
               ><i class="fab fa-github"></i
             ></a>
           </div>
         </div>
+      </nav>
+    </header>
+    <div class="container-fluid position-relative">
+      <div
+        class="page_background_holder"
+        style="
+          height: 450px;
+          background-image: url('https://cdn.cloudflare.steamstatic.com/steam/clusters/frontpage/6e5ce0b531f2fc5646591235/page_bg_spanish.jpg?t=1713209366'),
+            linear-gradient(
+              to right,
+              rgb(000, 000, 000) 50%,
+              rgb(000, 000, 000) 50%
+            );
+        "
+      ></div>
+    </div>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg pt-4">
+        <div class="container-fluid nav-p4 blur rounded-2">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarPillsExample"
+            aria-controls="navbarExample"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarPillsExample">
+            <ul class="navbar-nav navbar-nav-pills gap-3">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle active text-white"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Categorías</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Ofertas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Juegos baratos</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Mejores vendidos</a>
+              </li>
+            </ul>
+          </div>
+          <form class="d-flex py-1" role="search">
+            <input
+              class="form-control-sm border-0 btn-p1 me-2 fs-6 fst-italic"
+              type="search"
+              placeholder="Buscar..."
+              aria-label="Search"
+            />
+            <button class="btn btn-subtle" type="submit">
+              <i class="fa-solid fa-magnifying-glass fa-lg text-white"></i>
+            </button>
+          </form>
+        </div>
+      </nav>
+    </div>
+    <img
+      style="height: 385px"
+      src="https://store.cloudflare.steamstatic.com/public/images/blank.gif"
+      alt=""
+    />
+    <!-- CARRUSEL 🎠 -->
+    <section class="container pt-2 position-relative">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel mx-auto"
+        data-bs-ride="true"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="d-block size-img-carrusel mx-auto"
+              src="/assets/public/destiny2-carrusel.webp"
+              alt="frog"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block size-img-carrusel mx-auto"
+              src="/assets/public/cod-carrusel.webp"
+              alt="frog"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block size-img-carrusel mx-auto"
+              src="/assets/public/helldivers-2-carrusel.jpg"
+              alt="frog"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-    </nav>
+      <!-- CARDS 📇 -->
+    </section>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/c1a667f1b4.js"
       crossorigin="anonymous"
     ></script>
   </body>
