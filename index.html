@@ -159,7 +159,10 @@
         <div class="collapse navbar-collapse" id="navbarButtonsExample">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link grotesk text-p1" aria-current="page" href="#"
+              <a
+                class="nav-link grotesk text-white"
+                aria-current="page"
+                href="#"
                 >Mega Games</a
               >
             </li>
@@ -215,7 +218,7 @@
     </div>
     <div class="container">
       <nav class="navbar navbar-expand-lg pt-4">
-        <div class="container-fluid nav-p4 blur rounded-2">
+        <div class="container-fluid nav-p1 blur rounded-2">
           <button
             class="navbar-toggler"
             type="button"
@@ -227,6 +230,7 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
           <div class="collapse navbar-collapse" id="navbarPillsExample">
             <ul class="navbar-nav navbar-nav-pills gap-3">
               <li class="nav-item dropdown">
@@ -238,14 +242,48 @@
                   aria-expanded="false"
                   >Categorías</a
                 >
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
+                <ul class="dropdown-menu shadow bg-p05 blur border-0">
                   <li>
-                    <a class="dropdown-item" href="#">Another action</a>
+                    <a
+                      class="dropdown-item text-white btn-hover-p2 btn-focus-p2"
+                      href="#"
+                      >Todas las ofertas</a
+                    >
                   </li>
-                  <li><hr class="dropdown-divider" /></li>
                   <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a
+                      class="dropdown-item text-white btn-hover-p2 btn-focus-p2"
+                      href="#"
+                      >Juegos</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-white btn-hover-p2 btn-focus-p2"
+                      href="#"
+                      >Juegos Tarjetas</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-white btn-hover-p2 btn-focus-p2"
+                      href="#"
+                      >Xbox</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-white btn-hover-p2 btn-focus-p2"
+                      href="#"
+                      >PSN</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-white btn-hover-p2 btn-focus-p2"
+                      href="#"
+                      >Nintendo</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -281,12 +319,8 @@
       alt=""
     />
     <!-- CARRUSEL 🎠 -->
-    <section class="container pt-2 position-relative">
-      <div
-        id="carouselExampleIndicators"
-        class="carousel mx-auto"
-        data-bs-ride="true"
-      >
+    <section class="container pt-2">
+      <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
           <button
             type="button"
@@ -310,27 +344,60 @@
           ></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          <a class="carousel-item active" href="#">
             <img
-              class="d-block size-img-carrusel mx-auto"
-              src="/assets/public/destiny2-carrusel.webp"
-              alt="frog"
+              src="assets/public/destiny2-carrusel.webp"
+              class="d-block w-100 size-img-carrusel"
+              alt="Destiny 2"
             />
-          </div>
-          <div class="carousel-item">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="text-shadow">Destiny 2</h5>
+              <div class="d-inline-flex flex-column gap-2">
+                <span class="badge bg-p3 text-black rounded-1 shadow"
+                  >Lo más vendido</span
+                >
+                <p class="badge bg-gradient blur rounded-1 shadow">
+                  Free to Play
+                </p>
+              </div>
+            </div>
+          </a>
+          <a class="carousel-item" href="#">
             <img
-              class="d-block size-img-carrusel mx-auto"
               src="/assets/public/cod-carrusel.webp"
-              alt="frog"
+              class="d-block w-100 size-img-carrusel"
+              alt="Call of Duty Warzone Temporada 3"
             />
-          </div>
-          <div class="carousel-item">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="text-shadow">Call of Duty®️: Modern Warfare®️ III</h5>
+              <div class="d-inline-flex flex-column gap-2">
+                <span class="badge bg-p3 text-black rounded-1 shadow"
+                  >Lo más vendido</span
+                >
+                <p class="badge bg-gradient blur rounded-1 shadow">
+                  CLP$ 54.990
+                </p>
+              </div>
+            </div>
+          </a>
+          <a class="carousel-item" href="#">
             <img
-              class="d-block size-img-carrusel mx-auto"
               src="/assets/public/helldivers-2-carrusel.jpg"
-              alt="frog"
+              class="d-block w-100 size-img-carrusel opacity-75"
+              alt="Helldivers 2"
             />
-          </div>
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="text-shadow">HELLDIVERS™ 2</h5>
+              <div class="d-inline-flex flex-column gap-2">
+                <span class="badge bg-p3 text-black rounded-1 shadow"
+                  >Lo más vendido</span
+                >
+                <p class="badge bg-gradient blur rounded-1 shadow">
+                  CLP$ 28.000
+                </p>
+              </div>
+            </div>
+          </a>
         </div>
         <button
           class="carousel-control-prev"
