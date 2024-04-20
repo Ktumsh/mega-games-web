@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
 body {
-  background-color: #332941 !important;
+  background-color: #271f32 !important;
   color: white !important;
 }
 
@@ -37,11 +37,45 @@ body {
   }
 }
 
+.shadow-strong {
+  box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.75);
+}
+
+.form-control-sm::placeholder {
+  font-style: italic;
+}
+
+.focus-none:focus {
+  outline: none !important;
+}
+
+.active-none:active {
+  border: none;
+}
+
 .grotesk {
   font-family: "Space Grotesk", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+.card-flow {
+  transition: 150ms ease-in-out;
+}
+
+.card-flow:hover {
+  box-shadow: 0px 1px 30px 0px rgba(248, 229, 89);
+  scale: 1.05;
+}
+
+.card-shadow {
+  transition: 150ms ease-in-out;
+}
+
+.card-shadow:hover {
+  box-shadow: 0px 1px 30px 0px rgba(0, 0, 0, 0.5);
+  scale: 1.05;
 }
 
 .text-shadow {
@@ -153,14 +187,20 @@ body {
   background-color: #f9ea76 !important;
 }
 
+.bg-p4 {
+  background-color: #332941 !important;
+}
+
 .size-img-carrusel {
   height: 353px;
   object-fit: cover;
 }
 
 .size-img-card {
+  position: relative;
   width: 100%;
-  max-height: 200px;
+  max-height: 330px;
+  margin-bottom: -60px;
   object-fit: cover;
   overflow: hidden;
 }
@@ -176,6 +216,47 @@ body {
 }
 
 .card-size {
-  max-width: 230px;
-  max-height: 400px;
+  min-width: 235px;
+  min-height: 390px;
+  max-height: 390px;
+}
+
+.descuento-precio {
+  position: relative;
+  width: fit-content;
+  color: rgb(255 255 255 / 60%);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.fs-sm {
+  font-size: 14px;
+}
+
+.card-body h6 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.5;
+  max-height: 3em;
+  font-size: 14px;
+}
+
+.descuento-precio:before {
+  content: "";
+  left: 0px;
+  right: 0px;
+  position: absolute;
+  top: 43%;
+  border-bottom: 1.5px solid rgb(255 255 255 / 60%);
+  transform: skewY(-8deg);
+  box-shadow: 0 0 2px black;
+}
+
+.descuento_label {
+  font-family: "Motiva Sans", Sans-serif;
+  color: #f9ea76;
+  background: #9d8b07;
 }
