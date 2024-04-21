@@ -65,8 +65,8 @@ body {
 }
 
 .card-flow:hover {
-  box-shadow: 0px 1px 30px 0px rgba(248, 229, 89);
-  scale: 1.05;
+  box-shadow: 0px 1px 8px 0px rgba(248, 229, 89);
+  scale: 1.02;
 }
 
 .card-shadow {
@@ -238,7 +238,8 @@ body {
   font-size: 14px;
 }
 
-.card-body h6 {
+.card-body h6,
+.card-body h5 {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -292,5 +293,83 @@ body {
   75% {
     box-shadow: 0px 0px 20px 2px rgba(248 229 89 / 40%);
     text-shadow: 0px 0px 10px rgba(248 229 89 / 40%);
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .carousel-cards .carousel-inner {
+    display: flex;
+  }
+
+  .carousel-cards .carousel-item {
+    display: block;
+    margin-right: 0;
+    flex: 0 0 calc(100% / 3);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .carousel-cards .carousel-inner {
+    display: flex;
+  }
+
+  .carousel-cards .carousel-item {
+    display: block;
+    margin-right: 0;
+    flex: 0 0 calc(100% / 5);
+  }
+}
+
+.carousel-cards .card {
+  margin: 0 0.5em;
+}
+
+@media screen and (min-width: 576px) {
+  .prev-control.carousel-control-prev {
+    width: 3rem;
+    height: 8rem;
+    background: rgb(51, 41, 65);
+    background: rgb(51, 41, 65);
+    background: linear-gradient(
+      90deg,
+      rgba(51, 41, 65, 1) 0%,
+      rgba(134, 74, 249, 0.75) 100%
+    );
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    margin-left: -3.03rem !important;
+  }
+
+  .next-control.carousel-control-next {
+    width: 3rem;
+    height: 8rem;
+    background: rgb(134, 74, 249);
+    background: linear-gradient(
+      90deg,
+      rgba(134, 74, 249, 0.75) 0%,
+      rgba(51, 41, 65, 1) 100%
+    );
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    margin-right: -3.03rem !important;
+  }
+
+  .prev-control.carousel-control-prev:hover,
+  .next-control.carousel-control-next:hover {
+    opacity: 0.7;
+  }
+}
+
+.z-index-10 {
+  z-index: 9999;
+}
+
+@media screen and (min-width: 576px) {
+  .buttons {
+    transform: translateY(-50%);
+    top: 50%;
+    padding-right: 98.1%;
   }
 }
