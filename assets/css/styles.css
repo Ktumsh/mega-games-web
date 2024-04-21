@@ -384,9 +384,21 @@ body {
     margin-right: -3.03rem !important;
   }
 
-  .prev-control.carousel-control-prev:hover,
+  .prev-control.carousel-control-prev:hover {
+    background: rgb(51, 41, 65);
+    background: linear-gradient(
+      90deg,
+      rgba(51, 41, 65, 1) 0%,
+      rgb(116, 108, 198) 100%
+    );
+  }
   .next-control.carousel-control-next:hover {
-    opacity: 0.7;
+    background: rgb(116, 108, 198);
+    background: linear-gradient(
+      90deg,
+      rgb(116, 108, 198) 0%,
+      rgba(51, 41, 65, 1) 100%
+    );
   }
 }
 
