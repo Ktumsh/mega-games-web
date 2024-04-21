@@ -358,11 +358,10 @@ body {
     width: 3rem;
     height: 8rem;
     background: rgb(51, 41, 65);
-    background: rgb(51, 41, 65);
     background: linear-gradient(
       90deg,
       rgba(51, 41, 65, 1) 0%,
-      rgba(134, 74, 249, 0.75) 100%
+      rgba(88, 79, 186, 0.9) 100%
     );
     top: 50%;
     transform: translateY(-50%);
@@ -373,10 +372,10 @@ body {
   .next-control.carousel-control-next {
     width: 3rem;
     height: 8rem;
-    background: rgb(134, 74, 249);
+    background: rgb(88, 79, 186);
     background: linear-gradient(
       90deg,
-      rgba(134, 74, 249, 0.75) 0%,
+      rgba(88, 79, 186, 0.9) 0%,
       rgba(51, 41, 65, 1) 100%
     );
     top: 50%;
