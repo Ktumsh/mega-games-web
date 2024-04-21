@@ -45,12 +45,17 @@ body {
   font-style: italic;
 }
 
+#newsletter1::placeholder {
+  color: rgb(255 255 255 / 50%);
+}
+
 .focus-none:focus {
   outline: none !important;
+  box-shadow: none !important;
 }
 
 .active-none:active {
-  border: none;
+  border: none !important;
 }
 
 .grotesk {
@@ -65,7 +70,7 @@ body {
 }
 
 .card-flow:hover {
-  box-shadow: 0px 1px 8px 0px rgba(248, 229, 89);
+  box-shadow: 0px 0px 5px 0px rgba(248, 229, 89);
   scale: 1.02;
 }
 
@@ -93,6 +98,10 @@ body {
 }
 .nav-p3 {
   background-color: rgb(249 234 118 / 70%) !important;
+}
+
+.border-w {
+  border: 1px solid #fff !important;
 }
 
 .border-p1 {
@@ -127,6 +136,22 @@ body {
   color: #f8e559 !important;
 }
 
+.text-hover-p0:hover {
+  color: #453758 !important;
+}
+
+.text-hover-p1:hover {
+  color: #3b3486 !important;
+}
+
+.text-hover-p2:hover {
+  color: #864af9 !important;
+}
+
+.text-hover-p3:hover {
+  color: #f8e559 !important;
+}
+
 .btn-p0 {
   background-color: #453758 !important;
 }
@@ -145,6 +170,10 @@ body {
 
 .btn-hover-p0:hover {
   background-color: #4f3f64 !important;
+}
+
+.btn-hover-p1:hover {
+  background-color: #594771 !important;
 }
 
 .btn-hover-p2:hover {
@@ -235,7 +264,7 @@ body {
 }
 
 .fs-sm {
-  font-size: 14px;
+  font-size: 14px !important;
 }
 
 .card-body h6,
@@ -372,4 +401,52 @@ body {
     top: 50%;
     padding-right: 98.1%;
   }
+}
+
+.social-hover {
+  transition: 150ms ease-in-out;
+}
+
+.social-hover:hover {
+  color: #f8e559 !important;
+  opacity: 1 !important;
+}
+
+.footer-links-hover {
+  transition: all 150ms ease-in-out;
+}
+
+.footer-links-hover:hover {
+  color: #f8e559 !important;
+  opacity: 1 !important;
+  text-decoration: underline !important;
+}
+
+.app-badge img {
+  height: 40px;
+}
+
+.fst-nav a {
+  padding: 10px 20px !important;
+  transition: none !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+}
+
+.fst-nav a:hover {
+  background: rgb(116, 108, 198);
+  background: linear-gradient(
+    90deg,
+    rgba(116, 108, 198, 1) 0%,
+    rgba(59, 52, 134, 0) 100%
+  );
+}
+
+.nav-bg {
+  background: rgb(88, 79, 186);
+  background: linear-gradient(
+    90deg,
+    rgba(88, 79, 186, 0.9) 0%,
+    rgba(59, 52, 134, 0.9) 100%
+  );
 }
