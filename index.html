@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html class="responsive" lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,17 +20,8 @@
   <body>
     <!-- HEADER 🔴 -->
     <header class="navbar navbar-dark navbar-expand-lg my-3">
-      <nav class="container">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarButtonsExample"
-          aria-expanded="false"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand mx-0" href="#">
+      <nav class="container flex-nowrap flex-lg-wrap">
+        <a class="navbar-brand mx-0 d-none d-sm-block" href="#">
           <svg
             height="36px"
             width="36px"
@@ -155,18 +146,21 @@
             </g>
           </svg>
         </a>
-        <div class="collapse navbar-collapse" id="navbarButtonsExample">
+        <div
+          class="navbar-collapse d-flex justify-content-end"
+          id="navbarButtonsExample"
+        >
           <ul class="navbar-nav">
             <li class="nav-item">
               <a
-                class="nav-link grotesk text-white"
+                class="nav-link grotesk text-white d-none d-lg-block"
                 aria-current="page"
                 href="#"
                 >Mega Games</a
               >
             </li>
           </ul>
-          <div class="d-flex align-items-center ms-auto">
+          <div class="d-flex align-items-center ms-lg-auto">
             <ul class="navbar-nav me-3">
               <li class="nav-item">
                 <a class="nav-link position-relative" href="#">
@@ -180,18 +174,18 @@
             </ul>
             <button
               type="button"
-              class="btn bg-p05 btn-hover-p1 px-4 me-3 border-0 text-white rounded-1"
+              class="btn bg-p05 btn-hover-p1 px-3 px-lg-4 me-3 border-0 text-white rounded-1"
             >
               Iniciar sesión
             </button>
             <button
               type="button"
-              class="btn btn-primary btn-p2 btn-hover-p2 px-4 me-3 border-0 rounded-1"
+              class="btn btn-primary btn-p2 btn-hover-p2 px-3 px-lg-4 me-lg-3 border-0 rounded-1"
             >
               Registrarse
             </button>
             <a
-              class="btn btn-neon-p2"
+              class="btn btn-neon-p2 d-none d-lg-block"
               href="https://github.com/Ktumsh/mega-games-web"
               target="_blank"
               role="button"
@@ -215,23 +209,38 @@
             );
         "
       ></div>
+      <div
+        class="page_background_holder_mobile"
+        style="
+          height: 350px;
+          background-image: url('https://cdn.akamai.steamstatic.com/steam/clusters/frontpage/6e5ce0b531f2fc5646591235/page_bg_mobile_spanish.jpg?t=1713209366'),
+            linear-gradient(
+              to right,
+              rgb(000, 000, 000) 50%,
+              rgb(000, 000, 000) 50%
+            );
+        "
+      ></div>
     </div>
     <div class="container">
-      <nav class="navbar navbar-expand-lg pt-4">
+      <nav class="navbar navbar-dark navbar-expand-lg pt-4 z-3">
         <div class="container-fluid nav-bg border-0 p-0">
           <button
-            class="navbar-toggler"
+            class="navbar-toggler nav-btn border-0 rounded-0 py-2"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarPillsExample"
-            aria-controls="navbarExample"
-            aria-expanded="false"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-
-          <div class="collapse navbar-collapse" id="navbarPillsExample">
+          <div
+            class="offcanvas offcanvas-end text-bg-dark"
+            tabindex="-1"
+            id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel"
+          >
             <ul class="fst-nav navbar-nav navbar-nav-pills">
               <li class="nav-item dropdown">
                 <a
@@ -295,18 +304,22 @@
         </div>
       </nav>
     </div>
-    <img
-      style="height: 385px"
-      src="https://store.cloudflare.steamstatic.com/public/images/blank.gif"
-      alt=""
-    />
+    <div class="home_page_takeover_link">
+      <a class="home_page_takeover_sizer" href="#">
+        <img
+          style="height: 385px"
+          src="https://store.cloudflare.steamstatic.com/public/images/blank.gif"
+          alt=""
+        />
+      </a>
+    </div>
     <!-- CARRUSEL 🎠 -->
     <div class="gradient-p0">
       <section class="container pt-2 pb-5 position-relative">
         <h3 class="mt-2 fs-6 fw-normal mb-2">DESTACADOS Y RECOMENDADOS</h3>
         <div
           id="carouselExampleIndicators"
-          class="carousel slide shadow-strong z-index-10"
+          class="carousel slide shadow-strong z-2 carousel-responsive"
           data-bs-ride="carousel"
         >
           <div class="carousel-indicators">
@@ -665,7 +678,7 @@
     </div>
     <main>
       <!-- CARDS OFERTAS 📇 -->
-      <article class="py-5 border-top-p3">
+      <article class="py-5 border-top-p3 bg-gradient-p1">
         <div class="container">
           <div class="d-flex justify-content-center align-items-center">
             <div
@@ -1132,7 +1145,7 @@
             <button
               class="prev-control carousel-control-prev"
               type="button"
-              data-bs-target="#carouselExample"
+              data-bs-target="#carouselOfertas"
               data-bs-slide="prev"
             >
               <span
@@ -1144,7 +1157,7 @@
             <button
               class="next-control carousel-control-next"
               type="button"
-              data-bs-target="#carouselExample"
+              data-bs-target="#carouselOfertas"
               data-bs-slide="next"
             >
               <span
@@ -1478,7 +1491,7 @@
             <button
               class="prev-control carousel-control-prev"
               type="button"
-              data-bs-target="#carouselExample"
+              data-bs-target="#carouselJuegos"
               data-bs-slide="prev"
             >
               <span
@@ -1490,7 +1503,7 @@
             <button
               class="next-control carousel-control-next"
               type="button"
-              data-bs-target="#carouselExample"
+              data-bs-target="#carouselJuegos"
               data-bs-slide="next"
             >
               <span
@@ -1510,7 +1523,7 @@
         <div class="container">
           <h2 class="fw-bold">Tarjetas de regalo más vendidas (juegos)</h2>
           <div class="d-flex justify-content-center align-items-center"></div>
-          <div id="carouselJuegos" class="carousel-cards carousel">
+          <div id="carouselTarjetas" class="carousel-cards carousel">
             <div class="carousel-inner px-0 py-4">
               <a class="col text-decoration-none carousel-item active" href="#">
                 <div
@@ -1824,7 +1837,7 @@
             <button
               class="prev-control carousel-control-prev"
               type="button"
-              data-bs-target="#carouselExample"
+              data-bs-target="#carouselTarjetas"
               data-bs-slide="prev"
             >
               <span
@@ -1836,7 +1849,7 @@
             <button
               class="next-control carousel-control-next"
               type="button"
-              data-bs-target="#carouselExample"
+              data-bs-target="#carouselTarjetas"
               data-bs-slide="next"
             >
               <span
@@ -1847,7 +1860,7 @@
             </button>
           </div>
           <div class="d-flex justify-content-center pt-4">
-            <button class="btn-show-all2">Ver todo</button>
+            <button class="btn-show-all">Ver todo</button>
           </div>
         </div>
       </article>
