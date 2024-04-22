@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light dark" />
     <meta
       name="description"
       content="Tienda de videojuegos online - Mega Games"
@@ -168,7 +167,7 @@
             </li>
           </ul>
           <div class="d-flex align-items-center ms-auto">
-            <ul class="navbar-nav me-2">
+            <ul class="navbar-nav me-3">
               <li class="nav-item">
                 <a class="nav-link position-relative" href="#">
                   <span
@@ -181,13 +180,13 @@
             </ul>
             <button
               type="button"
-              class="btn bg-p05 btn-hover-p1 px-3 me-2 border-0 text-white"
+              class="btn bg-p05 btn-hover-p1 px-4 me-3 border-0 text-white rounded-1"
             >
               Iniciar sesión
             </button>
             <button
               type="button"
-              class="btn btn-primary btn-p2 btn-hover-p2 border-0 me-3"
+              class="btn btn-primary btn-p2 btn-hover-p2 px-4 me-3 border-0 rounded-1"
             >
               Registrarse
             </button>
@@ -219,7 +218,7 @@
     </div>
     <div class="container">
       <nav class="navbar navbar-expand-lg pt-4">
-        <div class="container-fluid nav-bg border-0 p-0 overflow-hidden">
+        <div class="container-fluid nav-bg border-0 p-0">
           <button
             class="navbar-toggler"
             type="button"
@@ -243,48 +242,30 @@
                   aria-expanded="false"
                   >Categorías</a
                 >
-                <ul class="dropdown-menu shadow bg-p05 blur border-0">
+                <ul
+                  class="scd-nav dropdown-menu shadow nav-bg-2 border-0 rounded-0"
+                >
                   <li>
-                    <a
-                      class="dropdown-item text-white btn-hover-p2 btn-focus-p2"
-                      href="#"
+                    <a class="dropdown-item text-white" href="#"
                       >Todas las ofertas</a
                     >
                   </li>
                   <li>
-                    <a
-                      class="dropdown-item text-white btn-hover-p2 btn-focus-p2"
-                      href="#"
-                      >Juegos</a
-                    >
+                    <a class="dropdown-item text-white" href="#">Juegos</a>
                   </li>
                   <li>
-                    <a
-                      class="dropdown-item text-white btn-hover-p2 btn-focus-p2"
-                      href="#"
+                    <a class="dropdown-item text-white" href="#"
                       >Juegos Tarjetas</a
                     >
                   </li>
                   <li>
-                    <a
-                      class="dropdown-item text-white btn-hover-p2 btn-focus-p2"
-                      href="#"
-                      >Xbox</a
-                    >
+                    <a class="dropdown-item text-white" href="#">Xbox</a>
                   </li>
                   <li>
-                    <a
-                      class="dropdown-item text-white btn-hover-p2 btn-focus-p2"
-                      href="#"
-                      >PSN</a
-                    >
+                    <a class="dropdown-item text-white" href="#">PSN</a>
                   </li>
                   <li>
-                    <a
-                      class="dropdown-item text-white btn-hover-p2 btn-focus-p2"
-                      href="#"
-                      >Nintendo</a
-                    >
+                    <a class="dropdown-item text-white" href="#">Nintendo</a>
                   </li>
                 </ul>
               </li>
@@ -684,829 +665,1199 @@
     </div>
     <main>
       <!-- CARDS OFERTAS 📇 -->
-      <article class="container mt-5 pb-5">
-        <div class="d-flex justify-content-center align-items-center">
-          <div
-            id="neon-text"
-            class="d-flex justify-content-center align-items-center px-5"
-          >
-            <h2
-              class="d-inline-flex justify-content-center align-items-center my-0 py-1"
+      <article class="py-5 border-top-p3">
+        <div class="container">
+          <div class="d-flex justify-content-center align-items-center">
+            <div
+              id="neon-text"
+              class="d-flex justify-content-center align-items-center px-2 px-sm-5 mb-2"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#55d4ff"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-star me-2 text-shadow"
+              <h2
+                class="d-inline-flex justify-content-center align-items-center my-0 py-1"
               >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"
-                />
-              </svg>
-              OFERTAS ESP<span class="offset">A</span>CIALES
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#55d4ff"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-star ms-1"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"
-                />
-              </svg>
-            </h2>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#55d4ff"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-star me-2 text-shadow"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"
+                  />
+                </svg>
+                OFERTAS ESP<span class="offset">A</span>CIALES
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#55d4ff"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-star ms-1"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"
+                  />
+                </svg>
+              </h2>
+            </div>
           </div>
-        </div>
-        <div id="carouselExample" class="carousel-cards carousel">
-          <div class="carousel-inner px-0 py-4">
-            <a class="col text-decoration-none carousel-item active" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    class="size-img-card rounded-0"
-                    src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
-                    alt="Xbox Game Pass Ultimate – 2 Months TRIAL Subscription (EXP July 31'24) (Xbox / Windows) Non-stackable Key UNITED STATES"
-                  />
-                </div>
+          <div id="carouselOfertas" class="carousel-cards carousel">
+            <div class="carousel-inner px-0 py-4">
+              <a class="col text-decoration-none carousel-item active" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title card-text-primary">
-                    Xbox Game Pass Ultimate – 2 Months TRIAL Subscription (EXP
-                    July 31'24) (Xbox / Windows) Non-stackable Key UNITED STATES
-                  </h6>
+                  <div class="overflow-hidden">
+                    <img
+                      class="size-img-card rounded-0"
+                      src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
+                      alt="Xbox Game Pass Ultimate – 2 Months TRIAL Subscription (EXP July 31'24) (Xbox / Windows) Non-stackable Key UNITED STATES"
+                    />
+                  </div>
                   <div
-                    class="d-inline-flex flex-row flex-sm-column flex-lg-row"
+                    class="card-body d-flex flex-column justify-content-between"
                   >
-                    <div class="d-flex descuento_label px-1">-40%</div>
+                    <h6 class="card-title card-text-primary">
+                      Xbox Game Pass Ultimate – 2 Months TRIAL Subscription (EXP
+                      July 31'24) (Xbox / Windows) Non-stackable Key UNITED
+                      STATES
+                    </h6>
                     <div
-                      class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
+                      class="d-inline-flex flex-row flex-sm-column flex-lg-row"
                     >
-                      <p
-                        class="card-text mb-0 position-relative descuento-precio"
+                      <div class="d-flex descuento_label px-1">-40%</div>
+                      <div
+                        class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
                       >
-                        $9.990 CLP
-                      </p>
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
-                      >
-                        $5.994 CLP
-                      </p>
+                        <p
+                          class="card-text mb-0 position-relative descuento-precio"
+                        >
+                          $9.990 CLP
+                        </p>
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
+                        >
+                          $5.994 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a class="col text-decoration-none carousel-item" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    class="card-img-top size-img-card rounded-0"
-                    src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                    draggable="false"
-                    decoding="async"
-                    alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                  />
-                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title">
-                    Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                    Games GLOBAL
-                  </h6>
+                  <div class="overflow-hidden">
+                    <img
+                      class="card-img-top size-img-card rounded-0"
+                      src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
+                      draggable="false"
+                      decoding="async"
+                      alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
+                    />
+                  </div>
                   <div
-                    class="d-inline-flex flex-row flex-sm-column flex-lg-row"
+                    class="card-body d-flex flex-column justify-content-between"
                   >
-                    <div class="descuento_label px-1">-50%</div>
+                    <h6 class="card-title">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
                     <div
-                      class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
+                      class="d-inline-flex flex-row flex-sm-column flex-lg-row"
                     >
-                      <p
-                        class="card-text mb-0 position-relative descuento-precio"
+                      <div class="descuento_label px-1">-50%</div>
+                      <div
+                        class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
                       >
-                        $13.000 CLP
-                      </p>
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
-                      >
-                        $6.500 CLP
-                      </p>
+                        <p
+                          class="card-text mb-0 position-relative descuento-precio"
+                        >
+                          $13.000 CLP
+                        </p>
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
+                        >
+                          $6.500 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a class="col text-decoration-none carousel-item" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    class="card-img-top size-img-card rounded-0"
-                    src="https://cdn-products.eneba.com/resized-products/Dbdx7ihzJk48bASi_G0jHEgx2obfGYE_tNyWsjtJ4a4_350x200_1x-0.png"
-                    draggable="false"
-                    decoding="async"
-                    alt="Minecraft: Java &amp; Bedrock Edition Official website Key GLOBAL"
-                  />
-                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title">
-                    Minecraft: Java & Bedrock Edition Official website Key
-                    GLOBAL
-                  </h6>
+                  <div class="overflow-hidden">
+                    <img
+                      class="card-img-top size-img-card rounded-0"
+                      src="https://cdn-products.eneba.com/resized-products/Dbdx7ihzJk48bASi_G0jHEgx2obfGYE_tNyWsjtJ4a4_350x200_1x-0.png"
+                      draggable="false"
+                      decoding="async"
+                      alt="Minecraft: Java &amp; Bedrock Edition Official website Key GLOBAL"
+                    />
+                  </div>
                   <div
-                    class="d-inline-flex flex-row flex-sm-column flex-lg-row"
+                    class="card-body d-flex flex-column justify-content-between"
                   >
-                    <div class="descuento_label px-1">-35%</div>
+                    <h6 class="card-title">
+                      Minecraft: Java & Bedrock Edition Official website Key
+                      GLOBAL
+                    </h6>
                     <div
-                      class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
+                      class="d-inline-flex flex-row flex-sm-column flex-lg-row"
                     >
-                      <p
-                        class="card-text mb-0 position-relative descuento-precio"
+                      <div class="descuento_label px-1">-35%</div>
+                      <div
+                        class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
                       >
-                        $19.990 CLP
-                      </p>
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
-                      >
-                        $12.994 CLP
-                      </p>
+                        <p
+                          class="card-text mb-0 position-relative descuento-precio"
+                        >
+                          $19.990 CLP
+                        </p>
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
+                        >
+                          $12.994 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a class="col text-decoration-none carousel-item" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    class="card-img-top size-img-card rounded-0"
-                    src="https://cdn-products.eneba.com/resized-products/s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_1x-0.jpeg"
-                    draggable="false"
-                    decoding="async"
-                    alt="Grand Theft Auto V: Edición Online Premium Rockstar Games Launcher Código GLOBAL"
-                  />
-                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title">
-                    Grand Theft Auto V: Edición Online Premium Rockstar Games
-                    Launcher Código GLOBAL
-                  </h6>
+                  <div class="overflow-hidden">
+                    <img
+                      class="card-img-top size-img-card rounded-0"
+                      src="https://cdn-products.eneba.com/resized-products/s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_1x-0.jpeg"
+                      draggable="false"
+                      decoding="async"
+                      alt="Grand Theft Auto V: Edición Online Premium Rockstar Games Launcher Código GLOBAL"
+                    />
+                  </div>
                   <div
-                    class="d-inline-flex flex-row flex-sm-column flex-lg-row"
+                    class="card-body d-flex flex-column justify-content-between"
                   >
-                    <div class="descuento_label px-1">-60%</div>
+                    <h6 class="card-title">
+                      Grand Theft Auto V: Edición Online Premium Rockstar Games
+                      Launcher Código GLOBAL
+                    </h6>
                     <div
-                      class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
+                      class="d-inline-flex flex-row flex-sm-column flex-lg-row"
                     >
-                      <p
-                        class="card-text mb-0 position-relative descuento-precio"
+                      <div class="descuento_label px-1">-60%</div>
+                      <div
+                        class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
                       >
-                        $22.990 CLP
-                      </p>
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
-                      >
-                        $9.196 CLP
-                      </p>
+                        <p
+                          class="card-text mb-0 position-relative descuento-precio"
+                        >
+                          $22.990 CLP
+                        </p>
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
+                        >
+                          $9.196 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a class="col text-decoration-none carousel-item" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    class="card-img-top size-img-card rounded-0"
-                    src="https://cdn-products.eneba.com/resized-products/NjuT6XzO0fs0Lbdbe4jBMt3m3EsGOgJh7bU9fQurfKI_350x200_1x-0.jpeg"
-                    draggable="false"
-                    decoding="async"
-                    alt="God of War (PC) Código de Steam GLOBAL"
-                  />
-                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title">
-                    God of War (PC) Código de Steam GLOBAL
-                  </h6>
+                  <div class="overflow-hidden">
+                    <img
+                      class="card-img-top size-img-card rounded-0"
+                      src="https://cdn-products.eneba.com/resized-products/NjuT6XzO0fs0Lbdbe4jBMt3m3EsGOgJh7bU9fQurfKI_350x200_1x-0.jpeg"
+                      draggable="false"
+                      decoding="async"
+                      alt="God of War (PC) Código de Steam GLOBAL"
+                    />
+                  </div>
                   <div
-                    class="d-inline-flex flex-row flex-sm-column flex-lg-row"
+                    class="card-body d-flex flex-column justify-content-between"
                   >
-                    <div class="descuento_label px-1">-53%</div>
+                    <h6 class="card-title">
+                      God of War (PC) Código de Steam GLOBAL
+                    </h6>
                     <div
-                      class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
+                      class="d-inline-flex flex-row flex-sm-column flex-lg-row"
                     >
-                      <p
-                        class="card-text mb-0 position-relative descuento-precio"
+                      <div class="descuento_label px-1">-53%</div>
+                      <div
+                        class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
                       >
-                        $35.000 CLP
-                      </p>
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
-                      >
-                        $18.550 CLP
-                      </p>
+                        <p
+                          class="card-text mb-0 position-relative descuento-precio"
+                        >
+                          $35.000 CLP
+                        </p>
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a class="col text-decoration-none carousel-item" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
-                    alt="..."
-                    class="size-img-card rounded-0"
-                  />
-                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title card-text-primary">
-                    Xbox Game Pass Ultimate – 2 Months TRIAL Subscription (EXP
-                    July 31'24) (Xbox / Windows) Non-stackable Key UNITED STATES
-                  </h6>
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
+                      alt="..."
+                      class="size-img-card rounded-0"
+                    />
+                  </div>
                   <div
-                    class="d-inline-flex flex-row flex-sm-column flex-lg-row"
+                    class="card-body d-flex flex-column justify-content-between"
                   >
-                    <div class="d-flex descuento_label px-1">-40%</div>
+                    <h6 class="card-title card-text-primary">
+                      Xbox Game Pass Ultimate – 2 Months TRIAL Subscription (EXP
+                      July 31'24) (Xbox / Windows) Non-stackable Key UNITED
+                      STATES
+                    </h6>
                     <div
-                      class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
+                      class="d-inline-flex flex-row flex-sm-column flex-lg-row"
                     >
-                      <p
-                        class="card-text mb-0 position-relative descuento-precio"
+                      <div class="d-flex descuento_label px-1">-40%</div>
+                      <div
+                        class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
                       >
-                        $9.990 CLP
-                      </p>
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
-                      >
-                        $5.994 CLP
-                      </p>
+                        <p
+                          class="card-text mb-0 position-relative descuento-precio"
+                        >
+                          $9.990 CLP
+                        </p>
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
+                        >
+                          $5.994 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a class="col text-decoration-none carousel-item" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
-                    alt="..."
-                    class="size-img-card rounded-0"
-                  />
-                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title card-text-primary">
-                    Xbox Game Pass Ultimate – 2 Months TRIAL Subscription (EXP
-                    July 31'24) (Xbox / Windows) Non-stackable Key UNITED STATES
-                  </h6>
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
+                      alt="..."
+                      class="size-img-card rounded-0"
+                    />
+                  </div>
                   <div
-                    class="d-inline-flex flex-row flex-sm-column flex-lg-row"
+                    class="card-body d-flex flex-column justify-content-between"
                   >
-                    <div class="d-flex descuento_label px-1">-40%</div>
+                    <h6 class="card-title card-text-primary">
+                      Xbox Game Pass Ultimate – 2 Months TRIAL Subscription (EXP
+                      July 31'24) (Xbox / Windows) Non-stackable Key UNITED
+                      STATES
+                    </h6>
                     <div
-                      class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
+                      class="d-inline-flex flex-row flex-sm-column flex-lg-row"
                     >
-                      <p
-                        class="card-text mb-0 position-relative descuento-precio"
+                      <div class="d-flex descuento_label px-1">-40%</div>
+                      <div
+                        class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
                       >
-                        $9.990 CLP
-                      </p>
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
-                      >
-                        $5.994 CLP
-                      </p>
+                        <p
+                          class="card-text mb-0 position-relative descuento-precio"
+                        >
+                          $9.990 CLP
+                        </p>
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
+                        >
+                          $5.994 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a class="col text-decoration-none carousel-item" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
-                    alt="..."
-                    class="size-img-card rounded-0"
-                  />
-                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title card-text-primary">
-                    Xbox Game Pass Ultimate – 2 Months TRIAL Subscription (EXP
-                    July 31'24) (Xbox / Windows) Non-stackable Key UNITED STATES
-                  </h6>
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
+                      alt="..."
+                      class="size-img-card rounded-0"
+                    />
+                  </div>
                   <div
-                    class="d-inline-flex flex-row flex-sm-column flex-lg-row"
+                    class="card-body d-flex flex-column justify-content-between"
                   >
-                    <div class="d-flex descuento_label px-1">-40%</div>
+                    <h6 class="card-title card-text-primary">
+                      Xbox Game Pass Ultimate – 2 Months TRIAL Subscription (EXP
+                      July 31'24) (Xbox / Windows) Non-stackable Key UNITED
+                      STATES
+                    </h6>
                     <div
-                      class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
+                      class="d-inline-flex flex-row flex-sm-column flex-lg-row"
                     >
-                      <p
-                        class="card-text mb-0 position-relative descuento-precio"
+                      <div class="d-flex descuento_label px-1">-40%</div>
+                      <div
+                        class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
                       >
-                        $9.990 CLP
-                      </p>
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
-                      >
-                        $5.994 CLP
-                      </p>
+                        <p
+                          class="card-text mb-0 position-relative descuento-precio"
+                        >
+                          $9.990 CLP
+                        </p>
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
+                        >
+                          $5.994 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a class="col text-decoration-none carousel-item" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
-                    alt="..."
-                    class="size-img-card rounded-0"
-                  />
-                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title card-text-primary">
-                    Xbox Game Pass Ultimate – 2 Months TRIAL Subscription (EXP
-                    July 31'24) (Xbox / Windows) Non-stackable Key UNITED STATES
-                  </h6>
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
+                      alt="..."
+                      class="size-img-card rounded-0"
+                    />
+                  </div>
                   <div
-                    class="d-inline-flex flex-row flex-sm-column flex-lg-row"
+                    class="card-body d-flex flex-column justify-content-between"
                   >
-                    <div class="d-flex descuento_label px-1">-40%</div>
+                    <h6 class="card-title card-text-primary">
+                      Xbox Game Pass Ultimate – 2 Months TRIAL Subscription (EXP
+                      July 31'24) (Xbox / Windows) Non-stackable Key UNITED
+                      STATES
+                    </h6>
                     <div
-                      class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
+                      class="d-inline-flex flex-row flex-sm-column flex-lg-row"
                     >
-                      <p
-                        class="card-text mb-0 position-relative descuento-precio"
+                      <div class="d-flex descuento_label px-1">-40%</div>
+                      <div
+                        class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
                       >
-                        $9.990 CLP
-                      </p>
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
-                      >
-                        $5.994 CLP
-                      </p>
+                        <p
+                          class="card-text mb-0 position-relative descuento-precio"
+                        >
+                          $9.990 CLP
+                        </p>
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
+                        >
+                          $5.994 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a class="col text-decoration-none carousel-item" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
-                    alt="..."
-                    class="size-img-card rounded-0"
-                  />
-                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title card-text-primary">
-                    Xbox Game Pass Ultimate – 2 Months TRIAL Subscription (EXP
-                    July 31'24) (Xbox / Windows) Non-stackable Key UNITED STATES
-                  </h6>
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
+                      alt="..."
+                      class="size-img-card rounded-0"
+                    />
+                  </div>
                   <div
-                    class="d-inline-flex flex-row flex-sm-column flex-lg-row"
+                    class="card-body d-flex flex-column justify-content-between"
                   >
-                    <div class="d-flex descuento_label px-1">-40%</div>
+                    <h6 class="card-title card-text-primary">
+                      Xbox Game Pass Ultimate – 2 Months TRIAL Subscription (EXP
+                      July 31'24) (Xbox / Windows) Non-stackable Key UNITED
+                      STATES
+                    </h6>
                     <div
-                      class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
+                      class="d-inline-flex flex-row flex-sm-column flex-lg-row"
                     >
-                      <p
-                        class="card-text mb-0 position-relative descuento-precio"
+                      <div class="d-flex descuento_label px-1">-40%</div>
+                      <div
+                        class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
                       >
-                        $9.990 CLP
-                      </p>
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
-                      >
-                        $5.994 CLP
-                      </p>
+                        <p
+                          class="card-text mb-0 position-relative descuento-precio"
+                        >
+                          $9.990 CLP
+                        </p>
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
+                        >
+                          $5.994 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
+            <button
+              class="prev-control carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="next-control carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
           </div>
-          <button
-            class="prev-control carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExample"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-          <button
-            class="next-control carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExample"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-          </button>
+          <div class="d-flex justify-content-center pt-4">
+            <button class="btn-show-all">Ver todo</button>
+          </div>
         </div>
       </article>
       <!-- CARDS JUEGOS 📇 -->
       <article class="bg-base py-5">
         <div class="container">
           <h2 class="fw-bold">Juegos populares</h2>
-          <div class="row row-cols-1 row-cols-sm-3 row-cols-lg-5 g-4 mt-3 mb-4">
-            <a class="col text-decoration-none" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    class="card-img-top size-img-card rounded-0"
-                    src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                    draggable="false"
-                    decoding="async"
-                    alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                    data-text="Ha habido un problema al mostrar esta imagen."
-                    data-text-short="No se pudo cargar la imagen"
-                  />
-                </div>
+          <div class="d-flex justify-content-center align-items-center"></div>
+          <div id="carouselJuegos" class="carousel-cards carousel">
+            <div class="carousel-inner px-0 py-4">
+              <a class="col text-decoration-none carousel-item active" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title">
-                    Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                    Games GLOBAL
-                  </h6>
-                  <div class="d-inline-flex">
-                    <div class="d-inline-flex px-1 gap-1 bg-p1">
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium"
-                      >
-                        $18.550 CLP
-                      </p>
+                  <div class="overflow-hidden">
+                    <img
+                      class="size-img-card rounded-0"
+                      src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
+                      alt="Xbox Game Pass Ultimate – 2 Months TRIAL Subscription (EXP July 31'24) (Xbox / Windows) Non-stackable Key UNITED STATES"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a class="col text-decoration-none" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    class="card-img-top size-img-card rounded-0"
-                    src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                    draggable="false"
-                    decoding="async"
-                    alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                    data-text="Ha habido un problema al mostrar esta imagen."
-                    data-text-short="No se pudo cargar la imagen"
-                  />
-                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title">
-                    Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                    Games GLOBAL
-                  </h6>
-                  <div class="d-inline-flex">
-                    <div class="d-inline-flex px-1 gap-1 bg-p1">
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium"
-                      >
-                        $18.550 CLP
-                      </p>
+                  <div class="overflow-hidden">
+                    <img
+                      class="card-img-top size-img-card rounded-0"
+                      src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
+                      draggable="false"
+                      decoding="async"
+                      alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a class="col text-decoration-none" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    class="card-img-top size-img-card rounded-0"
-                    src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                    draggable="false"
-                    decoding="async"
-                    alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                    data-text="Ha habido un problema al mostrar esta imagen."
-                    data-text-short="No se pudo cargar la imagen"
-                  />
-                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title">
-                    Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                    Games GLOBAL
-                  </h6>
-                  <div class="d-inline-flex">
-                    <div class="d-inline-flex px-1 gap-1 bg-p1">
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium"
-                      >
-                        $18.550 CLP
-                      </p>
+                  <div class="overflow-hidden">
+                    <img
+                      class="card-img-top size-img-card rounded-0"
+                      src="https://cdn-products.eneba.com/resized-products/Dbdx7ihzJk48bASi_G0jHEgx2obfGYE_tNyWsjtJ4a4_350x200_1x-0.png"
+                      draggable="false"
+                      decoding="async"
+                      alt="Minecraft: Java &amp; Bedrock Edition Official website Key GLOBAL"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a class="col text-decoration-none" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    class="card-img-top size-img-card rounded-0"
-                    src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                    draggable="false"
-                    decoding="async"
-                    alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                    data-text="Ha habido un problema al mostrar esta imagen."
-                    data-text-short="No se pudo cargar la imagen"
-                  />
-                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title">
-                    Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                    Games GLOBAL
-                  </h6>
-                  <div class="d-inline-flex">
-                    <div class="d-inline-flex px-1 gap-1 bg-p1">
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium"
-                      >
-                        $18.550 CLP
-                      </p>
+                  <div class="overflow-hidden">
+                    <img
+                      class="card-img-top size-img-card rounded-0"
+                      src="https://cdn-products.eneba.com/resized-products/s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_1x-0.jpeg"
+                      draggable="false"
+                      decoding="async"
+                      alt="Grand Theft Auto V: Edición Online Premium Rockstar Games Launcher Código GLOBAL"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a class="col text-decoration-none" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    class="card-img-top size-img-card rounded-0"
-                    src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                    draggable="false"
-                    decoding="async"
-                    alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                    data-text="Ha habido un problema al mostrar esta imagen."
-                    data-text-short="No se pudo cargar la imagen"
-                  />
-                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title">
-                    Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                    Games GLOBAL
-                  </h6>
-                  <div class="d-inline-flex">
-                    <div class="d-inline-flex px-1 gap-1 bg-p1">
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium"
-                      >
-                        $18.550 CLP
-                      </p>
+                  <div class="overflow-hidden">
+                    <img
+                      class="card-img-top size-img-card rounded-0"
+                      src="https://cdn-products.eneba.com/resized-products/NjuT6XzO0fs0Lbdbe4jBMt3m3EsGOgJh7bU9fQurfKI_350x200_1x-0.jpeg"
+                      draggable="false"
+                      decoding="async"
+                      alt="God of War (PC) Código de Steam GLOBAL"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a class="col text-decoration-none" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    class="card-img-top size-img-card rounded-0"
-                    src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                    draggable="false"
-                    decoding="async"
-                    alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                    data-text="Ha habido un problema al mostrar esta imagen."
-                    data-text-short="No se pudo cargar la imagen"
-                  />
-                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title">
-                    Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                    Games GLOBAL
-                  </h6>
-                  <div class="d-inline-flex">
-                    <div class="d-inline-flex px-1 gap-1 bg-p1">
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium"
-                      >
-                        $18.550 CLP
-                      </p>
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
+                      alt="..."
+                      class="size-img-card rounded-0"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a class="col text-decoration-none" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    class="card-img-top size-img-card rounded-0"
-                    src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                    draggable="false"
-                    decoding="async"
-                    alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                    data-text="Ha habido un problema al mostrar esta imagen."
-                    data-text-short="No se pudo cargar la imagen"
-                  />
-                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title">
-                    Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                    Games GLOBAL
-                  </h6>
-                  <div class="d-inline-flex">
-                    <div class="d-inline-flex px-1 gap-1 bg-p1">
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium"
-                      >
-                        $18.550 CLP
-                      </p>
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
+                      alt="..."
+                      class="size-img-card rounded-0"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a class="col text-decoration-none" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    class="card-img-top size-img-card rounded-0"
-                    src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                    draggable="false"
-                    decoding="async"
-                    alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                    data-text="Ha habido un problema al mostrar esta imagen."
-                    data-text-short="No se pudo cargar la imagen"
-                  />
-                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title">
-                    Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                    Games GLOBAL
-                  </h6>
-                  <div class="d-inline-flex">
-                    <div class="d-inline-flex px-1 gap-1 bg-p1">
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium"
-                      >
-                        $18.550 CLP
-                      </p>
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
+                      alt="..."
+                      class="size-img-card rounded-0"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a class="col text-decoration-none" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    class="card-img-top size-img-card rounded-0"
-                    src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                    draggable="false"
-                    decoding="async"
-                    alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                    data-text="Ha habido un problema al mostrar esta imagen."
-                    data-text-short="No se pudo cargar la imagen"
-                  />
-                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title">
-                    Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                    Games GLOBAL
-                  </h6>
-                  <div class="d-inline-flex">
-                    <div class="d-inline-flex px-1 gap-1 bg-p1">
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium"
-                      >
-                        $18.550 CLP
-                      </p>
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
+                      alt="..."
+                      class="size-img-card rounded-0"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-            <a class="col text-decoration-none" href="#">
-              <div
-                class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-              >
-                <div class="overflow-hidden">
-                  <img
-                    class="card-img-top size-img-card rounded-0"
-                    src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                    draggable="false"
-                    decoding="async"
-                    alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                    data-text="Ha habido un problema al mostrar esta imagen."
-                    data-text-short="No se pudo cargar la imagen"
-                  />
-                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
                 <div
-                  class="card-body d-flex flex-column justify-content-between"
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
                 >
-                  <h6 class="card-title">
-                    Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                    Games GLOBAL
-                  </h6>
-                  <div class="d-inline-flex">
-                    <div class="d-inline-flex px-1 gap-1 bg-p1">
-                      <p
-                        class="card-text mb-0 position-relative fs-sm fw-medium"
-                      >
-                        $18.550 CLP
-                      </p>
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
+                      alt="..."
+                      class="size-img-card rounded-0"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
+            <button
+              class="prev-control carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="next-control carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
           </div>
+          <div class="d-flex justify-content-center pt-4">
+            <button class="btn-show-all2">Ver todo</button>
+          </div>
+        </div>
+      </article>
+      <!--CARDS TARJETAS-->
+      <article class="py-5">
+        <div class="container">
+          <h2 class="fw-bold">Tarjetas de regalo más vendidas (juegos)</h2>
+          <div class="d-flex justify-content-center align-items-center"></div>
+          <div id="carouselJuegos" class="carousel-cards carousel">
+            <div class="carousel-inner px-0 py-4">
+              <a class="col text-decoration-none carousel-item active" href="#">
+                <div
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      class="size-img-card rounded-0"
+                      src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
+                      alt="Xbox Game Pass Ultimate – 2 Months TRIAL Subscription (EXP July 31'24) (Xbox / Windows) Non-stackable Key UNITED STATES"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
+                <div
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      class="card-img-top size-img-card rounded-0"
+                      src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
+                      draggable="false"
+                      decoding="async"
+                      alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
+                <div
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      class="card-img-top size-img-card rounded-0"
+                      src="https://cdn-products.eneba.com/resized-products/Dbdx7ihzJk48bASi_G0jHEgx2obfGYE_tNyWsjtJ4a4_350x200_1x-0.png"
+                      draggable="false"
+                      decoding="async"
+                      alt="Minecraft: Java &amp; Bedrock Edition Official website Key GLOBAL"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
+                <div
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      class="card-img-top size-img-card rounded-0"
+                      src="https://cdn-products.eneba.com/resized-products/s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_1x-0.jpeg"
+                      draggable="false"
+                      decoding="async"
+                      alt="Grand Theft Auto V: Edición Online Premium Rockstar Games Launcher Código GLOBAL"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
+                <div
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      class="card-img-top size-img-card rounded-0"
+                      src="https://cdn-products.eneba.com/resized-products/NjuT6XzO0fs0Lbdbe4jBMt3m3EsGOgJh7bU9fQurfKI_350x200_1x-0.jpeg"
+                      draggable="false"
+                      decoding="async"
+                      alt="God of War (PC) Código de Steam GLOBAL"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
+                <div
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
+                      alt="..."
+                      class="size-img-card rounded-0"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
+                <div
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
+                      alt="..."
+                      class="size-img-card rounded-0"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
+                <div
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
+                      alt="..."
+                      class="size-img-card rounded-0"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
+                <div
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
+                      alt="..."
+                      class="size-img-card rounded-0"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="col text-decoration-none carousel-item" href="#">
+                <div
+                  class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
+                      alt="..."
+                      class="size-img-card rounded-0"
+                    />
+                  </div>
+                  <div
+                    class="card-body d-flex flex-column justify-content-between"
+                  >
+                    <h6 class="carddivtle">
+                      Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
+                      Games GLOBAL
+                    </h6>
+                    <div class="d-inline-flex">
+                      <div class="d-inline-flex px-1 gap-1 bg-p1">
+                        <p
+                          class="card-text mb-0 position-relative fs-sm fw-medium"
+                        >
+                          $18.550 CLP
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <button
+              class="prev-control carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="next-control carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+          <div class="d-flex justify-content-center pt-4">
+            <button class="btn-show-all2">Ver todo</button>
+          </div>
+        </div>
+      </article>
+      <!--CARDS GÉNEROS-->
+      <article class="bg-base py-5">
+        <div class="container">
+          <h2 class="fw-bold">Géneros</h2>
+          <div
+            class="row row-cols-1 row-cols-sm-3 row-cols-lg-5 g-4 mt-3 mb-4"
+          ></div>
         </div>
       </article>
     </main>
