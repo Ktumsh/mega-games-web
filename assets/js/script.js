@@ -135,3 +135,72 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 } else {
   $(carousel2).addClass("slide");
 }
+
+//CARRUSEL TARJETAS
+const carousel3 = document.querySelector("#carouselTarjetas");
+
+if (window.matchMedia("(min-width: 992px)").matches) {
+  const carousel = new bootstrap.Carousel(carousel3, {
+    interval: false,
+    touch: true,
+  });
+
+  var carouselWidth3 = $(carousel3).find(".carousel-inner")[0].scrollWidth;
+  var cardWidth3 = $(carousel3).find(".carousel-item").width() * 5;
+  var scrollPosition3 = 0;
+
+  $(carousel3)
+    .find(".carousel-control-next")
+    .on("click", () => {
+      if (scrollPosition3 < carouselWidth3 - cardWidth3) {
+        scrollPosition3 = scrollPosition3 + cardWidth3;
+        $(carousel3)
+          .find(".carousel-inner")
+          .animate({ scrollLeft: scrollPosition3 }, 600);
+      }
+    });
+
+  $(carousel3)
+    .find(".carousel-control-prev")
+    .on("click", () => {
+      if (scrollPosition3 > 0) {
+        scrollPosition3 = scrollPosition3 - cardWidth3;
+        $(carousel3)
+          .find(".carousel-inner")
+          .animate({ scrollLeft: scrollPosition3 }, 600);
+      }
+    });
+} else if (window.matchMedia("(min-width: 576px)").matches) {
+  const carousel = new bootstrap.Carousel(carousel3, {
+    interval: false,
+    touch: true,
+  });
+
+  var carouselWidth3 = $(carousel3).find(".carousel-inner")[0].scrollWidth;
+  var cardWidth3 = $(carousel3).find(".carousel-item").width() * 3;
+  var scrollPosition3 = 0;
+
+  $(carousel3)
+    .find(".carousel-control-next")
+    .on("click", () => {
+      if (scrollPosition3 < carouselWidth3 - cardWidth3) {
+        scrollPosition3 = scrollPosition3 + cardWidth3;
+        $(carousel3)
+          .find(".carousel-inner")
+          .animate({ scrollLeft: scrollPosition3 }, 600);
+      }
+    });
+
+  $(carousel3)
+    .find(".carousel-control-prev")
+    .on("click", () => {
+      if (scrollPosition3 > 0) {
+        scrollPosition3 = scrollPosition3 - cardWidth3;
+        $(carousel3)
+          .find(".carousel-inner")
+          .animate({ scrollLeft: scrollPosition3 }, 600);
+      }
+    });
+} else {
+  $(carousel3).addClass("slide");
+}
