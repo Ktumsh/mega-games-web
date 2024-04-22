@@ -4,7 +4,7 @@ const carousel1 = document.querySelector("#carouselOfertas");
 if (window.matchMedia("(min-width: 992px)").matches) {
   const carousel = new bootstrap.Carousel(carousel1, {
     interval: false,
-    touch: false,
+    touch: true,
   });
 
   var carouselWidth1 = $(carousel1).find(".carousel-inner")[0].scrollWidth;
@@ -35,7 +35,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 } else if (window.matchMedia("(min-width: 576px)").matches) {
   const carousel = new bootstrap.Carousel(carousel1, {
     interval: false,
-    touch: false,
+    touch: true,
   });
 
   var carouselWidth1 = $(carousel1).find(".carousel-inner")[0].scrollWidth;
@@ -73,7 +73,7 @@ const carousel2 = document.querySelector("#carouselJuegos");
 if (window.matchMedia("(min-width: 992px)").matches) {
   const carousel = new bootstrap.Carousel(carousel2, {
     interval: false,
-    touch: false,
+    touch: true,
   });
 
   var carouselWidth2 = $(carousel2).find(".carousel-inner")[0].scrollWidth;
@@ -104,7 +104,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 } else if (window.matchMedia("(min-width: 576px)").matches) {
   const carousel = new bootstrap.Carousel(carousel2, {
     interval: false,
-    touch: false,
+    touch: true,
   });
 
   var carouselWidth2 = $(carousel2).find(".carousel-inner")[0].scrollWidth;
