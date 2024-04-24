@@ -342,10 +342,7 @@ html.responsive {
 
 .page_background_holder {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   background-repeat: no-repeat;
   background-position: center top;
 }
@@ -359,18 +356,6 @@ html.responsive {
   background-repeat: no-repeat;
   background-position: center top;
   display: none;
-}
-
-@media (min-width: 1442px) {
-  .page_background_holder {
-    right: 0;
-  }
-}
-
-@media (min-width: 1224px) {
-  .page_background_holder {
-    right: -218px;
-  }
 }
 
 .card-size {
@@ -540,7 +525,6 @@ html.responsive {
 .fst-nav a {
   color: #d8d8d8 !important;
   padding: 10px 10px 10px 15px !important;
-  transition: none !important;
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3) !important;
   font-weight: 600;
 }
@@ -594,11 +578,55 @@ html.responsive {
 }
 
 .text-bg-dark {
-  --bs-dark-rgb: 88, 79, 186;
+  --bs-dark-rgb: 19, 16, 25;
   background-color: RGBA(
     var(--bs-dark-rgb),
     var(--bs-bg-opacity, 0.1)
   ) !important;
+}
+
+.dropdown-toggle::after {
+  margin-left: 0.5em !important;
+}
+
+@media screen and (max-width: 576px) {
+  .dropdown-toggle::after {
+    margin-left: 9rem !important;
+    vertical-align: 0.1em !important;
+    border-top: 0.4em solid !important;
+    border-right: 0.4em solid transparent !important;
+    border-left: 0.4em solid transparent !important;
+  }
+
+  .offcanvas.offcanvas-start .scd-nav {
+    background: #1c1825;
+  }
+
+  .offcanvas.offcanvas-start .fst-nav a {
+    border-top: 1px solid #1c1825;
+    padding: 20px 10px 20px 15px !important;
+    text-shadow: none !important;
+  }
+
+  .offcanvas.offcanvas-start .fst-nav a:hover {
+    background: none;
+    color: #d8d8d8 !important;
+  }
+
+  .offcanvas.offcanvas-start .fst-nav a:focus {
+    background: #1c1825;
+  }
+
+  .offcanvas.offcanvas-start .scd-nav a {
+    border-bottom: none !important;
+    border-bottom: 2px solid #ffffff00 !important;
+    padding: 10px 0px !important;
+    font-size: 14px !important;
+  }
+
+  .offcanvas.offcanvas-start .scd-nav a:hover {
+    color: #d8d8d8 !important;
+  }
 }
 
 .dropdown-menu {
@@ -641,6 +669,9 @@ html.responsive {
 }
 
 .btn-show-all2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   padding: 5px 3rem;
   background: none;
   color: #fff;
@@ -653,6 +684,52 @@ html.responsive {
 
 .btn-show-all2:hover {
   background: #131019;
+  .loader::after {
+    background-color: #131019;
+  }
+}
+
+.loader {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+
+  display: none;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+}
+
+.loader::before {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    0deg,
+    rgba(134, 74, 249, 1) 0%,
+    rgba(37, 4, 98, 1) 100%
+  );
+}
+
+.loader::after {
+  width: 75%;
+  height: 75%;
+  background-color: #250462;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .btn-neon-p2 {
@@ -844,4 +921,69 @@ html.responsive {
     opacity: 1;
     text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
   }
+}
+
+.gen-card {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  background: #5108d9;
+  transition: background 150ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 140px;
+  padding: 15px 5px 0;
+  text-align: center;
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.gen-card:hover {
+  background: #3b069d;
+}
+
+@media (min-width: 1201px) {
+  .gen-card-container {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+.gen-card-container {
+  margin-bottom: 24px;
+  display: grid;
+  grid-gap: 32px;
+}
+
+.gen-card-quantity {
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.gen-card-title {
+  display: flex;
+  padding-top: 20px;
+  align-items: flex-start;
+  flex: 1;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+  touch-action: manipulation;
+}
+
+.offcanvas.offcanvas-start {
+  width: 266px !important;
 }

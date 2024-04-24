@@ -204,3 +204,21 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 } else {
   $(carousel3).addClass("slide");
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loadBtn = document.getElementById("load-more-generos");
+  const generosContainer = document.getElementById("genCardContainer");
+  const loader = document.getElementById("loader");
+
+  loadBtn.addEventListener("click", () => {
+    loader.style.display = "block";
+    setTimeout(function () {
+      var hiddenElements = generosContainer.getElementsByClassName("gen-card");
+      for (var i = 0; i < hiddenElements.length; i++) {
+        hiddenElements[i].classList.remove("d-none");
+      }
+      loader.style.display = "none";
+      loadBtn.style.display = "none";
+    }, 300);
+  });
+});
