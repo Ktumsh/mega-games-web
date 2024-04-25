@@ -637,6 +637,21 @@ textarea,
   line-height: 1;
   font-size: 14px;
   background: #16023b;
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.3);
+  transition: all 300ms ease-in-out;
+}
+
+.card_struct:hover {
+  filter: contrast(115%);
+  box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.card_struct:hover .img_card_content {
+  scale: 1.05;
+}
+
+.card_struct_2 {
+  background: #250462;
 }
 
 .card_content {
@@ -672,6 +687,7 @@ textarea,
   position: relative;
   padding-top: 140%;
   margin-bottom: -60px;
+  transition: all 300ms ease-in-out;
 }
 
 @media screen and (max-width: 576px) {
