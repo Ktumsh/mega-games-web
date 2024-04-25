@@ -641,12 +641,23 @@ textarea,
   transition: all 300ms ease-in-out;
 }
 
-.card_struct:hover {
+@media (min-width: 576px) {
+  .card_struct:hover {
+    filter: contrast(115%);
+    box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .card_struct:hover .img_card_content {
+    scale: 1.05;
+  }
+}
+
+.card_struct:active {
   filter: contrast(115%);
   box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
-.card_struct:hover .img_card_content {
+.card_struct:active .img_card_content {
   scale: 1.05;
 }
 
