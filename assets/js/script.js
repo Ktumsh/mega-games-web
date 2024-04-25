@@ -7,8 +7,8 @@ if (window.matchMedia("(min-width: 992px)").matches) {
     touch: true,
   });
 
-  var carouselWidth1 = $(carousel1).find(".carousel-inner")[0].scrollWidth;
-  var cardWidth1 = $(carousel1).find(".carousel-item").width() * 5;
+  var carouselWidth1 = $(carousel1).find(".inner_carousel")[0].scrollWidth;
+  var cardWidth1 = $(carousel1).find(".card_").width() * 5;
   var scrollPosition1 = 0;
 
   $(carousel1)
@@ -17,8 +17,8 @@ if (window.matchMedia("(min-width: 992px)").matches) {
       if (scrollPosition1 < carouselWidth1 - cardWidth1) {
         scrollPosition1 = scrollPosition1 + cardWidth1;
         $(carousel1)
-          .find(".carousel-inner")
-          .animate({ scrollLeft: scrollPosition1 }, 600);
+          .find(".inner_carousel")
+          .animate({ scrollLeft: scrollPosition1 }, 100);
       }
     });
 
@@ -28,8 +28,8 @@ if (window.matchMedia("(min-width: 992px)").matches) {
       if (scrollPosition1 > 0) {
         scrollPosition1 = scrollPosition1 - cardWidth1;
         $(carousel1)
-          .find(".carousel-inner")
-          .animate({ scrollLeft: scrollPosition1 }, 600);
+          .find(".inner_carousel")
+          .animate({ scrollLeft: scrollPosition1 }, 100);
       }
     });
 } else if (window.matchMedia("(min-width: 576px)").matches) {
@@ -38,8 +38,8 @@ if (window.matchMedia("(min-width: 992px)").matches) {
     touch: true,
   });
 
-  var carouselWidth1 = $(carousel1).find(".carousel-inner")[0].scrollWidth;
-  var cardWidth1 = $(carousel1).find(".carousel-item").width() * 3;
+  var carouselWidth1 = $(carousel1).find(".inner_carousel")[0].scrollWidth;
+  var cardWidth1 = $(carousel1).find(".card_").width() * 3;
   var scrollPosition1 = 0;
 
   $(carousel1)
@@ -48,8 +48,8 @@ if (window.matchMedia("(min-width: 992px)").matches) {
       if (scrollPosition1 < carouselWidth1 - cardWidth1) {
         scrollPosition1 = scrollPosition1 + cardWidth1;
         $(carousel1)
-          .find(".carousel-inner")
-          .animate({ scrollLeft: scrollPosition1 }, 600);
+          .find(".inner_carousel")
+          .animate({ scrollLeft: scrollPosition1 }, 100);
       }
     });
 
@@ -59,12 +59,10 @@ if (window.matchMedia("(min-width: 992px)").matches) {
       if (scrollPosition1 > 0) {
         scrollPosition1 = scrollPosition1 - cardWidth1;
         $(carousel1)
-          .find(".carousel-inner")
-          .animate({ scrollLeft: scrollPosition1 }, 600);
+          .find(".inner_carousel")
+          .animate({ scrollLeft: scrollPosition1 }, 100);
       }
     });
-} else {
-  $(carousel1).addClass("slide");
 }
 
 //CARRUSEL JUEGOS
@@ -76,8 +74,8 @@ if (window.matchMedia("(min-width: 992px)").matches) {
     touch: true,
   });
 
-  var carouselWidth2 = $(carousel2).find(".carousel-inner")[0].scrollWidth;
-  var cardWidth2 = $(carousel2).find(".carousel-item").width() * 5;
+  var carouselWidth2 = $(carousel2).find(".inner_carousel")[0].scrollWidth;
+  var cardWidth2 = $(carousel2).find(".card_").width() * 5;
   var scrollPosition2 = 0;
 
   $(carousel2)
@@ -86,8 +84,8 @@ if (window.matchMedia("(min-width: 992px)").matches) {
       if (scrollPosition2 < carouselWidth2 - cardWidth2) {
         scrollPosition2 = scrollPosition2 + cardWidth2;
         $(carousel2)
-          .find(".carousel-inner")
-          .animate({ scrollLeft: scrollPosition2 }, 600);
+          .find(".inner_carousel")
+          .animate({ scrollLeft: scrollPosition2 }, 100);
       }
     });
 
@@ -97,8 +95,8 @@ if (window.matchMedia("(min-width: 992px)").matches) {
       if (scrollPosition2 > 0) {
         scrollPosition2 = scrollPosition2 - cardWidth2;
         $(carousel2)
-          .find(".carousel-inner")
-          .animate({ scrollLeft: scrollPosition2 }, 600);
+          .find(".inner_carousel")
+          .animate({ scrollLeft: scrollPosition2 }, 100);
       }
     });
 } else if (window.matchMedia("(min-width: 576px)").matches) {
@@ -107,8 +105,8 @@ if (window.matchMedia("(min-width: 992px)").matches) {
     touch: true,
   });
 
-  var carouselWidth2 = $(carousel2).find(".carousel-inner")[0].scrollWidth;
-  var cardWidth2 = $(carousel2).find(".carousel-item").width() * 3;
+  var carouselWidth2 = $(carousel2).find(".inner_carousel")[0].scrollWidth;
+  var cardWidth2 = $(carousel2).find(".card_").width() * 3;
   var scrollPosition2 = 0;
 
   $(carousel2)
@@ -117,8 +115,8 @@ if (window.matchMedia("(min-width: 992px)").matches) {
       if (scrollPosition2 < carouselWidth2 - cardWidth2) {
         scrollPosition2 = scrollPosition2 + cardWidth2;
         $(carousel2)
-          .find(".carousel-inner")
-          .animate({ scrollLeft: scrollPosition2 }, 600);
+          .find(".inner_carousel")
+          .animate({ scrollLeft: scrollPosition2 }, 100);
       }
     });
 
@@ -128,12 +126,10 @@ if (window.matchMedia("(min-width: 992px)").matches) {
       if (scrollPosition2 > 0) {
         scrollPosition2 = scrollPosition2 - cardWidth2;
         $(carousel2)
-          .find(".carousel-inner")
-          .animate({ scrollLeft: scrollPosition2 }, 600);
+          .find(".inner_carousel")
+          .animate({ scrollLeft: scrollPosition2 }, 100);
       }
     });
-} else {
-  $(carousel2).addClass("slide");
 }
 
 //CARRUSEL TARJETAS
@@ -145,8 +141,8 @@ if (window.matchMedia("(min-width: 992px)").matches) {
     touch: true,
   });
 
-  var carouselWidth3 = $(carousel3).find(".carousel-inner")[0].scrollWidth;
-  var cardWidth3 = $(carousel3).find(".carousel-item").width() * 5;
+  var carouselWidth3 = $(carousel3).find(".inner_carousel")[0].scrollWidth;
+  var cardWidth3 = $(carousel3).find(".card_").width() * 5;
   var scrollPosition3 = 0;
 
   $(carousel3)
@@ -155,8 +151,8 @@ if (window.matchMedia("(min-width: 992px)").matches) {
       if (scrollPosition3 < carouselWidth3 - cardWidth3) {
         scrollPosition3 = scrollPosition3 + cardWidth3;
         $(carousel3)
-          .find(".carousel-inner")
-          .animate({ scrollLeft: scrollPosition3 }, 600);
+          .find(".inner_carousel")
+          .animate({ scrollLeft: scrollPosition3 }, 100);
       }
     });
 
@@ -166,8 +162,8 @@ if (window.matchMedia("(min-width: 992px)").matches) {
       if (scrollPosition3 > 0) {
         scrollPosition3 = scrollPosition3 - cardWidth3;
         $(carousel3)
-          .find(".carousel-inner")
-          .animate({ scrollLeft: scrollPosition3 }, 600);
+          .find(".inner_carousel")
+          .animate({ scrollLeft: scrollPosition3 }, 100);
       }
     });
 } else if (window.matchMedia("(min-width: 576px)").matches) {
@@ -176,8 +172,8 @@ if (window.matchMedia("(min-width: 992px)").matches) {
     touch: true,
   });
 
-  var carouselWidth3 = $(carousel3).find(".carousel-inner")[0].scrollWidth;
-  var cardWidth3 = $(carousel3).find(".carousel-item").width() * 3;
+  var carouselWidth3 = $(carousel3).find(".inner_carousel")[0].scrollWidth;
+  var cardWidth3 = $(carousel3).find(".card_").width() * 3;
   var scrollPosition3 = 0;
 
   $(carousel3)
@@ -186,8 +182,8 @@ if (window.matchMedia("(min-width: 992px)").matches) {
       if (scrollPosition3 < carouselWidth3 - cardWidth3) {
         scrollPosition3 = scrollPosition3 + cardWidth3;
         $(carousel3)
-          .find(".carousel-inner")
-          .animate({ scrollLeft: scrollPosition3 }, 600);
+          .find(".inner_carousel")
+          .animate({ scrollLeft: scrollPosition3 }, 100);
       }
     });
 
@@ -197,8 +193,8 @@ if (window.matchMedia("(min-width: 992px)").matches) {
       if (scrollPosition3 > 0) {
         scrollPosition3 = scrollPosition3 - cardWidth3;
         $(carousel3)
-          .find(".carousel-inner")
-          .animate({ scrollLeft: scrollPosition3 }, 600);
+          .find(".inner_carousel")
+          .animate({ scrollLeft: scrollPosition3 }, 100);
       }
     });
 } else {
