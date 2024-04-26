@@ -1,72 +1,72 @@
 [
-    {
-      "nombre": "Fallout 76 - Windows 10 Store Key",
-      "dlc": false,
-      "imagen": "assets/public/cards-juegos/01.jpeg",
-      "precio": "490 CLP",
-      "likes": 408
-    },
-    {
-      "nombre": "7 Days to Die Steam Clave",
-      "dlc": false,
-      "imagen": "assets/public/cards-juegos/02.jpg",
-      "precio": "4.631 CLP",
-      "likes": 7783
-    },
-    {
-      "nombre": "Fallout 76 (Xbox One) Xbox Live Key",
-      "dlc": false,
-      "imagen": "assets/public/cards-juegos/03.jpeg",
-      "precio": "459 CLP",
-      "likes": 2714
-    },
-    {
-      "nombre": "theHunter: Call of the Wild (PC) Steam Key LATAM",
-      "dlc": false,
-      "imagen": "assets/public/cards-juegos/04.jpg",
-      "precio": "551 CLP",
-      "likes": 320
-    },
-    {
-      "nombre": "EA SPORTS FC 24 (PC) Código de EA App",
-      "dlc": false,
-      "imagen": "assets/public/cards-juegos/05.jpg",
-      "precio": "25.612 CLP",
-      "likes": 3924
-    },
-    {
-      "nombre": "Fortnite – The Batman Who Laughs Outfit (DLC) Código de Epic Games",
-      "dlc": true,
-      "imagen": "assets/public/cards-juegos/06.jpg",
-      "precio": "9.190 CLP",
-      "likes": 29800
-    },
-    {
-      "nombre": "Arma 3 (PC) Steam Key",
-      "dlc": false,
-      "imagen": "assets/public/cards-juegos/07.jpg",
-      "precio": "5.233 CLP",
-      "likes": 657
-    },
-    {
-      "nombre": "Dying Light: Definitive Edition (PC) Steam Key",
-      "dlc": false,
-      "imagen": "assets/public/cards-juegos/08.jpeg",
-      "precio": "3.815 CLP",
-      "likes": 968
-    },
-    {
-      "nombre": "Dragon Ball: Xenoverse 2 Código de Steam",
-      "dlc": false,
-      "imagen": "assets/public/cards-juegos/09.jpg",
-      "precio": "9.211 CLP",
-      "likes": 3648
-    },
-    {
-      "nombre": "Batman: Arkham Knight (Premium Edition) Steam Key",
-      "dlc": false,
-      "imagen": "assets/public/cards-juegos/10.jpg",
-      "precio": "3.764 CLP",
-      "likes": 883
-    }
-  ]
+  {
+    "nombre": "Fallout 76 - Windows 10 Store Key",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/01.jpeg",
+    "precio": "$490 CLP",
+    "likes": 408
+  },
+  {
+    "nombre": "7 Days to Die Steam Clave",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/02.jpg",
+    "precio": "$4.631 CLP",
+    "likes": 7783
+  },
+  {
+    "nombre": "Fallout 76 (Xbox One) Xbox Live Key",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/03.jpeg",
+    "precio": "$459 CLP",
+    "likes": 2714
+  },
+  {
+    "nombre": "theHunter: Call of the Wild (PC) Steam Key LATAM",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/04.jpg",
+    "precio": "$551 CLP",
+    "likes": 320
+  },
+  {
+    "nombre": "EA SPORTS FC 24 (PC) Código de EA App",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/05.jpg",
+    "precio": "$25.612 CLP",
+    "likes": 3924
+  },
+  {
+    "nombre": "Fortnite – The Batman Who Laughs Outfit (DLC) Código de Epic Games",
+    "dlc": true,
+    "imagen": "assets/public/cards-juegos/06.jpg",
+    "precio": "$9.190 CLP",
+    "likes": 29800
+  },
+  {
+    "nombre": "Arma 3 (PC) Steam Key",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/07.jpg",
+    "precio": "$5.233 CLP",
+    "likes": 657
+  },
+  {
+    "nombre": "Dying Light: Definitive Edition (PC) Steam Key",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/08.jpeg",
+    "precio": "$3.815 CLP",
+    "likes": 968
+  },
+  {
+    "nombre": "Dragon Ball: Xenoverse 2 Código de Steam",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/09.jpg",
+    "precio": "$9.211 CLP",
+    "likes": 3648
+  },
+  {
+    "nombre": "Batman: Arkham Knight (Premium Edition) Steam Key",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/10.jpg",
+    "precio": "$3.764 CLP",
+    "likes": 883
+  }
+]

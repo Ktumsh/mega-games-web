@@ -1,22 +1,22 @@
 function cargarYAgregarTarjetas(jsonFile, carouselId) {
-    fetch(jsonFile)
-      .then((response) => response.json())
-      .then((tarjetas) => {
-        const cardsContainer = document.getElementById(
-          `cardsContainer${carouselId}`
-        );
-        const maxTarjetas = 10;
-  
-        tarjetas.slice(0, maxTarjetas).forEach((tarjeta) => {
-          const cardElement = document.createElement("div");
-          cardElement.classList.add("card_");
-  
-          // Verifica si la tarjeta es un DLC y agrega el span correspondiente
-          const dlcSpan = tarjeta.dlc ? `<span class="dlc_span">DLC</span>` : "";
-  
-          let cardContent = "";
-          if (carouselId === 1) {
-            cardContent = `
+  fetch(jsonFile)
+    .then((response) => response.json())
+    .then((tarjetas) => {
+      const cardsContainer = document.getElementById(
+        `cardsContainer${carouselId}`
+      );
+      const maxTarjetas = 10;
+
+      tarjetas.slice(0, maxTarjetas).forEach((tarjeta) => {
+        const cardElement = document.createElement("div");
+        cardElement.classList.add("card_");
+
+        // Verifica si la tarjeta es un DLC y agrega el span correspondiente
+        const dlcSpan = tarjeta.dlc ? `<span class="dlc_span">DLC</span>` : "";
+
+        let cardContent = "";
+        if (carouselId === 1) {
+          cardContent = `
             <div class="card_struct active border-p3" href="#">
               <div class="card_content">
                 <div class="card_img">
@@ -39,8 +39,8 @@ function cargarYAgregarTarjetas(jsonFile, carouselId) {
                       </div>
                       <div>
                         <div class="d-inline-flex flex-row flex-sm-column flex-lg-row p-1 gap-1 bg-p1">
-                          <p class="descuento-precio mb-0 position-relative">${tarjeta.precioDescuento}</p>
-                          <p class="mb-0 fw-medium text-p3">${tarjeta.precioOriginal}</p>
+                          <p class="descuento-precio mb-0 position-relative">${tarjeta.precioOriginal}</p>
+                          <p class="mb-0 fw-medium text-p3">${tarjeta.precioDescuento}</p>
                         </div>
                       </div>
                     </div>
@@ -57,8 +57,8 @@ function cargarYAgregarTarjetas(jsonFile, carouselId) {
               </div>
             </div>
           `;
-          } else if (carouselId === 2) {
-            cardContent = `
+        } else if (carouselId === 2) {
+          cardContent = `
           <div class="card_struct active" href="#">
             <div class="card_content">
               <div class="card_img">
@@ -92,8 +92,8 @@ function cargarYAgregarTarjetas(jsonFile, carouselId) {
             </div>
           </div>
         `;
-          } else {
-            cardContent = `
+        } else {
+          cardContent = `
           <div class="card_struct card_struct_2 active" href="#">
             <div class="card_content">
               <div class="card_img">
@@ -127,19 +127,19 @@ function cargarYAgregarTarjetas(jsonFile, carouselId) {
             </div>
           </div>
         `;
-          }
-          cardElement.innerHTML = cardContent;
-          cardsContainer.appendChild(cardElement);
-        });
-      })
-      .catch((error) => console.error("Error al cargar las tarjetas:", error));
-  }
-  
-  // Cargar y agregar tarjetas al carrusel 1
-  cargarYAgregarTarjetas("/data/api/offerCards.json", 1);
-  
-  // Cargar y agregar tarjetas al carrusel 2
-  cargarYAgregarTarjetas("/data/api/gamesCards.json", 2);
-  
-  // Cargar y agregar tarjetas al carrusel 3
-  cargarYAgregarTarjetas("/data/api/tarjetasCards.json", 3);
+        }
+        cardElement.innerHTML = cardContent;
+        cardsContainer.appendChild(cardElement);
+      });
+    })
+    .catch((error) => console.error("Error al cargar las tarjetas:", error));
+}
+
+// Cargar y agregar tarjetas al carrusel 1
+cargarYAgregarTarjetas("/data/api/offerCards.json", 1);
+
+// Cargar y agregar tarjetas al carrusel 2
+cargarYAgregarTarjetas("/data/api/gamesCards.json", 2);
+
+// Cargar y agregar tarjetas al carrusel 3
+cargarYAgregarTarjetas("/data/api/tarjetasCards.json", 3);

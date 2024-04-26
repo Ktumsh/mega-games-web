@@ -562,14 +562,19 @@ textarea,
 
 @media (min-width: 576px) {
   .carousel_cards .inner_carousel::-webkit-scrollbar {
-    height: 5px;
-    width: 5px;
+    height: 6px;
+    width: 6px;
   }
 }
 
 @media (min-width: 576px) {
   .carousel_cards .inner_carousel::-webkit-scrollbar-thumb {
     background: #864af9;
+    border-radius: 0;
+  }
+
+  .carousel_cards .inner_carousel::-webkit-scrollbar-thumb:active {
+    background: #b189fb;
     border-radius: 0;
   }
 }

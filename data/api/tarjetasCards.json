@@ -1,72 +1,72 @@
 [
-    {
-      "nombre": "Valorant Gift Card - 1000 Valorant Points - LATAM",
-      "dlc": false,
-      "imagen": "assets/public/cards-tarjetas/01.jpeg",
-      "precio": "10.445 CLP",
-      "likes": 241
-    },
-    {
-      "nombre": "Fallout 76 - Windows 10 Store Key",
-      "dlc": false,
-      "imagen": "assets/public/cards-tarjetas/02.jpeg",
-      "precio": "11.271 CLP",
-      "likes": 237
-    },
-    {
-      "nombre": "Fortnite - 13500 V-Bucks Gift Card Código",
-      "dlc": false,
-      "imagen": "assets/public/cards-tarjetas/03.jpeg",
-      "precio": "88.626 CLP",
-      "likes": 4085
-    },
-    {
-      "nombre": "Fallout 76 - Windows 10 Store Key",
-      "dlc": false,
-      "imagen": "assets/public/cards-tarjetas/04.webp",
-      "precio": "10.292 CLP",
-      "likes": 569
-    },
-    {
-      "nombre": "Steam Wallet Gift Card 50.000 CLP Key",
-      "dlc": false,
-      "imagen": "assets/public/cards-tarjetas/05.jpeg",
-      "precio": "47.486 CLP",
-      "likes": 101
-    },
-    {
-      "nombre": "League Of Legends Hextech Chest (DLC) Riot Key",
-      "dlc": true,
-      "imagen": "assets/public/cards-tarjetas/06.webp",
-      "precio": "1.030 CLP",
-      "likes": 301
-    },
-    {
-      "nombre": "Xbox Game Pass for PC - 3 Month TRIAL Windows Store Non-stackable Key",
-      "dlc": false,
-      "imagen": "assets/public/cards-tarjetas/07.jpeg",
-      "precio": "10.169 CLP",
-      "likes": 5604
-    },
-    {
-      "nombre": "EA Play Pro 1 Month (PC) Origin Key",
-      "dlc": false,
-      "imagen": "assets/public/cards-tarjetas/08.jpeg",
-      "precio": "31.354 CLP",
-      "likes": 125
-    },
-    {
-      "nombre": "Tarjeta PlayStation Network Card 50 USD código PSN",
-      "dlc": false,
-      "imagen": "assets/public/cards-tarjetas/09.jpeg",
-      "precio": "49.427 CLP",
-      "likes": 95
-    },
-    {
-      "nombre": "Xbox Game Pass 3 meses Código",
-      "dlc": false,
-      "imagen": "assets/public/cards-tarjetas/10.jpeg",
-      "precio": "30.537 CLP",
-      "likes": 615
-    }
-  ]
+  {
+    "nombre": "Valorant Gift Card - 1000 Valorant Points - LATAM",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/01.jpeg",
+    "precio": "$10.445 CLP",
+    "likes": 241
+  },
+  {
+    "nombre": "Fallout 76 - Windows 10 Store Key",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/02.jpeg",
+    "precio": "$11.271 CLP",
+    "likes": 237
+  },
+  {
+    "nombre": "Fortnite - 13500 V-Bucks Gift Card Código",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/03.jpeg",
+    "precio": "$88.626 CLP",
+    "likes": 4085
+  },
+  {
+    "nombre": "Fallout 76 - Windows 10 Store Key",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/04.webp",
+    "precio": "$10.292 CLP",
+    "likes": 569
+  },
+  {
+    "nombre": "Steam Wallet Gift Card 50.000 CLP Key",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/05.jpeg",
+    "precio": "$47.486 CLP",
+    "likes": 101
+  },
+  {
+    "nombre": "League Of Legends Hextech Chest (DLC) Riot Key",
+    "dlc": true,
+    "imagen": "assets/public/cards-tarjetas/06.webp",
+    "precio": "$1.030 CLP",
+    "likes": 301
+  },
+  {
+    "nombre": "Xbox Game Pass for PC - 3 Month TRIAL Windows Store Non-stackable Key",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/07.jpeg",
+    "precio": "$10.169 CLP",
+    "likes": 5604
+  },
+  {
+    "nombre": "EA Play Pro 1 Month (PC) Origin Key",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/08.jpeg",
+    "precio": "$31.354 CLP",
+    "likes": 125
+  },
+  {
+    "nombre": "Tarjeta PlayStation Network Card 50 USD código PSN",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/09.jpeg",
+    "precio": "$49.427 CLP",
+    "likes": 95
+  },
+  {
+    "nombre": "Xbox Game Pass 3 meses Código",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/10.jpeg",
+    "precio": "$30.537 CLP",
+    "likes": 615
+  }
+]
