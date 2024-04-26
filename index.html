@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
+<html class="responsive" lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light dark" />
     <meta
       name="description"
       content="Tienda de videojuegos online - Mega Games"
     />
     <title>Mega Games</title>
-    <link rel="icon" type="" href="" />
+    <link rel="icon" type="" href="assets/public/mega-games-logo-ondark.svg" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -21,16 +20,7 @@
   <body>
     <!-- HEADER 🔴 -->
     <header class="navbar navbar-dark navbar-expand-lg my-3">
-      <nav class="container">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarButtonsExample"
-          aria-expanded="false"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <nav class="container flex-nowrap flex-lg-wrap">
         <a class="navbar-brand mx-0" href="#">
           <svg
             height="36px"
@@ -156,43 +146,49 @@
             </g>
           </svg>
         </a>
-        <div class="collapse navbar-collapse" id="navbarButtonsExample">
+        <div
+          class="navbar-collapse d-flex justify-content-end"
+          id="navbarButtonsExample"
+        >
           <ul class="navbar-nav">
             <li class="nav-item">
               <a
-                class="nav-link grotesk text-white"
+                class="nav-link grotesk text-w d-none d-lg-block"
                 aria-current="page"
                 href="#"
                 >Mega Games</a
               >
             </li>
           </ul>
-          <div class="d-flex align-items-center ms-auto">
+          <div class="d-flex align-items-center ms-lg-auto">
             <ul class="navbar-nav me-2">
-              <li class="nav-item">
-                <a class="nav-link position-relative" href="#">
+              <li class="nav-item d-flex">
+                <a class="nav-link position-relative p-2" href="#"
+                  ><span><i class="fa-regular fa-heart text-w"></i></span
+                ></a>
+                <a class="nav-link position-relative p-2" href="#">
                   <span
-                    class="badge position-absolute top-0 end-0 text-bg-danger"
+                    class="badge position-absolute top-0 end-0 bg-danger rounded-1 p-1 d-none"
                     >1</span
                   >
-                  <span><i class="fas fa-shopping-cart text-white"></i></span>
+                  <span><i class="fas fa-shopping-cart text-w"></i></span>
                 </a>
               </li>
             </ul>
             <button
               type="button"
-              class="btn btn-p0 btn-hover-p0 px-3 me-2 border-0 text-white"
+              class="btn bg-transparent px-2 me-2 border-0 text-w"
             >
               Iniciar sesión
             </button>
             <button
               type="button"
-              class="btn btn-primary btn-p2 btn-hover-p2 border-0 me-3"
+              class="btn border-p3 px-2 me-lg-2 rounded-2 text-w"
             >
               Registrarse
             </button>
             <a
-              class="btn btn-hover-p0 px-3 text-white"
+              class="btn btn-neon d-none d-lg-block"
               href="https://github.com/Ktumsh/mega-games-web"
               target="_blank"
               role="button"
@@ -208,83 +204,72 @@
         class="page_background_holder"
         style="
           height: 450px;
-          background-image: url('https://cdn.cloudflare.steamstatic.com/steam/clusters/frontpage/6e5ce0b531f2fc5646591235/page_bg_spanish.jpg?t=1713209366'),
-            linear-gradient(
-              to right,
-              rgb(000, 000, 000) 50%,
-              rgb(000, 000, 000) 50%
-            );
+          background-image: url('assets/public/presentacion.jpg'),
+            linear-gradient(to right, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 50%);
+        "
+      ></div>
+      <div
+        class="page_background_holder_mobile"
+        style="
+          height: 350px;
+          background-image: url('assets/public/presentacion-mobile.jpg'),
+            linear-gradient(to right, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 50%);
         "
       ></div>
     </div>
     <div class="container">
-      <nav class="navbar navbar-expand-lg pt-4">
-        <div class="container-fluid nav-p1 blur rounded-2">
+      <nav class="navbar navbar-dark navbar-expand-lg pt-4 z-3">
+        <div class="container-fluid nav-bg border-0 p-0">
           <button
-            class="navbar-toggler"
+            class="navbar-toggler nav-btn border-0 rounded-1 m-1"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarPillsExample"
-            aria-controls="navbarExample"
-            aria-expanded="false"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-
-          <div class="collapse navbar-collapse" id="navbarPillsExample">
-            <ul class="navbar-nav navbar-nav-pills gap-3">
+          <div
+            class="offcanvas offcanvas-start text-bg-dark"
+            tabindex="-1"
+            id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel"
+          >
+            <ul class="fst-nav navbar-nav navbar-nav-pills">
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle active text-white"
+                  class="nav-link dropdown-toggle active text-white border-0"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                   >Categorías</a
                 >
-                <ul class="dropdown-menu shadow bg-p05 blur border-0">
+                <ul
+                  class="scd-nav dropdown-menu shadow nav-bg-2 border-0 rounded-0"
+                >
                   <li>
-                    <a
-                      class="dropdown-item text-white btn-hover-p2 btn-focus-p2"
-                      href="#"
+                    <a class="dropdown-item text-white" href="#"
                       >Todas las ofertas</a
                     >
                   </li>
                   <li>
-                    <a
-                      class="dropdown-item text-white btn-hover-p2 btn-focus-p2"
-                      href="#"
-                      >Juegos</a
-                    >
+                    <a class="dropdown-item text-white" href="#">Juegos</a>
                   </li>
                   <li>
-                    <a
-                      class="dropdown-item text-white btn-hover-p2 btn-focus-p2"
-                      href="#"
+                    <a class="dropdown-item text-white" href="#"
                       >Juegos Tarjetas</a
                     >
                   </li>
                   <li>
-                    <a
-                      class="dropdown-item text-white btn-hover-p2 btn-focus-p2"
-                      href="#"
-                      >Xbox</a
-                    >
+                    <a class="dropdown-item text-white" href="#">Xbox</a>
                   </li>
                   <li>
-                    <a
-                      class="dropdown-item text-white btn-hover-p2 btn-focus-p2"
-                      href="#"
-                      >PSN</a
-                    >
+                    <a class="dropdown-item text-white" href="#">PSN</a>
                   </li>
                   <li>
-                    <a
-                      class="dropdown-item text-white btn-hover-p2 btn-focus-p2"
-                      href="#"
-                      >Nintendo</a
-                    >
+                    <a class="dropdown-item text-white" href="#">Nintendo</a>
                   </li>
                 </ul>
               </li>
@@ -302,629 +287,2860 @@
           </div>
           <form class="d-flex py-1" role="search">
             <input
-              class="form-control-sm border-0 btn-p1 me-2 fs-6 focus-none text-white"
+              class="form-control-sm border-0 bg-base fs-6 focus-none text-w"
               type="search"
               placeholder="Buscar..."
               aria-label="Search"
             />
             <button class="btn border-0 active-none" type="submit">
-              <i class="fa-solid fa-magnifying-glass fa-lg text-white"></i>
+              <i class="fa-solid fa-magnifying-glass fa-lg text-w"></i>
             </button>
           </form>
         </div>
       </nav>
     </div>
-    <img
-      style="height: 385px"
-      src="https://store.cloudflare.steamstatic.com/public/images/blank.gif"
-      alt=""
-    />
-    <!-- CARRUSEL 🎠 -->
-    <section class="container pt-2">
-      <h3 class="mt-2 fs-6 fw-normal mb-2">DESTACADOS Y RECOMENDADOS</h3>
-      <div
-        id="carouselExampleIndicators"
-        class="carousel slide shadow-strong"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
+    <div class="home_page_takeover_link">
+      <a class="home_page_takeover_sizer" href="#">
+        <img
+          style="height: 385px"
+          src="https://store.cloudflare.steamstatic.com/public/images/blank.gif"
+          alt=""
+        />
+      </a>
+    </div>
+    <main>
+      <!-- CARRUSEL 🎠 -->
+      <div class="gradient-p0">
+        <section class="container pt-2 pb-5 position-relative">
+          <h3 class="mt-2 fs-6 fw-normal mb-2">DESTACADOS Y RECOMENDADOS</h3>
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide shadow-strong z-2 carousel-responsive"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="3"
+                aria-label="Slide 4"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="4"
+                aria-label="Slide 5"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="5"
+                aria-label="Slide 6"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="6"
+                aria-label="Slide 7"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="7"
+                aria-label="Slide 8"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="8"
+                aria-label="Slide 9"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <a class="carousel-item active" href="#" data-bs-interval="5000">
+                <img
+                  src="/assets/public/diablo-4-carrusel.webp"
+                  class="d-block w-100 size-img-carrusel"
+                  alt="Diablo®️ IV"
+                />
+                <div class="d-flex flex-column carousel-caption mb-3">
+                  <h5 class="text-shadow">Diablo®️ IV</h5>
+                  <div class="d-inline-flex flex-column mx-auto mb-2">
+                    <span
+                      class="d-inline-flex badge bg-p3 text-black rounded-1 shadow"
+                      >Lo más vendido</span
+                    >
+                  </div>
+                  <div class="d-inline-flex mx-auto gap-1">
+                    <span class="badge rounded-1 nav-p2 blur fs-xs fw-bold"
+                      >-50%</span
+                    >
+                    <div
+                      class="badge rounded-1 d-inline-flex gap-1 bg-gradient blur"
+                    >
+                      <p class="mb-0 position-relative fs-xs descuento-precio">
+                        CLP$64.990
+                      </p>
+                      <p class="mb-0 position-relative fs-xs fw-bold">
+                        CLP$32.495
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="carousel-item" href="#" data-bs-interval="5000">
+                <img
+                  src="assets/public/resident-evil-4.jpg"
+                  class="d-block w-100 size-img-carrusel"
+                  alt="Resident Evil 4"
+                />
+                <div class="d-flex flex-column carousel-caption mb-3">
+                  <h5 class="text-shadow">Resident Evil 4</h5>
+                  <div class="d-inline-flex flex-column mx-auto mb-2">
+                    <span
+                      class="d-inline-flex badge bg-p3 text-black rounded-1 shadow"
+                      >Lo más vendido</span
+                    >
+                  </div>
+                  <div class="d-inline-flex mx-auto gap-1">
+                    <span class="badge rounded-1 nav-p2 blur fs-xs fw-bold"
+                      >-25%</span
+                    >
+                    <div
+                      class="badge rounded-1 d-inline-flex gap-1 bg-gradient blur"
+                    >
+                      <p class="mb-0 position-relative fs-xs descuento-precio">
+                        CLP$35.740
+                      </p>
+                      <p class="mb-0 position-relative fs-xs fw-bold">
+                        CLP$26.805
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="carousel-item" href="#" data-bs-interval="5000">
+                <img
+                  src="/assets/public/cod-carrusel.webp"
+                  class="d-block w-100 size-img-carrusel"
+                  alt="Call of Duty Warzone Temporada 3"
+                />
+                <div class="d-flex flex-column carousel-caption mb-3">
+                  <h5 class="text-shadow">
+                    Call of Duty®️: Modern Warfare®️ III
+                  </h5>
+                  <div class="d-inline-flex flex-column mx-auto mb-2">
+                    <span
+                      class="d-inline-flex badge bg-p3 text-black rounded-1 shadow"
+                      >Lo más vendido</span
+                    >
+                  </div>
+                  <div class="d-inline-flex mx-auto gap-1">
+                    <span class="badge rounded-1 nav-p2 blur fs-xs fw-bold"
+                      >-35%</span
+                    >
+                    <div
+                      class="badge rounded-1 d-inline-flex gap-1 bg-gradient blur"
+                    >
+                      <p class="mb-0 position-relative fs-xs descuento-precio">
+                        CLP$54.990
+                      </p>
+                      <p class="mb-0 position-relative fs-xs fw-bold">
+                        CLP$35.743
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="carousel-item" href="#" data-bs-interval="5000">
+                <img
+                  src="/assets/public/helldivers-2-carrusel.jpg"
+                  class="d-block w-100 size-img-carrusel opacity-75"
+                  alt="Helldivers 2"
+                />
+                <div class="carousel-caption">
+                  <h5 class="text-shadow">HELLDIVERS™ 2</h5>
+                  <div class="d-inline-flex flex-column gap-2">
+                    <span class="badge bg-p3 text-black rounded-1 shadow"
+                      >Lo más vendido</span
+                    >
+                    <p class="badge bg-gradient blur rounded-1 shadow">
+                      CLP$ 28.000
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a class="carousel-item" href="#" data-bs-interval="5000">
+                <img
+                  src="/assets/public/no-rest-for-the-wicked-carrusel.jpg"
+                  class="d-block w-100 size-img-carrusel"
+                  alt="No Rest for the Wicked"
+                />
+                <div class="d-flex flex-column carousel-caption mb-3">
+                  <h5 class="text-shadow">No Rest for the Wicked</h5>
+                  <div class="d-inline-flex flex-column mx-auto mb-2">
+                    <span
+                      class="d-inline-flex badge bg-p3 text-black rounded-1 shadow"
+                      >Lo más vendido</span
+                    >
+                  </div>
+                  <div class="d-inline-flex mx-auto gap-1">
+                    <span class="badge rounded-1 nav-p2 blur fs-xs fw-bold"
+                      >-10%</span
+                    >
+                    <div
+                      class="badge rounded-1 d-inline-flex gap-1 bg-gradient blur"
+                    >
+                      <p class="mb-0 position-relative fs-xs descuento-precio">
+                        CLP$24.000
+                      </p>
+                      <p class="mb-0 position-relative fs-xs fw-bold">
+                        CLP$21.600
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="carousel-item" href="#" data-bs-interval="5000">
+                <img
+                  src="/assets/public/forza-horizon-5-carrusel.jpg"
+                  class="d-block w-100 size-img-carrusel"
+                  alt="Forza Horizon 5"
+                />
+                <div class="d-flex flex-column carousel-caption mb-3">
+                  <h5 class="text-shadow">Forza Horizon 5</h5>
+                  <div class="d-inline-flex flex-column mx-auto mb-2">
+                    <span
+                      class="d-inline-flex badge bg-p3 text-black rounded-1 shadow"
+                      >Lo más vendido</span
+                    >
+                  </div>
+                  <div class="d-inline-flex mx-auto gap-1">
+                    <span class="badge rounded-1 nav-p2 blur fs-xs fw-bold"
+                      >-50%</span
+                    >
+                    <div
+                      class="badge rounded-1 d-inline-flex gap-1 bg-gradient blur"
+                    >
+                      <p class="mb-0 position-relative fs-xs descuento-precio">
+                        CLP$43.900
+                      </p>
+                      <p class="mb-0 position-relative fs-xs fw-bold">
+                        CLP$21.950
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="carousel-item" href="#" data-bs-interval="5000">
+                <img
+                  src="/assets/public/sker-ritual-carrusel.webp"
+                  class="d-block w-100 size-img-carrusel opacity-75"
+                  alt="Sker Ritual"
+                />
+                <div class="d-flex flex-column carousel-caption mb-3">
+                  <h5 class="text-shadow">Sker Ritual</h5>
+                  <div class="d-inline-flex flex-column mx-auto mb-2">
+                    <span
+                      class="d-inline-flex badge bg-p3 text-black rounded-1 shadow"
+                      >Lo más vendido</span
+                    >
+                  </div>
+                  <div class="d-inline-flex mx-auto gap-1">
+                    <span class="badge rounded-1 nav-p2 blur fs-xs fw-bold"
+                      >-20%</span
+                    >
+                    <div
+                      class="badge rounded-1 d-inline-flex gap-1 bg-gradient blur"
+                    >
+                      <p class="mb-0 position-relative fs-xs descuento-precio">
+                        CLP$13.000
+                      </p>
+                      <p class="mb-0 position-relative fs-xs fw-bold">
+                        CLP$10.400
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="carousel-item" href="#" data-bs-interval="5000">
+                <img
+                  src="/assets/public/fallout-76-carrusel.jpg"
+                  class="d-block w-100 size-img-carrusel opacity-75"
+                  alt="Fallout 76"
+                />
+                <div class="carousel-caption">
+                  <h5 class="text-shadow">Fallout 76</h5>
+                  <div class="d-inline-flex flex-column gap-2">
+                    <span class="badge bg-p3 text-black rounded-1 shadow"
+                      >Lo más vendido</span
+                    >
+                    <p class="badge bg-gradient blur rounded-1 shadow">
+                      CLP$ 26.799
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a class="carousel-item" href="#" data-bs-interval="5000">
+                <img
+                  src="/assets/public/sekiro-carrusel.jpg"
+                  class="d-block w-100 size-img-carrusel"
+                  alt="Sekiro™: Shadows Die Twice - GOTY Edition"
+                />
+                <div class="d-flex flex-column carousel-caption mb-3">
+                  <h5 class="text-shadow">
+                    Sekiro™: Shadows Die Twice - GOTY Edition
+                  </h5>
+                  <div class="d-inline-flex flex-column mx-auto mb-2">
+                    <span
+                      class="d-inline-flex badge bg-p3 text-black rounded-1 shadow"
+                      >Lo más vendido</span
+                    >
+                  </div>
+                  <div class="d-inline-flex mx-auto gap-1">
+                    <span class="badge rounded-1 nav-p2 blur fs-xs fw-bold"
+                      >-50%</span
+                    >
+                    <div
+                      class="badge rounded-1 d-inline-flex gap-1 bg-gradient blur"
+                    >
+                      <p class="mb-0 position-relative fs-xs descuento-precio">
+                        CLP$47.650
+                      </p>
+                      <p class="mb-0 position-relative fs-xs fw-bold">
+                        CLP$23.825
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="d-flex position-absolute buttons">
+            <button
+              class="prev-control carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="next-control carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+      </div>
+      <!-- CARDS OFERTAS 📇 -->
+      <section class="py-5 border-top-p3 bg-gradient-p1">
+        <div class="container">
+          <div class="d-flex justify-content-center align-items-center">
+            <div
+              id="neon-text"
+              class="d-flex justify-content-center align-items-center px-2 px-sm-5 mb-2"
+            >
+              <h2
+                class="d-inline-flex justify-content-center align-items-center my-0 py-1"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#55d4ff"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-star me-2 text-shadow"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"
+                  />
+                </svg>
+                OFERTAS ESP<span class="offset">A</span>CIALES
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#55d4ff"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-star ms-1"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"
+                  />
+                </svg>
+              </h2>
+            </div>
+          </div>
+          <div id="carouselOfertas" class="carousel_cards mt-4">
+            <div class="inner_carousel">
+              <div class="card_ border-p3">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards/01.jpg"
+                            alt="Fortnite - Rogue Scout Pack + 1,500 V-Bucks Challenge XBOX LIVE Key"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span>
+                          <span class="dlc_span">DLC</span>
+                          Fortnite - Rogue Scout Pack + 1,500 V-Bucks Challenge
+                          XBOX LIVE Key</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div
+                          class="offer_desc fs-sm d-flex flex-row flex-lg-column gap-2"
+                        >
+                          <div class="d-flex align-items-center h-100">
+                            <span class="descuento_label p-1">-35%</span>
+                          </div>
+                          <div>
+                            <div
+                              class="d-inline-flex flex-row flex-sm-column flex-lg-row p-1 gap-1 bg-p1"
+                            >
+                              <p
+                                class="descuento-precio mb-0 position-relative"
+                              >
+                                $9.990 CLP
+                              </p>
+                              <p class="mb-0 fw-medium text-p3">$6.494 CLP</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">17555</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_ border-p3">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards/02.jpeg"
+                            alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span>
+                          <span class="dlc_span">DLC</span>
+                          Fortnite - Rebirth Harley Quinn Skin (DLC) Código de
+                          Epic Games</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div
+                          class="offer_desc fs-sm d-flex flex-row flex-lg-column gap-2"
+                        >
+                          <div class="d-flex align-items-center h-100">
+                            <span class="descuento_label p-1">-35%</span>
+                          </div>
+                          <div>
+                            <div
+                              class="d-inline-flex flex-row flex-sm-column flex-lg-row p-1 gap-1 bg-p1"
+                            >
+                              <p
+                                class="descuento-precio mb-0 position-relative"
+                              >
+                                $9.990 CLP
+                              </p>
+                              <p class="mb-0 fw-medium text-p3">$6.494 CLP</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">41808</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_ border-p3">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards/03.webp"
+                            alt="Minecraft: Java & Bedrock Edition Official website Key"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span
+                          >Minecraft: Java & Bedrock Edition Official website
+                          Key</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div
+                          class="offer_desc fs-sm d-flex flex-row flex-lg-column gap-2"
+                        >
+                          <div class="d-flex align-items-center h-100">
+                            <span class="descuento_label p-1">-40%</span>
+                          </div>
+                          <div>
+                            <div
+                              class="d-inline-flex flex-row flex-sm-column flex-lg-row p-1 gap-1 bg-p1"
+                            >
+                              <p
+                                class="descuento-precio mb-0 position-relative"
+                              >
+                                $19.990 CLP
+                              </p>
+                              <p class="mb-0 fw-medium text-p3">$9.995 CLP</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">21494</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_ border-p3">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards/04.jpg"
+                            alt="Xbox Game Pass Ultimate – 1 Month Subscription Código de (Xbox/Windows) Non-stackable"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span
+                          >Xbox Game Pass Ultimate – 1 Month Subscription Código
+                          de (Xbox/Windows) Non-stackable</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div
+                          class="offer_desc fs-sm d-flex flex-row flex-lg-column gap-2"
+                        >
+                          <div class="d-flex align-items-center h-100">
+                            <span class="descuento_label p-1">-30%</span>
+                          </div>
+                          <div>
+                            <div
+                              class="d-inline-flex flex-row flex-sm-column flex-lg-row p-1 gap-1 bg-p1"
+                            >
+                              <p
+                                class="descuento-precio mb-0 position-relative"
+                              >
+                                $8.890 CLP
+                              </p>
+                              <p class="mb-0 fw-medium text-p3">$6.223 CLP</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">47456</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_ border-p3">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards/05.jpg"
+                            alt="Genshin Impact Genesis Crystals"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span>Genshin Impact Genesis Crystals</span>
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div
+                          class="offer_desc fs-sm d-flex flex-row flex-lg-column gap-2"
+                        >
+                          <div class="d-flex align-items-center h-100">
+                            <span class="descuento_label p-1">-50%</span>
+                          </div>
+                          <div>
+                            <div
+                              class="d-inline-flex flex-row flex-sm-column flex-lg-row p-1 gap-1 bg-p1"
+                            >
+                              <p
+                                class="descuento-precio mb-0 position-relative"
+                              >
+                                $2.000 CLP
+                              </p>
+                              <p class="mb-0 fw-medium text-p3">$1.000 CLP</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">8461</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_ border-p3">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards/06.jpg"
+                            alt="Fortnite - Chill Vibez Pack + 600 V-Bucks Xbox Live Key"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span>
+                          <span class="dlc_span">DLC</span>
+                          Fortnite - Chill Vibez Pack + 600 V-Bucks Xbox Live
+                          Key</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div
+                          class="offer_desc fs-sm d-flex flex-row flex-lg-column gap-2"
+                        >
+                          <div class="d-flex align-items-center h-100">
+                            <span class="descuento_label p-1">-35%</span>
+                          </div>
+                          <div>
+                            <div
+                              class="d-inline-flex flex-row flex-sm-column flex-lg-row p-1 gap-1 bg-p1"
+                            >
+                              <p
+                                class="descuento-precio mb-0 position-relative"
+                              >
+                                $9.990 CLP
+                              </p>
+                              <p class="mb-0 fw-medium text-p3">$6.494 CLP</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">20218</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_ border-p3">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards/07.jpeg"
+                            alt="Grand Theft Auto V: Edición Online Premium Rockstar Games Launcher Key"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span
+                          >Grand Theft Auto V: Edición Online Premium Rockstar
+                          Games Launcher Código</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div
+                          class="offer_desc fs-sm d-flex flex-row flex-lg-column gap-2"
+                        >
+                          <div class="d-flex align-items-center h-100">
+                            <span class="descuento_label p-1">-66%</span>
+                          </div>
+                          <div>
+                            <div
+                              class="d-inline-flex flex-row flex-sm-column flex-lg-row p-1 gap-1 bg-p1"
+                            >
+                              <p
+                                class="descuento-precio mb-0 position-relative"
+                              >
+                                $22.995 CLP
+                              </p>
+                              <p class="mb-0 fw-medium text-p3">$10.118 CLP</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">46329</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_ border-p3">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards/08.jpg"
+                            alt="Diablo IV (PC) Código de Battle.Net"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span>Diablo IV (PC) Código de Battle.Net</span>
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div
+                          class="offer_desc fs-sm d-flex flex-row flex-lg-column gap-2"
+                        >
+                          <div class="d-flex align-items-center h-100">
+                            <span class="descuento_label p-1">-50%</span>
+                          </div>
+                          <div>
+                            <div
+                              class="d-inline-flex flex-row flex-sm-column flex-lg-row p-1 gap-1 bg-p1"
+                            >
+                              <p
+                                class="descuento-precio mb-0 position-relative"
+                              >
+                                $64.990 CLP
+                              </p>
+                              <p class="mb-0 fw-medium text-p3">$32.495 CLP</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">48705</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_ border-p3">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards/09.jpg"
+                            alt="Call of Duty: Modern Warfare III (PC) Código de Steam"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span
+                          >Call of Duty: Modern Warfare III (PC) Código de
+                          Steam</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div
+                          class="offer_desc fs-sm d-flex flex-row flex-lg-column gap-2"
+                        >
+                          <div class="d-flex align-items-center h-100">
+                            <span class="descuento_label p-1">-35%</span>
+                          </div>
+                          <div>
+                            <div
+                              class="d-inline-flex flex-row flex-sm-column flex-lg-row p-1 gap-1 bg-p1"
+                            >
+                              <p
+                                class="descuento-precio mb-0 position-relative"
+                              >
+                                $54.990 CLP
+                              </p>
+                              <p class="mb-0 fw-medium text-p3">$35.743 CLP</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">45039</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_ border-p3">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards/10.jpg"
+                            alt="Resident Evil 4 (PC) Código de Steam"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span>Resident Evil 4 (PC) Código de Steam</span>
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div
+                          class="offer_desc fs-sm d-flex flex-row flex-lg-column gap-2"
+                        >
+                          <div class="d-flex align-items-center h-100">
+                            <span class="descuento_label p-1">-25%</span>
+                          </div>
+                          <div>
+                            <div
+                              class="d-inline-flex flex-row flex-sm-column flex-lg-row p-1 gap-1 bg-p1"
+                            >
+                              <p
+                                class="descuento-precio mb-0 position-relative"
+                              >
+                                $35.740 CLP
+                              </p>
+                              <p class="mb-0 fw-medium text-p3">$26.805 CLP</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">52601</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="prev-control carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselOfertas"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="next-control carousel-control-next"
+              type="button"
+              data-bs-target="#carouselOfertas"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+          <div class="d-flex justify-content-center pt-4">
+            <button class="btn-show-all">Ver todo</button>
+          </div>
         </div>
-        <div class="carousel-inner">
-          <a class="carousel-item active" href="#" data-bs-interval="8000">
-            <img
-              src="assets/public/destiny2-carrusel.webp"
-              class="d-block w-100 size-img-carrusel"
-              alt="Destiny 2"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="text-shadow">Destiny 2</h5>
-              <div class="d-inline-flex flex-column gap-2">
-                <span class="badge bg-p3 text-black rounded-1 shadow"
-                  >Lo más vendido</span
-                >
-                <p class="badge bg-gradient blur rounded-1 shadow">
-                  Free to Play
-                </p>
+      </section>
+      <!-- CARDS JUEGOS 📇 -->
+      <section class="bg-base py-5">
+        <div class="container d-flex flex-column">
+          <h2 class="fw-bold">Juegos populares</h2>
+          <div class="d-flex justify-content-center align-items-center"></div>
+          <div id="carouselJuegos" class="carousel_cards mt-4">
+            <div class="inner_carousel">
+              <div class="card_">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-juegos/01.jpeg"
+                            alt="Fallout 76 - Windows 10 Store Key"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span>Fallout 76 - Windows 10 Store Key</span>
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">490 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">408</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-juegos/02.jpg"
+                            alt="7 Days to Die Steam Clave"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span>7 Days to Die Steam Clave</span>
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">4.631 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">7783</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-juegos/03.jpeg"
+                            alt="Fallout 76 (Xbox One) Xbox Live Key"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span>Fallout 76 (Xbox One) Xbox Live Key</span>
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">459 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">2714</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-juegos/04.jpg"
+                            alt="theHunter: Call of the Wild (PC) Steam Key LATAM"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span
+                          >theHunter: Call of the Wild (PC) Steam Key
+                          LATAM</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">551 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">320</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-juegos/05.jpg"
+                            alt="EA SPORTS FC 24 (PC) Código de EA App"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span>EA SPORTS FC 24 (PC) Código de EA App</span>
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">25.612 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">3924</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-juegos/06.jpg"
+                            alt="Fortnite – The Batman Who Laughs Outfit (DLC) Código de Epic Games"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span>
+                          <span class="dlc_span">DLC</span>
+                          Fortnite – The Batman Who Laughs Outfit (DLC) Código
+                          de Epic Games</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">9.190 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">29800</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-juegos/07.jpg"
+                            alt="Arma 3 (PC) Steam Key"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span>Arma 3 (PC) Steam Key</span>
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">5.233 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">657</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-juegos/08.jpeg"
+                            alt="Dying Light: Definitive Edition (PC) Steam Key"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span
+                          >Dying Light: Definitive Edition (PC) Steam Key</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">3.815 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">968</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-juegos/09.jpg"
+                            alt="Dragon Ball: Xenoverse 2 Código de Steam"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span>Dragon Ball: Xenoverse 2 Código de Steam</span>
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">9.211 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">3648</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_">
+                <div class="card_struct active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-juegos/10.jpg"
+                            alt="Batman: Arkham Knight (Premium Edition) Steam Key"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span
+                          >Batman: Arkham Knight (Premium Edition) Steam
+                          Key</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">3.764 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">883</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </a>
-          <a class="carousel-item" href="#" data-bs-interval="8000">
-            <img
-              src="/assets/public/cod-carrusel.webp"
-              class="d-block w-100 size-img-carrusel"
-              alt="Call of Duty Warzone Temporada 3"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="text-shadow">Call of Duty®️: Modern Warfare®️ III</h5>
-              <div class="d-inline-flex flex-column gap-2">
-                <span class="badge bg-p3 text-black rounded-1 shadow"
-                  >Lo más vendido</span
-                >
-                <p class="badge bg-gradient blur rounded-1 shadow">
-                  CLP$ 54.990
-                </p>
-              </div>
-            </div>
-          </a>
-          <a class="carousel-item" href="#" data-bs-interval="8000">
-            <img
-              src="/assets/public/helldivers-2-carrusel.jpg"
-              class="d-block w-100 size-img-carrusel opacity-75"
-              alt="Helldivers 2"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="text-shadow">HELLDIVERS™ 2</h5>
-              <div class="d-inline-flex flex-column gap-2">
-                <span class="badge bg-p3 text-black rounded-1 shadow"
-                  >Lo más vendido</span
-                >
-                <p class="badge bg-gradient blur rounded-1 shadow">
-                  CLP$ 28.000
-                </p>
-              </div>
-            </div>
-          </a>
+            <button
+              class="prev-control carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselJuegos"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="next-control carousel-control-next"
+              type="button"
+              data-bs-target="#carouselJuegos"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+          <div class="d-flex justify-content-center pt-4">
+            <button class="btn-show-all2">Ver todo</button>
+          </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev"
+      </section>
+      <!--CARDS TARJETAS-->
+      <section class="py-5">
+        <div class="container">
+          <h2 class="fw-bold">Tarjetas de regalo más vendidas (juegos)</h2>
+          <div class="d-flex justify-content-center align-items-center"></div>
+          <div id="carouselTarjetas" class="carousel_cards mt-4">
+            <div class="inner_carousel">
+              <div class="card_">
+                <div class="card_struct card_struct_2 active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-tarjetas/01.jpeg"
+                            alt="Valorant Gift Card - 1000 Valorant Points - LATAM"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span
+                          >Valorant Gift Card - 1000 Valorant Points -
+                          LATAM</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">10.445 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">241</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_">
+                <div class="card_struct card_struct_2 active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-tarjetas/02.jpeg"
+                            alt="League of Legends Gift Card - 1245 Riot Points - LATAM"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span
+                          >League of Legends Gift Card - 1245 Riot Points -
+                          LATAM</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">11.271 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">237</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_">
+                <div class="card_struct card_struct_2 active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-tarjetas/03.jpeg"
+                            alt="Fortnite - 13500 V-Bucks Gift Card Código"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span
+                          >Fortnite - 13500 V-Bucks Gift Card Código
+                          GLOBAL</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">88.626 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">4085</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_">
+                <div class="card_struct card_struct_2 active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-tarjetas/04.webp"
+                            alt="1,100 Modern Warfare II or Call of Duty: Warzone 2.0 Points XBOX LIVE Key"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span
+                          >1,100 Modern Warfare II or Call of Duty: Warzone 2.0
+                          Points XBOX LIVE Key</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">10.292 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">569</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_">
+                <div class="card_struct card_struct_2 active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-tarjetas/05.jpeg"
+                            alt="Steam Wallet Gift Card 50.000 CLP Key"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span>Steam Wallet Gift Card 50.000 CLP Key</span>
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">47.486 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">100</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_">
+                <div class="card_struct card_struct_2 active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-tarjetas/06.webp"
+                            alt="League Of Legends Hextech Chest (DLC) Riot Key"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span>
+                          <span class="dlc_span">DLC</span>
+                          League Of Legends Hextech Chest (DLC) Riot Key</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">1.030 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">301</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_">
+                <div class="card_struct card_struct_2 active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-tarjetas/07.jpeg"
+                            alt="Xbox Game Pass for PC - 3 Month TRIAL Windows Store Non-stackable Key"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span
+                          >Xbox Game Pass for PC - 3 Month TRIAL Windows Store
+                          Non-stackable Key</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">10.169 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">5604</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_">
+                <div class="card_struct card_struct_2 active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-tarjetas/08.jpeg"
+                            alt="EA Play Pro 1 Month (PC) Origin Key"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span>EA Play Pro 1 Month (PC) Origin Key</span>
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">31.354 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">125</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_">
+                <div class="card_struct card_struct_2 active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-tarjetas/09.jpeg"
+                            alt="Tarjeta PlayStation Network Card 50 USD código PSN"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span
+                          >Tarjeta PlayStation Network Card 50 USD código
+                          PSN</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">49.427 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">95</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card_">
+                <div class="card_struct card_struct_2 active" href="#">
+                  <div class="card_content">
+                    <div class="card_img">
+                      <div class="img_card_content">
+                        <picture>
+                          <img
+                            class="img_card"
+                            src="assets/public/cards-tarjetas/10.jpeg"
+                            alt="Xbox Game Pass 3 meses Código"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card_top_body">
+                      <div class="card_title">
+                        <span>Xbox Game Pass 3 meses Código</span>
+                      </div>
+                    </div>
+                    <div class="card_bottom_body">
+                      <a class="card_link" href="">
+                        <div class="card_price">
+                          <span class="card_text">Desde</span>
+                          <span class="price">30.537 CLP </span>
+                        </div>
+                        <div class="like_badge">
+                          <span class="like_span"
+                            ><svg
+                              viewBox="0 0 24 24"
+                              height="24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                              stroke-width="1.5"
+                              class="like_icon"
+                              style="
+                                max-width: 16px;
+                                min-width: 16px;
+                                height: auto;
+                              "
+                            >
+                              <path
+                                d="M12,21.844l-9.588-10A5.672,5.672,0,0,1,1.349,5.293h0a5.673,5.673,0,0,1,9.085-1.474L12,5.384l1.566-1.565a5.673,5.673,0,0,1,9.085,1.474h0a5.673,5.673,0,0,1-1.062,6.548Z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path></svg
+                            ><span class="like_count">615</span></span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="prev-control carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselTarjetas"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="next-control carousel-control-next"
+              type="button"
+              data-bs-target="#carouselTarjetas"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+          <div class="d-flex justify-content-center pt-4">
+            <button class="btn-show-all">Ver todo</button>
+          </div>
+        </div>
+      </section>
+      <!--CARDS GÉNEROS-->
+      <section class="bg-base py-5">
+        <div class="container">
+          <h2 class="fw-bold">Géneros</h2>
+          <div id="genCardContainer" class="gen-card-container pt-4">
+            <a href="#" class="gen-card">
+              <div class="gen-card-quantity">6929</div>
+              <img
+                src="https://assets.eneba.games/tag/v2/action.svg"
+                width="40"
+                height="40"
+                alt="Acción"
+                loading="lazy"
+              />
+              <div class="gen-card-title">Acción</div>
+            </a>
+            <a href="#" class="gen-card">
+              <div class="gen-card-quantity">4990</div>
+              <img
+                src="https://assets.eneba.games/tag/v2/adventure.svg"
+                width="40"
+                height="40"
+                alt="Aventuras"
+                loading="lazy"
+              />
+              <div class="gen-card-title">Aventuras</div>
+            </a>
+            <a href="#" class="gen-card">
+              <div class="gen-card-quantity">2853</div>
+              <img
+                src="https://assets.eneba.games/tag/v2/action.svg"
+                width="40"
+                height="40"
+                alt="Acción"
+                loading="lazy"
+              />
+              <div class="gen-card-title">FPS / TPS</div>
+            </a>
+            <a href="#" class="gen-card">
+              <div class="gen-card-quantity">2535</div>
+              <img
+                src="https://assets.eneba.games/tag/v2/fps.svg"
+                width="40"
+                height="40"
+                alt="FPS / TPS"
+                loading="lazy"
+              />
+              <div class="gen-card-title">RPG</div>
+            </a>
+            <a href="#" class="gen-card">
+              <div class="gen-card-quantity">2422</div>
+              <img
+                src="https://assets.eneba.games/tag/v2/indie.svg"
+                width="40"
+                height="40"
+                alt="Indie"
+                loading="lazy"
+              />
+              <div class="gen-card-title">Indie</div>
+            </a>
+            <a href="#" class="gen-card">
+              <div class="gen-card-quantity">2011</div>
+              <img
+                src="https://assets.eneba.games/tag/v2/simulation.svg"
+                width="40"
+                height="40"
+                alt="Simulación"
+                loading="lazy"
+              />
+              <div class="gen-card-title">Simulación</div>
+            </a>
+            <a href="#" class="gen-card">
+              <div class="gen-card-quantity">1936</div>
+              <img
+                src="https://assets.eneba.games/tag/v2/strategy.svg"
+                width="40"
+                height="40"
+                alt="Estrategia"
+                loading="lazy"
+              />
+              <div class="gen-card-title">Estrategia</div>
+            </a>
+            <!-- cardhidden -->
+            <a href="#" class="gen-card d-none">
+              <div class="gen-card-quantity">950</div>
+              <img
+                src="https://assets.eneba.games/tag/v2/racing.svg"
+                width="40"
+                height="40"
+                alt="Carreras"
+                loading="lazy"
+              />
+              <div class="gen-card-title">Carreras</div>
+            </a>
+            <a href="#" class="gen-card d-none">
+              <div class="gen-card-quantity">648</div>
+              <img
+                src="https://assets.eneba.games/tag/v2/fighting.svg"
+                width="40"
+                height="40"
+                alt="Lucha"
+                loading="lazy"
+              />
+              <div class="gen-card-title">Lucha</div>
+            </a>
+            <a href="#" class="gen-card d-none">
+              <div class="gen-card-quantity">543</div>
+              <img
+                src="https://assets.eneba.games/tag/v2/hack-slash.svg"
+                width="40"
+                height="40"
+                alt="Hack & Slash"
+                loading="lazy"
+              />
+              <div class="gen-card-title">Hack & Slash</div>
+            </a>
+            <a href="#" class="gen-card d-none">
+              <div class="gen-card-quantity">538</div>
+              <img
+                src="https://assets.eneba.games/tag/v2/sport.svg"
+                width="40"
+                height="40"
+                alt="Deporte"
+                loading="lazy"
+              />
+              <div class="gen-card-title">Deporte</div>
+            </a>
+            <a href="#" class="gen-card d-none">
+              <div class="gen-card-quantity">508</div>
+              <img
+                src="https://assets.eneba.games/tag/v2/platform.svg"
+                width="40"
+                height="40"
+                alt="Plataforma"
+                loading="lazy"
+              />
+              <div class="gen-card-title">Plataforma</div>
+            </a>
+            <a href="#" class="gen-card d-none">
+              <div class="gen-card-quantity">483</div>
+              <img
+                src="https://assets.eneba.games/tag/v2/puzzle.svg"
+                width="40"
+                height="40"
+                alt="Rompecabezas"
+                loading="lazy"
+              />
+              <div class="gen-card-title">Rompecabezas</div>
+            </a>
+            <a href="#" class="gen-card d-none">
+              <div class="gen-card-quantity">232</div>
+              <img
+                src="https://assets.eneba.games/tag/v2/arcade.svg"
+                width="40"
+                height="40"
+                alt="Arcade"
+                loading="lazy"
+              />
+              <div class="gen-card-title">Arcade</div>
+            </a>
+            <a href="#" class="gen-card d-none">
+              <div class="gen-card-quantity">183</div>
+              <img
+                src="https://assets.eneba.games/tag/v2/mmo.svg"
+                width="40"
+                height="40"
+                alt="MMO"
+                loading="lazy"
+              />
+              <div class="gen-card-title">MMO</div>
+            </a>
+            <a href="#" class="gen-card d-none">
+              <div class="gen-card-quantity">172</div>
+              <img
+                src="https://assets.eneba.games/tag/v2/point-click.svg"
+                width="40"
+                height="40"
+                alt="Point & Click"
+                loading="lazy"
+              />
+              <div class="gen-card-title">Point & Click</div>
+            </a>
+            <a href="#" class="gen-card d-none">
+              <div class="gen-card-quantity">34</div>
+              <img
+                src="https://assets.eneba.games/tag/v2/educational.svg"
+                width="40"
+                height="40"
+                alt="Educativo"
+                loading="lazy"
+              />
+              <div class="gen-card-title">Educativo</div>
+            </a>
+            <a href="#" class="gen-card d-none">
+              <div class="gen-card-quantity">22</div>
+              <img
+                src="https://assets.eneba.games/tag/v2/music.svg"
+                width="40"
+                height="40"
+                alt="Música"
+                loading="lazy"
+              />
+              <div class="gen-card-title">Música</div>
+            </a>
+          </div>
+          <div class="d-flex justify-content-center pt-4">
+            <button id="load-more-generos" class="btn-show-all2" type="button">
+              Cargar más
+              <span class="loader" id="loader"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <div class="container">
+      <footer class="pt-5">
+        <div class="row">
+          <div class="row mb-5 pb-2">
+            <div class="col-6 col-md-2">
+              <h5 class="fs-6 mb-3">Sobre Mega Games</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0 text-white fs-sm opacity-75"
+                    >Sobre nosotros</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0 text-white fs-sm opacity-75"
+                    >Contáctanos</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0 text-white fs-sm opacity-75"
+                    >Vacantes</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-6 col-md-2">
+              <h5 class="fs-6 mb-3">Comprar</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0 text-white fs-sm opacity-75"
+                    >Cómo comprar</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0 text-white fs-sm opacity-75"
+                    >Lista de juegos</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0 text-white fs-sm opacity-75"
+                    >Colecciones</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0 text-white fs-sm opacity-75"
+                    >Programa de fidelidad</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-6 col-md-2">
+              <h5 class="fs-6 mb-3">Ayuda</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0 text-white fs-sm opacity-75"
+                    >Preguntas frecuentes</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0 text-white fs-sm opacity-75"
+                    >Cómo activar tus juegos</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0 text-white fs-sm opacity-75"
+                    >Crear un ticket</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0 text-white fs-sm opacity-75"
+                    >Política de devoluciones</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-6 col-md-2">
+              <h5 class="fs-6 mb-3">Comunidad</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0 text-white fs-sm opacity-75"
+                    >Blog</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0 text-white fs-sm opacity-75"
+                    >Sorteos</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0 text-white fs-sm opacity-75"
+                    >Conviértete en afiliado</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-6 col-md-2">
+              <h5 class="fs-6 mb-3">Negocios</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0 text-white fs-sm opacity-75"
+                    >Vende en Mega Games</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="d-flex justify-content-end col-6 col-md-2">
+              <div class="app-badge d-flex flex-column gap-3">
+                <h5 class="fs-6 mb-0">Descarga la app de Mega Games</h5>
+                <a href="#">
+                  <img
+                    src="https://static.eneba.games/mobile/v1/appAndroidCTA.svg"
+                    alt="Google play badge"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="https://static.eneba.games/mobile/v1/appAppleCTA.svg"
+                    alt="Apple badge"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="col-md-4 mb-1">
+              <form>
+                <h5 class="fs-6 mb-2 pb-1">
+                  Obtén ofertas personalizadas de videojuegos
+                </h5>
+                <div
+                  class="d-flex flex-column flex-sm-row w-100 bg-base rounded-2 overflow-hidden"
+                >
+                  <label for="newsletter1" class="visually-hidden"
+                    >Correo electrónico</label
+                  >
+                  <input
+                    id="newsletter1"
+                    type="text"
+                    class="form-control border-0 bg-transparent fs-6 focus-none text-white rounded-0"
+                    placeholder="Ingresa tu email"
+                  />
+                  <button
+                    class="btn bg-p05 btn-hover-p1 rounded-0 text-white border-0"
+                    type="button"
+                  >
+                    Suscribirse
+                  </button>
+                </div>
+              </form>
+            </div>
+            <p class="fs-sm col-md-8 opacity-75">
+              Puedes darte de baja en cualquier momento. Visita el apartado
+              <a class="text-white footer-links-hover" href="#"
+                >Aviso de Privacidad</a
+              >
+              para más información
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-between align-items-center pt-4 mt-4 border-top fs-sm opacity-75"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </section>
-    <!-- CARDS OFERTAS 📇 -->
-    <article class="container">
-      <h2 class="mt-5 fw-bold">Ofertas especiales</h2>
-      <div class="row row-cols-1 row-cols-sm-3 row-cols-lg-5 g-4 my-3">
-        <a class="col text-decoration-none" href="#">
-          <div
-            class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
-          >
-            <div class="overflow-hidden">
-              <img
-                class="card-img-top size-img-card rounded-0"
-                src="https://cdn-products.eneba.com/resized-products/ceiw8goQ1-ggtTZ3UVSq7oDG0sPD-qQOk7Gg07_eeqA_350x200_1x-0.jpeg"
-                draggable="false"
-                decoding="async"
-                alt="Xbox Game Pass Ultimate – 2 Months TRIAL Subscription (EXP July 31'24) (Xbox / Windows) Non-stackable Key UNITED STATES"
-                data-text="Ha habido un problema al mostrar esta imagen."
-                data-text-short="No se pudo cargar la imagen"
-              />
-            </div>
-            <div class="card-body d-flex flex-column justify-content-between">
-              <h6 class="card-title card-text-primary">
-                Xbox Game Pass Ultimate – 2 Months TRIAL Subscription (EXP July
-                31'24) (Xbox / Windows) Non-stackable Key UNITED STATES
-              </h6>
-              <div class="d-inline-flex flex-row flex-sm-column flex-lg-row">
-                <div class="descuento_label px-1">40%</div>
-                <div
-                  class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
-                >
-                  <p class="card-text mb-0 position-relative descuento-precio">
-                    $9.990 CLP
-                  </p>
-                  <p
-                    class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
-                  >
-                    $5.994 CLP
-                  </p>
-                </div>
-              </div>
-            </div>
+          <p class="opacity-75 mb-4">
+            Copyright © 2024 Mega Games. Todos los derechos reservados.
+          </p>
+          <div class="d-flex gap-3">
+            <a
+              class="text-decoration-none text-white fw-medium opacity-75 footer-links-hover mb-4"
+              href="#"
+              >Términos y condiciones</a
+            >
+            <a
+              class="text-decoration-none text-white fw-medium opacity-75 footer-links-hover mb-4"
+              href="#"
+              >Aviso de privacidad</a
+            >
           </div>
-        </a>
-        <a class="col text-decoration-none" href="#">
-          <div
-            class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
-          >
-            <div class="overflow-hidden">
-              <img
-                class="card-img-top size-img-card rounded-0"
-                src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                draggable="false"
-                decoding="async"
-                alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                data-text="Ha habido un problema al mostrar esta imagen."
-                data-text-short="No se pudo cargar la imagen"
-              />
-            </div>
-            <div class="card-body d-flex flex-column justify-content-between">
-              <h6 class="card-title">
-                Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games
-                GLOBAL
-              </h6>
-              <div class="d-inline-flex flex-row flex-sm-column flex-lg-row">
-                <div class="descuento_label px-1">50%</div>
-                <div
-                  class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
+          <ul class="list-unstyled d-flex mb-4">
+            <li class="ms-3">
+              <a
+                class="social-hover text-white opacity-75"
+                href="https://www.instagram.com/"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="21"
+                  preserveAspectRatio="xMidYMid"
+                  viewBox="0 0 256 256"
                 >
-                  <p class="card-text mb-0 position-relative descuento-precio">
-                    $13.000 CLP
-                  </p>
-                  <p
-                    class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
-                  >
-                    $6.500 CLP
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a class="col text-decoration-none" href="#">
-          <div
-            class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
-          >
-            <div class="overflow-hidden">
-              <img
-                class="card-img-top size-img-card rounded-0"
-                src="https://cdn-products.eneba.com/resized-products/Dbdx7ihzJk48bASi_G0jHEgx2obfGYE_tNyWsjtJ4a4_350x200_1x-0.png"
-                draggable="false"
-                decoding="async"
-                alt="Minecraft: Java &amp; Bedrock Edition Official website Key GLOBAL"
-                data-text="Ha habido un problema al mostrar esta imagen."
-                data-text-short="No se pudo cargar la imagen"
-              />
-            </div>
-            <div class="card-body d-flex flex-column justify-content-between">
-              <h6 class="card-title">
-                Minecraft: Java & Bedrock Edition Official website Key GLOBAL
-              </h6>
-              <div class="d-inline-flex flex-row flex-sm-column flex-lg-row">
-                <div class="descuento_label px-1">35%</div>
-                <div
-                  class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
+                  <path
+                    fill="currentColor"
+                    d="M128 23.064c34.177 0 38.225.13 51.722.745 12.48.57 19.258 2.655 23.769 4.408 5.974 2.322 10.238 5.096 14.717 9.575 4.48 4.479 7.253 8.743 9.575 14.717 1.753 4.511 3.838 11.289 4.408 23.768.615 13.498.745 17.546.745 51.723 0 34.178-.13 38.226-.745 51.723-.57 12.48-2.655 19.257-4.408 23.768-2.322 5.974-5.096 10.239-9.575 14.718-4.479 4.479-8.743 7.253-14.717 9.574-4.511 1.753-11.289 3.839-23.769 4.408-13.495.616-17.543.746-51.722.746-34.18 0-38.228-.13-51.723-.746-12.48-.57-19.257-2.655-23.768-4.408-5.974-2.321-10.239-5.095-14.718-9.574-4.479-4.48-7.253-8.744-9.574-14.718-1.753-4.51-3.839-11.288-4.408-23.768-.616-13.497-.746-17.545-.746-51.723 0-34.177.13-38.225.746-51.722.57-12.48 2.655-19.258 4.408-23.769 2.321-5.974 5.095-10.238 9.574-14.717 4.48-4.48 8.744-7.253 14.718-9.575 4.51-1.753 11.288-3.838 23.768-4.408 13.497-.615 17.545-.745 51.723-.745M128 0C93.237 0 88.878.147 75.226.77c-13.625.622-22.93 2.786-31.071 5.95-8.418 3.271-15.556 7.648-22.672 14.764C14.367 28.6 9.991 35.738 6.72 44.155 3.555 52.297 1.392 61.602.77 75.226.147 88.878 0 93.237 0 128c0 34.763.147 39.122.77 52.774.622 13.625 2.785 22.93 5.95 31.071 3.27 8.417 7.647 15.556 14.763 22.672 7.116 7.116 14.254 11.492 22.672 14.763 8.142 3.165 17.446 5.328 31.07 5.95 13.653.623 18.012.77 52.775.77s39.122-.147 52.774-.77c13.624-.622 22.929-2.785 31.07-5.95 8.418-3.27 15.556-7.647 22.672-14.763 7.116-7.116 11.493-14.254 14.764-22.672 3.164-8.142 5.328-17.446 5.95-31.07.623-13.653.77-18.012.77-52.775s-.147-39.122-.77-52.774c-.622-13.624-2.786-22.929-5.95-31.07-3.271-8.418-7.648-15.556-14.764-22.672C227.4 14.368 220.262 9.99 211.845 6.72c-8.142-3.164-17.447-5.328-31.071-5.95C167.122.147 162.763 0 128 0Zm0 62.27C91.698 62.27 62.27 91.7 62.27 128c0 36.302 29.428 65.73 65.73 65.73 36.301 0 65.73-29.428 65.73-65.73 0-36.301-29.429-65.73-65.73-65.73Zm0 108.397c-23.564 0-42.667-19.103-42.667-42.667S104.436 85.333 128 85.333s42.667 19.103 42.667 42.667-19.103 42.667-42.667 42.667Zm83.686-110.994c0 8.484-6.876 15.36-15.36 15.36-8.483 0-15.36-6.876-15.36-15.36 0-8.483 6.877-15.36 15.36-15.36 8.484 0 15.36 6.877 15.36 15.36Z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li class="ms-3">
+              <a
+                class="social-hover text-white opacity-75"
+                href="https://twitter.com/"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="21"
+                  fill="none"
+                  viewBox="0 0 1200 1227"
                 >
-                  <p class="card-text mb-0 position-relative descuento-precio">
-                    $19.990 CLP
-                  </p>
-                  <p
-                    class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
-                  >
-                    $12.994 CLP
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a class="col text-decoration-none" href="#">
-          <div
-            class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
-          >
-            <div class="overflow-hidden">
-              <img
-                class="card-img-top size-img-card rounded-0"
-                src="https://cdn-products.eneba.com/resized-products/s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_1x-0.jpeg"
-                draggable="false"
-                decoding="async"
-                alt="Grand Theft Auto V: Edición Online Premium Rockstar Games Launcher Código GLOBAL"
-                data-text="Ha habido un problema al mostrar esta imagen."
-                data-text-short="No se pudo cargar la imagen"
-              />
-            </div>
-            <div class="card-body d-flex flex-column justify-content-between">
-              <h6 class="card-title">
-                Grand Theft Auto V: Edición Online Premium Rockstar Games
-                Launcher Código GLOBAL
-              </h6>
-              <div class="d-inline-flex flex-row flex-sm-column flex-lg-row">
-                <div class="descuento_label px-1">60%</div>
-                <div
-                  class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
+                  <path
+                    fill="currentColor"
+                    d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li class="ms-3">
+              <a
+                class="social-hover text-white opacity-75"
+                href="https://github.com/Ktumsh/mega-games-web"
+                target="_blank"
+              >
+                <svg
+                  viewBox="0 0 256 250"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid"
                 >
-                  <p class="card-text mb-0 position-relative descuento-precio">
-                    $22.990 CLP
-                  </p>
-                  <p
-                    class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
-                  >
-                    $9.196 CLP
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a class="col text-decoration-none" href="#">
-          <div
-            class="card card-size bg-p2 rounded-0 text-white card-flow border-0"
-          >
-            <div class="overflow-hidden">
-              <img
-                class="card-img-top size-img-card rounded-0"
-                src="https://cdn-products.eneba.com/resized-products/NjuT6XzO0fs0Lbdbe4jBMt3m3EsGOgJh7bU9fQurfKI_350x200_1x-0.jpeg"
-                draggable="false"
-                decoding="async"
-                alt="God of War (PC) Código de Steam GLOBAL"
-                data-text="Ha habido un problema al mostrar esta imagen."
-                data-text-short="No se pudo cargar la imagen"
-              />
-            </div>
-            <div class="card-body d-flex flex-column justify-content-between">
-              <h6 class="card-title">God of War (PC) Código de Steam GLOBAL</h6>
-              <div class="d-inline-flex flex-row flex-sm-column flex-lg-row">
-                <div class="descuento_label px-1">53%</div>
-                <div
-                  class="d-inline-flex flex-row flex-sm-column flex-lg-row px-1 gap-1 bg-p1"
-                >
-                  <p class="card-text mb-0 position-relative descuento-precio">
-                    $35.000 CLP
-                  </p>
-                  <p
-                    class="card-text mb-0 position-relative fs-sm fw-medium text-p3"
-                  >
-                    $18.550 CLP
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </article>
-    <!-- CARDS JUEGOS 📇 -->
-    <article class="bg-p4">
-      <div class="container">
-        <h2 class="mt-5 pt-4 fw-bold">Juegos populares</h2>
-        <div class="row row-cols-1 row-cols-sm-3 row-cols-lg-5 g-4 my-3">
-          <a class="col text-decoration-none" href="#">
-            <div
-              class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-            >
-              <div class="overflow-hidden">
-                <img
-                  class="card-img-top size-img-card rounded-0"
-                  src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                  draggable="false"
-                  decoding="async"
-                  alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                  data-text="Ha habido un problema al mostrar esta imagen."
-                  data-text-short="No se pudo cargar la imagen"
-                />
-              </div>
-              <div class="card-body d-flex flex-column justify-content-between">
-                <h6 class="card-title">
-                  Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                  Games GLOBAL
-                </h6>
-                <div class="d-inline-flex">
-                  <div class="d-inline-flex px-1 gap-1 bg-p1">
-                    <p class="card-text mb-0 position-relative fs-sm fw-medium">
-                      $18.550 CLP
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a class="col text-decoration-none" href="#">
-            <div
-              class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-            >
-              <div class="overflow-hidden">
-                <img
-                  class="card-img-top size-img-card rounded-0"
-                  src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                  draggable="false"
-                  decoding="async"
-                  alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                  data-text="Ha habido un problema al mostrar esta imagen."
-                  data-text-short="No se pudo cargar la imagen"
-                />
-              </div>
-              <div class="card-body d-flex flex-column justify-content-between">
-                <h6 class="card-title">
-                  Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                  Games GLOBAL
-                </h6>
-                <div class="d-inline-flex">
-                  <div class="d-inline-flex px-1 gap-1 bg-p1">
-                    <p class="card-text mb-0 position-relative fs-sm fw-medium">
-                      $18.550 CLP
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a class="col text-decoration-none" href="#">
-            <div
-              class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-            >
-              <div class="overflow-hidden">
-                <img
-                  class="card-img-top size-img-card rounded-0"
-                  src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                  draggable="false"
-                  decoding="async"
-                  alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                  data-text="Ha habido un problema al mostrar esta imagen."
-                  data-text-short="No se pudo cargar la imagen"
-                />
-              </div>
-              <div class="card-body d-flex flex-column justify-content-between">
-                <h6 class="card-title">
-                  Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                  Games GLOBAL
-                </h6>
-                <div class="d-inline-flex">
-                  <div class="d-inline-flex px-1 gap-1 bg-p1">
-                    <p class="card-text mb-0 position-relative fs-sm fw-medium">
-                      $18.550 CLP
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a class="col text-decoration-none" href="#">
-            <div
-              class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-            >
-              <div class="overflow-hidden">
-                <img
-                  class="card-img-top size-img-card rounded-0"
-                  src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                  draggable="false"
-                  decoding="async"
-                  alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                  data-text="Ha habido un problema al mostrar esta imagen."
-                  data-text-short="No se pudo cargar la imagen"
-                />
-              </div>
-              <div class="card-body d-flex flex-column justify-content-between">
-                <h6 class="card-title">
-                  Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                  Games GLOBAL
-                </h6>
-                <div class="d-inline-flex">
-                  <div class="d-inline-flex px-1 gap-1 bg-p1">
-                    <p class="card-text mb-0 position-relative fs-sm fw-medium">
-                      $18.550 CLP
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a class="col text-decoration-none" href="#">
-            <div
-              class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-            >
-              <div class="overflow-hidden">
-                <img
-                  class="card-img-top size-img-card rounded-0"
-                  src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                  draggable="false"
-                  decoding="async"
-                  alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                  data-text="Ha habido un problema al mostrar esta imagen."
-                  data-text-short="No se pudo cargar la imagen"
-                />
-              </div>
-              <div class="card-body d-flex flex-column justify-content-between">
-                <h6 class="card-title">
-                  Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                  Games GLOBAL
-                </h6>
-                <div class="d-inline-flex">
-                  <div class="d-inline-flex px-1 gap-1 bg-p1">
-                    <p class="card-text mb-0 position-relative fs-sm fw-medium">
-                      $18.550 CLP
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a class="col text-decoration-none" href="#">
-            <div
-              class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-            >
-              <div class="overflow-hidden">
-                <img
-                  class="card-img-top size-img-card rounded-0"
-                  src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                  draggable="false"
-                  decoding="async"
-                  alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                  data-text="Ha habido un problema al mostrar esta imagen."
-                  data-text-short="No se pudo cargar la imagen"
-                />
-              </div>
-              <div class="card-body d-flex flex-column justify-content-between">
-                <h6 class="card-title">
-                  Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                  Games GLOBAL
-                </h6>
-                <div class="d-inline-flex">
-                  <div class="d-inline-flex px-1 gap-1 bg-p1">
-                    <p class="card-text mb-0 position-relative fs-sm fw-medium">
-                      $18.550 CLP
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a class="col text-decoration-none" href="#">
-            <div
-              class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-            >
-              <div class="overflow-hidden">
-                <img
-                  class="card-img-top size-img-card rounded-0"
-                  src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                  draggable="false"
-                  decoding="async"
-                  alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                  data-text="Ha habido un problema al mostrar esta imagen."
-                  data-text-short="No se pudo cargar la imagen"
-                />
-              </div>
-              <div class="card-body d-flex flex-column justify-content-between">
-                <h6 class="card-title">
-                  Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                  Games GLOBAL
-                </h6>
-                <div class="d-inline-flex">
-                  <div class="d-inline-flex px-1 gap-1 bg-p1">
-                    <p class="card-text mb-0 position-relative fs-sm fw-medium">
-                      $18.550 CLP
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a class="col text-decoration-none" href="#">
-            <div
-              class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-            >
-              <div class="overflow-hidden">
-                <img
-                  class="card-img-top size-img-card rounded-0"
-                  src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                  draggable="false"
-                  decoding="async"
-                  alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                  data-text="Ha habido un problema al mostrar esta imagen."
-                  data-text-short="No se pudo cargar la imagen"
-                />
-              </div>
-              <div class="card-body d-flex flex-column justify-content-between">
-                <h6 class="card-title">
-                  Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                  Games GLOBAL
-                </h6>
-                <div class="d-inline-flex">
-                  <div class="d-inline-flex px-1 gap-1 bg-p1">
-                    <p class="card-text mb-0 position-relative fs-sm fw-medium">
-                      $18.550 CLP
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a class="col text-decoration-none" href="#">
-            <div
-              class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-            >
-              <div class="overflow-hidden">
-                <img
-                  class="card-img-top size-img-card rounded-0"
-                  src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                  draggable="false"
-                  decoding="async"
-                  alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                  data-text="Ha habido un problema al mostrar esta imagen."
-                  data-text-short="No se pudo cargar la imagen"
-                />
-              </div>
-              <div class="card-body d-flex flex-column justify-content-between">
-                <h6 class="card-title">
-                  Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                  Games GLOBAL
-                </h6>
-                <div class="d-inline-flex">
-                  <div class="d-inline-flex px-1 gap-1 bg-p1">
-                    <p class="card-text mb-0 position-relative fs-sm fw-medium">
-                      $18.550 CLP
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a class="col text-decoration-none" href="#">
-            <div
-              class="card card-size bg-p2 rounded-0 text-white card-shadow border-0 border-0"
-            >
-              <div class="overflow-hidden">
-                <img
-                  class="card-img-top size-img-card rounded-0"
-                  src="https://cdn-products.eneba.com/resized-products/6BRVWMeOF037dplYWPWZOVHxfK8feBxJMjzXlCmKUVw_350x200_1x-0.jpeg"
-                  draggable="false"
-                  decoding="async"
-                  alt="Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games GLOBAL"
-                  data-text="Ha habido un problema al mostrar esta imagen."
-                  data-text-short="No se pudo cargar la imagen"
-                />
-              </div>
-              <div class="card-body d-flex flex-column justify-content-between">
-                <h6 class="card-title">
-                  Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic
-                  Games GLOBAL
-                </h6>
-                <div class="d-inline-flex">
-                  <div class="d-inline-flex px-1 gap-1 bg-p1">
-                    <p class="card-text mb-0 position-relative fs-sm fw-medium">
-                      $18.550 CLP
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
+                  <path
+                    d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
-      </div>
-    </article>
+      </footer>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -934,13 +3150,11 @@
       src="https://kit.fontawesome.com/c1a667f1b4.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
-<a href=""></a>
-
-
-
-
-
-
-
