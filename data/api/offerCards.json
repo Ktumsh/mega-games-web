@@ -1,0 +1,92 @@
+[
+    {
+      "nombre": "Fortnite - Rogue Scout Pack + 1,500 V-Bucks Challenge XBOX LIVE Key",
+      "dlc": true,
+      "imagen": "assets/public/cards/01.jpg",
+      "descuento": "-35%",
+      "precioOriginal": "$9.990 CLP",
+      "precioDescuento": "$6.494 CLP",
+      "likes": 17555
+    },
+    {
+      "nombre": "Fortnite - Rebirth Harley Quinn Skin (DLC) Código de Epic Games",
+      "dlc": true,
+      "imagen": "assets/public/cards/02.jpeg",
+      "descuento": "-35%",
+      "precioOriginal": "$9.990 CLP",
+      "precioDescuento": "$6.494 CLP",
+      "likes": 41808
+    },
+    {
+      "nombre": "Minecraft: Java & Bedrock Edition Official website Key",
+      "dlc": false,
+      "imagen": "assets/public/cards/03.webp",
+      "descuento": "-50%",
+      "precioOriginal": "$19.990 CLP",
+      "precioDescuento": "$9.995 CLP",
+      "likes": 21494
+    },
+    {
+      "nombre": "Xbox Game Pass Ultimate – 1 Month Subscription Código de (Xbox/Windows) Non-stackable",
+      "dlc": false,
+      "imagen": "assets/public/cards/04.jpg",
+      "descuento": "-30%",
+      "precioOriginal": "$8.890 CLP",
+      "precioDescuento": "$6.223 CLP",
+      "likes": 47456
+    },
+    {
+      "nombre": "Genshin Impact Genesis Crystals",
+      "dlc": false,
+      "imagen": "assets/public/cards/05.jpg",
+      "descuento": "-50%",
+      "precioOriginal": "$2.000 CLP",
+      "precioDescuento": "$1.000 CLP",
+      "likes": 8461
+    },
+    {
+      "nombre": "Fortnite - Chill Vibez Pack + 600 V-Bucks Xbox Live Key",
+      "dlc": true,
+      "imagen": "assets/public/cards/06.jpg",
+      "descuento": "-35%",
+      "precioOriginal": "9.990 CLP",
+      "precioDescuento": "6.494 CLP",
+      "likes": 20218
+    },
+    {
+      "nombre": "Grand Theft Auto V: Edición Online Premium Rockstar Games Launcher Key",
+      "dlc": false,
+      "imagen": "assets/public/cards/07.jpeg",
+      "descuento": "-66%",
+      "precioOriginal": "$22.995 CLP",
+      "precioDescuento": "$10.118 CLP",
+      "likes": 46329
+    },
+    {
+      "nombre": "Diablo IV (PC) Código de Battle.Net",
+      "dlc": false,
+      "imagen": "assets/public/cards/08.jpg",
+      "descuento": "-50%",
+      "precioOriginal": "$64.990 CLP",
+      "precioDescuento": "$32.495 CLP",
+      "likes": 48705
+    },
+    {
+      "nombre": "Call of Duty: Modern Warfare III (PC) Código de Steam",
+      "dlc": false,
+      "imagen": "assets/public/cards/09.jpg",
+      "descuento": "-35%",
+      "precioOriginal": "$54.990 CLP",
+      "precioDescuento": "$35.743 CLP",
+      "likes": 45039
+    },
+    {
+      "nombre": "Resident Evil 4 (PC) Código de Steam",
+      "dlc": false,
+      "imagen": "assets/public/cards/10.jpg",
+      "descuento": "-25%",
+      "precioOriginal": "$35.740 CLP",
+      "precioDescuento": "$26.805 CLP",
+      "likes": 52601
+    }
+  ]
