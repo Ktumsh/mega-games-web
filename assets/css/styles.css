@@ -5,6 +5,7 @@
 body {
   background-color: #131019 !important;
   color: white !important;
+  font-family: Arial, Helvetica, sans-serif !important;
 }
 
 html.responsive {
@@ -31,6 +32,27 @@ summary,
 textarea,
 [tabindex] {
   touch-action: manipulation;
+}
+
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 960px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 960px !important;
+  }
 }
 
 @supports selector(::-webkit-scrollbar) {
@@ -84,8 +106,86 @@ textarea,
   box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.75);
 }
 
-.form-control-sm::placeholder {
+.navbar .search_area {
+  flex-grow: 1;
+  flex-shrink: 0;
+  max-width: 210px;
+}
+
+div#store_search {
+  float: none;
+  padding: 3px 4px 2px;
+  height: 30px;
+  box-sizing: content-box;
+}
+
+.searchbox {
+  background-image: url(/public/images/v6/store_header_search.png?v=1);
+  color: #a6a5a2;
+  width: auto;
+  height: 30px;
+  position: relative;
+  z-index: 150;
+  cursor: text;
+}
+
+.searchbox {
+  display: flex;
+  background-image: none;
+  background-color: #250462;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 0px;
+  outline: none;
+  height: 27px;
+  padding: 0px 6px;
+  box-sizing: content-box;
+}
+
+.searchbox input.default {
   font-style: italic;
+  color: #305d8a;
+}
+
+.searchbox input.default {
+  color: #0e1c25;
+  font-size: 14px;
+  margin-top: 1px;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  box-sizing: content-box;
+}
+
+.searchbox input {
+  border: none;
+  background-color: transparent;
+  color: #eeeeee;
+  margin-top: 2px;
+  margin-left: 8px;
+  width: calc(100% - 25px - 8px);
+  outline: none;
+  line-height: 24px;
+  box-sizing: content-box;
+  font-family: "Motiva Sans", Sans-serif;
+}
+
+a#store_search_link {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 100%;
+  background: #36058a;
+}
+
+a#store_search_link i {
+  color: rgb(255 255 255 / 70%) !important;
 }
 
 #newsletter1::placeholder {
@@ -351,11 +451,17 @@ textarea,
   display: none;
 }
 
+.navbar .container-fluid {
+  height: 35px;
+}
+
 .fst-nav a {
   color: #d8d8d8 !important;
-  padding: 10px 10px 10px 15px !important;
+  padding: 0px 10px 0px 15px !important;
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3) !important;
-  font-weight: 600;
+  font-size: 13px;
+  line-height: 35px;
+  font-weight: bold;
 }
 
 .fst-nav a:hover {
@@ -461,6 +567,11 @@ textarea,
 .dropdown-menu {
   --bs-dropdown-spacer: 0 !important;
   --bs-dropdown-min-width: 0 !important;
+}
+
+.navbar-toggler-icon {
+  width: 1.2rem !important;
+  height: 1.2rem !important;
 }
 
 @media screen and (min-width: 576px) {
@@ -888,7 +999,7 @@ textarea,
 }
 
 .gen-card {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1;
   background: #5108d9;
@@ -906,9 +1017,9 @@ textarea,
   background: #3b069d;
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 992px) {
   .gen-card-container {
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 

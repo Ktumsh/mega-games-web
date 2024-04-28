@@ -11,7 +11,6 @@ function cargarYAgregarTarjetas(jsonFile, carouselId) {
         const cardElement = document.createElement("div");
         cardElement.classList.add("card_");
 
-        // Verifica si la tarjeta es un DLC y agrega el span correspondiente
         const dlcSpan = tarjeta.dlc ? `<span class="dlc_span">DLC</span>` : "";
 
         let cardContent = "";
@@ -135,11 +134,38 @@ function cargarYAgregarTarjetas(jsonFile, carouselId) {
     .catch((error) => console.error("Error al cargar las tarjetas:", error));
 }
 
-// Cargar y agregar tarjetas al carrusel 1
 cargarYAgregarTarjetas("/data/api/offerCards.json", 1);
 
-// Cargar y agregar tarjetas al carrusel 2
 cargarYAgregarTarjetas("/data/api/gamesCards.json", 2);
 
-// Cargar y agregar tarjetas al carrusel 3
 cargarYAgregarTarjetas("/data/api/tarjetasCards.json", 3);
+
+fetch("/data/api/genCards.json")
+  .then((response) => response.json())
+  .then((tarjetas) => {
+    const genContainer = document.getElementById("genCardContainer");
+    tarjetas.forEach((tarjeta, index) => {
+      const cardElement = document.createElement("a");
+      cardElement.classList.add("gen-card");
+      cardElement.href = "#";
+      let cardContent = `
+        <div class="gen-card-quantity">${tarjeta.cantidad}</div>
+        <img
+          src="${tarjeta.imagen}"
+          width="40"
+          height="40"
+          alt="${tarjeta.titulo}"
+          loading="lazy"
+        />
+        <div class="gen-card-title">${tarjeta.titulo}</div>
+      `;
+      if (index >= 5) {
+        cardElement.classList.add("d-none");
+      }
+      cardElement.innerHTML = cardContent;
+      genContainer.appendChild(cardElement);
+    });
+  })
+  .catch((error) =>
+    console.error("Error al cargar las tarjetas de géneros:", error)
+  );

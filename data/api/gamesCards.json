@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "nombre": "Fallout 76 - Windows 10 Store Key",
     "dlc": false,
     "imagen": "assets/public/cards-juegos/01.jpeg",
@@ -7,6 +8,7 @@
     "likes": 408
   },
   {
+    "id": 2,
     "nombre": "7 Days to Die Steam Clave",
     "dlc": false,
     "imagen": "assets/public/cards-juegos/02.jpg",
@@ -14,6 +16,7 @@
     "likes": 7783
   },
   {
+    "id": 3,
     "nombre": "Fallout 76 (Xbox One) Xbox Live Key",
     "dlc": false,
     "imagen": "assets/public/cards-juegos/03.jpeg",
@@ -21,6 +24,7 @@
     "likes": 2714
   },
   {
+    "id": 4,
     "nombre": "theHunter: Call of the Wild (PC) Steam Key LATAM",
     "dlc": false,
     "imagen": "assets/public/cards-juegos/04.jpg",
@@ -28,6 +32,7 @@
     "likes": 320
   },
   {
+    "id": 5,
     "nombre": "EA SPORTS FC 24 (PC) Código de EA App",
     "dlc": false,
     "imagen": "assets/public/cards-juegos/05.jpg",
@@ -35,6 +40,7 @@
     "likes": 3924
   },
   {
+    "id": 6,
     "nombre": "Fortnite – The Batman Who Laughs Outfit (DLC) Código de Epic Games",
     "dlc": true,
     "imagen": "assets/public/cards-juegos/06.jpg",
@@ -42,6 +48,7 @@
     "likes": 29800
   },
   {
+    "id": 7,
     "nombre": "Arma 3 (PC) Steam Key",
     "dlc": false,
     "imagen": "assets/public/cards-juegos/07.jpg",
@@ -49,6 +56,7 @@
     "likes": 657
   },
   {
+    "id": 8,
     "nombre": "Dying Light: Definitive Edition (PC) Steam Key",
     "dlc": false,
     "imagen": "assets/public/cards-juegos/08.jpeg",
@@ -56,6 +64,7 @@
     "likes": 968
   },
   {
+    "id": 9,
     "nombre": "Dragon Ball: Xenoverse 2 Código de Steam",
     "dlc": false,
     "imagen": "assets/public/cards-juegos/09.jpg",
@@ -63,6 +72,7 @@
     "likes": 3648
   },
   {
+    "id": 10,
     "nombre": "Batman: Arkham Knight (Premium Edition) Steam Key",
     "dlc": false,
     "imagen": "assets/public/cards-juegos/10.jpg",
