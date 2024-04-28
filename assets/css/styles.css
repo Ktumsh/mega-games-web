@@ -34,6 +34,13 @@ textarea,
   touch-action: manipulation;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 @media (min-width: 1400px) {
   .container,
   .container-lg,
@@ -574,88 +581,115 @@ a#store_search_link i {
   height: 1.2rem !important;
 }
 
-@media screen and (min-width: 576px) {
-  .prev-control.carousel-control-prev {
-    width: 3rem;
-    height: 8rem;
-    background: rgb(51, 41, 65);
-    background: linear-gradient(
-      90deg,
-      rgba(51, 41, 65, 1) 0%,
-      rgba(88, 79, 186, 0.9) 100%
-    );
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 1;
-    margin-left: -3.03rem !important;
-  }
+.carousel-item {
+  transition: transform 0.4s ease-in-out !important;
+}
 
-  .next-control.carousel-control-next {
-    width: 3rem;
-    height: 8rem;
-    background: rgb(88, 79, 186);
-    background: linear-gradient(
-      90deg,
-      rgba(88, 79, 186, 0.9) 0%,
-      rgba(51, 41, 65, 1) 100%
-    );
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 1;
-    margin-right: -3.03rem !important;
-  }
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel .carousel-indicators {
+  text-align: center;
+  min-height: 37px;
+  position: relative;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.carousel-indicators {
+  padding-bottom: 4px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-clip: border-box !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  opacity: 1 !important;
+}
+
+.carousel .carousel-indicators > div {
+  display: inline-block;
+  margin: 12px 2px;
+  width: 15px;
+  height: 9px;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+  background-color: hsla(202, 60%, 100%, 0.2);
+  cursor: pointer;
+}
+
+.carousel-indicators .active {
+  background-color: hsla(202, 60%, 100%, 0.4) !important;
+}
+
+.carousel-caption {
+  padding-bottom: 1.25rem;
 }
 
 @media screen and (min-width: 576px) {
-  .carousel_cards .prev-control.carousel-control-prev {
-    display: none;
-    width: 3rem;
-    height: 8rem;
-    background: rgb(51, 41, 65);
-    background: linear-gradient(
-      90deg,
-      rgba(51, 41, 65, 1) 0%,
-      rgba(88, 79, 186, 0.9) 100%
-    );
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 1;
-    margin-left: -3.03rem !important;
+  .arrow {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: calc(50% - 54px);
+    width: 23px;
+    height: 36px;
+    padding: 36px 11px;
+    cursor: pointer;
+    z-index: 3;
   }
 
-  .carousel_cards .next-control.carousel-control-next {
-    display: none;
-    width: 3rem;
-    height: 8rem;
-    background: rgb(88, 79, 186);
-    background: linear-gradient(
-      90deg,
-      rgba(88, 79, 186, 0.9) 0%,
-      rgba(51, 41, 65, 1) 100%
-    );
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 1;
-    margin-right: -3.03rem !important;
+  .arrow {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 35%;
+    width: 23px;
+    height: 36px;
+    padding: 36px 11px;
+    cursor: pointer;
+    z-index: 1;
+    box-sizing: content-box;
   }
 
-  .carousel_cards:hover .prev-control.carousel-control-prev {
-    display: block;
+  .arrow.left {
     background: rgb(51, 41, 65);
-    background: linear-gradient(
-      90deg,
-      rgba(51, 41, 65, 1) 0%,
-      rgb(116, 108, 198) 100%
+    background: -webkit-linear-gradient(
+      left,
+      rgba(88, 79, 186, 0.5) 5%,
+      rgba(88, 79, 186, 0) 95%
     );
+    background: linear-gradient(
+      to right,
+      rgba(88, 79, 186, 0.5) 5%,
+      rgba(88, 79, 186, 0) 95%
+    );
+    left: -46px;
   }
-  .carousel_cards:hover .next-control.carousel-control-next {
-    display: block;
-    background: rgb(116, 108, 198);
-    background: linear-gradient(
-      90deg,
-      rgb(116, 108, 198) 0%,
-      rgba(51, 41, 65, 1) 100%
+
+  .arrow.right {
+    background: rgb(51, 41, 65);
+    background: -webkit-linear-gradient(
+      right,
+      rgba(51, 41, 65, 0) 5%,
+      rgba(88, 79, 186, 0.5) 95%
     );
+    background: linear-gradient(
+      to right,
+      rgba(51, 41, 65, 0) 5%,
+      rgba(88, 79, 186, 0.5) 95%
+    );
+    right: -46px;
+  }
+
+  .arrow.left > div {
+    background-position-x: 23px;
+  }
+
+  .arrow > div {
+    background-image: url(/assets/public/arrows.png);
+    width: 23px;
+    height: 36px;
   }
 }
 
@@ -676,16 +710,26 @@ a#store_search_link i {
     height: 6px;
     width: 6px;
   }
-}
 
-@media (min-width: 576px) {
+  .carousel_cards .inner_carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel_cards:hover .inner_carousel::-webkit-scrollbar {
+    display: initial;
+  }
+
+  .carousel_cards:hover .inner_carousel {
+    -webkit-padding-after: 14px;
+  }
+
   .carousel_cards .inner_carousel::-webkit-scrollbar-thumb {
-    background: #864af9;
+    background: #b189fb;
     border-radius: 0;
   }
 
   .carousel_cards .inner_carousel::-webkit-scrollbar-thumb:active {
-    background: #b189fb;
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 0;
   }
 }
@@ -1048,26 +1092,25 @@ a#store_search_link i {
 
 @media screen and (min-width: 576px) {
   .buttons {
-    transform: translateY(-50%);
     top: 50%;
-    padding-right: 98.1%;
+    padding-right: 100%;
   }
 }
 
-.social-hover {
+.footer_link {
   transition: 150ms ease-in-out;
 }
 
-.social-hover:hover {
+.footer_link:hover {
   color: #f8e559 !important;
   opacity: 1 !important;
 }
 
-.footer-links-hover {
+.footer_link2 {
   transition: all 150ms ease-in-out;
 }
 
-.footer-links-hover:hover {
+.footer_link2:hover {
   color: #f8e559 !important;
   opacity: 1 !important;
   text-decoration: underline !important;

@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var scrollPosition1 = 0;
 
     $(carousel1)
-      .find(".carousel-control-next")
+      .find(".arrow.right")
       .on("click", () => {
         if (scrollPosition1 < carouselWidth1 - cardWidth1) {
           scrollPosition1 = scrollPosition1 + cardWidth1;
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
     $(carousel1)
-      .find(".carousel-control-prev")
+      .find(".arrow.left")
       .on("click", () => {
         if (scrollPosition1 > 0) {
           scrollPosition1 = scrollPosition1 - cardWidth1;
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var scrollPosition1 = 0;
 
     $(carousel1)
-      .find(".carousel-control-next")
+      .find(".arrow.right")
       .on("click", () => {
         if (scrollPosition1 < carouselWidth1 - cardWidth1) {
           scrollPosition1 = scrollPosition1 + cardWidth1;
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
     $(carousel1)
-      .find(".carousel-control-prev")
+      .find(".arrow.left")
       .on("click", () => {
         if (scrollPosition1 > 0) {
           scrollPosition1 = scrollPosition1 - cardWidth1;
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var scrollPosition2 = 0;
 
     $(carousel2)
-      .find(".carousel-control-next")
+      .find(".arrow.right")
       .on("click", () => {
         if (scrollPosition2 < carouselWidth2 - cardWidth2) {
           scrollPosition2 = scrollPosition2 + cardWidth2;
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
     $(carousel2)
-      .find(".carousel-control-prev")
+      .find(".arrow.left")
       .on("click", () => {
         if (scrollPosition2 > 0) {
           scrollPosition2 = scrollPosition2 - cardWidth2;
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var scrollPosition2 = 0;
 
     $(carousel2)
-      .find(".carousel-control-next")
+      .find(".arrow.right")
       .on("click", () => {
         if (scrollPosition2 < carouselWidth2 - cardWidth2) {
           scrollPosition2 = scrollPosition2 + cardWidth2;
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
     $(carousel2)
-      .find(".carousel-control-prev")
+      .find(".arrow.left")
       .on("click", () => {
         if (scrollPosition2 > 0) {
           scrollPosition2 = scrollPosition2 - cardWidth2;
@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var scrollPosition3 = 0;
 
     $(carousel3)
-      .find(".carousel-control-next")
+      .find(".arrow.right")
       .on("click", () => {
         if (scrollPosition3 < carouselWidth3 - cardWidth3) {
           scrollPosition3 = scrollPosition3 + cardWidth3;
@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
     $(carousel3)
-      .find(".carousel-control-prev")
+      .find(".arrow.left")
       .on("click", () => {
         if (scrollPosition3 > 0) {
           scrollPosition3 = scrollPosition3 - cardWidth3;
@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var scrollPosition3 = 0;
 
     $(carousel3)
-      .find(".carousel-control-next")
+      .find(".arrow.right")
       .on("click", () => {
         if (scrollPosition3 < carouselWidth3 - cardWidth3) {
           scrollPosition3 = scrollPosition3 + cardWidth3;
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
     $(carousel3)
-      .find(".carousel-control-prev")
+      .find(".arrow.left")
       .on("click", () => {
         if (scrollPosition3 > 0) {
           scrollPosition3 = scrollPosition3 - cardWidth3;
