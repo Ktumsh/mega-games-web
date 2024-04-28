@@ -249,3 +249,67 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.getElementById("carouselMaincap");
+
+  const items = carousel.querySelectorAll(
+    ".carousel_items .store_main_capsule"
+  );
+  const thumbs = carousel.querySelectorAll(".carousel_thumbs div");
+
+  function activateItem(index) {
+    items.forEach((item) => item.classList.remove("active"));
+    thumbs.forEach((thumb) => thumb.classList.remove("active"));
+
+    items[index].classList.add("active");
+    thumbs[index].classList.add("active");
+  }
+
+  function nextItem() {
+    const current = carousel.querySelector(
+      ".carousel_items .store_main_capsule.active"
+    );
+    const currentIndex = Array.from(items).indexOf(current);
+    const nextIndex = (currentIndex + 1) % items.length;
+    activateItem(nextIndex);
+  }
+
+  function prevItem() {
+    const current = carousel.querySelector(
+      ".carousel_items .store_main_capsule.active"
+    );
+    const currentIndex = Array.from(items).indexOf(current);
+    const prevIndex = (currentIndex - 1 + items.length) % items.length;
+    activateItem(prevIndex);
+  }
+
+  carousel
+    .querySelector(".maincap .arrow.left")
+    .addEventListener("click", prevItem);
+  carousel
+    .querySelector(".maincap .arrow.right")
+    .addEventListener("click", nextItem);
+
+  thumbs.forEach((thumb, index) => {
+    thumb.addEventListener("click", () => {
+      activateItem(index);
+    });
+  });
+
+  activateItem(0);
+
+  let intervalId;
+  function startAutoSlide() {
+    intervalId = setInterval(nextItem, 5000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(intervalId);
+  }
+
+  startAutoSlide();
+
+  carousel.addEventListener("mouseenter", stopAutoSlide);
+  carousel.addEventListener("mouseleave", startAutoSlide);
+});
