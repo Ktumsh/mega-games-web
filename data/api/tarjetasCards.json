@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "nombre": "Valorant Gift Card - 1000 Valorant Points - LATAM",
     "dlc": false,
     "imagen": "assets/public/cards-tarjetas/01.jpeg",
@@ -7,6 +8,7 @@
     "likes": 241
   },
   {
+    "id": 2,
     "nombre": "Fallout 76 - Windows 10 Store Key",
     "dlc": false,
     "imagen": "assets/public/cards-tarjetas/02.jpeg",
@@ -14,6 +16,7 @@
     "likes": 237
   },
   {
+    "id": 3,
     "nombre": "Fortnite - 13500 V-Bucks Gift Card Código",
     "dlc": false,
     "imagen": "assets/public/cards-tarjetas/03.jpeg",
@@ -21,6 +24,7 @@
     "likes": 4085
   },
   {
+    "id": 4,
     "nombre": "Fallout 76 - Windows 10 Store Key",
     "dlc": false,
     "imagen": "assets/public/cards-tarjetas/04.webp",
@@ -28,6 +32,7 @@
     "likes": 569
   },
   {
+    "id": 5,
     "nombre": "Steam Wallet Gift Card 50.000 CLP Key",
     "dlc": false,
     "imagen": "assets/public/cards-tarjetas/05.jpeg",
@@ -35,6 +40,7 @@
     "likes": 101
   },
   {
+    "id": 6,
     "nombre": "League Of Legends Hextech Chest (DLC) Riot Key",
     "dlc": true,
     "imagen": "assets/public/cards-tarjetas/06.webp",
@@ -42,6 +48,7 @@
     "likes": 301
   },
   {
+    "id": 7,
     "nombre": "Xbox Game Pass for PC - 3 Month TRIAL Windows Store Non-stackable Key",
     "dlc": false,
     "imagen": "assets/public/cards-tarjetas/07.jpeg",
@@ -49,6 +56,7 @@
     "likes": 5604
   },
   {
+    "id": 8,
     "nombre": "EA Play Pro 1 Month (PC) Origin Key",
     "dlc": false,
     "imagen": "assets/public/cards-tarjetas/08.jpeg",
@@ -56,6 +64,7 @@
     "likes": 125
   },
   {
+    "id": 9,
     "nombre": "Tarjeta PlayStation Network Card 50 USD código PSN",
     "dlc": false,
     "imagen": "assets/public/cards-tarjetas/09.jpeg",
@@ -63,6 +72,7 @@
     "likes": 95
   },
   {
+    "id": 10,
     "nombre": "Xbox Game Pass 3 meses Código",
     "dlc": false,
     "imagen": "assets/public/cards-tarjetas/10.jpeg",
