@@ -1,3 +1,4 @@
+//Cargar tarjetas principales
 function cargarYAgregarTarjetas(jsonFile, carouselId) {
   fetch(jsonFile)
     .then((response) => response.json())
@@ -140,6 +141,7 @@ cargarYAgregarTarjetas("/data/api/gamesCards.json", 2);
 
 cargarYAgregarTarjetas("/data/api/tarjetasCards.json", 3);
 
+//Cargar tarjetas de géneros
 fetch("/data/api/genCards.json")
   .then((response) => response.json())
   .then((tarjetas) => {
