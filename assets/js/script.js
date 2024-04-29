@@ -277,29 +277,30 @@ window.onload = () => {
       loadBtn.style.display = "none";
     }, 300);
   });
-
-  const StoreNavSearchTerm = document.getElementById("store_nav_search_term");
-
-  StoreNavSearchTerm.addEventListener("focus", (event) => {
-    event.stopPropagation();
-    StoreNavSearchTerm.classList.remove("default");
-  });
-
-  StoreNavSearchTerm.addEventListener("focus", (event) => {
-    StoreNavSearchTerm.placeholder = "";
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!StoreNavSearchTerm.contains(event.target)) {
-      if (StoreNavSearchTerm.value === "") {
-        StoreNavSearchTerm.classList.add("default");
-        if (StoreNavSearchTerm.value === "") {
-          StoreNavSearchTerm.placeholder = "Buscar";
-        }
-      } else {
-        StoreNavSearchTerm.classList.remove("default");
-        StoreNavSearchTerm.placeholder = "";
-      }
-    }
-  });
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+  const StoreNavSearchTerms = document.querySelectorAll(
+    ".store_nav_search_term"
+  );
+
+  StoreNavSearchTerms.forEach(function (input) {
+    input.addEventListener("focus", function (event) {
+      event.stopPropagation();
+      input.classList.remove("default");
+      input.placeholder = "";
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!input.contains(event.target)) {
+        if (input.value === "") {
+          input.classList.add("default");
+          input.placeholder = "Buscar";
+        } else {
+          input.classList.remove("default");
+          input.placeholder = "";
+        }
+      }
+    });
+  });
+});
