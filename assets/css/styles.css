@@ -2,6 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
+@font-face {
+  font-family: "Motiva Sans";
+  src: url(/assets/public/fonts/motiva-sans/MotivaSansRegular.woff.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+
 body {
   background-color: #131019 !important;
   color: white !important;
@@ -104,6 +111,17 @@ textarea,
       scrollbar-width: thin;
     }
   }
+}
+
+.arial {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.motiva-sans {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .grotesk {
@@ -755,7 +773,6 @@ a#store_search_link i {
 
 .home_page_content {
   position: relative;
-  margin: 0 auto;
 }
 
 .home_page_content {
@@ -1185,6 +1202,10 @@ a#store_search_link i {
     padding: 6px;
   }
 
+  html.responsive .discount_block_inline .discount_prices {
+    font-size: 14px;
+  }
+
   html.responsive .carousel_container.maincap .carousel_items {
     height: auto;
   }
@@ -1586,12 +1607,6 @@ span.platform_img.music {
 .like_count {
   vertical-align: middle;
   font-size: 14px;
-}
-
-@media (max-width: 576px) {
-  .offer_desc {
-    font-size: 16px !important;
-  }
 }
 
 .descuento-precio {
