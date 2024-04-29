@@ -778,8 +778,8 @@ body.v6 {
   transition-duration: 0.2s;
   transition-timing-function: ease-out;
   background: #36058a;
-  padding: 6px 25px 6px 25px;
-  border-radius: 2px;
+  padding: 6px 3rem 6px 3rem;
+  border-radius: 20px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   position: relative;
   text-decoration: none;

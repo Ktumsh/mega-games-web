@@ -1711,7 +1711,7 @@ span.platform_img.music {
 }
 
 .btn-show-all {
-  padding: 5px 3rem;
+  padding: 6px 3rem;
   background: none;
   color: #fff;
   border-radius: 2rem;
@@ -1729,7 +1729,7 @@ span.platform_img.music {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 5px 3rem;
+  padding: 6px 3rem;
   background: none;
   color: #fff;
   border-radius: 2rem;
