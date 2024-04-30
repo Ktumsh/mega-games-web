@@ -808,3 +808,53 @@ body.v6 {
 .footer_spacer {
   height: 75px;
 }
+
+@media screen and (max-width: 576px) {
+  .home_sale_ctn {
+    padding: 0px 10px;
+  }
+
+  .panel_card_grid {
+    grid-template-areas:
+      "left left left left"
+      "right right right right";
+  }
+
+  .grid_panel_subtitle_game_type {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .sale_section_content {
+    padding: 16px 4px;
+  }
+
+  .game_date {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .curator_2 img {
+    width: 15vw;
+  }
+
+  .grid_panel_description {
+    display: none;
+  }
+
+  .grid_panel_btn_ctn {
+    position: relative;
+  }
+
+  .capsule_bottom_bar .platform_label {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .sale_background {
+    background-size: var(--background-scale, 166%);
+  }
+}
