@@ -196,6 +196,12 @@ div#store_search {
   box-sizing: content-box;
 }
 
+.searchbox input::placeholder {
+  color: rgba(190, 157, 251, 0.9);
+  font-weight: 300;
+  text-shadow: 1px 1px 0px rgb(59, 52, 134);
+}
+
 .searchbox input {
   border: none;
   background-color: transparent;
@@ -606,9 +612,13 @@ a#store_search_link i {
   --bs-dropdown-min-width: 0 !important;
 }
 
+.navbar-toggler {
+  margin: 3px 4px;
+}
+
 .navbar-toggler-icon {
-  width: 1.2rem !important;
-  height: 1.2rem !important;
+  width: 1.8rem !important;
+  height: 1.8rem !important;
 }
 
 .carousel-item {

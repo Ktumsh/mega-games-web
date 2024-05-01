@@ -848,6 +848,19 @@ body.v6 {
     position: relative;
   }
 
+  .sale_section_card .price_ctn {
+    max-width: 100%;
+  }
+
+  .sale_section_card .disconunt_label {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .disconunt_label {
+    margin-right: 0;
+  }
+
   .capsule_bottom_bar .platform_label {
     display: none;
   }
