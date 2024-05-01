@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "titulo": "Call of Duty®: Modern Warfare® III",
+    "imagen": "/assets/public/capsules/hero_capsule_01.jpg",
+    "descuento": "-35%",
+    "precioOriginal": "CLP$54.990",
+    "precioDescuento": "CLP$35.743",
+    "plataforma": "battlenet",
+    "plataforma_2": ""
+  },
+  {
+    "id": 2,
+    "titulo": "Sekiro™: Shadows Die Twice - GOTY Edition",
+    "imagen": "/assets/public/capsules/hero_capsule_02.jpg",
+    "descuento": "-50%",
+    "precioOriginal": "CLP$47.650",
+    "precioDescuento": "CLP$23.825",
+    "plataforma": "",
+    "plataforma_2": ""
+  },
+  {
+    "id": 3,
+    "titulo": "Call of Duty®: Black Ops III",
+    "imagen": "/assets/public/capsules/hero_capsule_03.jpg",
+    "descuento": "-67%",
+    "precioOriginal": "CLP$47.650",
+    "precioDescuento": "CLP$15.724",
+    "plataforma": "",
+    "plataforma_2": ""
+  },
+  {
+    "id": 4,
+    "titulo": "Call of Duty®: Modern Warfare®",
+    "imagen": "/assets/public/capsules/hero_capsule_04.jpg",
+    "descuento": "-67%",
+    "precioOriginal": "CLP$47.650",
+    "precioDescuento": "CLP$15.724",
+    "plataforma": "battlenet",
+    "plataforma_2": ""
+  },
+  {
+    "id": 5,
+    "titulo": "Call of Duty®: Modern Warfare® II",
+    "imagen": "/assets/public/capsules/hero_capsule_05.jpg",
+    "descuento": "-50%",
+    "precioOriginal": "CLP$55.600",
+    "precioDescuento": "CLP$27.800",
+    "plataforma": "battlenet",
+    "plataforma_2": ""
+  },
+  {
+    "id": 6,
+    "titulo": "Call of Duty®: Black Ops Cold War",
+    "imagen": "/assets/public/capsules/hero_capsule_06.jpg",
+    "descuento": "-67%",
+    "precioOriginal": "CLP$47.650",
+    "precioDescuento": "CLP$15.724",
+    "plataforma": "battlenet",
+    "plataforma_2": ""
+  },
+  {
+    "id": 7,
+    "titulo": "Call of Duty®: Vanguard",
+    "imagen": "/assets/public/capsules/hero_capsule_07.jpg",
+    "descuento": "-60%",
+    "precioOriginal": "CLP$47.650",
+    "precioDescuento": "CLP$19.060",
+    "plataforma": "battlenet",
+    "plataforma_2": ""
+  },
+  {
+    "id": 8,
+    "titulo": "Call of Duty®: WWII",
+    "imagen": "/assets/public/capsules/hero_capsule_08.jpg",
+    "descuento": "-67%",
+    "precioOriginal": "CLP$47.650",
+    "precioDescuento": "CLP$15.724",
+    "plataforma": "",
+    "plataforma_2": ""
+  },
+  {
+    "id": 9,
+    "titulo": "Call of Duty®: Black Ops",
+    "imagen": "/assets/public/capsules/hero_capsule_09.jpg",
+    "descuento": "-50%",
+    "precioOriginal": "CLP$31.770",
+    "precioDescuento": "CLP$15.885",
+    "plataforma": "",
+    "plataforma_2": ""
+  },
+  {
+    "id": 10,
+    "titulo": "Call of Duty®: Black Ops II",
+    "imagen": "/assets/public/capsules/hero_capsule_10.jpg",
+    "descuento": "-67%",
+    "precioOriginal": "CLP$47.650",
+    "precioDescuento": "CLP$15.724",
+    "plataforma": "",
+    "plataforma_2": ""
+  },
+  {
+    "id": 11,
+    "titulo": "Call of Duty®: Ghosts",
+    "imagen": "/assets/public/capsules/hero_capsule_11.jpg",
+    "descuento": "-67%",
+    "precioOriginal": "CLP$47.650",
+    "precioDescuento": "CLP$15.724",
+    "plataforma": "",
+    "plataforma_2": ""
+  },
+  {
+    "id": 12,
+    "titulo": "Call of Duty® 4: Modern Warfare® (2007)",
+    "imagen": "/assets/public/capsules/hero_capsule_12.jpg",
+    "descuento": "-50%",
+    "precioOriginal": "CLP$15.880",
+    "precioDescuento": "CLP$7.940",
+    "plataforma": "",
+    "plataforma_2": ""
+  },
+  {
+    "id": 13,
+    "titulo": "Call of Duty®: Modern Warfare® 2 (2009)",
+    "imagen": "/assets/public/capsules/hero_capsule_13.jpg",
+    "descuento": "-25%",
+    "precioOriginal": "CLP$15.880",
+    "precioDescuento": "CLP$11.910",
+    "plataforma": "",
+    "plataforma_2": ""
+  },
+  {
+    "id": 14,
+    "titulo": "Call of Duty®: Infinite Warfare",
+    "imagen": "/assets/public/capsules/hero_capsule_14.jpg",
+    "descuento": "-67%",
+    "precioOriginal": "CLP$47.650",
+    "precioDescuento": "CLP$15.724",
+    "plataforma": "",
+    "plataforma_2": ""
+  },
+  {
+    "id": 15,
+    "titulo": "Call of Duty®: Modern Warfare® 3 (2011)",
+    "imagen": "/assets/public/capsules/hero_capsule_15.jpg",
+    "descuento": "-50%",
+    "precioOriginal": "CLP$31.770",
+    "precioDescuento": "CLP$15.885",
+    "plataforma": "",
+    "plataforma_2": ""
+  },
+  {
+    "id": 16,
+    "titulo": "Crash Bandicoot™ 4: It’s About Time",
+    "imagen": "/assets/public/capsules/hero_capsule_16.jpg",
+    "descuento": "-50%",
+    "precioOriginal": "CLP$31.770",
+    "precioDescuento": "CLP$15.885",
+    "plataforma": "",
+    "plataforma_2": ""
+  },
+  {
+    "id": 17,
+    "titulo": "Crash Bandicoot™ N. Sane Trilogy",
+    "imagen": "/assets/public/capsules/hero_capsule_17.jpg",
+    "descuento": "-60%",
+    "precioOriginal": "CLP$31.770",
+    "precioDescuento": "CLP$12.708",
+    "plataforma": "",
+    "plataforma_2": ""
+  },
+  {
+    "id": 18,
+    "titulo": "Spyro™ Reignited Trilogy",
+    "imagen": "/assets/public/capsules/hero_capsule_18.jpg",
+    "descuento": "-65%",
+    "precioOriginal": "CLP$31.770",
+    "precioDescuento": "CLP$11.119",
+    "plataforma": "",
+    "plataforma_2": ""
+  },
+  {
+    "id": 19,
+    "titulo": "Prototype 2",
+    "imagen": "/assets/public/capsules/hero_capsule_19.jpg",
+    "descuento": "-75%",
+    "precioOriginal": "CLP$31.770",
+    "precioDescuento": "CLP$7.942",
+    "plataforma": "xbox",
+    "plataforma_2": "playstation"
+  },
+  {
+    "id": 20,
+    "titulo": "Prototype™",
+    "imagen": "/assets/public/capsules/hero_capsule_20.jpg",
+    "descuento": "-75%",
+    "precioOriginal": "CLP$15.880",
+    "precioDescuento": "CLP$3.970",
+    "plataforma": "xbox",
+    "plataforma_2": "playstation"
+  },
+  {
+    "id": 21,
+    "titulo": "Arcanum: Of Steamworks and Magick Obscura",
+    "imagen": "/assets/public/capsules/hero_capsule_21.jpg",
+    "descuento": "-75%",
+    "precioOriginal": "CLP$4.760",
+    "precioDescuento": "CLP$1.190",
+    "plataforma": "",
+    "plataforma_2": ""
+  },
+  {
+    "id": 22,
+    "titulo": "GUN™",
+    "imagen": "/assets/public/capsules/hero_capsule_22.jpg",
+    "descuento": "-67%",
+    "precioOriginal": "CLP$15.880",
+    "precioDescuento": "CLP$5.240",
+    "plataforma": "",
+    "plataforma_2": ""
+  },
+  {
+    "id": 23,
+    "titulo": "Singularity™",
+    "imagen": "/assets/public/capsules/hero_capsule_23.jpg",
+    "descuento": "-67%",
+    "precioOriginal": "CLP$22.900",
+    "precioDescuento": "CLP$7.557",
+    "plataforma": "",
+    "plataforma_2": ""
+  },
+  {
+    "id": 24,
+    "titulo": "Space Quest™ Collection",
+    "imagen": "/assets/public/capsules/hero_capsule_24.jpg",
+    "descuento": "-67%",
+    "precioOriginal": "CLP$15.880",
+    "precioDescuento": "CLP$5.240",
+    "plataforma": "",
+    "plataforma_2": ""
+  },
+  {
+    "id": 25,
+    "titulo": "Geometry Wars™ 3: Dimensions Evolved",
+    "imagen": "/assets/public/capsules/hero_capsule_25.jpg",
+    "descuento": "-50%",
+    "precioOriginal": "CLP$11.910",
+    "precioDescuento": "CLP$5.955",
+    "plataforma": "mac",
+    "plataforma_2": ""
+  }
+]

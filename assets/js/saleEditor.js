@@ -256,20 +256,3 @@ function copyText() {
   textarea.setSelectionRange(0, 0);
   alertText.innerHTML = "Enlace copiado";
 }
-
-const socialShareButton = document.querySelectorAll(".share_button");
-
-socialShareButton.addEventListener("click", () => {
-  if (navigator.share) {
-    navigator
-      .share({
-        title: "Mega Games",
-        text: "Mega Games",
-        url: "https://megagames.com/",
-      })
-      .then(() => {
-        console.log("Thanks for sharing!");
-      })
-      .catch(console.error);
-  }
-});
