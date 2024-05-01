@@ -3,6 +3,11 @@ body.v6 {
   font-size: 13px;
 }
 
+body.hidden_body {
+  overflow-y: hidden;
+  height: 100vh;
+}
+
 .sale_background {
   background-position: center top;
   background-repeat: no-repeat;
@@ -715,7 +720,7 @@ body.v6 {
   width: auto;
   min-width: unset;
   padding: 9px 20px;
-  transition: box-shadow 0.2s ease-out;
+  transition: background, color, box-shadow 0.2s ease-out;
   height: 38px;
   box-sizing: border-box;
   text-align: center;
@@ -733,7 +738,6 @@ body.v6 {
     #d7bf09 0%,
     #766805 120%
   );
-  color: #fff;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
@@ -869,5 +873,457 @@ body.v6 {
 @media screen and (max-width: 940px) {
   .sale_background {
     background-size: var(--background-scale, 166%);
+  }
+}
+
+.full_modal_overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1500;
+}
+
+.modal_overlay_background {
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 7;
+}
+
+.modal_overlay_content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modal_overlay_content.active {
+  z-index: 10;
+}
+
+.modal_position {
+  display: flex;
+  align-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.full_modal_overlay .modal_position_content {
+  height: initial;
+  width: initial;
+  max-width: 88vw;
+  max-height: 90vh;
+}
+
+@media screen and (max-width: 640px) {
+  .full_modal_overlay .modal_position_content {
+    max-height: 95vh;
+  }
+}
+
+.modal_position_content {
+  box-shadow: 0px 8px 38px 5px rgba(0, 0, 0, 0.75);
+  margin: auto;
+  font-weight: 300;
+  color: #969696;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal_position_content > * {
+  min-height: 0;
+  min-width: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.modal_position_top_bar {
+  min-height: 1px;
+  min-width: initial;
+  flex-grow: initial;
+  flex-shrink: initial;
+  background: linear-gradient(to right, #cbb0fc 0%, #6f26f7 60%);
+}
+
+div.modal_position_dismiss {
+  min-width: initial;
+  min-height: initial;
+  flex-grow: initial;
+  flex-shrink: initial;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  z-index: 1;
+  box-sizing: content-box;
+}
+
+.modal_position_dismiss .close_button {
+  width: 14px;
+  height: 14px;
+  padding: 4px;
+  background-size: cover;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 4px;
+  box-sizing: content-box;
+}
+
+.close_button svg {
+  fill: #fff;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  max-width: 320px;
+  max-height: 320px;
+  box-sizing: content-box;
+}
+
+.modal_position_dismiss .close_button line {
+  stroke: #788a92;
+  stroke-width: 24px;
+}
+
+.dialog_center_vertically {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.dialog_content {
+  padding: 24px;
+  display: flex;
+  overflow: visible;
+  position: relative;
+}
+
+.dialog_content,
+.dialog_content_transition {
+  background: radial-gradient(
+      circle at top left,
+      rgba(74, 81, 92, 0.4) 0%,
+      rgba(75, 81, 92, 0) 60%
+    ),
+    #25282e;
+  user-select: none;
+}
+
+.dialog_content_inner_width {
+  max-width: 600px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.dialog_content_inner_width > form {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
+}
+
+.dialog_header {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #fff;
+  flex-shrink: 0;
+  user-select: none;
+  margin-right: 26px;
+  margin-bottom: 4px;
+}
+
+.dialog_body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: auto;
+  -webkit-app-region: no-drag;
+}
+
+.dialog_body a {
+  color: #6dcff6;
+  text-decoration: none;
+}
+
+.event_display_share_dialog .dialog_body_text {
+  margin-bottom: 10px;
+}
+
+.dialog_body_text {
+  color: #969696;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 300;
+  margin-bottom: 32px;
+  user-select: none;
+}
+
+.dialog_label_content {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(59, 63, 72, 0.5);
+  border-radius: 3px;
+  padding: 10px;
+  text-align: left;
+  margin-top: 16px;
+}
+
+.dialog_label {
+  display: flex;
+  justify-content: flex-start;
+  padding: 16px 8px;
+  align-items: center;
+}
+
+.dialog_label select {
+  font-size: 13px;
+}
+
+.dialog_label .d_label {
+  padding: 0px 8px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0px;
+}
+
+.d_label {
+  font-weight: 300;
+  color: #969696;
+  text-transform: uppercase;
+  line-height: 19px;
+  font-size: 13px;
+  margin-bottom: 4px;
+  user-select: none;
+  letter-spacing: initial;
+}
+
+.share_section_ctn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.share_button > img {
+  height: 33px;
+  padding-bottom: 8px;
+  vertical-align: bottom;
+}
+
+.share_icon {
+  color: #dfe3e6;
+  transition-property: background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  background: #3d4450;
+  padding: 6px 50px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-decoration: none;
+  box-sizing: content-box;
+}
+
+.share_icon:hover {
+  background: #464d58;
+  color: #fff;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.separator {
+  background-color: #161616;
+  border-bottom: 1px solid #4c4c4c;
+  height: 1px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.share_link_ctn {
+  display: flex;
+  flex-direction: row;
+  font-size: 13.3333px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.share_section_ctn > div:not(:first-child) {
+  margin-left: 8px;
+}
+
+.share_link_ctn span {
+  font-size: 12px;
+  padding-right: 10px;
+  padding-left: 2px;
+}
+
+.share_link {
+  -webkit-user-select: none !important; /* Safari */
+  -moz-user-select: none !important; /* Firefox */
+  -ms-user-select: none !important; /* IE 10+ */
+  user-select: none !important; /* Standard syntax */
+  flex-grow: 10;
+  width: 485px;
+  height: 32px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #909090;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid #000;
+  border-radius: 3px;
+  outline: none;
+  font-family: "Motiva Sans", Sans-serif;
+  resize: none;
+  line-height: 14px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.share_link_button_ctn.share_icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #dfe3e6;
+  transition-property: background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  background: #3d4450;
+  padding: 6px 25px 6px 25px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.share_link_button_ctn.share_icon:hover {
+  background: #464d58;
+  color: #fff;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.share_link_button_ctn img {
+  height: 18px;
+  margin-top: 0px;
+}
+
+.void_div {
+  text-align: center;
+  min-height: 30px;
+  padding-top: 10px;
+}
+
+.dialog_footer {
+  margin-top: auto;
+  padding-top: 16px;
+  flex-shrink: 0;
+}
+
+button.dialog_button.Primary {
+  background: transparent;
+  background: linear-gradient(
+    to right,
+    rgba(190, 157, 251, 1) 0%,
+    rgba(88, 9, 236, 1) 60%
+  );
+  background-position: 25%;
+  background-size: 330% 100%;
+}
+
+button.dialog_button.Primary:hover {
+  background: linear-gradient(
+    to right,
+    rgba(190, 157, 251, 1) 0%,
+    rgba(88, 9, 236, 1) 60%
+  );
+  background-position: 0%;
+  background-size: 330% 100%;
+  color: #fff;
+}
+
+button.dialog_button::before {
+  pointer-events: none;
+  user-select: none;
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.generic_confirm_dialog .dialog_button {
+  min-width: 120px;
+}
+
+button.dialog_button {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: 0;
+  font: inherit;
+  overflow: visible;
+  padding: 0;
+  margin: 2px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  display: block;
+  line-height: 32px;
+  color: #dfe3e6;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 100%;
+  transition-property: opacity, background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  background: #3d4450;
+  background-position: 99% 1%;
+  background-size: 300% 300%;
+  position: relative;
+}
+
+@media screen and (max-width: 700px) {
+  .dialog_label {
+    flex-direction: column;
+  }
+
+  .dialog_label_content {
+    margin-top: 2px;
+    padding: 0px;
+    background: none;
+  }
+
+  .share_link {
+    min-width: 250px;
+    min-height: 80px;
+  }
+
+  .share_link_ctn span {
+    display: none;
+  }
+
+  .share_link_button_ctn {
+    display: none !important;
+  }
+
+  .share_section_ctn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .share_button img {
+    height: 30px;
+    padding: 5px 40px;
   }
 }

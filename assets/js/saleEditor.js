@@ -162,6 +162,7 @@ function aplicarEstilos() {
     saleSectionGrid8.style.gridTemplateColumns = "repeat(3, minmax(0px, 1fr))";
   } else if (window.matchMedia("(min-width: 910px)").matches) {
     //panel1
+    saleSectionGrid1.appendChild(lastCard1);
     saleSectionGrid1.style.gridTemplateColumns = "repeat(3, minmax(0px, 1fr))";
 
     //panel2
@@ -215,3 +216,60 @@ function delay(func) {
 const delayAplicarEstilos = delay(aplicarEstilos);
 
 window.addEventListener("resize", delayAplicarEstilos);
+
+const body = document.querySelector(".v6");
+const modalOverlay = document.querySelector(".full_modal_overlay");
+const shareButton = document.querySelector(".social_share_button");
+const closeButton = document.querySelector(".close_button");
+const closeDialog = document.querySelector(".dialog_button");
+const alertText = document.querySelector(".void_div");
+
+shareButton.addEventListener("click", () => {
+  modalOverlay.style = "";
+  body.classList.add("hidden_body");
+});
+
+closeButton.addEventListener("click", () => {
+  modalOverlay.style = "display: none";
+  body.classList.remove("hidden_body");
+  alertText.innerHTML = "";
+});
+
+closeDialog.addEventListener("click", () => {
+  modalOverlay.style = "display: none";
+  body.classList.remove("hidden_body");
+  alertText.innerHTML = "";
+});
+
+document.getElementById("copy_button").addEventListener("click", copyText);
+document
+  .getElementById("share_link_text")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    copyText();
+  });
+
+function copyText() {
+  var textarea = document.getElementById("share_link_text");
+  textarea.select();
+  document.execCommand("copy");
+  textarea.setSelectionRange(0, 0);
+  alertText.innerHTML = "Enlace copiado";
+}
+
+const socialShareButton = document.querySelectorAll(".share_button");
+
+socialShareButton.addEventListener("click", () => {
+  if (navigator.share) {
+    navigator
+      .share({
+        title: "Mega Games",
+        text: "Mega Games",
+        url: "https://megagames.com/",
+      })
+      .then(() => {
+        console.log("Thanks for sharing!");
+      })
+      .catch(console.error);
+  }
+});

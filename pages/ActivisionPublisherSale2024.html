@@ -46,7 +46,7 @@
           </ul>
           <div class="d-flex align-items-center ms-lg-auto">
             <ul class="navbar-nav me-2">
-              <li class="nav-item d-flex">
+              <li class="nav-item d-flex fs-6">
                 <a class="nav-link position-relative p-2" href="#"
                   ><span><i class="fa-regular fa-heart text-w"></i></span
                 ></a>
@@ -61,14 +61,11 @@
             </ul>
             <button
               type="button"
-              class="btn bg-transparent px-2 me-2 border-0 text-w arial"
+              class="bg-transparent px-2 me-2 border-0 text-w fs-sm"
             >
               Iniciar sesión
             </button>
-            <button
-              type="button"
-              class="btn border-p3 px-2 me-lg-2 rounded-2 text-w arial"
-            >
+            <button type="button" class="main_btn border-0 me-lg-2 fs-sm">
               Registrarse
             </button>
             <a
@@ -2161,6 +2158,174 @@
           </ul>
         </div>
       </footer>
+    </div>
+    <div class="full_modal_overlay" style="display: none">
+      <div class="modal_overlay_content modal_overlay_background"></div>
+      <div class="modal_overlay_content active" tabindex="-1">
+        <div class="modal_position event_display_share_dialog" tabindex="0">
+          <div class="modal_position_content">
+            <div class="modal_position_top_bar"></div>
+            <div class="modal_position_dismiss">
+              <div class="close_button">
+                <svg
+                  version="1.1"
+                  id="Layer_2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="256px"
+                  height="256px"
+                  viewBox="0 0 256 256"
+                >
+                  <line
+                    fill="none"
+                    stroke="#FFFFFF"
+                    stroke-width="45"
+                    stroke-miterlimit="10"
+                    x1="212"
+                    y1="212"
+                    x2="44"
+                    y2="44"
+                  ></line>
+                  <line
+                    fill="none"
+                    stroke="#FFFFFF"
+                    stroke-width="45"
+                    stroke-miterlimit="10"
+                    x1="44"
+                    y1="212"
+                    x2="212"
+                    y2="44"
+                  ></line>
+                </svg>
+              </div>
+            </div>
+            <div
+              class="dialog_content dialog_layout generic_confirm_dialog dialog_center_vertically"
+            >
+              <div class="dialog_content_inner_width">
+                <form>
+                  <div class="dialog_header">Compartir</div>
+                  <div class="dialog_body">
+                    <div class="dialog_body_text">
+                      <div class="dialog_label_content">
+                        <div class="dialog_label">
+                          <div class="d_label dialog_layout">
+                            Compartir el contenido en
+                          </div>
+                          <div>
+                            <div class="Focusable">
+                              <select>
+                                <option>Alemán</option>
+                                <option>Árabe</option>
+                                <option>Búlgaro</option>
+                                <option>Checo</option>
+                                <option>Chino simplificado</option>
+                                <option>Chino tradicional</option>
+                                <option>Coreano</option>
+                                <option>Danés</option>
+                                <option>Español de España</option>
+                                <option selected>
+                                  Español de Hispanoamérica
+                                </option>
+                                <option>Finés</option>
+                                <option>Francés</option>
+                                <option>Griego</option>
+                                <option>Holandés</option>
+                                <option>Húngaro</option>
+                                <option>Indonesio</option>
+                                <option>Inglés</option>
+                                <option>Italiano</option>
+                                <option>Japonés</option>
+                                <option>Noruego</option>
+                                <option>Polaco</option>
+                                <option>Portugués de Brasil</option>
+                                <option>Portugués de Portugal</option>
+                                <option>Rumano</option>
+                                <option>Ruso</option>
+                                <option>Sueco</option>
+                                <option>Tailandés</option>
+                                <option>Turco</option>
+                                <option>Ucraniano</option>
+                                <option>Vietnamita</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="share_section_ctn" style="flex-wrap: wrap">
+                          <div class="Focusable">
+                            <a
+                              class="share_button"
+                              href="https://www.facebook.com/sharer/sharer.php?u=https://mega-gamess.netlify.app/pages/activisionpublishersale2024"
+                              target="_blank"
+                              ><img
+                                class="share_icon"
+                                src="/assets/public/icons/facebook-icon.png"
+                            /></a>
+                          </div>
+                          <div class="Focusable">
+                            <a
+                              class="share_button"
+                              href="https://www.reddit.com/submit?url=https://mega-gamess.netlify.app/pages/activisionpublishersale2024&title=¡Gran venta de editores de Activision Blizzard en 2024!"
+                              target="_blank"
+                              ><img
+                                class="share_icon"
+                                src="/assets/public/icons/twitter-icon.png"
+                            /></a>
+                          </div>
+                          <div class="Focusable">
+                            <a
+                              class="share_button"
+                              href="https://www.reddit.com/submit?url=https://mega-gamess.netlify.app/pages/activisionpublishersale2024&title=ActivisionBlizzard+Publisher+Sale+2024"
+                              target="_blank"
+                              ><img
+                                class="share_icon"
+                                src="/assets/public/icons/reddit-icon.png"
+                            /></a>
+                          </div>
+                        </div>
+                        <div class="separator"></div>
+                        <div>
+                          <div class="share_link_ctn">
+                            <span>Enlace: </span
+                            ><textarea
+                              id="share_link_text"
+                              class="share_link"
+                              readonly=""
+                            >
+https://mega-gamess.netlify.app/pages/activisionpublishersale2024</textarea
+                            >
+                            <div
+                              id="copy_button"
+                              class="share_link_button_ctn share_icon"
+                              data-tooltip-text="Copiar el enlace al portapapeles"
+                              title="Copiar el enlace al portapapeles"
+                            >
+                              <img
+                                src="/assets/public/icons/copy-link-icon.svg"
+                              />
+                            </div>
+                          </div>
+                          <div class="void_div"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dialog_footer">
+                      <button
+                        type="button"
+                        class="dialog_button dialog_layout Primary Focusable"
+                        tabindex="0"
+                      >
+                        Cerrar
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
