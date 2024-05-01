@@ -295,7 +295,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!input.contains(event.target)) {
         if (input.value === "") {
           input.classList.add("default");
-          input.placeholder = "Buscar";
+          input.placeholder = "buscar";
         } else {
           input.classList.remove("default");
           input.placeholder = "";

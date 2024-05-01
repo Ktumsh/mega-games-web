@@ -196,6 +196,12 @@ div#store_search {
   box-sizing: content-box;
 }
 
+.searchbox input::placeholder {
+  color: rgba(190, 157, 251, 0.9);
+  font-weight: 300;
+  text-shadow: 1px 1px 0px rgb(59, 52, 134);
+}
+
 .searchbox input {
   border: none;
   background-color: transparent;
@@ -378,13 +384,23 @@ a#store_search_link i {
   background-color: #332941 !important;
 }
 
-.gradient-p0 {
-  background: rgb(30, 3, 78);
-  background: linear-gradient(
-    0deg,
-    rgba(30, 3, 78, 1) 0%,
-    rgba(19, 16, 25, 1) 100%
+.main_btn {
+  background-image: radial-gradient(
+    circle at top left,
+    #9d8b07 10%,
+    #766805 80%
   );
+  color: #fff;
+  padding: 8px 10px;
+  transition: all 0.2s ease-out;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main_btn:hover {
+  opacity: 0.75;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .bg-gradient-p1 {
@@ -400,6 +416,14 @@ a#store_search_link i {
     rgba(255, 0, 230, 0.3) 85%,
     rgba(249, 234, 118, 0.5) 98%,
     rgba(249, 234, 118, 0.7) 100%
+  );
+}
+
+.bg-gradient-p2 {
+  background-image: radial-gradient(
+    circle at top left,
+    #9d8b07 10%,
+    #766805 80%
   );
 }
 
@@ -606,9 +630,13 @@ a#store_search_link i {
   --bs-dropdown-min-width: 0 !important;
 }
 
+.navbar-toggler {
+  margin: 3px 4px;
+}
+
 .navbar-toggler-icon {
-  width: 1.2rem !important;
-  height: 1.2rem !important;
+  width: 1.8rem !important;
+  height: 1.8rem !important;
 }
 
 .carousel-item {
