@@ -403,6 +403,15 @@ a#store_search_link i {
   cursor: pointer;
 }
 
+.bg-gradient-p0 {
+  background: rgb(37, 4, 98);
+  background: linear-gradient(
+    0deg,
+    rgba(37, 4, 98, 1) 0%,
+    rgba(19, 16, 25, 1) 100%
+  );
+}
+
 .bg-gradient-p1 {
   background: rgb(249, 234, 118);
   background: linear-gradient(
