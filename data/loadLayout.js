@@ -1,4 +1,159 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const logoPath = "../assets/public/mega-games-logo.svg";
+
+  const headerSlot = document.querySelector(".HeaderSlot");
+  const headerContainer = document.createElement("header");
+  headerContainer.classList.add("navbar");
+  headerContainer.classList.add("navbar-expand-lg");
+  headerContainer.classList.add("navbar-dark");
+  headerContainer.classList.add("my-3");
+
+  headerContainer.innerHTML = `
+    <nav class="container flex-nowrap flex-lg-wrap">
+      <a class="navbar-brand mx-0" href="/index.html">
+        <img
+          width="36px"
+          height="auto"
+          src="${logoPath}"
+          alt="Mega Games Logo"
+        />
+      </a>
+      <div class="navbar-collapse d-flex justify-content-end" id="navbarButtonsExample">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link grotesk text-w d-none d-lg-block fs-6" aria-current="page" href="/index.html">Mega Games</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center ms-lg-auto">
+          <ul class="navbar-nav me-2">
+            <li class="nav-item d-flex">
+              <a class="nav-link position-relative p-2" href="#"><span><i class="fa-regular fa-heart text-w"></i></span></a>
+              <a class="nav-link position-relative p-2" href="#">
+                <span class="badge position-absolute top-0 end-0 bg-danger rounded-1 p-1 d-none">1</span>
+                <span><i class="fas fa-shopping-cart text-w"></i></span>
+              </a>
+            </li>
+          </ul>
+          <button type="button" class="bg-transparent px-2 me-2 border-0 text-w fs-sm motiva-sans">Iniciar sesión</button>
+          <button type="button" class="main_btn border-0 me-lg-2 fs-sm motiva-sans">Registrarse</button>
+          <a class="btn btn-neon d-none d-lg-block" href="https://github.com/Ktumsh/mega-games-web" target="_blank" role="button"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </nav>
+  `;
+
+  headerSlot.appendChild(headerContainer);
+
+  const navbarSlot = document.querySelector(".NavbarSlot");
+  const navbarContainer = document.createElement("div");
+  navbarContainer.classList.add("container");
+  navbarContainer.style.position = "absolute";
+  navbarContainer.style.left = "0";
+  navbarContainer.style.right = "0";
+  navbarContainer.innerHTML = `
+  <nav class="navbar navbar-dark navbar-expand-lg pt-4 z-3 motiva-sans">
+    <div class="container-fluid nav-bg border-0 p-0 align-items-stretch">
+      <button
+        class="navbar-toggler nav-btn border-0 rounded-1 py-0 px-2 d-flex d-lg-none align-items-center"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="offcanvas offcanvas-start text-bg-dark"
+        tabindex="-1"
+        id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel"
+      >
+        <ul class="fst-nav navbar-nav navbar-nav-pills">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle active text-white border-0"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Categorías</a
+            >
+            <ul
+              class="scd-nav dropdown-menu shadow nav-bg-2 border-0 rounded-0"
+            >
+              <li>
+                <a
+                  class="dropdown-item text-white"
+                  href="/sites/ActivisionPublisherSale2024.html"
+                  >Ofertas del editor</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#"
+                  >Todas las ofertas</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#">Juegos</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#"
+                  >Juegos Tarjetas</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#">Xbox</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#">PSN</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#">Nintendo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/sites/ActivisionPublisherSale2024.html">Ofertas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Juegos baratos</a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Mejores vendidos</a>
+          </li>
+        </ul>
+      </div>
+      <div class="search_area">
+        <div id="store_search">
+          <form name="searchform" role="search">
+            <div class="searchbox">
+              <input
+                class="store_nav_search_term default"
+                type="search"
+                placeholder="buscar"
+                size="22"
+                autocomplete="off"
+                maxlength="64"
+              />
+              <a
+                href="#"
+                id="store_search_link"
+                class="store_search_link text-w"
+                aria-label="Buscar en Mega Games"
+                ><i class="fa-solid fa-magnifying-glass fa"></i
+              ></a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+  `;
+
+  navbarSlot.appendChild(navbarContainer);
+
   const footerSlot = document.querySelector(".FooterSlot");
   const footerContainer = document.createElement("div");
   footerContainer.classList.add("container");
@@ -45,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <div>
           <div class="col-md-5 mb-1">
-            <form>
+            <form class="pt-4 pb-2">
               <h5 class="fs-6 mb-2 pb-1">Obtén ofertas personalizadas de videojuegos</h5>
               <div class="d-flex flex-column flex-sm-row w-100 bg-base rounded-2 overflow-hidden">
                 <label for="newsletter1" class="visually-hidden">Correo electrónico</label>
