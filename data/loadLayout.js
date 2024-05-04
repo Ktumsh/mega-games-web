@@ -50,109 +50,346 @@ document.addEventListener("DOMContentLoaded", () => {
   navbarContainer.style.position = "absolute";
   navbarContainer.style.left = "0";
   navbarContainer.style.right = "0";
+  navbarContainer.style.zIndex = "9999";
   navbarContainer.innerHTML = `
-  <nav class="navbar navbar-dark navbar-expand-lg pt-4 z-3 motiva-sans">
-    <div class="container-fluid nav-bg border-0 p-0 align-items-stretch">
-      <button
-        class="navbar-toggler nav-btn border-0 rounded-1 py-0 px-2 d-flex d-lg-none align-items-center"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasDarkNavbar"
-        aria-controls="offcanvasDarkNavbar"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div
-        class="offcanvas offcanvas-start text-bg-dark"
-        tabindex="-1"
-        id="offcanvasDarkNavbar"
-        aria-labelledby="offcanvasDarkNavbarLabel"
-      >
-        <ul class="fst-nav navbar-nav navbar-nav-pills">
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle active text-white border-0"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              >Categorías</a
-            >
-            <ul
-              class="scd-nav dropdown-menu shadow nav-bg-2 border-0 rounded-0"
-            >
-              <li>
-                <a
-                  class="dropdown-item text-white"
-                  href="/sites/ActivisionPublisherSale2024.html"
-                  >Ofertas del editor</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item text-white" href="#"
-                  >Todas las ofertas</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item text-white" href="#">Juegos</a>
-              </li>
-              <li>
-                <a class="dropdown-item text-white" href="#"
-                  >Juegos Tarjetas</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item text-white" href="#">Xbox</a>
-              </li>
-              <li>
-                <a class="dropdown-item text-white" href="#">PSN</a>
-              </li>
-              <li>
-                <a class="dropdown-item text-white" href="#">Nintendo</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="/sites/ActivisionPublisherSale2024.html">Ofertas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Juegos baratos</a>
-          </li>
-  
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Mejores vendidos</a>
-          </li>
-        </ul>
-      </div>
-      <div class="search_area">
-        <div id="store_search">
-          <form name="searchform" role="search">
-            <div class="searchbox">
-              <input
-                class="store_nav_search_term default"
-                type="search"
-                placeholder="buscar"
-                size="22"
-                autocomplete="off"
-                maxlength="64"
-              />
-              <a
-                href="#"
-                id="store_search_link"
-                class="store_search_link text-w"
-                aria-label="Buscar en Mega Games"
-                ><i class="fa-solid fa-magnifying-glass fa"></i
-              ></a>
+  <div
+  class="home_page_content container"
+  style="position: absolute; left: 0; right: 0"
+>
+  <div class="responsive_store_nav_ctn_spacer">
+    <div
+      id="store_header"
+      role="navigation"
+      aria-label="Menú de la tienda"
+      style="visibility: visible; display: block"
+    >
+      <div class="content">
+        <nav id="store_nav_area">
+          <div class="store_nav_bg nav-bg">
+            <div class="store_nav">
+              <div id="foryou_tab" data-flyout="foryou_flyout" class="tab">
+                <span class="pulldown">
+                  <a class="pulldown_desktop" href="#">Tu tienda</a>
+                  <a class="pulldown_mobile" href="#">Tu tienda</a>
+                </span>
+              </div>
+              <div
+                id="foryou_flyout"
+                class="popup_block_new"
+                style="
+                  visibility: visible;
+                  top: 42px;
+                  left: 0px;
+                  display: none;
+                  opacity: 1;
+                "
+              >
+                <div class="popup_body popup_menu popup_menu_browse">
+                  <a href="/index.html" class="popup_menu_item">Inicio</a>
+                  <a href="#" class="popup_menu_item">Recomendaciones</a>
+                  <a href="#" class="popup_menu_item"
+                    >Vistos recientemente</a
+                  >
+                </div>
+              </div>
+              <div id="noteworthy_tab" data-flyout="noteworthy_flyout" class="tab">
+                <span class="pulldown">
+                  <a href="#" class="pulldown_desktop"
+                    >Nuevo y destacable</a
+                  >
+                  <a href="#" class="pulldown_mobile">Nuevo y destacable</a>
+                </span>
+              </div>
+              <div
+                id="noteworthy_flyout"
+                class="popup_block_new"
+                style="
+                  visibility: visible;
+                  top: 42px;
+                  left: 83px;
+                  display: none;
+                  opacity: 1;
+                "
+              >
+                <div class="popup_body popup_menu_twocol_new">
+                  <div class="popup_menu popup_menu_browse">
+                    <div class="popup_menu_subheader responsive_hidden">
+                      Populares
+                    </div>
+                    <a href="/index.html" class="popup_menu_item"
+                      >Lo más vendido</a
+                    >
+                    <a href="#" class="popup_menu_item">Lo más jugado</a>
+                    <div class="category_hr responsive_hidden"></div>
+                    <a href="#" class="popup_menu_item">Novedades</a>
+                    <a href="#" class="popup_menu_item"
+                      >Próximos lanzamientos</a
+                    >
+                  </div>
+                  <div class="popup_menu popup_menu_browse leftborder">
+                    <div class="popup_menu_subheader responsive_hidden">
+                      Promociones y eventos
+                    </div>
+                    <a href="/index.html" class="popup_menu_item"
+                      >Ofertas espaciales</a
+                    >
+                    <a href="#" class="popup_menu_item"
+                      >Eventos de rebajas</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div id="genre_tab" data-flyout="genre_flyout" class="tab">
+                <span class="pulldown">
+                  <a href="#" class="pulldown_desktop">Categorías</a>
+                  <a href="#" class="pulldown_mobile">Categorías</a>
+                </span>
+              </div>
+              <div
+                id="genre_flyout"
+                class="popup_block_new"
+                style="
+                  visibility: visible;
+                  top: 42px;
+                  left: 232px;
+                  display: none;
+                  opacity: 1;
+                "
+              >
+                <div class="popup_body popup_menu_twocol_new">
+                  <div class="popup_menu popup_menu_browse">
+                    <div class="popup_menu_subheader responsive_hidden">
+                      Miscelánea
+                    </div>
+                    <a href="#" class="popup_menu_item"
+                      >Todas las ofertas</a
+                    >
+                    <div class="category_hr responsive_hidden"></div>
+                    <a href="#" class="popup_menu_item">Juegos</a>
+                    <a href="#" class="popup_menu_item"
+                      >Juegos y tarjetas</a
+                    >
+                    <a href="#" class="popup_menu_item">eTarjetas</a>
+                    <div class="category_hr responsive_hidden"></div>
+                    <a href="#" class="popup_menu_item">Xbox</a>
+                    <a href="#" class="popup_menu_item">PSN</a>
+                    <a href="#" class="popup_menu_item">Nintendo</a>
+                  </div>
+                  <div class="popup_menu popup_menu_browse leftborder">
+                    <div class="popup_menu_subheader reduced_vspace">
+                      Géneros
+                    </div>
+                    <div
+                      class="popup_menu_subheader popup_genre_expand_header responsive_hidden"
+                    >
+                      <a href="#" class="popup_menu_item">Acción</a>
+                    </div>
+
+                    <a href="#" class="popup_menu_item">Aventuras</a>
+                    <a href="#" class="popup_menu_item">Arcade</a>
+                    <a href="#" class="popup_menu_item">Carreras</a>
+                    <a href="#" class="popup_menu_item"
+                      >Disparos en primera persona</a
+                    >
+                    <a href="#" class="popup_menu_item"
+                      >Disparos en tercera persona</a
+                    >
+                  </div>
+                  <div class="popup_menu popup_menu_browse">
+                    <div
+                      class="popup_menu_subheader reduced_vspace responsive_hidden"
+                    >
+                      <br />
+                    </div>
+                    <div
+                      class="popup_menu_subheader popup_genre_expand_header responsive_hidden"
+                    >
+                      <a href="#" class="popup_menu_item">Rol</a>
+                    </div>
+                    <div
+                      class="popup_genre_expand_content responsive_hidden"
+                    >
+                      <a href="#" class="popup_menu_item">Deporte</a>
+                      <a href="#" class="popup_menu_item">Educativo</a>
+                      <a href="#" class="popup_menu_item">Estrategia</a>
+                      <a href="#" class="popup_menu_item">Hack and slash</a>
+                      <a href="#" class="popup_menu_item">Indie</a>
+                      <a href="#" class="popup_menu_item">Lucha</a>
+                    </div>
+                  </div>
+                  <div class="popup_menu popup_menu_browse">
+                    <div
+                      class="popup_menu_subheader reduced_vspace responsive_hidden"
+                    >
+                      <br />
+                    </div>
+                    <div
+                      class="popup_menu_subheader popup_genre_expand_header responsive_hidden"
+                    >
+                      <a href="#" class="popup_menu_item"
+                        >Multijugador masivo en línea</a
+                      >
+                    </div>
+                    <div
+                      class="popup_genre_expand_content responsive_hidden"
+                    >
+                      <a href="#" class="popup_menu_item">Música</a>
+                      <a href="#" class="popup_menu_item">Plataforma</a>
+                      <a href="#" class="popup_menu_item"
+                        >Point and click</a
+                      >
+                      <a href="#" class="popup_menu_item">Rompecabezas</a>
+                      <a href="#" class="popup_menu_item">Simulación</a>
+                    </div>
+                  </div>
+                  <div class="popup_menu popup_menu_browse leftborder">
+                    <div class="ps-4"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="search_area">
+                <div id="store_search">
+                  <form name="searchform" role="search">
+                    <div class="searchbox">
+                      <input
+                        class="store_nav_search_term default"
+                        type="search"
+                        placeholder="buscar"
+                        size="22"
+                        autocomplete="off"
+                        maxlength="64"
+                      />
+                      <a
+                        href="#"
+                        id="store_search_link"
+                        class="store_search_link text-w"
+                        aria-label="Buscar en Mega Games"
+                        ><i class="fa-solid fa-magnifying-glass fa"></i
+                      ></a>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
-          </form>
-        </div>
+          </div>
+        </nav>
       </div>
     </div>
-  </nav>
+  </div>
+</div>
   `;
 
   navbarSlot.appendChild(navbarContainer);
+
+  function changeOpacity(target, duration, fromOpacity, toOpacity) {
+    const opacityIncrement = (toOpacity - fromOpacity) / (duration / 10);
+    let currentOpacity = fromOpacity;
+    const timer = setInterval(function () {
+      currentOpacity += opacityIncrement;
+      currentOpacity = Math.min(Math.max(currentOpacity, 0), 1);
+      target.style.opacity = currentOpacity;
+      if (
+        (opacityIncrement > 0 && currentOpacity >= toOpacity) ||
+        (opacityIncrement < 0 && currentOpacity <= toOpacity)
+      ) {
+        clearInterval(timer);
+      }
+    }, 10);
+  }
+
+  function showMenuWithOpacity(tabId, flyoutId, timeoutId, isMouseOverMenu) {
+    const tab = document.getElementById(tabId);
+    const flyout = document.getElementById(flyoutId);
+    if (flyout.style.display === "none" && !flyout.classList.contains("open")) {
+      clearTimeout(timeoutId);
+      changeOpacity(flyout, 150, 0, 1);
+      flyout.style.display = "block";
+      flyout.classList.add("open");
+      toggleTabFocusClass(tab, true);
+      isMouseOverMenu = true;
+    }
+  }
+
+  function hideMenuWithOpacity(tabId, flyoutId, timeoutId, isMouseOverMenu) {
+    const tab = document.getElementById(tabId);
+    const flyout = document.getElementById(flyoutId);
+    clearTimeout(timeoutId);
+    if (!isMouseOverMenu) {
+      changeOpacity(flyout, 150, 1, 0);
+      setTimeout(function () {
+        flyout.style.display = "none";
+        flyout.classList.remove("open");
+      }, 150);
+      toggleTabFocusClass(tab, false);
+    }
+  }
+
+  function toggleTabFocusClass(tab, isFocused) {
+    if (isFocused) {
+      if (!tab.classList.contains("focus")) {
+        tab.classList.add("focus");
+      }
+    } else {
+      tab.classList.remove("focus");
+    }
+  }
+
+  let currentMenuTimeoutId;
+  let currentMenuIsMouseOverMenu = false;
+  let currentMenuId;
+
+  function hideAllMenus() {
+    clearTimeout(currentMenuTimeoutId);
+    document.querySelectorAll(".popup_block_new").forEach(function (flyout) {
+      if (flyout.id !== currentMenuId) {
+        changeOpacity(flyout, 150, 1, 0);
+        setTimeout(function () {
+          flyout.style.display = "none";
+          flyout.classList.remove("open");
+        }, 150);
+      }
+    });
+    document.querySelectorAll(".tab").forEach(function (tab) {
+      if (tab.id !== currentMenuId) {
+        toggleTabFocusClass(tab, false);
+      }
+    });
+  }
+
+  document.querySelectorAll(".tab").forEach(function (tab) {
+    tab.addEventListener("mouseenter", function () {
+      hideAllMenus();
+      currentMenuId = tab.id;
+      currentMenuTimeoutId = setTimeout(function () {
+        showMenuWithOpacity(
+          tab.id,
+          tab.dataset.flyout,
+          currentMenuTimeoutId,
+          currentMenuIsMouseOverMenu
+        );
+      }, 300);
+    });
+
+    tab.addEventListener("mouseleave", function () {
+      clearTimeout(currentMenuTimeoutId);
+    });
+  });
+
+  document.querySelectorAll(".popup_block_new").forEach(function (flyout) {
+    flyout.addEventListener("mouseenter", function () {
+      currentMenuIsMouseOverMenu = true;
+    });
+
+    flyout.addEventListener("mouseleave", function () {
+      currentMenuIsMouseOverMenu = false;
+      hideMenuWithOpacity(
+        flyout.dataset.tab,
+        flyout.id,
+        currentMenuTimeoutId,
+        currentMenuIsMouseOverMenu
+      );
+    });
+  });
 
   const footerSlot = document.querySelector(".FooterSlot");
   const footerContainer = document.createElement("div");
