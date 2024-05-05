@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const logoPath = "../assets/public/mega-games-logo.svg";
 
-  const headerSlot = document.querySelector(".HeaderSlot");
+  const headerSlot = document.querySelector(".HeaderSlotDesktop");
   const headerContainer = document.createElement("header");
   headerContainer.classList.add("navbar");
   headerContainer.classList.add("navbar-expand-lg");
@@ -42,16 +42,110 @@ document.addEventListener("DOMContentLoaded", () => {
     </nav>
   `;
 
+  const headerSlotMobile = document.querySelector(".HeaderSlotMobile");
+  const headerContainerMobile = document.createElement("div");
+  headerContainerMobile.classList.add("responsive_header");
+
+  headerContainerMobile.innerHTML = `
+  <div class="responsive_header_content">
+    <div id="responsive_menu_logo">
+      <img
+        src="/assets/public/icons/header_menu_hamburger.png"
+        height="100%"
+      />
+    </div>
+    <div class="responsive_header_logo">
+      <a href="/index.html">
+        <div class="d-flex align-items-center">
+          <img
+            src="/assets/public/mega-games-logo.svg"
+            height="36"
+            alt="Mega Games"
+          />
+          <span class="grotesk ps-2 fs-6">Mega Games</span>
+        </div>
+      </a>
+    </div>
+  </div>
+  `;
+
+  headerSlotMobile.appendChild(headerContainerMobile);
+
   headerSlot.appendChild(headerContainer);
 
-  const navbarSlot = document.querySelector(".NavbarSlot");
-  const navbarContainer = document.createElement("div");
-  navbarContainer.classList.add("container");
-  navbarContainer.style.position = "absolute";
-  navbarContainer.style.left = "0";
-  navbarContainer.style.right = "0";
-  navbarContainer.style.zIndex = "9999";
-  navbarContainer.innerHTML = `
+  const hamburgerMenuSlot = document.querySelector(".HamburgerMenuSlot");
+  const hamburgerMenuContainer = document.createElement("div");
+  hamburgerMenuContainer.innerHTML = `
+    <div class="overlay_menu_bg" style="display: none;"></div>
+    <div
+    role="navigation"
+    class="responsive_page_menu_ctn mainmenu"
+    aria-label="Menú móvil"
+  >
+    <div id="responsive_page_menu" class="responsive_page_menu">
+      <div class="mainmenu_contents">
+        <div class="mainmenu_contents_items">
+          <a class="menuitem" href="#">Iniciar sesión</a>
+          <a class="menuitem" href="#">Registrarse</a>
+          <a class="menuitem supernav" href="#">Acerca de</a>
+          <a class="menuitem supernav" href="#">Soporte</a>
+        </div>
+        <div class="menuitem_end"></div>
+        <div class="mainmenu_footer_spacer"></div>
+        <div class="mainmenu_footer">
+          <div class="mainmenu_footer_logo">
+            <img src="/assets/public/mega-games-logo.svg" height="36" />
+            <span class="grotesk d-lg-block fs-6"
+              >Mega Games</span
+            >
+          </div>
+          Copyright © 2024 Mega Games. Todos los derechos reservados.
+          <span class="mainmenu_footer_links">
+            <a
+              class="text-decoration-none text-white fw-medium opacity-75 footer_link2 mb-4"
+              href="#"
+              >Términos y condiciones</a
+            >
+            <a
+              class="text-decoration-none text-white fw-medium opacity-75 footer_link2 mb-4"
+              href="#"
+              >Aviso de privacidad</a
+            >
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  `;
+
+  hamburgerMenuSlot.appendChild(hamburgerMenuContainer);
+
+  const hamburgerMenuOpenBtn = document.getElementById("responsive_menu_logo");
+  const overlaybBg = document.querySelector(".overlay_menu_bg");
+  const body = document.querySelector("body");
+
+  hamburgerMenuOpenBtn.addEventListener("click", () => {
+    hamburgerMenuSlot.classList.add("mainmenu_active");
+    overlaybBg.style = "display: block";
+    body.classList.add("hidden_body");
+  });
+
+  overlaybBg.addEventListener("click", () => {
+    hamburgerMenuSlot.classList.remove("mainmenu_active");
+    overlaybBg.style = "display: none";
+    body.classList.remove("hidden_body");
+  });
+
+  function createDesktopNavbar() {
+    const navbarSlot = document.querySelector(".NavbarSlotDesktop");
+    const navbarContainer = document.createElement("div");
+    navbarContainer.id = "responsive_store_nav_desktop";
+    navbarContainer.classList.add("container");
+    navbarContainer.style.position = "absolute";
+    navbarContainer.style.left = "0";
+    navbarContainer.style.right = "0";
+    navbarContainer.style.zIndex = "9999";
+    let navbar = `
   <div
   class="home_page_content container"
   style="position: absolute; left: 0; right: 0"
@@ -75,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
               <div
                 id="foryou_flyout"
-                class="popup_block_new"
+                class="popup_block_new responsive_slidedown"
                 style="
                   visibility: visible;
                   top: 42px;
@@ -133,7 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a href="/index.html" class="popup_menu_item"
                       >Ofertas espaciales</a
                     >
-                    <a href="#" class="popup_menu_item"
+                    <a href="/sites/ActivisionPublisherSale2024.html" class="popup_menu_item"
                       >Eventos de rebajas</a
                     >
                   </div>
@@ -279,7 +373,253 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
   `;
 
-  navbarSlot.appendChild(navbarContainer);
+    navbarContainer.innerHTML = navbar;
+
+    navbarSlot.appendChild(navbarContainer);
+  }
+
+  function createMobileNavbar() {
+    const navbarSlot = document.querySelector(".NavbarSlotMobile");
+    const navbarContainer = document.createElement("div");
+    navbarContainer.id = "responsive_store_nav_mobile";
+
+    let mobileNavbar = `
+    <div
+    id="store_header"
+    role="navigation"
+    aria-label="Menú de la tienda"
+    style="visibility: visible; display: block"
+  >
+    <div class="content">
+      <div id="store_nav_area">
+        <div class="store_nav_bg nav-bg">
+          <div class="store_nav">
+            <div id="foryou_tab" data-flyout="foryou_flyout" class="tab">
+              <span class="pulldown">
+                <a class="pulldown_desktop" href="#">Tu tienda</a>
+                <a class="pulldown_mobile" href="#">Tu tienda</a>
+              </span>
+            </div>
+            <div
+              id="foryou_flyout"
+              class="popup_block_new responsive_slidedown sub_menu"
+            >
+              <div class="popup_body popup_menu popup_menu_browse">
+                <a href="/index.html" class="popup_menu_item">Inicio</a>
+                <a href="#" class="popup_menu_item">Recomendaciones</a>
+                <a href="#" class="popup_menu_item">Vistos recientemente</a>
+              </div>
+            </div>
+            <div
+              id="noteworthy_tab"
+              data-flyout="noteworthy_flyout"
+              class="tab"
+            >
+              <span class="pulldown">
+                <a href="#" class="pulldown_desktop">Nuevo y destacable</a>
+                <a href="#" class="pulldown_mobile">Nuevo y destacable</a>
+              </span>
+            </div>
+            <div id="noteworthy_flyout" class="popup_block_new responsive_slidedown sub_menu">
+              <div class="popup_body popup_menu_twocol_new">
+                <div class="popup_menu popup_menu_browse">
+                  <div class="popup_menu_subheader responsive_hidden">
+                    Populares
+                  </div>
+                  <a href="/index.html" class="popup_menu_item"
+                    >Lo más vendido</a
+                  >
+                  <a href="#" class="popup_menu_item">Lo más jugado</a>
+                  <div class="category_hr responsive_hidden"></div>
+                  <a href="#" class="popup_menu_item">Novedades</a>
+                  <a href="#" class="popup_menu_item"
+                    >Próximos lanzamientos</a
+                  >
+                </div>
+                <div class="popup_menu popup_menu_browse leftborder">
+                  <div class="popup_menu_subheader responsive_hidden">
+                    Promociones y eventos
+                  </div>
+                  <a href="/index.html" class="popup_menu_item"
+                    >Ofertas espaciales</a
+                  >
+                  <a
+                    href="/sites/ActivisionPublisherSale2024.html"
+                    class="popup_menu_item"
+                    >Eventos de rebajas</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div id="genre_tab" data-flyout="genre_flyout" class="tab">
+              <span class="pulldown">
+                <a href="#" class="pulldown_desktop">Categorías</a>
+                <a href="#" class="pulldown_mobile">Categorías</a>
+              </span>
+            </div>
+            <div id="genre_flyout" class="popup_block_new responsive_slidedown sub_menu">
+              <div class="popup_body popup_menu_twocol_new">
+                <div class="popup_menu popup_menu_browse">
+                  <div class="popup_menu_subheader responsive_hidden">
+                    Miscelánea
+                  </div>
+                  <a href="#" class="popup_menu_item">Todas las ofertas</a>
+                  <div class="category_hr responsive_hidden"></div>
+                  <a href="#" class="popup_menu_item">Juegos</a>
+                  <a href="#" class="popup_menu_item">Juegos y tarjetas</a>
+                  <a href="#" class="popup_menu_item">eTarjetas</a>
+                  <div class="category_hr responsive_hidden"></div>
+                  <a href="#" class="popup_menu_item">Xbox</a>
+                  <a href="#" class="popup_menu_item">PSN</a>
+                  <a href="#" class="popup_menu_item">Nintendo</a>
+                </div>
+                <div class="popup_menu popup_menu_browse leftborder">
+                  <div class="popup_menu_subheader reduced_vspace">
+                    Géneros
+                  </div>
+                  <div
+                    class="popup_menu_subheader popup_genre_expand_header responsive_hidden"
+                  >
+                    <a href="#" class="popup_menu_item">Acción</a>
+                  </div>
+
+                  <a href="#" class="popup_menu_item">Aventuras</a>
+                  <a href="#" class="popup_menu_item">Arcade</a>
+                  <a href="#" class="popup_menu_item">Carreras</a>
+                  <a href="#" class="popup_menu_item"
+                    >Disparos en primera persona</a
+                  >
+                  <a href="#" class="popup_menu_item"
+                    >Disparos en tercera persona</a
+                  >
+                </div>
+                <div class="popup_menu popup_menu_browse">
+                  <div
+                    class="popup_menu_subheader reduced_vspace responsive_hidden"
+                  >
+                    <br />
+                  </div>
+                  <div
+                    class="popup_menu_subheader popup_genre_expand_header responsive_hidden"
+                  >
+                    <a href="#" class="popup_menu_item">Rol</a>
+                  </div>
+                  <div class="popup_genre_expand_content responsive_hidden">
+                    <a href="#" class="popup_menu_item">Deporte</a>
+                    <a href="#" class="popup_menu_item">Educativo</a>
+                    <a href="#" class="popup_menu_item">Estrategia</a>
+                    <a href="#" class="popup_menu_item">Hack and slash</a>
+                    <a href="#" class="popup_menu_item">Indie</a>
+                    <a href="#" class="popup_menu_item">Lucha</a>
+                  </div>
+                </div>
+                <div class="popup_menu popup_menu_browse">
+                  <div
+                    class="popup_menu_subheader reduced_vspace responsive_hidden"
+                  >
+                    <br />
+                  </div>
+                  <div
+                    class="popup_menu_subheader popup_genre_expand_header responsive_hidden"
+                  >
+                    <a href="#" class="popup_menu_item"
+                      >Multijugador masivo en línea</a
+                    >
+                  </div>
+                  <div class="popup_genre_expand_content responsive_hidden">
+                    <a href="#" class="popup_menu_item">Música</a>
+                    <a href="#" class="popup_menu_item">Plataforma</a>
+                    <a href="#" class="popup_menu_item">Point and click</a>
+                    <a href="#" class="popup_menu_item">Rompecabezas</a>
+                    <a href="#" class="popup_menu_item">Simulación</a>
+                  </div>
+                </div>
+                <div class="popup_menu popup_menu_browse leftborder">
+                  <div class="ps-4"></div>
+                </div>
+              </div>
+            </div>
+            <div class="search_area">
+              <div id="store_search">
+                <form name="searchform" role="search">
+                  <div class="searchbox">
+                    <input
+                      class="store_nav_search_term default"
+                      type="search"
+                      placeholder="buscar"
+                      size="22"
+                      autocomplete="off"
+                      maxlength="64"
+                    />
+                    <a
+                      href="#"
+                      id="store_search_link"
+                      class="store_search_link text-w"
+                      aria-label="Buscar en Mega Games"
+                      ><i class="fa-solid fa-magnifying-glass fa"></i
+                    ></a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  `;
+
+    navbarContainer.innerHTML = mobileNavbar;
+
+    navbarSlot.appendChild(navbarContainer);
+  }
+
+  function removeDesktopNavbar() {
+    const desktopNavbar = document.getElementById(
+      "responsive_store_nav_desktop"
+    );
+    if (desktopNavbar) {
+      desktopNavbar.remove();
+    }
+  }
+
+  function removeMobileNavbar() {
+    const mobileNavbar = document.getElementById("responsive_store_nav_mobile");
+    if (mobileNavbar) {
+      mobileNavbar.remove();
+    }
+  }
+  const mobileMediaQuery = window.matchMedia("(max-width: 910px)");
+
+  function screenSizeChange(mq) {
+    if (mq.matches) {
+      createMobileNavbar();
+      removeDesktopNavbar();
+    } else {
+      createDesktopNavbar();
+      removeMobileNavbar();
+    }
+  }
+
+  screenSizeChange(mobileMediaQuery);
+
+  mobileMediaQuery.addEventListener("change", screenSizeChange);
+  const menuItems = document.querySelectorAll(".tab");
+
+  menuItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      const flyoutId = this.dataset.flyout;
+      const flyout = document.getElementById(flyoutId);
+      const isOpen =
+        flyout.style.height === "0px" || flyout.style.height === "";
+
+      if (isOpen) {
+        flyout.style.height = flyout.scrollHeight + "px";
+      } else {
+        flyout.style.height = "0";
+      }
+    });
+  });
 
   function changeOpacity(target, duration, fromOpacity, toOpacity) {
     const opacityIncrement = (toOpacity - fromOpacity) / (duration / 10);
@@ -340,15 +680,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function hideAllMenus() {
     clearTimeout(currentMenuTimeoutId);
-    document.querySelectorAll(".popup_block_new").forEach(function (flyout) {
-      if (flyout.id !== currentMenuId) {
-        changeOpacity(flyout, 150, 1, 0);
-        setTimeout(function () {
-          flyout.style.display = "none";
-          flyout.classList.remove("open");
-        }, 150);
-      }
-    });
+    document
+      .querySelectorAll("#responsive_store_nav_desktop .popup_block_new")
+      .forEach(function (flyout) {
+        if (flyout.id !== currentMenuId) {
+          changeOpacity(flyout, 150, 1, 0);
+          setTimeout(function () {
+            flyout.style.display = "none";
+            flyout.classList.remove("open");
+          }, 150);
+        }
+      });
     document.querySelectorAll(".tab").forEach(function (tab) {
       if (tab.id !== currentMenuId) {
         toggleTabFocusClass(tab, false);
@@ -356,40 +698,44 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  document.querySelectorAll(".tab").forEach(function (tab) {
-    tab.addEventListener("mouseenter", function () {
-      hideAllMenus();
-      currentMenuId = tab.id;
-      currentMenuTimeoutId = setTimeout(function () {
-        showMenuWithOpacity(
-          tab.id,
-          tab.dataset.flyout,
+  document
+    .querySelectorAll("#responsive_store_nav_desktop .tab")
+    .forEach(function (tab) {
+      tab.addEventListener("mouseenter", function () {
+        hideAllMenus();
+        currentMenuId = tab.id;
+        currentMenuTimeoutId = setTimeout(function () {
+          showMenuWithOpacity(
+            tab.id,
+            tab.dataset.flyout,
+            currentMenuTimeoutId,
+            currentMenuIsMouseOverMenu
+          );
+        }, 300);
+      });
+
+      tab.addEventListener("mouseleave", function () {
+        clearTimeout(currentMenuTimeoutId);
+      });
+    });
+
+  document
+    .querySelectorAll("#responsive_store_nav_desktop .popup_block_new")
+    .forEach(function (flyout) {
+      flyout.addEventListener("mouseenter", function () {
+        currentMenuIsMouseOverMenu = true;
+      });
+
+      flyout.addEventListener("mouseleave", function () {
+        currentMenuIsMouseOverMenu = false;
+        hideMenuWithOpacity(
+          flyout.dataset.tab,
+          flyout.id,
           currentMenuTimeoutId,
           currentMenuIsMouseOverMenu
         );
-      }, 300);
+      });
     });
-
-    tab.addEventListener("mouseleave", function () {
-      clearTimeout(currentMenuTimeoutId);
-    });
-  });
-
-  document.querySelectorAll(".popup_block_new").forEach(function (flyout) {
-    flyout.addEventListener("mouseenter", function () {
-      currentMenuIsMouseOverMenu = true;
-    });
-
-    flyout.addEventListener("mouseleave", function () {
-      currentMenuIsMouseOverMenu = false;
-      hideMenuWithOpacity(
-        flyout.dataset.tab,
-        flyout.id,
-        currentMenuTimeoutId,
-        currentMenuIsMouseOverMenu
-      );
-    });
-  });
 
   const footerSlot = document.querySelector(".FooterSlot");
   const footerContainer = document.createElement("div");
