@@ -482,16 +482,14 @@ document.addEventListener("DOMContentLoaded", () => {
                   >
                     <a href="#" class="popup_menu_item">Acción</a>
                   </div>
-
+                  <a href="#" class="popup_menu_item">Acción</a>
                   <a href="#" class="popup_menu_item">Aventuras</a>
-                  <a href="#" class="popup_menu_item">Arcade</a>
                   <a href="#" class="popup_menu_item">Carreras</a>
-                  <a href="#" class="popup_menu_item"
-                    >Disparos en primera persona</a
-                  >
-                  <a href="#" class="popup_menu_item"
-                    >Disparos en tercera persona</a
-                  >
+                  <a href="#" class="popup_menu_item">Estrategia</a>
+                  <a href="#" class="popup_menu_item">Disparos en primera persona</a>
+                  <a href="#" class="popup_menu_item">Disparos en tercera persona</a>
+                  <a href="#" class="popup_menu_item">Multijugador masivo en línea</a>
+                  <a href="#" class="popup_menu_item">Simulación</a>
                 </div>
                 <div class="popup_menu popup_menu_browse">
                   <div
@@ -604,6 +602,7 @@ document.addEventListener("DOMContentLoaded", () => {
   screenSizeChange(mobileMediaQuery);
 
   mobileMediaQuery.addEventListener("change", screenSizeChange);
+
   const menuItems = document.querySelectorAll(".tab");
 
   menuItems.forEach(function (item) {
@@ -612,7 +611,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const flyout = document.getElementById(flyoutId);
       const isOpen =
         flyout.style.height === "0px" || flyout.style.height === "";
-
       if (isOpen) {
         flyout.style.height = flyout.scrollHeight + "px";
       } else {
