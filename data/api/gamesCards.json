@@ -65,7 +65,7 @@
   },
   {
     "id": 9,
-    "nombre": "Dragon Ball: Xenoverse 2 Código de Steam",
+    "nombre": "Dragon Ball: Xenoverse 2 Steam key",
     "dlc": false,
     "imagen": "assets/public/cards-juegos/09.jpg",
     "precio": "$9.211 CLP",
@@ -78,5 +78,246 @@
     "imagen": "assets/public/cards-juegos/10.jpg",
     "precio": "$3.764 CLP",
     "likes": 883
+  },
+  {
+    "id": 11,
+    "nombre": "Assassin's Creed Valhalla Steam Key",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/11.jpeg",
+    "precio": "$12.450 CLP",
+    "likes": 40368
+  },
+  {
+    "id": 12,
+    "nombre": "Dragon Ball: Xenoverse Código de Steam GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/12.jpg",
+    "precio": "$6.130 CLP",
+    "likes": 33338
+  },
+  {
+    "id": 13,
+    "nombre": "Left 4 Dead 2 Steam Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/13.jpg",
+    "precio": "$4.200 CLP",
+    "likes": 29230
+  },
+  {
+    "id": 14,
+    "nombre": "Mortal Kombat 1 (PC) Código de Steam LATAM",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/14.jpg",
+    "precio": "$24.250 CLP",
+    "likes": 28649
+  },
+  {
+    "id": 15,
+    "nombre": "Overcooked! 2 Steam Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/15.jpg",
+    "precio": "$6.490 CLP",
+    "likes": 32730
+  },
+  {
+    "id": 16,
+    "nombre": "DayZ (PC) Steam Key LATAM",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/16.jpeg",
+    "precio": "$22.310 CLP",
+    "likes": 13024
+  },
+  {
+    "id": 17,
+    "nombre": "Borderlands 2 (GOTY) Código de Steam LATAM",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/17.jpg",
+    "precio": "$7.876 CLP",
+    "likes": 10619
+  },
+  {
+    "id": 18,
+    "nombre": "Dead by Daylight (PC) Steam Clave LATAM",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/18.jpeg",
+    "precio": "$15.800 CLP",
+    "likes": 48047
+  },
+  {
+    "id": 19,
+    "nombre": "Call of Duty: Black Ops (MAC OS) Código de Steam GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/19.jpg",
+    "precio": "$28.340 CLP",
+    "likes": 27687
+  },
+  {
+    "id": 20,
+    "nombre": "SOUTH PARK: SNOW DAY! + Pre-Order Bonus (PC) Steam Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/20.jpg",
+    "precio": "$23.240 CLP",
+    "likes": 36340
+  },
+  {
+    "id": 21,
+    "nombre": "Stardew Valley (PC) Steam Key LATAM",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/21.jpg",
+    "precio": "$14.140 CLP",
+    "likes": 13352
+  },
+  {
+    "id": 22,
+    "nombre": "Returnal™ (PC) Código de Steam GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/22.jpg",
+    "precio": "$35.220 CLP",
+    "likes": 15592
+  },
+  {
+    "id": 23,
+    "nombre": "Borderlands 3 Clave Epic Games GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/23.jpeg",
+    "precio": "$18.200 CLP",
+    "likes": 12130
+  },
+  {
+    "id": 24,
+    "nombre": "Terraria Código de Steam GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/24.jpg",
+    "precio": "$6.800 CLP",
+    "likes": 42561
+  },
+  {
+    "id": 25,
+    "nombre": "Cities: Skylines Steam Clave GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/25.jpg",
+    "precio": "$21.100 CLP",
+    "likes": 29266
+  },
+  {
+    "id": 26,
+    "nombre": "Back 4 Blood (PC) Steam Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/26.jpeg",
+    "precio": "$16.520 CLP",
+    "likes": 24229
+  },
+  {
+    "id": 27,
+    "nombre": "It Takes Two - Digital Version Código de XBOX GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/27.webp",
+    "precio": "$14.710 CLP",
+    "likes": 45969
+  },
+  {
+    "id": 28,
+    "nombre": "Far Cry 5 Uplay Clave GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/28.jpg",
+    "precio": "$14.199 CLP",
+    "likes": 39415
+  },
+  {
+    "id": 29,
+    "nombre": "Tomb Raider (PC) Steam Key LATAM",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/29.jpg",
+    "precio": "$8.000 CLP",
+    "likes": 11357
+  },
+  {
+    "id": 30,
+    "nombre": "Death Stranding Director's Cut (PC) Steam Key",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/30.jpeg",
+    "precio": "$18.570 CLP",
+    "likes": 12779
+  },
+  {
+    "id": 31,
+    "nombre": "Ratchet & Clank: Rift Apart (PC) Código de Steam GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/31.jpg",
+    "precio": "$34.200 CLP",
+    "likes": 45652
+  },
+  {
+    "id": 32,
+    "nombre": "It Takes Two Código de Código de Steam GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/32.jpeg",
+    "precio": "$16.300 CLP",
+    "likes": 25324
+  },
+  {
+    "id": 33,
+    "nombre": "LEGO: Marvel Super Heroes Steam Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/33.jpg",
+    "precio": "$6.637 CLP",
+    "likes": 37137
+  },
+  {
+    "id": 34,
+    "nombre": "WWE 2K23 (PC) Steam Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/34.jpg",
+    "precio": "$22.650 CLP",
+    "likes": 42710
+  },
+  {
+    "id": 35,
+    "nombre": "Palworld (PC) Código de Steam GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/35.jpg",
+    "precio": "$16.400 CLP",
+    "likes": 36147
+  },
+  {
+    "id": 36,
+    "nombre": "Resident Evil 2 Steam Key LATAM",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/36.jpeg",
+    "precio": "$10.524 CLP",
+    "likes": 10524
+  },
+  {
+    "id": 37,
+    "nombre": "Marvel's Spider-Man Remastered (PC) Código de Steam GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/37.jpg",
+    "precio": "$29.000 CLP",
+    "likes": 42447
+  },
+  {
+    "id": 38,
+    "nombre": "Move or Die Steam Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/38.jpeg",
+    "precio": "$7.090 CLP",
+    "likes": 23137
+  },
+  {
+    "id": 39,
+    "nombre": "Hogwarts Legacy (PC) Steam Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/39.jpg",
+    "precio": "$45.800 CLP",
+    "likes": 20477
+  },
+  {
+    "id": 40,
+    "nombre": "Marvel's Spider-Man: Miles Morales Código de Steam GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-juegos/40.jpg",
+    "precio": "$24.345 CLP",
+    "likes": 33516
   }
+  
 ]

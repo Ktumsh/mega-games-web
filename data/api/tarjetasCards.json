@@ -78,5 +78,165 @@
     "imagen": "assets/public/cards-tarjetas/10.jpeg",
     "precio": "$30.537 CLP",
     "likes": 615
+  },
+  {
+    "id": 11,
+    "nombre": "Tinder Gold - 1 Month Subscription Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/11.jpg",
+    "precio": "$15.200 CLP",
+    "likes": 671
+  },
+  {
+    "id": 12,
+    "nombre": "Discord Nitro Basic - 1 Month Subscription Mintroute Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/12.jpg",
+    "precio": "$6900 CLP",
+    "likes": 4103
+  },
+  {
+    "id": 13,
+    "nombre": "Nintendo Switch Online Membership - 12 Months eShop Key CHILE",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/13.jpeg",
+    "precio": "$20.275 CLP",
+    "likes": 1671
+  },
+  {
+    "id": 14,
+    "nombre": "Discord Nitro - 1 Year Subscription Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/14.jpeg",
+    "precio": "$68.200 CLP",
+    "likes": 4073
+  },
+  {
+    "id": 15,
+    "nombre": "EA SPORTS FC 24 - 500 Ultimate Team Points (PC) EA App Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/15.jpg",
+    "precio": "$7090 CLP",
+    "likes": 1644
+  },
+  {
+    "id": 16,
+    "nombre": "Call of Duty: Modern Warfare III - 5000 Points XBOX LIVE Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/16.webp",
+    "precio": "$39.170 CLP",
+    "likes": 4276
+  },
+  {
+    "id": 17,
+    "nombre": "1,100 Call of Duty: Warzone Points XBOX LIVE Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/17.webp",
+    "precio": "$8.800 CLP",
+    "likes": 3976
+  },
+  {
+    "id": 18,
+    "nombre": "Overwatch 2 - 5000 (+700 Bonus) Overwatch Coins XBOX LIVE Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/18.webp",
+    "precio": "$55.500 CLP",
+    "likes": 1086
+  },
+  {
+    "id": 19,
+    "nombre": "League of Legends Gift Card - 3200 Riot Points",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/19.jpeg",
+    "precio": "$31.650 CLP",
+    "likes": 4877
+  },
+  {
+    "id": 20,
+    "nombre": "Roblox - 200 Robux Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/20.jpg",
+    "precio": "$7080 CLP",
+    "likes": 1055
+  },
+  {
+    "id": 21,
+    "nombre": "EA SPORTS FC 24 - 2800 Ultimate Team Points (PC) EA App Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/21.jpg",
+    "precio": "$20.185 CLP",
+    "likes": 2083
+  },
+  {
+    "id": 22,
+    "nombre": "Mobile Legends – 565 Diamonds Mobilelegends.com Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/22.jpg",
+    "precio": "$15.210 CLP",
+    "likes": 572
+  },
+  {
+    "id": 23,
+    "nombre": "Grand Theft Auto Online: Megalodon Shark Cash Card (PC) Rockstar Games Launcher Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/23.jpg",
+    "precio": "$23.330 CLP",
+    "likes": 3564
+  },
+  {
+    "id": 24,
+    "nombre": "Grand Theft Auto Online: Whale Shark Cash Card (PC) Rockstar Games Launcher Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/24.jpg",
+    "precio": "$19.800 CLP",
+    "likes": 4146
+  },
+  {
+    "id": 25,
+    "nombre": "Tinder Plus - 1 Month Subscription Código de GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/25.jpg",
+    "precio": "$9.990 CLP",
+    "likes": 193
+  },
+  {
+    "id": 26,
+    "nombre": "Apex Legends 2150 Apex Coins (XBOX ONE) Código de Xbox Live GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/26.jpeg",
+    "precio": "$20.275 CLP",
+    "likes": 3344
+  },
+  {
+    "id": 27,
+    "nombre": "Fortnite - 2800 V-Bucks Gift Card Key LATAM",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/27.jpeg",
+    "precio": "$18.985 CLP",
+    "likes": 2070
+  },
+  {
+    "id": 28,
+    "nombre": "Apex Legends 1000 Monedas Apex Origin Key GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/28.jpeg",
+    "precio": "$8.550 CLP",
+    "likes": 3314
+  },
+  {
+    "id": 29,
+    "nombre": "Fortnite - 5000 V-Bucks Gift Card Código GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/29.jpeg",
+    "precio": "$29.840 CLP",
+    "likes": 4574
+  },
+  {
+    "id": 30,
+    "nombre": "Fortnite - 1000 V-Bucks Gift Card Código GLOBAL",
+    "dlc": false,
+    "imagen": "assets/public/cards-tarjetas/30.jpeg",
+    "precio": "$9.100 CLP",
+    "likes": 4876
   }
 ]
