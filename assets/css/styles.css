@@ -2678,3 +2678,43 @@ a.pulldown_mobile {
     display: block;
   }
 }
+
+#gameOfferCardsContainer {
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 992px) {
+  #gameOfferCardsContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  #gameOfferCardsContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) and (min-width: 577px) {
+  #gameOfferCardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  #gameOfferCardsContainer {
+    grid-auto-flow: row;
+    gap: 15px;
+  }
+}
+
+#cardsLoader .loader {
+  display: block;
+  height: 5rem;
+  width: 5rem;
+}
+
+#cardsLoader .loader::after {
+  background-color: #131019;
+}
