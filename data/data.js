@@ -28,7 +28,7 @@ function cargarYAgregarTarjetas(jsonFile, carouselId) {
                 </div>
                 <div class="card_top_body">
                   <div class="card_title">
-                    <span>${tarjeta.nombre}</span>
+                    <span>${dlcSpan}${tarjeta.nombre}</span>
                   </div>
                 </div>
                 <div class="card_bottom_body">
