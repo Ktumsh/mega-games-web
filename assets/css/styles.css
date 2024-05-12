@@ -2718,3 +2718,12 @@ a.pulldown_mobile {
 #cardsLoader .loader::after {
   background-color: #131019;
 }
+
+.homepage_bg {
+  z-index: -10;
+  position: absolute;
+  top: 92px;
+  left: 0;
+  height: 100vw;
+  width: 100%;
+}

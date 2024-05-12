@@ -31,6 +31,7 @@ fetch("/data/api/editorSalePage.json")
       } else if (index >= 2 && index < 5) {
         cardsPanels[2].appendChild(grid);
       } else if (index === 5) {
+        console.log(saleSectionGrids[4]);
         cardsPanels[3].appendChild(grid);
       } else if (index >= 6) {
         cardsPanels[4].appendChild(grid);

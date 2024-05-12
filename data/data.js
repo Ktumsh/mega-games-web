@@ -16,8 +16,10 @@ function cargarYAgregarTarjetas(jsonFile, carouselId) {
 
         let cardContent = "";
         if (carouselId === 1) {
+          const gameName = tarjeta.nombre;
+          const pageName = gameName;
           cardContent = `
-            <div class="card_struct active border-p3" href="#">
+            <div class="card_struct active border-p3">
               <div class="card_content">
                 <div class="card_img">
                   <div class="img_card_content">
@@ -32,7 +34,7 @@ function cargarYAgregarTarjetas(jsonFile, carouselId) {
                   </div>
                 </div>
                 <div class="card_bottom_body">
-                  <a class="card_link" href="#">
+                  <a class="card_link" href="/sites/offer-details.html?name=${pageName}&id=${tarjeta.id}">
                     <div class="fs-sm d-flex flex-row flex-lg-column gap-sm-2">
                       <div class="d-flex align-items-center h-100">
                         <span class="descuento_label p-1">${tarjeta.descuento}</span>
@@ -58,8 +60,10 @@ function cargarYAgregarTarjetas(jsonFile, carouselId) {
             </div>
           `;
         } else if (carouselId === 2) {
+          const gameName = tarjeta.nombre;
+          const pageName = gameName;
           cardContent = `
-          <div class="card_struct active" href="#">
+          <div class="card_struct active">
             <div class="card_content">
               <div class="card_img">
                 <div class="img_card_content">
@@ -74,7 +78,7 @@ function cargarYAgregarTarjetas(jsonFile, carouselId) {
                 </div>
               </div>
               <div class="card_bottom_body">
-                <a class="card_link" href="#">
+                <a class="card_link" href="/sites/games-details.html?name=${pageName}&id=${tarjeta.id}">
                   <div class="card_price">
                     <span class="card_text">Desde</span>
                     <span class="price">${tarjeta.precio}</span>
@@ -93,8 +97,10 @@ function cargarYAgregarTarjetas(jsonFile, carouselId) {
           </div>
         `;
         } else {
+          const gameName = tarjeta.nombre;
+          const pageName = gameName;
           cardContent = `
-          <div class="card_struct card_struct_2 active" href="#">
+          <div class="card_struct card_struct_2 active">
             <div class="card_content">
               <div class="card_img">
                 <div class="img_card_content">
@@ -109,7 +115,7 @@ function cargarYAgregarTarjetas(jsonFile, carouselId) {
                 </div>
               </div>
               <div class="card_bottom_body">
-                <a class="card_link" href="#">
+                <a class="card_link" href="/sites/gift-details.html?name=${pageName}&id=${tarjeta.id}">
                   <div class="card_price">
                     <span class="card_text">Desde</span>
                     <span class="price">${tarjeta.precio}</span>
