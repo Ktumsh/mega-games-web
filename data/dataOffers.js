@@ -15,7 +15,6 @@ function loadInitialCards() {
         cardElement.classList.add("card_");
         const gameName = tarjeta.nombre;
         const pageName = gameName;
-        console.log(pageName);
 
         const dlcSpan = tarjeta.dlc ? `<span class="dlc_span">DLC</span>` : "";
         const cardContent = `
@@ -34,7 +33,7 @@ function loadInitialCards() {
                 </div>
               </div>
               <div class="card_bottom_body">
-                <a class="card_link" href="details.html?name=${pageName}&id=${tarjeta.id}">
+                <a class="card_link" href="offer-details.html?name=${pageName}&id=${tarjeta.id}">
                   <div class="fs-sm d-flex flex-row flex-lg-column gap-sm-2">
                     <div class="d-flex align-items-center h-100">
                       <span class="descuento_label p-1">${tarjeta.descuento}</span>
@@ -97,9 +96,7 @@ function loadCards() {
           cardElement.classList.add("card_");
 
           const gameName = tarjeta.nombre;
-          console.log(tarjeta.nombre);
           const pageName = gameName;
-          console.log(pageName);
 
           const dlcSpan = tarjeta.dlc
             ? `<span class="dlc_span">DLC</span>`
@@ -120,7 +117,7 @@ function loadCards() {
                   </div>
                 </div>
                 <div class="card_bottom_body">
-                  <a class="card_link" href="details.html?name=${pageName}&id=${tarjeta.id}">
+                  <a class="card_link" href="offer-details.html?name=${pageName}&id=${tarjeta.id}">
                     <div class="fs-sm d-flex flex-row flex-lg-column gap-sm-2">
                       <div class="d-flex align-items-center h-100">
                         <span class="descuento_label p-1">${tarjeta.descuento}</span>

@@ -224,8 +224,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="popup_menu_subheader responsive_hidden">
                       Promociones y eventos
                     </div>
-                    <a href="/index.html" class="popup_menu_item"
-                      >Ofertas espaciales</a
+                    <a href="/sites/ofertas-especiales.html" class="popup_menu_item"
+                      >Ofertas especiales</a
                     >
                     <a href="/sites/ActivisionPublisherSale2024.html" class="popup_menu_item"
                       >Eventos de rebajas</a
@@ -440,8 +440,8 @@ document.addEventListener("DOMContentLoaded", () => {
                   <div class="popup_menu_subheader responsive_hidden">
                     Promociones y eventos
                   </div>
-                  <a href="/index.html" class="popup_menu_item"
-                    >Ofertas espaciales</a
+                  <a href="/sites/ofertas-especiales.html" class="popup_menu_item"
+                    >Ofertas especiales</a
                   >
                   <a
                     href="/sites/ActivisionPublisherSale2024.html"
@@ -856,3 +856,29 @@ function generateFooterColumn(title, items) {
       </div>
     `;
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const StoreNavSearchTerms = document.querySelectorAll(
+    ".store_nav_search_term"
+  );
+
+  StoreNavSearchTerms.forEach(function (input) {
+    input.addEventListener("focus", function (event) {
+      event.stopPropagation();
+      input.classList.remove("default");
+      input.placeholder = "";
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!input.contains(event.target)) {
+        if (input.value === "") {
+          input.classList.add("default");
+          input.placeholder = "buscar";
+        } else {
+          input.classList.remove("default");
+          input.placeholder = "";
+        }
+      }
+    });
+  });
+});

@@ -278,29 +278,3 @@ window.onload = () => {
     }, 300);
   });
 };
-
-document.addEventListener("DOMContentLoaded", () => {
-  const StoreNavSearchTerms = document.querySelectorAll(
-    ".store_nav_search_term"
-  );
-
-  StoreNavSearchTerms.forEach(function (input) {
-    input.addEventListener("focus", function (event) {
-      event.stopPropagation();
-      input.classList.remove("default");
-      input.placeholder = "";
-    });
-
-    document.addEventListener("click", function (event) {
-      if (!input.contains(event.target)) {
-        if (input.value === "") {
-          input.classList.add("default");
-          input.placeholder = "buscar";
-        } else {
-          input.classList.remove("default");
-          input.placeholder = "";
-        }
-      }
-    });
-  });
-});
