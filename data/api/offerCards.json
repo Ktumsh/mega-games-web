@@ -7,7 +7,45 @@
     "descuento": "-35%",
     "precioOriginal": "$9.990 CLP",
     "precioDescuento": "$6.494 CLP",
-    "likes": 17555
+    "likes": 17555,
+    "plataforma": "battlenet",
+    "plataforma_2": "",
+    "disponibleEn": ["epicgames", "xbox", "playstation"],
+    "key": "Xbox Live",
+    "keyImg": "/assets/public/xbox.svg",
+    "keyLink": "https://www.xbox.com/",
+    "galeria": [],
+    "generos": [
+      "Acción",
+      "Multijugador",
+      "Cooperativo",
+      "Tercera persona",
+      "Aventuras"
+    ],
+    "descripcion": "Incluye estos modos: Atuendo de Dara (con estilo LEGO®), Mochila Mercenary Razorsword, Pico con vaina de Razorsword, Acceso a la campaña PvE “Save the World”, Desafíos de Dara: Gana hasta 1,500 V-Bucks completando misiones diarias de Save the World. Desafíos desbloqueados después de haber completado la misión 'Homebase Stormshield Defense 3' en la campaña 'Salvar el mundo'.",
+    "adicional": false,
+    "introCaracteristicas": "",
+    "caracteristicas": [],
+    "descripcionAdicional": [],
+    "requisitos": [
+      "No especificado",
+      "No especificado",
+      "No especificado",
+      "No especificado",
+      "No especificado",
+      "No especificado",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": ["Inglés"],
+        "lanzamiento": "21 de diciembre de 2023",
+        "editor": "Epic Games",
+        "desarrolladores": "Epic Games"
+      }
+    ],
+    "restriccion": "PEGI 12",
+    "restriccionImg": "/assets/public/pegi_12.svg"
   },
   {
     "id": 2,

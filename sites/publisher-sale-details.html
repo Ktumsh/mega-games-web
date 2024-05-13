@@ -26,7 +26,18 @@
     <div class="HeaderSlotDesktop"></div>
     <!-- NAVBAR 🔴 -->
     <div class="NavbarSlotMobile"></div>
-    <main class="position-relative bg-base">
+    <main
+      class="position-relative"
+      style="
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        background-image: url('/assets/public/sale-page-bg.jpg');
+        background-color: rgb(0, 0, 0);
+        background-repeat: repeat-y;
+        --background-scale: 210.52631578947367%;
+      "
+    >
       <div class="NavbarSlotDesktop"></div>
       <div class="divider_header d-lg-block d-none"></div>
       <div class="container mt-5">
@@ -70,15 +81,17 @@
                 itemscope
                 itemtype="http://schema.org/ListItem"
               >
-                <a href="/">Juegos y tarjetas</a>
+                <a href="/sites/ActivisionPublisherSale2024.html"
+                  >Eventos de rebajas</a
+                >
                 <meta
                   itemscope
                   itemtype="http://schema.org/WebPage"
                   itemprop="item"
-                  itemid="/"
-                  content="Juegos y tarjetas"
+                  itemid="/sites/ActivisionPublisherSale2024.html"
+                  content="Eventos de rebajas"
                 />
-                <meta itemprop="name" content="Juegos y tarjetas" />
+                <meta itemprop="name" content="Eventos de rebajas" />
                 <meta itemprop="position" content="3" />
               </li>
             </ul>
@@ -187,35 +200,20 @@
               <div class="details_shopping_area_ctn">
                 <div class="shopping_area">
                   <div class="shopping_title">
-                    <span>Mejor precio</span>
+                    <span>Oferta especial</span>
                   </div>
                   <div class="shopping_price_ctn">
                     <div>
                       <div class="shopping">
-                        <span class="price_ctn without_discount">
+                        <span class="price_ctn">
+                          <div id="discount" class="discount"></div>
                           <div class="price_label">
-                            <div id="price" class="price"></div>
+                            <div
+                              id="originalPrice"
+                              class="original_price"
+                            ></div>
+                            <div id="finalPrice" class="final_price"></div>
                           </div>
-                          <span class="price_warn">
-                            <span
-                              class="warning"
-                              title="El precio no es definitivo. Se aplica una tarifa de servicio al finalizar la compra"
-                            >
-                              <span>
-                                <div>
-                                  <img
-                                    style="
-                                      max-width: 15px;
-                                      min-width: 15px;
-                                      height: auto;
-                                    "
-                                    src="/assets/public/icons/warning.svg"
-                                  />
-                                </div>
-                              </span>
-                            </span>
-                            <span class="info">No es el precio final</span>
-                          </span>
                         </span>
                         <div class="shopping_action_buttons">
                           <div class="buy_now">
@@ -249,7 +247,12 @@
                   <ul class="miscelaneous">
                     <li>
                       <span class="miscelaneous_img">
-                        <img id="keyAvailable" src="" alt="" />
+                        <img
+                          style="max-width: 35px; min-width: 35px; height: auto"
+                          id="keyAvailable"
+                          src=""
+                          alt=""
+                        />
                       </span>
                       <div>
                         <strong
@@ -266,7 +269,7 @@
                           ></a>
                           <br />
                           Consulta la
-                          <a href="#">guía de activación</a>
+                          <a href="">guía de activación</a>
                         </span>
                       </div>
                     </li>
@@ -305,10 +308,10 @@
               </div>
               <div class="details_game_description_area">
                 <h3 class="description_title">Descripción del producto</h3>
-                <div class="genders">
+                <div class="genders publisher">
                   <ul id="genderList" class="genders_list"></ul>
                 </div>
-                <div class="game_description_area">
+                <div class="game_description_area publisher">
                   <h2 id="descGameName"></h2>
                   <div>
                     <p id="descGameDescription"></p>
@@ -323,7 +326,7 @@
                   </button>
                 </div>
                 <h3 class="description_title sub">Requisitos del sistema</h3>
-                <div class="system_requirements">
+                <div class="system_requirements publisher">
                   <h4>Requisitos mínimos</h4>
                   <ul id="requirements" class="detail_list">
                     <li>
@@ -357,7 +360,7 @@
                   </ul>
                 </div>
                 <h3 class="description_title sub">Detalles del pedido</h3>
-                <div class="order_details">
+                <div class="order_details publisher">
                   <img id="pegi" src="" width="30" alt="" />
                   <ul id="details" class="detail_list">
                     <li class="lenguages">
@@ -384,6 +387,8 @@
         </div>
       </div>
     </main>
+    <!-- FOOTER -->
+    <div class="FooterSlot"></div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -408,7 +413,7 @@
     const gameId = parseInt(queryParams.get("id"));
     document.title = gameTitle;
 
-    fetch("/data/api/tarjetasCards.json")
+    fetch("/data/api/editorSalePage.json")
       .then((response) => response.json())
       .then((games) => {
         const gameFound = games.find((game) => game.id === gameId);
@@ -416,7 +421,8 @@
         const gameImage = document.getElementById("gameImage");
         const gameName = document.getElementById("gameName");
         const discount = document.getElementById("discount");
-        const price = document.getElementById("price");
+        const originalPrice = document.getElementById("originalPrice");
+        const finalPrice = document.getElementById("finalPrice");
         const platform = document.getElementById("platform");
         const keyAvailable = document.getElementById("keyAvailable");
         const keyTitle = document.getElementById("keyTitle");
@@ -456,6 +462,7 @@
         const developers = document.getElementById("developers");
 
         const restriction = document.getElementById("pegi");
+
         if (gameFound) {
           if (gameId < 19) {
             gameImage.src = gameFound.imagen;
@@ -463,7 +470,9 @@
             gameImage.src = gameFound.altImagen;
           }
           gameName.textContent = gameFound.nombre;
-          price.textContent = gameFound.precio;
+          discount.textContent = gameFound.descuento;
+          originalPrice.textContent = gameFound.precioOriginal;
+          finalPrice.textContent = gameFound.precioDescuento;
           gameFound.disponibleEn.forEach((plataforma) => {
             const availableIn = document.createElement("span");
             availableIn.title = `Disponible en ${plataforma}`;
@@ -491,7 +500,6 @@
           });
 
           gameLikes.textContent = gameFound.likes;
-          console.log(gameFound.likes);
 
           descGameName.textContent = gameFound.nombre;
           const adicional = gameFound.adicional;

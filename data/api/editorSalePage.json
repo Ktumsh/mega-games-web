@@ -1,77 +1,562 @@
 [
   {
     "id": 1,
-    "titulo": "Call of Duty®: Modern Warfare® III",
+    "nombre": "Call of Duty®: Modern Warfare® III",
     "imagen": "/assets/public/capsules/hero_capsule_01.jpg",
     "descuento": "-35%",
     "precioOriginal": "CLP$54.990",
     "precioDescuento": "CLP$35.743",
     "plataforma": "battlenet",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": 45039,
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ],
+    "restriccion": "PEGI 18",
+    "restriccionImg": "/assets/public/pegi_18.svg"
   },
   {
     "id": 2,
-    "titulo": "Sekiro™: Shadows Die Twice - GOTY Edition",
+    "nombre": "Sekiro™: Shadows Die Twice - GOTY Edition",
     "imagen": "/assets/public/capsules/hero_capsule_02.jpg",
     "descuento": "-50%",
     "precioOriginal": "CLP$47.650",
     "precioDescuento": "CLP$23.825",
     "plataforma": "",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 3,
-    "titulo": "Call of Duty®: Black Ops III",
+    "nombre": "Call of Duty®: Black Ops III",
     "imagen": "/assets/public/capsules/hero_capsule_03.jpg",
     "descuento": "-67%",
     "precioOriginal": "CLP$47.650",
     "precioDescuento": "CLP$15.724",
     "plataforma": "",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 4,
-    "titulo": "Call of Duty®: Modern Warfare®",
+    "nombre": "Call of Duty®: Modern Warfare®",
     "imagen": "/assets/public/capsules/hero_capsule_04.jpg",
     "descuento": "-67%",
     "precioOriginal": "CLP$47.650",
     "precioDescuento": "CLP$15.724",
     "plataforma": "battlenet",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 5,
-    "titulo": "Call of Duty®: Modern Warfare® II",
+    "nombre": "Call of Duty®: Modern Warfare® II",
     "imagen": "/assets/public/capsules/hero_capsule_05.jpg",
     "descuento": "-50%",
     "precioOriginal": "CLP$55.600",
     "precioDescuento": "CLP$27.800",
     "plataforma": "battlenet",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 6,
-    "titulo": "Call of Duty®: Black Ops Cold War",
+    "nombre": "Call of Duty®: Black Ops Cold War",
     "imagen": "/assets/public/capsules/hero_capsule_06.jpg",
     "descuento": "-67%",
     "precioOriginal": "CLP$47.650",
     "precioDescuento": "CLP$15.724",
     "plataforma": "battlenet",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 7,
-    "titulo": "Call of Duty®: Vanguard",
+    "nombre": "Call of Duty®: Vanguard",
     "imagen": "/assets/public/capsules/hero_capsule_07.jpg",
     "descuento": "-60%",
     "precioOriginal": "CLP$47.650",
     "precioDescuento": "CLP$19.060",
     "plataforma": "battlenet",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 8,
-    "titulo": "Call of Duty®: WWII",
+    "nombre": "Call of Duty®: WWII",
     "imagen": "/assets/public/capsules/hero_capsule_08.jpg",
     "descuento": "-67%",
     "precioOriginal": "CLP$47.650",
@@ -87,166 +572,1346 @@
     "precioOriginal": "CLP$31.770",
     "precioDescuento": "CLP$15.885",
     "plataforma": "",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 10,
-    "titulo": "Call of Duty®: Black Ops II",
+    "nombre": "Call of Duty®: Black Ops II",
     "imagen": "/assets/public/capsules/hero_capsule_10.jpg",
     "descuento": "-67%",
     "precioOriginal": "CLP$47.650",
     "precioDescuento": "CLP$15.724",
     "plataforma": "",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 11,
-    "titulo": "Call of Duty®: Ghosts",
+    "nombre": "Call of Duty®: Ghosts",
     "imagen": "/assets/public/capsules/hero_capsule_11.jpg",
     "descuento": "-67%",
     "precioOriginal": "CLP$47.650",
     "precioDescuento": "CLP$15.724",
     "plataforma": "",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 12,
-    "titulo": "Call of Duty® 4: Modern Warfare® (2007)",
+    "nombre": "Call of Duty® 4: Modern Warfare® (2007)",
     "imagen": "/assets/public/capsules/hero_capsule_12.jpg",
     "descuento": "-50%",
     "precioOriginal": "CLP$15.880",
     "precioDescuento": "CLP$7.940",
     "plataforma": "",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 13,
-    "titulo": "Call of Duty®: Modern Warfare® 2 (2009)",
+    "nombre": "Call of Duty®: Modern Warfare® 2 (2009)",
     "imagen": "/assets/public/capsules/hero_capsule_13.jpg",
     "descuento": "-25%",
     "precioOriginal": "CLP$15.880",
     "precioDescuento": "CLP$11.910",
     "plataforma": "",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 14,
-    "titulo": "Call of Duty®: Infinite Warfare",
+    "nombre": "Call of Duty®: Infinite Warfare",
     "imagen": "/assets/public/capsules/hero_capsule_14.jpg",
     "descuento": "-67%",
     "precioOriginal": "CLP$47.650",
     "precioDescuento": "CLP$15.724",
     "plataforma": "",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 15,
-    "titulo": "Call of Duty®: Modern Warfare® 3 (2011)",
+    "nombre": "Call of Duty®: Modern Warfare® 3 (2011)",
     "imagen": "/assets/public/capsules/hero_capsule_15.jpg",
     "descuento": "-50%",
     "precioOriginal": "CLP$31.770",
     "precioDescuento": "CLP$15.885",
     "plataforma": "",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 16,
-    "titulo": "Crash Bandicoot™ 4: It’s About Time",
+    "nombre": "Crash Bandicoot™ 4: It’s About Time",
     "imagen": "/assets/public/capsules/hero_capsule_16.jpg",
     "descuento": "-50%",
     "precioOriginal": "CLP$31.770",
     "precioDescuento": "CLP$15.885",
     "plataforma": "",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 17,
-    "titulo": "Crash Bandicoot™ N. Sane Trilogy",
+    "nombre": "Crash Bandicoot™ N. Sane Trilogy",
     "imagen": "/assets/public/capsules/hero_capsule_17.jpg",
     "descuento": "-60%",
     "precioOriginal": "CLP$31.770",
     "precioDescuento": "CLP$12.708",
     "plataforma": "",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 18,
-    "titulo": "Spyro™ Reignited Trilogy",
+    "nombre": "Spyro™ Reignited Trilogy",
     "imagen": "/assets/public/capsules/hero_capsule_18.jpg",
     "descuento": "-65%",
     "precioOriginal": "CLP$31.770",
     "precioDescuento": "CLP$11.119",
     "plataforma": "",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 19,
-    "titulo": "Prototype 2",
+    "nombre": "Prototype 2",
     "imagen": "/assets/public/capsules/hero_capsule_19.jpg",
+    "altImagen": "/assets/public/capsules/hero_capsule_19-1.jpg",
     "descuento": "-75%",
     "precioOriginal": "CLP$31.770",
     "precioDescuento": "CLP$7.942",
     "plataforma": "xbox",
-    "plataforma_2": "playstation"
+    "plataforma_2": "playstation",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 20,
-    "titulo": "Prototype™",
+    "nombre": "Prototype™",
     "imagen": "/assets/public/capsules/hero_capsule_20.jpg",
+    "altImagen": "/assets/public/capsules/hero_capsule_20-1.jpg",
     "descuento": "-75%",
     "precioOriginal": "CLP$15.880",
     "precioDescuento": "CLP$3.970",
     "plataforma": "xbox",
-    "plataforma_2": "playstation"
+    "plataforma_2": "playstation",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 21,
-    "titulo": "Arcanum: Of Steamworks and Magick Obscura",
+    "nombre": "Arcanum: Of Steamworks and Magick Obscura",
     "imagen": "/assets/public/capsules/hero_capsule_21.jpg",
+    "altImagen": "/assets/public/capsules/hero_capsule_21-1.jpg",
     "descuento": "-75%",
     "precioOriginal": "CLP$4.760",
     "precioDescuento": "CLP$1.190",
     "plataforma": "",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 22,
-    "titulo": "GUN™",
+    "nombre": "GUN™",
     "imagen": "/assets/public/capsules/hero_capsule_22.jpg",
+    "altImagen": "/assets/public/capsules/hero_capsule_22-1.jpg",
     "descuento": "-67%",
     "precioOriginal": "CLP$15.880",
     "precioDescuento": "CLP$5.240",
     "plataforma": "",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 23,
-    "titulo": "Singularity™",
+    "nombre": "Singularity™",
     "imagen": "/assets/public/capsules/hero_capsule_23.jpg",
+    "altImagen": "/assets/public/capsules/hero_capsule_23-1.jpg",
     "descuento": "-67%",
     "precioOriginal": "CLP$22.900",
     "precioDescuento": "CLP$7.557",
     "plataforma": "",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 24,
-    "titulo": "Space Quest™ Collection",
+    "nombre": "Space Quest™ Collection",
     "imagen": "/assets/public/capsules/hero_capsule_24.jpg",
+    "altImagen": "/assets/public/capsules/hero_capsule_24-1.jpg",
     "descuento": "-67%",
     "precioOriginal": "CLP$15.880",
     "precioDescuento": "CLP$5.240",
     "plataforma": "",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   },
   {
     "id": 25,
-    "titulo": "Geometry Wars™ 3: Dimensions Evolved",
+    "nombre": "Geometry Wars™ 3: Dimensions Evolved",
     "imagen": "/assets/public/capsules/hero_capsule_25.jpg",
+    "altImagen": "/assets/public/capsules/hero_capsule_25-1.jpg",
     "descuento": "-50%",
     "precioOriginal": "CLP$11.910",
     "precioDescuento": "CLP$5.955",
     "plataforma": "mac",
-    "plataforma_2": ""
+    "plataforma_2": "",
+    "disponibleEn": ["battlenet", "steam", "xbox", "playstation"],
+    "key": "Steam",
+    "keyImg": "/assets/public/steam.svg",
+    "keyLink": "https://store.steampowered.com/",
+    "likes": "45039",
+    "galeria": [
+      "/assets/public/capsules/galery/hero_capsule_01-1.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-2.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-3.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-4.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-5.jpg",
+      "/assets/public/capsules/galery/hero_capsule_01-6.jpg"
+    ],
+    "generos": ["Acción", "Primera persona"],
+    "descripcion": "Modern Warfare III, la emocionante secuela de Call of Duty: Modern Warfare II, que batió todos los récords, te sumerge de nuevo en el fragor de la batalla, donde el Capitán Price y la Task Force 141 de élite se enfrentan a su adversario más formidable hasta la fecha. Esta entrega no se limita a los tiroteos dinámicos, sino que hace hincapié en las decisiones estratégicas, ya sea eligiendo el equipo ideal o recorriendo los diversos terrenos de la misión. Aunque puedes esperar la intensidad cinemática sinónimo de las campañas de Call of Duty, Modern Warfare III va más allá al introducir misiones de combate abierto, que te otorgan un nuevo nivel de autonomía y compromiso. Aquellos que busquen un desafío aún mayor podrán formar equipo con otros guerreros para enfrentarse a hordas de muertos vivientes en el mapa de Zombis más grande de la historia de la franquicia. Modern Warfare Zombies, desarrollado por el talentoso equipo de Treyarch, teje una nueva y cautivadora historia repleta de apasionantes misiones, características de Zombies por excelencia y secretos ocultos. Prepárate para una extensa odisea de supervivencia PvE, donde los adversarios del pasado de Call of Duty están al acecho - ¡compra Call of Duty: Modern Warfare III Código de Steam más barato!",
+    "adicional": true,
+    "introCaracteristicas": "Da rienda suelta a tu destreza en combate en Modern Warfare III, donde te espera un estimulante abanico de innovaciones jugables:",
+    "caracteristicas": [
+      {
+        "titulo": "Campaña: ",
+        "descripcion": "Embárcate en un viaje épico en la campaña, donde cautivadoras misiones de acción te transportarán a los lugares más recónditos del planeta."
+      },
+      {
+        "titulo": "Special Ops: ",
+        "descripcion": "Sumérgete en el trepidante modo Special Ops, donde las misiones cooperativas te invitan a formar equipo con un camarada y enfrentaros juntos al caos."
+      },
+      {
+        "titulo": "Misiones de combate abiertas: ",
+        "descripcion": "Sumérgete en estas misiones en las que todas las estrategias están a tu alcance. Con diversos equipamientos y un sinfín de caminos, crea tu propia estrategia para disfrutar de una experiencia infinitamente emocionante."
+      },
+      {
+        "titulo": "Nuevos modos multijugador: Guerra terrestre, Invasión y Guerra: ",
+        "descripcion": "Sumérgete en grandes enfrentamientos, con hasta 64 jugadores enfrentándose en amplios campos de batalla o forma equipo con 32 aliados y únete a las tropas de la IA, creando estrategias para dominar objetivos clave. Mientras tanto, el modo Guerra reaviva esa llama nostálgica con un sentido regreso a los icónicos enfrentamientos basados en misiones de Call of Duty."
+      },
+      {
+        "titulo": "Nuevas armas y equipamiento: ",
+        "descripcion": "Mejora tu arsenal con elegantes rifles de asalto, rifles de francotirador de precisión y temibles escopetas, entre otros."
+      },
+      {
+        "titulo": "Nuevo modo Zombis: ",
+        "descripcion": "Prepárate para un viaje de otro mundo. Sumérgete en una saga de Zombis de mundo abierto en el mapa más grande jamás visto en la historia de Call of Duty. Experimenta una inquietante mezcla de mecánicas nuevas y conocidas de las pasadas leyendas de Zombis."
+      },
+      { "descripcion": "Call of Duty: Modern Warfare III al mejor precio." }
+    ],
+    "descripcionAdicional": [
+      {
+        "titulo": "Tambores de guerra",
+        "descripcion": "Modern Warfare III conmemora a lo grande el 20 aniversario de Call of Duty, en un homenaje a dos décadas de estimulante maestría en los shooters en primera persona. Sumérgete en un rico tapiz de mapas multijugador que combina brillantemente la nostalgia de antaño con las innovaciones de hoy. Deléitate con los 16 mapas icónicos del venerado Modern Warfare 2 (2009) que han sido meticulosamente reimaginados, ofreciendo nuevos giros de juego, modos actualizados y un lavado de cara visual para saciar el paladar del jugador moderno. Pero eso es sólo el principio. Prepárate para estar continuamente absorto con más de 12 mapas principales 6v6 de última generación, creados con maestría para preparar el terreno para las temporadas en vivo posteriores al lanzamiento. Cada mapa promete una mezcla única de estrategia, desafío y adrenalina, garantizando que el campo de batalla se mantenga fresco y competitivo. Así que, ¡prepárate y a por todas! Tanto si estás ajustando viejas cuentas como forjando nuevas rivalidades, compra Call of Duty: Modern Warfare III Código de Steam y ¡responde al llamado, soldado!"
+      }
+    ],
+    "requisitos": [
+      "Sí",
+      "Windows® 10 64 Bit (latest update)",
+      "Intel® Core™ i5-6600 / AMD Ryzen™ 5 1400",
+      "8 GB RAM",
+      "NVIDIA® GeForce® GTX 960 / GTX 1650 or AMD Radeon™ RX 470",
+      "150 GB SSD",
+      "Sin notas adicionales"
+    ],
+    "detalles": [
+      {
+        "idiomas": [
+          "Alemán, Francés, Inglés, Italiano, Español - España, Español - Latinoamérica"
+        ],
+        "lanzamiento": "10 de noviembre de 2023",
+        "editor": "Activision",
+        "desarrolladores": "Treyarch Infinity Ward Sledgehammer Games Raven Software"
+      }
+    ]
   }
 ]

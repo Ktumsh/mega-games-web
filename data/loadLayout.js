@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   headerContainer.innerHTML = `
     <nav class="container flex-nowrap flex-lg-wrap">
-      <a class="navbar-brand mx-0" href="/index.html">
+      <a class="navbar-brand mx-0" href="/">
         <img
           width="36px"
           height="auto"
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="navbar-collapse d-flex justify-content-end" id="navbarButtonsExample">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link grotesk text-w d-none d-lg-block fs-6" aria-current="page" href="/index.html">Mega Games</a>
+            <a class="nav-link grotesk text-w d-none d-lg-block fs-6" aria-current="page" href="/">Mega Games</a>
           </li>
         </ul>
         <div class="d-flex align-items-center ms-lg-auto">
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       />
     </div>
     <div class="responsive_header_logo">
-      <a href="/index.html">
+      <a href="/">
         <div class="d-flex align-items-center">
           <img
             src="/assets/public/mega-games-logo.svg"
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "
               >
                 <div class="popup_body popup_menu popup_menu_browse">
-                  <a href="/index.html" class="popup_menu_item">Inicio</a>
+                  <a href="/" class="popup_menu_item">Inicio</a>
                   <a href="#" class="popup_menu_item">Recomendaciones</a>
                   <a href="#" class="popup_menu_item"
                     >Vistos recientemente</a
@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="popup_menu_subheader responsive_hidden">
                       Populares
                     </div>
-                    <a href="/index.html" class="popup_menu_item"
+                    <a href="/" class="popup_menu_item"
                       >Lo más vendido</a
                     >
                     <a href="#" class="popup_menu_item">Lo más jugado</a>
@@ -405,7 +405,7 @@ document.addEventListener("DOMContentLoaded", () => {
               class="popup_block_new responsive_slidedown sub_menu"
             >
               <div class="popup_body popup_menu popup_menu_browse">
-                <a href="/index.html" class="popup_menu_item">Inicio</a>
+                <a href="/" class="popup_menu_item">Inicio</a>
                 <a href="#" class="popup_menu_item">Recomendaciones</a>
                 <a href="#" class="popup_menu_item">Vistos recientemente</a>
               </div>
@@ -426,7 +426,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   <div class="popup_menu_subheader responsive_hidden">
                     Populares
                   </div>
-                  <a href="/index.html" class="popup_menu_item"
+                  <a href="/" class="popup_menu_item"
                     >Lo más vendido</a
                   >
                   <a href="#" class="popup_menu_item">Lo más jugado</a>
