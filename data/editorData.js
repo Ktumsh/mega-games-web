@@ -39,13 +39,15 @@ fetch("/data/api/editorSalePage.json")
     });
 
     function regularCard(tarjeta) {
+      const gameName = tarjeta.nombre;
+      const pageName = gameName;
       return `
         <div class="sale_section_card">
           <div class="sale_section_card_ctn">
-            <a href="#" style="display: block; cursor: pointer">
+            <a href="publisher-sale-details.html?name=${pageName}&id=${tarjeta.id}" style="display: block; cursor: pointer">
               <div class="capsule_decorators"></div>
               <div class="hero_capsule_image_ctn">
-                <img class="hero_image" src="${tarjeta.imagen}" alt="${tarjeta.titulo}">
+                <img class="hero_image" src="${tarjeta.imagen}" alt="${tarjeta.nombre}">
               </div>
               <div class="capsule_bottom_bar">
                 <span class="platform_label">
@@ -68,14 +70,16 @@ fetch("/data/api/editorSalePage.json")
     }
 
     function specialCard(tarjeta) {
+      const gameName = tarjeta.nombre;
+      const pageName = gameName;
       return `
         <div class="sale_section_card">
           <div class="sale_section_card_ctn">
-            <a href="#" style="display: block; cursor: pointer">
+            <a href="publisher-sale-details.html?name=${pageName}&id=${tarjeta.id}" style="display: block; cursor: pointer">
               <div class="capsule_decorators"></div>
               <div class="hero_capsule_image_ctn">
                 <div class="hero_capsule_image" style="background-image: url('${tarjeta.imagen}');"></div>
-                <img class="hero_image_diff" src="${tarjeta.imagen}" alt="${tarjeta.titulo}">
+                <img class="hero_image_diff" src="${tarjeta.imagen}" alt="${tarjeta.nombre}">
               </div>
               <div class="capsule_bottom_bar">
                 <span class="price_ctn">
@@ -95,18 +99,20 @@ fetch("/data/api/editorSalePage.json")
     }
 
     function regularCard2(tarjeta) {
+      const gameName = tarjeta.nombre;
+      const pageName = gameName;
       return `
     <div class="sale_section_card">
       <div class="sale_section_card_ctn">
         <a
-          href="#"
+          href="publisher-sale-details.html?name=${pageName}&id=${tarjeta.id}"
           style="display: block; cursor: pointer"
         >
           <div class="capsule_decorators"></div>
           <div class="capsule_image_ctn">
             <img
               src="${tarjeta.imagen}"
-              alt="${tarjeta.titulo}"
+              alt="${tarjeta.nombre}"
             />
           </div>
           <div class="capsule_bottom_bar">

@@ -1329,8 +1329,8 @@ span.platform_img.mac {
   background-image: url("/assets/public/icons/icon_platform_mac.png");
 }
 
-span.platform_img.linux {
-  background-image: url("/assets/public/icons/icon_platform_linux.png");
+span.platform_img.steam {
+  background-image: url("/assets/public/icons/icon_platform_steam.png");
 }
 
 span.platform_img.streamingvideo {
@@ -1363,6 +1363,10 @@ span.platform_img.valveindex {
 
 span.platform_img.music {
   background-image: url("/public/images/v6/icon_platform_music.png");
+}
+
+span.platform_img.epicgames {
+  background-image: url("/assets/public/icons/icon_platform_epicgames.png");
 }
 
 @media (min-width: 576px) {

@@ -26,7 +26,7 @@
     <div class="HeaderSlotDesktop"></div>
     <!-- NAVBAR 🔴 -->
     <div class="NavbarSlotMobile"></div>
-    <main class="position-relative bg-base">
+    <main class="position-relative bg-gradient-p1">
       <div class="NavbarSlotDesktop"></div>
       <div class="divider_header d-lg-block d-none"></div>
       <div class="container mt-5">
@@ -38,12 +38,12 @@
                 itemscope
                 itemtype="http://schema.org/ListItem"
               >
-                <a href="/index.html">Tienda</a>
+                <a href="/">Tienda</a>
                 <meta
                   itemscope
                   itemtype="http://schema.org/WebPage"
                   itemprop="item"
-                  itemid="/index.html"
+                  itemid="/"
                   content="Tienda"
                 />
                 <meta itemprop="name" content="Tienda" />
@@ -54,12 +54,12 @@
                 itemscope
                 itemtype="http://schema.org/ListItem"
               >
-                <a href="/index.html">Todos los juegos</a>
+                <a href="/">Todos los juegos</a>
                 <meta
                   itemscope
                   itemtype="http://schema.org/WebPage"
                   itemprop="item"
-                  itemid="/index.html"
+                  itemid="/"
                   content="Todos los juegos"
                 />
                 <meta itemprop="name" content="Todos los juegos" />
@@ -278,217 +278,76 @@
                     </li>
                   </ul>
                   <div class="platform_ctn">
-                    <div class="platform_label">
-                      <span id="platform" class="platform_img"></span>
-                    </div>
+                    <div class="available_in">Disponible en:</div>
+                    <div id="platform" class="platform_label"></div>
                   </div>
                 </div>
               </div>
               <div class="details_galery_area_ctn">
                 <div class="galery_area">
-                  <div class="galery">
-                    <div class="galery_item">
-                      <div class="galery_image">
-                        <button type="button">
-                          <img class="gameGaleryImage" src="" alt="" />
-                        </button>
-                      </div>
-                    </div>
-                    <div class="galery_item">
-                      <div class="galery_image">
-                        <button type="button">
-                          <img class="gameGaleryImage" src="" alt="" />
-                        </button>
-                      </div>
-                    </div>
-                    <div class="galery_item">
-                      <div class="galery_image">
-                        <button type="button">
-                          <img class="gameGaleryImage" src="" alt="" />
-                        </button>
-                      </div>
-                    </div>
-                    <div class="galery_item">
-                      <div class="galery_image">
-                        <button type="button">
-                          <img class="gameGaleryImage" src="" alt="" />
-                        </button>
-                      </div>
-                    </div>
-                    <div class="galery_item">
-                      <div class="galery_image">
-                        <button type="button">
-                          <img class="gameGaleryImage" src="" alt="" />
-                        </button>
-                      </div>
-                    </div>
-                    <div class="galery_item">
-                      <div class="galery_image">
-                        <button type="button">
-                          <img class="gameGaleryImage" src="" alt="" />
-                        </button>
-                      </div>
-                    </div>
-                    <div class="galery_item">
-                      <div class="galery_image">
-                        <button type="button">
-                          <img class="gameGaleryImage" src="" alt="" />
-                        </button>
-                      </div>
-                    </div>
-                    <div class="galery_item">
-                      <div class="galery_image">
-                        <button type="button">
-                          <img class="gameGaleryImage" src="" alt="" />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                  <div id="galery" class="galery"></div>
                 </div>
               </div>
               <div class="details_game_description_area">
                 <h3 class="description_title">Descripción del producto</h3>
                 <div class="genders">
-                  <ul class="genders_list">
-                    <li class="gender">
-                      <a class="gameType" href="">Acción</a>
-                    </li>
-                    <li class="gender">
-                      <a class="gameType" href="">Un solo jugador</a>
-                    </li>
-                    <li class="gender">
-                      <a class="gameType" href="">Tercera persona</a>
-                    </li>
-                    <li class="gender">
-                      <a class="gameType" href="">Horror</a>
-                    </li>
-                    <li class="gender">
-                      <a class="gameType" href="">Aventuras</a>
-                    </li>
-                  </ul>
+                  <ul id="genderList" class="genders_list"></ul>
                 </div>
                 <div class="game_description_area">
-                  <h2>Resident Evil 4</h2>
+                  <h2 id="descGameName"></h2>
                   <div>
-                    <p>
-                      Disfruta del remake del juego de survival horror que
-                      cambió por completo el género. Resident Evil 4, adaptado a
-                      las consolas y PC modernos con gráficos y mecánicas de
-                      juego renovados, te lleva de vuelta a un remoto pueblo
-                      europeo infectado por el parásito que controla la mente:
-                      Las Plagas. Tras los remakes de RE2 y RE3, Capcom nos
-                      ofrece otro remake de un juego clásico. Si nunca has
-                      jugado al RE4 original, el Resident Evil 4 Código de Steam
-                      es una forma perfecta de experimentar uno de los mejores
-                      juegos, si no el mejor, de la serie Resident Evil.
-                    </p>
-                    <h2>Características del juego Resident Evil 4</h2>
-                    <p>
-                      Estas características del juego Resident Evil 4 hacen que
-                      el remake parezca nuevo pero muy familiar:
-                    </p>
-                    <h2>Sub descripción (opcional)</h2>
-                    <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Quibusdam sint aut atque sit ab eius ea perspiciatis esse
-                      quae omnis animi ut repellendus distinctio obcaecati modi,
-                      rerum exercitationem vero dolorem. Lorem ipsum, dolor sit
-                      amet consectetur adipisicing elit. Quibusdam sint aut
-                      atque sit ab eius ea perspiciatis esse quae omnis animi ut
-                      repellendus distinctio obcaecati modi, rerum
-                      exercitationem vero dolorem. Lorem ipsum, dolor sit amet
-                      consectetur adipisicing elit. Quibusdam sint aut atque sit
-                      ab eius ea perspiciatis esse quae omnis animi ut
-                      repellendus distinctio obcaecati modi, rerum
-                      exercitationem vero dolorem. Lorem ipsum, dolor sit amet
-                      consectetur adipisicing elit. Quibusdam sint aut atque sit
-                      ab eius ea perspiciatis esse quae omnis animi ut
-                      repellendus distinctio obcaecati modi, rerum
-                      exercitationem vero dolorem. Lorem ipsum, dolor sit amet
-                      consectetur adipisicing elit. Quibusdam sint aut atque sit
-                      ab eius ea perspiciatis esse quae omnis animi ut
-                      repellendus distinctio obcaecati modi, rerum
-                      exercitationem vero dolorem.
-                    </p>
+                    <p id="descGameDescription"></p>
+                    <h2 id="descCharacteristicsGameName"></h2>
+                    <p id="introCharacteristics"></p>
+                    <ul id="characteristicsList"></ul>
+                    <h2 id="additionalDesc"></h2>
+                    <p id="additionalDescText"></p>
                   </div>
-                  <button class="link read_more" type="button">Leer más</button>
+                  <button id="readMore" class="link read_more" type="button">
+                    Leer más
+                  </button>
                 </div>
                 <h3 class="description_title sub">Requisitos del sistema</h3>
                 <div class="system_requirements">
                   <h4>Requisitos mínimos</h4>
-                  <ul class="detail_list">
+                  <ul id="requirements" class="detail_list">
                     <li>
                       <div class="detail_tlt">Soporte de 64 bits</div>
-                      <div class="detail_desc">Sí</div>
+                      <div class="detail_desc"></div>
                     </li>
                     <li>
                       <div class="detail_tlt">Requisitos del sistema</div>
-                      <div class="detail_desc">Windows 10 (64 bit)</div>
+                      <div class="detail_desc"></div>
                     </li>
                     <li>
                       <div class="detail_tlt">Procesador</div>
-                      <div class="detail_desc">
-                        AMD Ryzen 3 1200 / Intel Core i5-7500
-                      </div>
+                      <div class="detail_desc"></div>
                     </li>
                     <li>
                       <div class="detail_tlt">Memoria</div>
-                      <div class="detail_desc">8 GB RAM</div>
+                      <div class="detail_desc"></div>
                     </li>
                     <li>
                       <div class="detail_tlt">Gráficos</div>
-                      <div class="detail_desc">
-                        AMD Radeon RX 560 with 4GB VRAM / NVIDIA GeForce GTX
-                        1050 Ti with 4GB VRAM
-                      </div>
+                      <div class="detail_desc"></div>
                     </li>
                     <li>
                       <div class="detail_tlt">Red</div>
-                      <div class="detail_desc">
-                        Conexión de banda ancha a Internet
-                      </div>
+                      <div class="detail_desc"></div>
                     </li>
                     <li>
                       <div class="detail_tlt">Notas adicionales</div>
-                      <div class="detail_desc">
-                        Estimated performance (when set to Prioritize
-                        Performance): 1080p/60fps. ・Framerate might drop in
-                        graphics-intensive scenes. ・AMD Radeon RX 6700 XT or
-                        NVIDIA GeForce RTX 2060 required to support ray tracing
-                      </div>
+                      <div class="detail_desc"></div>
                     </li>
                   </ul>
                 </div>
                 <h3 class="description_title sub">Detalles del pedido</h3>
                 <div class="order_details">
-                  <img
-                    src="/assets/public/pegi_18.svg"
-                    width="30"
-                    alt="PEGI 18"
-                  />
-                  <ul class="detail_list">
+                  <img id="pegi" src="" width="30" alt="" />
+                  <ul id="details" class="detail_list">
                     <li class="lenguages">
                       <div class="detail_tlt">Idiomas</div>
-                      <ul class="detail_desc">
-                        <li>
-                          <span>Alemán</span>
-                        </li>
-                        <li>
-                          <span>Francés</span>
-                        </li>
-                        <li>
-                          <span>Inglés</span>
-                        </li>
-                        <li>
-                          <span>Italiano</span>
-                        </li>
-                        <li>
-                          <span>Español - España</span>
-                        </li>
-                        <li>
-                          <span>Español - Latinoamérica</span>
-                        </li>
-                      </ul>
+                      <ul class="detail_desc"></ul>
                     </li>
                     <li>
                       <div class="detail_tlt">Fecha de lanzamiento</div>
@@ -501,10 +360,6 @@
                     <li>
                       <div class="detail_tlt">Desarrolladores</div>
                       <div id="developers" class="detail_desc"></div>
-                    </li>
-                    <li>
-                      <div class="detail_tlt">Funciona en</div>
-                      <div id="workIn" class="detail_desc"></div>
                     </li>
                   </ul>
                 </div>
@@ -554,35 +409,147 @@
         const keyAvailable = document.getElementById("keyAvailable");
         const keyTitle = document.getElementById("keyTitle");
         const keyActivation = document.getElementById("keyActivation");
-        const gameGaleryImage = document.querySelectorAll(".gameGaleryImage");
-        const gameType = document.querySelectorAll(".gameType");
+        const gameLikes = document.getElementById("gameLikes");
+
+        const genderList = document.getElementById("genderList");
+
+        const descGameName = document.getElementById("descGameName");
+        const descCharacteristicsGameName = document.getElementById(
+          "descCharacteristicsGameName"
+        );
+        const descGameDescription = document.getElementById(
+          "descGameDescription"
+        );
+        const introCharacteristics = document.getElementById(
+          "introCharacteristics"
+        );
+        const characteristicsList = document.getElementById(
+          "characteristicsList"
+        );
+
+        const additionalDesc = document.getElementById("additionalDesc");
+        const additionalDescText =
+          document.getElementById("additionalDescText");
+
+        const galery = document.getElementById("galery");
+
+        const detailDesc = document.querySelectorAll(
+          "#requirements .detail_desc"
+        );
+
+        const lenguages = document.querySelector("#details .detail_desc");
+
         const releaseDate = document.getElementById("releaseDate");
         const publisher = document.getElementById("publisher");
         const developers = document.getElementById("developers");
-        const workIn = document.getElementById("workIn");
-        const gameLikes = document.getElementById("gameLikes");
 
+        const restriction = document.getElementById("pegi");
         if (gameFound) {
-          gameImage.src = gameFound.imagen;
+          if (gameId < 19) {
+            gameImage.src = gameFound.imagen;
+          } else {
+            gameImage.src = gameFound.altImagen;
+          }
           gameName.textContent = gameFound.nombre;
           discount.textContent = gameFound.descuento;
           originalPrice.textContent = gameFound.precioOriginal;
           finalPrice.textContent = gameFound.precioDescuento;
-          platform.classList.add(gameFound.plataforma);
-          keyAvailable.src = gameFound.keyAvailable;
-          keyTitle.textContent = gameFound.keyTitle;
-          keyActivation.href = gameFound.keyActivation;
-          /*gameGaleryImage.forEach((image) => {
-            image.src = gameFound.gameGaleryImage;
-          });*/
-          /*gameType.forEach((type) => {
-            type.textContent = gameFound.gameType;
-          });*/
-          releaseDate.textContent = gameFound.releaseDate;
-          publisher.textContent = gameFound.publisher;
-          developers.textContent = gameFound.developers;
-          workIn.textContent = gameFound.workIn;
+          gameFound.disponibleEn.forEach((plataforma) => {
+            const availableIn = document.createElement("span");
+            availableIn.title = `Disponible en ${plataforma}`;
+            availableIn.classList.add("platform_img");
+            availableIn.classList.add(plataforma);
+            platform.appendChild(availableIn);
+          });
+          keyAvailable.src = gameFound.keyImg;
+          keyTitle.textContent = gameFound.key;
+          keyActivation.href = gameFound.keyLink;
+          keyActivation.textContent = gameFound.key;
+
+          const galeria = gameFound.galeria;
+          galeria.forEach((imagen) => {
+            const galeryItem = document.createElement("div");
+            galeryItem.classList.add("galery_item");
+            galeryItem.innerHTML = `
+              <div class="galery_image">
+                <button type="button">
+                  <img class="gameGaleryImage" src="${imagen}" alt="${gameFound.nombre}" />
+                </button>
+              </div>
+            `;
+            galery.appendChild(galeryItem);
+          });
+
           gameLikes.textContent = gameFound.likes;
+          console.log(gameFound.likes);
+
+          descGameName.textContent = gameFound.nombre;
+          const adicional = gameFound.adicional;
+          if (adicional) {
+            descCharacteristicsGameName.textContent = `Características de ${gameFound.nombre}`;
+          }
+          descGameDescription.textContent = gameFound.descripcion;
+          introCharacteristics.textContent = gameFound.introCaracteristicas;
+
+          const generos = gameFound.generos;
+          generos.forEach((genero) => {
+            const linkItem = document.createElement("a");
+            linkItem.classList.add("gameType");
+            linkItem.href = "";
+            linkItem.textContent = genero;
+            const listItem = document.createElement("li");
+            listItem.classList.add("gender");
+            listItem.appendChild(linkItem);
+            genderList.appendChild(listItem);
+          });
+
+          const caracteristicas = gameFound.caracteristicas;
+          caracteristicas.forEach((caracteristica) => {
+            const charactTitle = document.createElement("strong");
+            charactTitle.textContent = caracteristica.titulo;
+
+            const descripcionElement = document.createElement("span");
+            descripcionElement.textContent = caracteristica.descripcion;
+
+            const listItem = document.createElement("li");
+            listItem.textContent = "• ";
+            listItem.appendChild(charactTitle);
+            listItem.appendChild(descripcionElement);
+
+            characteristicsList.appendChild(listItem);
+          });
+
+          const descripcionAdicional = gameFound.descripcionAdicional;
+          descripcionAdicional.forEach((adicional) => {
+            additionalDesc.textContent = adicional.titulo;
+            additionalDescText.textContent = adicional.descripcion;
+          });
+
+          detailDesc.forEach((element, index) => {
+            element.textContent = gameFound.requisitos[index];
+          });
+
+          const detalles = gameFound.detalles;
+          if (detalles.length > 0 && detalles[0].idiomas.length > 0) {
+            const lenguagesList = document.querySelector(
+              "#details .lenguages .detail_desc"
+            );
+            const idiomas = detalles[0].idiomas[0].split(", ");
+            idiomas.forEach((idioma) => {
+              const idiomaItem = document.createElement("li");
+              const spanIdioma = document.createElement("span");
+              spanIdioma.textContent = idioma;
+              idiomaItem.appendChild(spanIdioma);
+              lenguagesList.appendChild(idiomaItem);
+            });
+          }
+          releaseDate.textContent = detalles[0].lanzamiento;
+          publisher.textContent = detalles[0].editor;
+          developers.textContent = detalles[0].desarrolladores;
+
+          restriction.src = gameFound.restriccionImg;
+          restriction.alt = gameFound.restriccion;
+          restriction.title = `Restricción: ${gameFound.restriccion}`;
         } else {
           console.log("Juego no encontrado");
         }
@@ -590,5 +557,12 @@
       .catch((error) =>
         console.error("Error al cargar los datos del juego:", error)
       );
+    const readMore = document.getElementById("readMore");
+    const gameDescArea = document.querySelector(".game_description_area");
+
+    readMore.addEventListener("click", function () {
+      gameDescArea.style.maxHeight = "100%";
+      readMore.style.display = "none";
+    });
   });
 </script>
