@@ -363,6 +363,10 @@ a#store_search_link i {
   background-color: #f9ea76 !important;
 }
 
+.bg-default {
+  background: #131019 !important;
+}
+
 .bg-base {
   background: #250462 !important;
 }
