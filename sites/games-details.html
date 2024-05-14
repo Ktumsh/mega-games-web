@@ -83,6 +83,7 @@
               </li>
             </ul>
           </div>
+          <!-- Game Details -->
           <div class="details_container">
             <div class="details_grid_container grid_areas">
               <div class="details_image_area">
@@ -194,7 +195,7 @@
                       <div class="shopping">
                         <span class="price_ctn without_discount">
                           <div class="price_label">
-                            <div id="price" class="price"></div>
+                            <div id="price" class="price detail"></div>
                           </div>
                           <span class="price_warn">
                             <span
@@ -459,11 +460,7 @@
 
         const restriction = document.getElementById("pegi");
         if (gameFound) {
-          if (gameId < 19) {
-            gameImage.src = gameFound.imagen;
-          } else {
-            gameImage.src = gameFound.altImagen;
-          }
+          gameImage.src = gameFound.imagen;
           gameName.textContent = gameFound.nombre;
           price.textContent = gameFound.precio;
           gameFound.disponibleEn.forEach((plataforma) => {

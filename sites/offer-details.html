@@ -83,6 +83,7 @@
               </li>
             </ul>
           </div>
+          <!-- Offer Details-->
           <div class="details_container">
             <div class="details_grid_container grid_areas">
               <div class="details_image_area">
@@ -445,11 +446,7 @@
 
         const restriction = document.getElementById("pegi");
         if (gameFound) {
-          if (gameId < 19) {
-            gameImage.src = gameFound.imagen;
-          } else {
-            gameImage.src = gameFound.altImagen;
-          }
+          gameImage.src = gameFound.imagen;
           gameName.textContent = gameFound.nombre;
           discount.textContent = gameFound.descuento;
           originalPrice.textContent = gameFound.precioOriginal;

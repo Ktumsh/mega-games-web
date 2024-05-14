@@ -7,6 +7,12 @@ body {
   margin-bottom: 30px;
 }
 
+#popularGames .route_container,
+#specialOffers .route_container,
+#gamesAndCards .route_container {
+  margin-bottom: 10px;
+}
+
 .route {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   list-style: none;
@@ -32,6 +38,12 @@ body {
   height: 8px;
   transform: rotate(45deg);
   margin: 0px 8px 1px 6px;
+}
+
+#popularGames .route > li:last-child::after,
+#specialOffers .route > li:last-child::after,
+#gamesAndCards .route > li:last-child::after {
+  display: none;
 }
 
 .route > li > a {
