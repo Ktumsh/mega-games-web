@@ -1,11 +1,18 @@
 let lastCard = 0;
 let isLoading = false;
 
+function updateCounter(total) {
+  const counterElement = document.getElementById("counter");
+  counterElement.textContent = total;
+}
+
 function loadInitialCards() {
   fetch("/data/api/offerCards.json")
     .then((response) => response.json())
     .then((tarjetas) => {
       const cardsContainer = document.getElementById("gameOfferCardsContainer");
+
+      updateCounter(tarjetas.length);
 
       const maxCards = 8;
       const cardsForLoad = tarjetas.slice(lastCard, lastCard + maxCards);
@@ -41,7 +48,7 @@ function loadInitialCards() {
                     <div>
                       <div class="d-inline-flex flex-row flex-sm-column flex-lg-row p-1 gap-1 bg-p1">
                         <p class="descuento-precio mb-0 position-relative">${tarjeta.precioOriginal}</p>
-                        <p class="mb-0 fw-medium text-p3">${tarjeta.precioDescuento}</p>
+                        <p class="mb-0 fw-semibold text-p3 motiva-sans">${tarjeta.precioDescuento}</p>
                       </div>
                     </div>
                   </div>
@@ -87,6 +94,7 @@ function loadCards() {
         const cardsContainer = document.getElementById(
           "gameOfferCardsContainer"
         );
+        const loader = document.getElementById("loader");
 
         const maxCards = 8;
         const cardsForLoad = tarjetas.slice(lastCard, lastCard + maxCards);
@@ -124,8 +132,8 @@ function loadCards() {
                       </div>
                       <div>
                         <div class="d-inline-flex flex-row flex-sm-column flex-lg-row p-1 gap-1 bg-p1">
-                          <p class="descuento-precio mb-0 position-relative">${tarjeta.precioOriginal}</p>
-                          <p class="mb-0 fw-medium text-p3">${tarjeta.precioDescuento}</p>
+                          <p class="descuento-precio mb-0 position-relative ">${tarjeta.precioOriginal}</p>
+                          <p class="mb-0 fw-semibold text-p3 motiva-sans">${tarjeta.precioDescuento}</p>
                         </div>
                       </div>
                     </div>
@@ -145,15 +153,14 @@ function loadCards() {
 
           cardElement.innerHTML = cardContent;
           cardsContainer.appendChild(cardElement);
-
-          const loader = document.getElementById("loader");
-
-          if (lastCard === 32) {
-            loader.style.display = "none";
-          }
         });
 
         lastCard += cardsForLoad.length;
+
+        if (lastCard >= tarjetas.length) {
+          loader.style.display = "none";
+        }
+
         isLoading = false;
       })
       .catch((error) => {

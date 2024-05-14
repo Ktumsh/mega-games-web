@@ -163,8 +163,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="store_nav">
               <div id="foryou_tab" data-flyout="foryou_flyout" class="tab">
                 <span class="pulldown">
-                  <a class="pulldown_desktop" href="#">Tu tienda</a>
-                  <a class="pulldown_mobile" href="#">Tu tienda</a>
+                  <a class="pulldown_desktop" href="/">Tu tienda</a>
+                  <a class="pulldown_mobile" href="/">Tu tienda</a>
                 </span>
               </div>
               <div
@@ -188,10 +188,10 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
               <div id="noteworthy_tab" data-flyout="noteworthy_flyout" class="tab">
                 <span class="pulldown">
-                  <a href="#" class="pulldown_desktop"
+                  <a href="javascript:void(0)" class="pulldown_desktop"
                     >Nuevo y destacable</a
                   >
-                  <a href="#" class="pulldown_mobile">Nuevo y destacable</a>
+                  <a href="javascript:void(0)" class="pulldown_mobile">Nuevo y destacable</a>
                 </span>
               </div>
               <div
@@ -210,10 +210,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="popup_menu_subheader responsive_hidden">
                       Populares
                     </div>
-                    <a href="/" class="popup_menu_item"
+                    <a href="/sites/juegos-populares.html" class="popup_menu_item"
                       >Lo más vendido</a
                     >
-                    <a href="#" class="popup_menu_item">Lo más jugado</a>
+                    <a href="/sites/juegos-populares.html" class="popup_menu_item">Lo más jugado</a>
                     <div class="category_hr responsive_hidden"></div>
                     <a href="#" class="popup_menu_item">Novedades</a>
                     <a href="#" class="popup_menu_item"
@@ -235,8 +235,8 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
               <div id="genre_tab" data-flyout="genre_flyout" class="tab">
                 <span class="pulldown">
-                  <a href="#" class="pulldown_desktop">Categorías</a>
-                  <a href="#" class="pulldown_mobile">Categorías</a>
+                  <a href="javascript:void(0)" class="pulldown_desktop">Categorías</a>
+                  <a href="javascript:void(0)" class="pulldown_mobile">Categorías</a>
                 </span>
               </div>
               <div
@@ -260,7 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     >
                     <div class="category_hr responsive_hidden"></div>
                     <a href="#" class="popup_menu_item">Juegos</a>
-                    <a href="#" class="popup_menu_item"
+                    <a href="/sites/juegos-y-tarjetas.html" class="popup_menu_item"
                       >Juegos y tarjetas</a
                     >
                     <a href="#" class="popup_menu_item">eTarjetas</a>
@@ -346,6 +346,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   <form name="searchform" role="search">
                     <div class="searchbox">
                       <input
+                        id="searchInput"
                         class="store_nav_search_term default"
                         type="search"
                         placeholder="buscar"
@@ -362,6 +363,16 @@ document.addEventListener("DOMContentLoaded", () => {
                       ></a>
                     </div>
                   </form>
+                </div>
+              </div>
+              <div
+                id="searchterm_options"
+                class="search_suggest popup_block_new"
+                style="opacity: 1; display: none"
+              >
+                <div class="popup_body search_v2" style="border-top: none">
+                  <div id="search_suggestion_contents">
+                  </div>
                 </div>
               </div>
             </div>
@@ -416,8 +427,8 @@ document.addEventListener("DOMContentLoaded", () => {
               class="tab"
             >
               <span class="pulldown">
-                <a href="#" class="pulldown_desktop">Nuevo y destacable</a>
-                <a href="#" class="pulldown_mobile">Nuevo y destacable</a>
+                <a href="javascript:void(0)" class="pulldown_desktop">Nuevo y destacable</a>
+                <a href="javascript:void(0)" class="pulldown_mobile">Nuevo y destacable</a>
               </span>
             </div>
             <div id="noteworthy_flyout" class="popup_block_new responsive_slidedown sub_menu">
@@ -426,10 +437,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <div class="popup_menu_subheader responsive_hidden">
                     Populares
                   </div>
-                  <a href="/" class="popup_menu_item"
+                  <a href="/sites/juegos-populares.html" class="popup_menu_item"
                     >Lo más vendido</a
                   >
-                  <a href="#" class="popup_menu_item">Lo más jugado</a>
+                  <a href="/sites/juegos-populares.html" class="popup_menu_item">Lo más jugado</a>
                   <div class="category_hr responsive_hidden"></div>
                   <a href="#" class="popup_menu_item">Novedades</a>
                   <a href="#" class="popup_menu_item"
@@ -453,8 +464,8 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <div id="genre_tab" data-flyout="genre_flyout" class="tab">
               <span class="pulldown">
-                <a href="#" class="pulldown_desktop">Categorías</a>
-                <a href="#" class="pulldown_mobile">Categorías</a>
+                <a href="javascript:void(0)" class="pulldown_desktop">Categorías</a>
+                <a href="javascript:void(0)" class="pulldown_mobile">Categorías</a>
               </span>
             </div>
             <div id="genre_flyout" class="popup_block_new responsive_slidedown sub_menu">
@@ -466,7 +477,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   <a href="#" class="popup_menu_item">Todas las ofertas</a>
                   <div class="category_hr responsive_hidden"></div>
                   <a href="#" class="popup_menu_item">Juegos</a>
-                  <a href="#" class="popup_menu_item">Juegos y tarjetas</a>
+                  <a href="/sites/juegos-y-tarjetas.html" class="popup_menu_item">Juegos y tarjetas</a>
                   <a href="#" class="popup_menu_item">eTarjetas</a>
                   <div class="category_hr responsive_hidden"></div>
                   <a href="#" class="popup_menu_item">Xbox</a>
@@ -538,28 +549,39 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
             </div>
             <div class="search_area">
-              <div id="store_search">
-                <form name="searchform" role="search">
-                  <div class="searchbox">
-                    <input
-                      class="store_nav_search_term default"
-                      type="search"
-                      placeholder="buscar"
-                      size="22"
-                      autocomplete="off"
-                      maxlength="64"
-                    />
-                    <a
-                      href="#"
-                      id="store_search_link"
-                      class="store_search_link text-w"
-                      aria-label="Buscar en Mega Games"
-                      ><i class="fa-solid fa-magnifying-glass fa"></i
-                    ></a>
-                  </div>
-                </form>
+            <div id="store_search">
+              <form name="searchform" role="search">
+                <div class="searchbox">
+                  <input
+                    id="searchInput"
+                    class="store_nav_search_term default"
+                    type="search"
+                    placeholder="buscar"
+                    size="22"
+                    autocomplete="off"
+                    maxlength="64"
+                  />
+                  <a
+                    href="#"
+                    id="store_search_link"
+                    class="store_search_link text-w"
+                    aria-label="Buscar en Mega Games"
+                    ><i class="fa-solid fa-magnifying-glass fa"></i
+                  ></a>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div
+            id="searchterm_options"
+            class="search_suggest popup_block_new"
+            style="opacity: 1; display: none"
+          >
+            <div class="popup_body search_v2" style="border-top: none">
+              <div id="search_suggestion_contents">
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>
@@ -667,8 +689,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!tab.classList.contains("focus")) {
         tab.classList.add("focus");
       }
-    } else {
-      tab.classList.remove("focus");
     }
   }
 

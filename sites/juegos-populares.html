@@ -7,7 +7,7 @@
       name="description"
       content="Tienda de videojuegos online - Mega Games"
     />
-    <title>Ofertas espaciales - Mega Games</title>
+    <title>Juegos populares - Mega Games</title>
     <link rel="icon" type="" href="/assets/public/mega-games-logo.svg" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/details.css" />
@@ -18,7 +18,7 @@
       crossorigin="anonymous"
     />
     <script src="/data/loadLayout.js"></script>
-    <script src="/data/dataOffers.js"></script>
+    <script src="/data/dataPopularGames.js"></script>
   </head>
   <body>
     <!-- HEADER 🔴 -->
@@ -27,8 +27,8 @@
     <div class="HeaderSlotDesktop"></div>
     <!-- NAVBAR 🔴 -->
     <div class="NavbarSlotMobile"></div>
-    <!-- Ofertas espaciales -->
-    <section id="specialOffers" class="position-relative bg-gradient-p1">
+    <!-- Juegos populares -->
+    <section id="popularGames" class="position-relative bg-base">
       <div class="NavbarSlotDesktop"></div>
       <div class="divider_header d-lg-block d-none"></div>
       <div class="container py-5">
@@ -55,21 +55,21 @@
               itemscope
               itemtype="http://schema.org/ListItem"
             >
-              <a href="/sites/ofertas-especiales.html">Ofertas especiales</a>
+              <a href="/sites/juegos-populares.html">Juegos populares</a>
               <meta
                 itemscope
                 itemtype="http://schema.org/WebPage"
                 itemprop="item"
                 itemid="/"
-                content="Ofertas especiales"
+                content="Juegos populares"
               />
-              <meta itemprop="name" content="Ofertas especiales"" />
+              <meta itemprop="name" content="Juegos populares"" />
               <meta itemprop="position" content="2" />
             </li>
           </ul>
         </div>
         <div class="d-flex align-items-center">
-          <h2 class="page_title">Ofertas especiales</h2>
+          <h2 class="page_title">Juegos populares</h2>
         </div>
         <div class="filter_container">
           <span class="counter_ctn">
@@ -78,12 +78,12 @@
           </span>
         </div>
         <div
-          id="gameOfferCardsContainer"
+          id="popularGamesCardsContainer"
           class="home_page_cards_ctn mt-4"
         ></div>
       </div>
       <div id="cardsLoader" class="d-flex justify-content-center pb-5">
-        <span class="loader" id="loader"></span>
+        <span class="loader popular_games" id="loader"></span>
       </div>
     </section>
     <!-- FOOTER -->
