@@ -2861,42 +2861,26 @@ a.pulldown_mobile {
   box-shadow: 0 0 12px #000000;
 }
 
-.store_nav .popup_block_new .popup_body {
-  background: linear-gradient(
-      90deg,
-      rgba(33, 162, 255, 0.1) 1.89%,
-      rgba(50, 50, 51, 0) 50%
-    ),
-    linear-gradient(180deg, #575860 11.6%, #3a4852 54.73%, #2c2d34 100%);
-  padding: 8px 5px 8px 5px;
-}
-
-.store_nav .popup_block_new .popup_body.search_v2 {
-  background: linear-gradient(
-      90deg,
-      rgba(33, 162, 255, 0.1) 1.89%,
-      rgba(50, 50, 51, 0) 50%
-    ),
-    linear-gradient(180deg, #575860 11.6%, #3a4852 54.73%, #2c2d34 100%);
-}
-
 .store_nav .popup_block_new .popup_body.search_v2 {
   padding: 1px;
   box-sizing: border-box;
-  background: #3d4450;
+  background: linear-gradient(
+      90deg,
+      rgba(59, 52, 134, 0.7) 1.89%,
+      rgba(50, 50, 51, 0) 50%
+    ),
+    linear-gradient(180deg, #644f7d 11.6%, #48456d 54.73%, #503f64 100%);
 }
 
 .popup_block_new .popup_body {
   border: 1px solid #3d4450;
   position: relative;
-  background-color: #3d4450;
 }
 
 .store_nav .popup_block_new .popup_body,
 #footer_nav .popup_block_new .popup_body {
   border: none;
   position: relative;
-  background: #417a9b;
 }
 
 .search_suggest .match {
