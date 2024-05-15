@@ -1531,6 +1531,12 @@ span.platform_img.epicgames {
   transition: all 300ms ease-in-out;
 }
 
+@media (max-width: 576px) {
+  .card_struct {
+    min-height: auto;
+  }
+}
+
 @media (min-width: 576px) {
   .card_struct:hover {
     filter: contrast(115%);
