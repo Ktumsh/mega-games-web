@@ -431,9 +431,10 @@
     const gameId = parseInt(queryParams.get("id"));
     document.title = gameTitle;
 
-    fetch("/data/api/offerCards.json")
+    fetch("/data/api/apiStore.json")
       .then((response) => response.json())
-      .then((games) => {
+      .then((apiStore) => {
+        const games = apiStore.offerCards;
         const gameFound = games.find((game) => game.id === gameId);
 
         const gameImage = document.getElementById("gameImage");

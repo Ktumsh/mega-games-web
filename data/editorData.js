@@ -1,6 +1,7 @@
-fetch("/data/api/editorSalePage.json")
+fetch("/data/api/apiStore.json")
   .then((response) => response.json())
-  .then((tarjetas) => {
+  .then((apiStore) => {
+    const tarjetas = apiStore.editorSalePage;
     const cardsPanels = Array.from({ length: 5 }, (_, i) =>
       document.getElementById(`panel_${i + 1}`)
     );
