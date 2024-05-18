@@ -7,9 +7,10 @@ function updateCounter(total) {
 }
 
 function loadInitialCards() {
-  fetch("/data/api/tarjetasCards.json")
+  fetch("/data/api/apiStore.json")
     .then((response) => response.json())
-    .then((tarjetas) => {
+    .then((apiStore) => {
+      const tarjetas = apiStore.tarjetasCards;
       const cardsContainer = document.getElementById("gamesAndCardsContainer");
 
       updateCounter(tarjetas.length);
@@ -73,7 +74,7 @@ document.addEventListener("DOMContentLoaded", loadInitialCards);
 function loadCards() {
   if (
     isLoading ||
-    document.body.offsetHeight - (window.innerHeight + window.scrollY) > 500
+    document.body.offsetHeight - (window.innerHeight + window.scrollY) > 700
   ) {
     return;
   }
@@ -81,9 +82,10 @@ function loadCards() {
   isLoading = true;
 
   setTimeout(() => {
-    fetch("/data/api/tarjetasCards.json")
+    fetch("/data/api/apiStore.json")
       .then((response) => response.json())
-      .then((tarjetas) => {
+      .then((apiStore) => {
+        const tarjetas = apiStore.tarjetasCards;
         const cardsContainer = document.getElementById(
           "gamesAndCardsContainer"
         );

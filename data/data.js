@@ -1,24 +1,42 @@
-//Cargar tarjetas principales
-function cargarYAgregarTarjetas(jsonFile, carouselId) {
-  fetch(jsonFile)
-    .then((response) => response.json())
-    .then((tarjetas) => {
-      const cardsContainer = document.getElementById(
-        `cardsContainer${carouselId}`
-      );
-      const maxTarjetas = 10;
+document.addEventListener("DOMContentLoaded", () => {
+  //Cargar tarjetas principales
+  function cargarYAgregarTarjetas(carouselId) {
+    fetch("/data/api/apiStore.json")
+      .then((response) => response.json())
+      .then((apiStore) => {
+        let tarjetas;
+        switch (carouselId) {
+          case 1:
+            tarjetas = apiStore.offerCards;
+            break;
+          case 2:
+            tarjetas = apiStore.gamesCards;
+            break;
+          case 3:
+            tarjetas = apiStore.tarjetasCards;
+            break;
+          default:
+            console.error("Invalid carouselId");
+            return;
+        }
+        const cardsContainer = document.getElementById(
+          `cardsContainer${carouselId}`
+        );
+        const maxTarjetas = 10;
 
-      tarjetas.slice(0, maxTarjetas).forEach((tarjeta) => {
-        const cardElement = document.createElement("div");
-        cardElement.classList.add("card_");
+        tarjetas.slice(0, maxTarjetas).forEach((tarjeta) => {
+          const cardElement = document.createElement("div");
+          cardElement.classList.add("card_");
 
-        const dlcSpan = tarjeta.dlc ? `<span class="dlc_span">DLC</span>` : "";
+          const dlcSpan = tarjeta.dlc
+            ? `<span class="dlc_span">DLC</span>`
+            : "";
 
-        let cardContent = "";
-        if (carouselId === 1) {
-          const gameName = tarjeta.nombre;
-          const pageName = gameName;
-          cardContent = `
+          let cardContent = "";
+          if (carouselId === 1) {
+            const gameName = tarjeta.nombre;
+            const pageName = gameName;
+            cardContent = `
             <div class="card_struct active border-p3">
               <div class="card_content">
                 <div class="card_img">
@@ -59,10 +77,10 @@ function cargarYAgregarTarjetas(jsonFile, carouselId) {
               </div>
             </div>
           `;
-        } else if (carouselId === 2) {
-          const gameName = tarjeta.nombre;
-          const pageName = gameName;
-          cardContent = `
+          } else if (carouselId === 2) {
+            const gameName = tarjeta.nombre;
+            const pageName = gameName;
+            cardContent = `
           <div class="card_struct active">
             <div class="card_content">
               <div class="card_img">
@@ -96,10 +114,10 @@ function cargarYAgregarTarjetas(jsonFile, carouselId) {
             </div>
           </div>
         `;
-        } else {
-          const gameName = tarjeta.nombre;
-          const pageName = gameName;
-          cardContent = `
+          } else {
+            const gameName = tarjeta.nombre;
+            const pageName = gameName;
+            cardContent = `
           <div class="card_struct card_struct_2 active">
             <div class="card_content">
               <div class="card_img">
@@ -133,30 +151,30 @@ function cargarYAgregarTarjetas(jsonFile, carouselId) {
             </div>
           </div>
         `;
-        }
-        cardElement.innerHTML = cardContent;
-        cardsContainer.appendChild(cardElement);
-      });
-    })
-    .catch((error) => console.error("Error al cargar las tarjetas:", error));
-}
+          }
+          cardElement.innerHTML = cardContent;
+          cardsContainer.appendChild(cardElement);
+        });
+      })
+      .catch((error) => console.error("Error al cargar las tarjetas:", error));
+  }
 
-cargarYAgregarTarjetas("/data/api/offerCards.json", 1);
+  cargarYAgregarTarjetas(1);
 
-cargarYAgregarTarjetas("/data/api/gamesCards.json", 2);
+  cargarYAgregarTarjetas(2);
 
-cargarYAgregarTarjetas("/data/api/tarjetasCards.json", 3);
+  cargarYAgregarTarjetas(3);
 
-//Cargar tarjetas de géneros
-fetch("/data/api/genCards.json")
-  .then((response) => response.json())
-  .then((tarjetas) => {
-    const genContainer = document.getElementById("genCardContainer");
-    tarjetas.forEach((tarjeta, index) => {
-      const cardElement = document.createElement("a");
-      cardElement.classList.add("gen-card");
-      cardElement.href = "#";
-      let cardContent = `
+  //Cargar tarjetas de géneros
+  fetch("/data/api/genCards.json")
+    .then((response) => response.json())
+    .then((tarjetas) => {
+      const genContainer = document.getElementById("genCardContainer");
+      tarjetas.forEach((tarjeta, index) => {
+        const cardElement = document.createElement("a");
+        cardElement.classList.add("gen-card");
+        cardElement.href = "#";
+        let cardContent = `
         <div class="gen-card-quantity">${tarjeta.cantidad}</div>
         <img
           src="${tarjeta.imagen}"
@@ -167,13 +185,14 @@ fetch("/data/api/genCards.json")
         />
         <div class="gen-card-title">${tarjeta.titulo}</div>
       `;
-      if (index >= 5) {
-        cardElement.classList.add("d-none");
-      }
-      cardElement.innerHTML = cardContent;
-      genContainer.appendChild(cardElement);
-    });
-  })
-  .catch((error) =>
-    console.error("Error al cargar las tarjetas de géneros:", error)
-  );
+        if (index >= 5) {
+          cardElement.classList.add("d-none");
+        }
+        cardElement.innerHTML = cardContent;
+        genContainer.appendChild(cardElement);
+      });
+    })
+    .catch((error) =>
+      console.error("Error al cargar las tarjetas de géneros:", error)
+    );
+});
