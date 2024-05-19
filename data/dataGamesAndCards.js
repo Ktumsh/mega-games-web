@@ -6,26 +6,26 @@ function updateCounter(total) {
   counterElement.textContent = total;
 }
 
-function loadInitialCards() {
-  fetch("/data/api/apiStore.json")
-    .then((response) => response.json())
-    .then((apiStore) => {
-      const tarjetas = apiStore.tarjetasCards;
-      const cardsContainer = document.getElementById("gamesAndCardsContainer");
+async function loadInitialCards() {
+  try {
+    const response = await fetch("/data/api/apiStore.json");
+    const apiStore = await response.json();
+    const tarjetas = apiStore.tarjetasCards;
+    const cardsContainer = document.getElementById("gamesAndCardsContainer");
 
-      updateCounter(tarjetas.length);
+    updateCounter(tarjetas.length);
 
-      const maxCards = 8;
-      const cardsForLoad = tarjetas.slice(lastCard, lastCard + maxCards);
+    const maxCards = 8;
+    const cardsForLoad = tarjetas.slice(lastCard, lastCard + maxCards);
 
-      cardsForLoad.forEach((tarjeta) => {
-        const cardElement = document.createElement("div");
-        cardElement.classList.add("card_");
-        const gameName = tarjeta.nombre;
-        const pageName = gameName;
+    cardsForLoad.forEach((tarjeta) => {
+      const cardElement = document.createElement("div");
+      cardElement.classList.add("card_");
+      const gameName = tarjeta.nombre;
+      const pageName = gameName;
 
-        const dlcSpan = tarjeta.dlc ? `<span class="dlc_span">DLC</span>` : "";
-        const cardContent = `
+      const dlcSpan = tarjeta.dlc ? `<span class="dlc_span">DLC</span>` : "";
+      const cardContent = `
         <div class="card_struct active">
           <div class="card_content">
             <div class="card_img">
@@ -44,7 +44,7 @@ function loadInitialCards() {
               <a class="card_link" href="/sites/gift-details.html?name=${pageName}&id=${tarjeta.id}">
                 <div class="card_price">
                   <span class="card_text">Desde</span>
-                  <span class="price">${tarjeta.precio}</span>
+                  <span class="price">CLP$ ${tarjeta.precio}</span>
                 </div>
                 <div class="like_badge">
                   <span class="like_span">
@@ -59,19 +59,20 @@ function loadInitialCards() {
           </div>
         </div>
       `;
-        cardElement.innerHTML = cardContent;
-        cardsContainer.appendChild(cardElement);
-      });
+      cardElement.innerHTML = cardContent;
+      cardsContainer.appendChild(cardElement);
+    });
 
-      lastCard += cardsForLoad.length;
-      window.addEventListener("scroll", loadCards);
-    })
-    .catch((error) => console.error("Error al cargar las tarjetas:", error));
+    lastCard += cardsForLoad.length;
+    window.addEventListener("scroll", loadCards);
+  } catch (error) {
+    console.error("Error al cargar las tarjetas:", error);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", loadInitialCards);
 
-function loadCards() {
+async function loadCards() {
   if (
     isLoading ||
     document.body.offsetHeight - (window.innerHeight + window.scrollY) > 700
@@ -81,30 +82,26 @@ function loadCards() {
 
   isLoading = true;
 
-  setTimeout(() => {
-    fetch("/data/api/apiStore.json")
-      .then((response) => response.json())
-      .then((apiStore) => {
-        const tarjetas = apiStore.tarjetasCards;
-        const cardsContainer = document.getElementById(
-          "gamesAndCardsContainer"
-        );
-        const loader = document.getElementById("loader");
+  setTimeout(async () => {
+    try {
+      const response = await fetch("/data/api/apiStore.json");
+      const apiStore = await response.json();
+      const tarjetas = apiStore.tarjetasCards;
+      const cardsContainer = document.getElementById("gamesAndCardsContainer");
+      const loader = document.getElementById("loader");
 
-        const maxCards = 8;
-        const cardsForLoad = tarjetas.slice(lastCard, lastCard + maxCards);
+      const maxCards = 8;
+      const cardsForLoad = tarjetas.slice(lastCard, lastCard + maxCards);
 
-        cardsForLoad.forEach((tarjeta) => {
-          const cardElement = document.createElement("div");
-          cardElement.classList.add("card_");
+      cardsForLoad.forEach((tarjeta) => {
+        const cardElement = document.createElement("div");
+        cardElement.classList.add("card_");
 
-          const gameName = tarjeta.nombre;
-          const pageName = gameName;
+        const gameName = tarjeta.nombre;
+        const pageName = gameName;
 
-          const dlcSpan = tarjeta.dlc
-            ? `<span class="dlc_span">DLC</span>`
-            : "";
-          const cardContent = `
+        const dlcSpan = tarjeta.dlc ? `<span class="dlc_span">DLC</span>` : "";
+        const cardContent = `
           <div class="card_struct active">
             <div class="card_content">
               <div class="card_img">
@@ -123,7 +120,7 @@ function loadCards() {
                 <a class="card_link" href="/sites/gift-details.html?name=${pageName}&id=${tarjeta.id}">
                   <div class="card_price">
                     <span class="card_text">Desde</span>
-                    <span class="price">${tarjeta.precio}</span>
+                    <span class="price">CLP$ ${tarjeta.precio}</span>
                   </div>
                   <div class="like_badge">
                     <span class="like_span">
@@ -138,24 +135,20 @@ function loadCards() {
             </div>
           </div>
         `;
-
-          cardElement.innerHTML = cardContent;
-          cardsContainer.appendChild(cardElement);
-
-          console.log(tarjetas.length - 1);
-        });
-
-        lastCard += cardsForLoad.length;
-
-        if (lastCard >= tarjetas.length) {
-          loader.style.display = "none";
-        }
-
-        isLoading = false;
-      })
-      .catch((error) => {
-        console.error("Error al cargar las tarjetas:", error);
-        loader.style.display = "none";
+        cardElement.innerHTML = cardContent;
+        cardsContainer.appendChild(cardElement);
       });
+
+      lastCard += cardsForLoad.length;
+
+      if (lastCard >= tarjetas.length) {
+        loader.style.display = "none";
+      }
+
+      isLoading = false;
+    } catch (error) {
+      console.error("Error al cargar las tarjetas:", error);
+      loader.style.display = "none";
+    }
   }, 500);
 }
