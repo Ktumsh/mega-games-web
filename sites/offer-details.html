@@ -63,8 +63,8 @@
     <div class="NavbarSlotMobile"></div>
     <main class="position-relative bg-gradient-p1">
       <div class="NavbarSlotDesktop"></div>
-      <div class="divider_header d-lg-block d-none"></div>
-      <div class="container pt-5">
+      <div class="divider_header"></div>
+      <div class="details_section_ctn container">
         <div class="details_section_grid_ctn">
           <div class="route_container">
             <ul class="route">
@@ -247,13 +247,30 @@
                           <div class="add_to_cart">
                             <button type="button">
                               <span
+                                ><svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  viewBox="0 0 12 12"
+                                  style="
+                                    max-width: 12px;
+                                    min-width: 12px;
+                                    height: auto;
+                                  "
+                                >
+                                  <path
+                                    fill="#fff"
+                                    d="M11.76 4.6a.79.79 0 0 0-.58-.24H7.64V.82A.79.79 0 0 0 7.4.24.79.79 0 0 0 6.82 0H5.18a.79.79 0 0 0-.58.24.79.79 0 0 0-.24.58v3.54H.82a.79.79 0 0 0-.58.24.79.79 0 0 0-.24.58v1.64c0 .23.08.42.24.58.16.16.35.24.58.24h3.54v3.54c0 .23.08.42.24.58.16.16.35.24.58.24h1.64c.23 0 .42-.08.58-.24a.79.79 0 0 0 .24-.58V7.64h3.54c.23 0 .42-.08.58-.24a.79.79 0 0 0 .24-.58V5.18a.79.79 0 0 0-.24-.58z"
+                                  ></path></svg
+                              ></span>
+                              <span
                                 ><i
                                   style="
                                     max-width: 18px;
                                     min-width: 18px;
                                     height: auto;
                                   "
-                                  class="fas fa-shopping-cart text-w"
+                                  class="fas fa-shopping-cart"
                                 ></i
                               ></span>
                               <span>Añadir al carrito</span>
@@ -421,6 +438,7 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <script src="/assets/js/search.js"></script>
   </body>
 </html>
 
@@ -485,8 +503,8 @@
           gameImage.src = gameFound.imagen;
           gameName.textContent = gameFound.nombre;
           discount.textContent = gameFound.descuento;
-          originalPrice.textContent = gameFound.precioOriginal;
-          finalPrice.textContent = gameFound.precioDescuento;
+          originalPrice.textContent = `CLP$ ${gameFound.precioOriginal}`;
+          finalPrice.textContent = `CLP$ ${gameFound.precioDescuento}`;
           gameFound.disponibleEn.forEach((plataforma) => {
             const availableIn = document.createElement("span");
             availableIn.title = `Disponible en ${plataforma}`;

@@ -2219,11 +2219,29 @@ a.pulldown_mobile {
   box-shadow: 0 0 12px #000000;
 }
 
+.popup_block_search {
+  z-index: 200;
+  position: absolute;
+  box-shadow: 0 0 12px #000000;
+}
+
 .popup_block_new .popup_body.popup_menu {
   padding: 0px 0px;
 }
 
 .store_nav .popup_block_new .popup_body {
+  border: none;
+  position: relative;
+  background: linear-gradient(
+      90deg,
+      rgba(59, 52, 134, 0.7) 1.89%,
+      rgba(50, 50, 51, 0) 50%
+    ),
+    linear-gradient(180deg, #644f7d 11.6%, #48456d 54.73%, #503f64 100%);
+  padding: 8px 5px 8px 5px;
+}
+
+.store_nav .popup_block_search .popup_body {
   border: none;
   position: relative;
   background: linear-gradient(
@@ -2861,7 +2879,7 @@ a.pulldown_mobile {
   box-shadow: 0 0 12px #000000;
 }
 
-.store_nav .popup_block_new .popup_body.search_v2 {
+.store_nav .popup_block_search .popup_body.search_v2 {
   padding: 1px;
   box-sizing: border-box;
   background: linear-gradient(
@@ -2918,6 +2936,17 @@ a.pulldown_mobile {
   padding: 5px 6px;
 }
 
+.store_nav .popup_menu .popup_menu_item:hover,
+.store_nav .popup_menu .popup_menu_item:focus,
+.footer_content .popup_menu .popup_menu_item:hover,
+.footer_content .popup_menu .popup_menu_item:focus,
+.search_area .popup_body .match:hover,
+.search_area .popup_body .match:hover .match_name,
+.search_area .popup_body .match:focus,
+.search_area .popup_body .match:focus .match_name {
+  color: #fff;
+}
+
 .search_suggest .match_app .match_name {
   left: 128px;
   width: 258px;
@@ -2942,7 +2971,7 @@ a.pulldown_mobile {
   left: unset;
   top: unset;
   width: 100%;
-  font-weight: 500;
+  font-weight: 600;
   padding: 0 0 0 8px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2950,6 +2979,20 @@ a.pulldown_mobile {
   color: #f5f5f5;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   transition: color 0.2s ease-in-out;
+}
+
+.popup_body.search_v2 .match.match_v2:hover,
+.popup_body.search_v2 .match.match_v2:focus {
+  background-color: rgba(229, 216, 254, 0.8);
+  color: #151515;
+}
+
+.popup_body.search_v2 .match.match_v2:hover .match_name,
+.popup_body.search_v2 .match.match_v2:hover .match_subtitle,
+.popup_body.search_v2 .match.match_v2:focus .match_name,
+.popup_body.search_v2 .match.match_v2:focus .match_subtitle {
+  color: #151515;
+  text-shadow: unset;
 }
 
 .popup_body.search_v2 .match.match_v2 .match_img {
