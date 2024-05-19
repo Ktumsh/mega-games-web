@@ -3004,8 +3004,7 @@ a.pulldown_mobile {
   position: absolute;
   left: 4px;
   top: 4px;
-  width: 120px;
-  height: 45px;
+  object-fit: cover;
 }
 
 .popup_body.search_v2 .match.match_v2 .match_img img {
@@ -3013,6 +3012,8 @@ a.pulldown_mobile {
   left: unset;
   top: unset;
   display: block;
+  width: 120px;
+  height: 45px;
 }
 
 .search_suggest .match .match_subtitle {
