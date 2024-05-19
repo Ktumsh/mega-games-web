@@ -2962,6 +2962,22 @@ a.pulldown_mobile {
   color: #ffffff;
 }
 
+.popup_body.search_v2 .match.match_tag.match_v2 {
+  display: grid;
+  grid-template-areas:
+    "name name name price"
+    "name name name price";
+  height: 53px;
+}
+
+.popup_body.search_v2 .match.match_tag.match_v2 .match_subtitle,
+.popup_body.search_v2 .match.match_creator.match_v2 .match_subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  justify-self: end;
+}
+
 .popup_body.search_v2 .match.match_v2 .match_name {
   grid-area: name;
   display: flex;
@@ -2979,6 +2995,25 @@ a.pulldown_mobile {
   color: #f5f5f5;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   transition: color 0.2s ease-in-out;
+}
+
+.popup_body.search_v2 .match.match_tag.match_v2 .match_name,
+.popup_body.search_v2 .match.match_creator.match_v2 .match_name {
+  display: flex;
+  align-items: center;
+}
+
+.popup_body.search_v2 .match.match_tag.match_v2 .match_name > div {
+  min-width: 40px;
+}
+
+.popup_body.search_v2 .match.match_v2 .match_name span {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 1px 8px;
+  border-radius: 3px;
+  font-weight: 400;
+  font-size: 13px;
+  margin-left: 4px;
 }
 
 .popup_body.search_v2 .match.match_v2:hover,

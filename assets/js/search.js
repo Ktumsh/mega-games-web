@@ -102,6 +102,8 @@ function handleSearch(event) {
         normalizeString(convertRomanNumerals(game.nombre)).includes(searchTerm)
     );
 
+    const totalGamesFound = filteredGames.length;
+
     filteredGames.sort((a, b) => {
       const indexA = normalizeString(convertRomanNumerals(a.nombre)).indexOf(
         searchTerm
@@ -112,9 +114,9 @@ function handleSearch(event) {
       return indexA - indexB;
     });
 
-    filteredGames = filteredGames.slice(0, 5);
+    const displayedGames = filteredGames.slice(0, 5);
 
-    displayResults(filteredGames);
+    displayResults(displayedGames, totalGamesFound);
   }, 300);
 }
 
@@ -143,7 +145,7 @@ function generateGameHref(game) {
   }
 }
 
-function displayResults(games) {
+function displayResults(games, totalGamesFound) {
   const resultsContainer = document.getElementById("searchterm_options");
   const suggestionsContainer = document.getElementById(
     "search_suggestion_contents"
@@ -162,12 +164,13 @@ function displayResults(games) {
       "match_category_top",
       "ds_collapse_flag"
     );
-    tagElement.href = "/assets/public/search-bg.png";
+
+    tagElement.href = "javascript:void(0)";
     tagElement.setAttribute("data-ds-options", "0");
 
     tagElement.innerHTML = `
       <div class="match_background_image">
-        <img src="https://store.steampowered.com/categories/searchsuggestionsimage/category/multiplayer_mmo?cc=CL&l=spanish">
+        <img src="/assets/public/search-bg.png">
       </div>
       <div class="match_name">
         <div>Etiqueta:</div>
@@ -176,10 +179,8 @@ function displayResults(games) {
       <div class="match_img">
         <img src="https://store.akamai.steamstatic.com/public/images/icon_SearchTagResult.png">
       </div>
-      <div class="match_subtitle">${games.length}&nbsp;juegos</div>
+      <div class="match_subtitle">${totalGamesFound}&nbsp;juegos</div>
     `;
-
-    suggestionsContainer.appendChild(tagElement);
 
     games.forEach((game) => {
       const gameElement = document.createElement("a");
@@ -206,6 +207,8 @@ function displayResults(games) {
 
       suggestionsContainer.appendChild(gameElement);
     });
+
+    suggestionsContainer.appendChild(tagElement);
 
     resultsContainer.style.display = "block";
   }
