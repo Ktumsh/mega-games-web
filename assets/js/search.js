@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   searchLink.addEventListener("click", (event) => {
     event.preventDefault();
     handleSearch({ target: searchInput });
+    // Agregar al historial cuando se abre la búsqueda
+    history.pushState({ searchOpen: true }, "");
   });
 
   document.addEventListener("click", (event) => {
@@ -17,12 +19,24 @@ document.addEventListener("DOMContentLoaded", async () => {
       !resultsContainer.contains(event.target)
     ) {
       resultsContainer.style.display = "none";
+      if (history.state && history.state.searchOpen) {
+        history.back(); // Volver al estado anterior en el historial
+      }
     }
   });
 
   searchInput.addEventListener("focus", () => {
     if (searchInput.value.trim() !== "") {
       handleSearch({ target: searchInput });
+      // Agregar al historial cuando se abre la búsqueda
+      history.pushState({ searchOpen: true }, "");
+    }
+  });
+
+  // Manejar el evento popstate para cerrar la búsqueda
+  window.addEventListener("popstate", (event) => {
+    if (event.state && event.state.searchOpen) {
+      resultsContainer.style.display = "none";
     }
   });
 });
@@ -139,6 +153,34 @@ function displayResults(games) {
   if (games.length === 0) {
     resultsContainer.style.display = "none";
   } else {
+    // Crear la etiqueta adicional
+    const tagElement = document.createElement("a");
+    tagElement.classList.add(
+      "match",
+      "match_tag",
+      "match_v2",
+      "match_category_top",
+      "ds_collapse_flag"
+    );
+    tagElement.href = "/assets/public/search-bg.png";
+    tagElement.setAttribute("data-ds-options", "0");
+
+    tagElement.innerHTML = `
+      <div class="match_background_image">
+        <img src="https://store.steampowered.com/categories/searchsuggestionsimage/category/multiplayer_mmo?cc=CL&l=spanish">
+      </div>
+      <div class="match_name">
+        <div>Etiqueta:</div>
+        <span>Juegos encontrados</span>
+      </div>
+      <div class="match_img">
+        <img src="https://store.akamai.steamstatic.com/public/images/icon_SearchTagResult.png">
+      </div>
+      <div class="match_subtitle">${games.length}&nbsp;juegos</div>
+    `;
+
+    suggestionsContainer.appendChild(tagElement);
+
     games.forEach((game) => {
       const gameElement = document.createElement("a");
       gameElement.classList.add(

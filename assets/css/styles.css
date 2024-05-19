@@ -3000,6 +3000,45 @@ a.pulldown_mobile {
   position: relative;
 }
 
+.popup_body.search_v2 .match.match_tag.match_v2 .match_img {
+  display: none;
+}
+
+.match_background_image {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 8px;
+  right: 4px;
+  overflow: hidden;
+  border-radius: 3px;
+  background: linear-gradient(
+    90deg,
+    #584fba29 0%,
+    #584fba30 15%,
+    #584fbac2 85%
+  );
+  transition: background 0.3s ease-in-out;
+}
+
+.match_background_image img {
+  filter: saturate(0.1) contrast(0.7);
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 7%,
+    #00000033 39%,
+    #0000008c 85%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 7%,
+    #00000033 39%,
+    #0000008c 85%,
+    transparent 100%
+  );
+}
+
 .search_suggest .match_app .match_img img {
   position: absolute;
   left: 4px;

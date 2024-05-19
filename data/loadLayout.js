@@ -409,11 +409,11 @@ document.addEventListener("DOMContentLoaded", () => {
                       </div>
                     </form>
                   </div>
-                </div>
-                <div id="searchterm_options" class="search_suggest popup_block_search" style="opacity: 1; display: none">
+                  <div id="searchterm_options" class="search_suggest popup_block_search" style="opacity: 1; display: none">
                   <div class="popup_body search_v2" style="border-top: none">
                     <div id="search_suggestion_contents"></div>
                   </div>
+                </div>
                 </div>
               </div>
             </div>
