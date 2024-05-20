@@ -3111,3 +3111,7 @@ a.pulldown_mobile {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
+
+.selected {
+  background-color: rgba(229, 216, 254, 0.8);
+}
