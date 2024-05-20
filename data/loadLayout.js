@@ -253,7 +253,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     navbarSlot.appendChild(navbarContainer);
 
-    // Add hover event listeners for submenus
+    addStoreNavSearchEvents();
+    addSearchEvents();
+
     document.querySelectorAll(".tab").forEach((tab) => {
       const flyoutId = tab.dataset.flyout;
       tab.addEventListener("mouseenter", () => {
@@ -423,6 +425,9 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
     navbarSlot.appendChild(navbarContainer);
+
+    addStoreNavSearchEvents();
+    addSearchEvents();
   }
 
   function removeDesktopNavbar() {
@@ -700,29 +705,3 @@ function generateFooterColumn(title, items) {
     </div>
   `;
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const StoreNavSearchTerms = document.querySelectorAll(
-    ".store_nav_search_term"
-  );
-
-  StoreNavSearchTerms.forEach((input) => {
-    input.addEventListener("focus", (event) => {
-      event.stopPropagation();
-      input.classList.remove("default");
-      input.placeholder = "";
-    });
-
-    document.addEventListener("click", (event) => {
-      if (!input.contains(event.target)) {
-        if (input.value === "") {
-          input.classList.add("default");
-          input.placeholder = "buscar";
-        } else {
-          input.classList.remove("default");
-          input.placeholder = "";
-        }
-      }
-    });
-  });
-});

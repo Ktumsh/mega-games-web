@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       tarjetas.forEach((tarjeta, index) => {
         const cardElement = document.createElement("a");
         cardElement.classList.add("gen-card");
-        cardElement.href = "#";
+        cardElement.href = "javascript:void(0)";
 
         const cardContent = `
           <div class="gen-card-quantity">${tarjeta.cantidad}</div>

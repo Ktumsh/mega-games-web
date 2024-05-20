@@ -28,7 +28,6 @@ async function loadGames() {
       }
     });
 
-    // Ensure the carousel script runs after the games are loaded
     initializeCarousel();
   } catch (error) {
     console.error("Error al cargar los juegos:", error);
