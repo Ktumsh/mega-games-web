@@ -9,7 +9,7 @@ function initializeCarousel() {
   const thumbs = carousel.querySelectorAll(".carousel_thumbs div");
 
   function activateItem(index) {
-    if (!items[index] || !thumbs[index]) return; // Check if the elements exist
+    if (!items[index] || !thumbs[index]) return;
     items.forEach((item) => item.classList.remove("active"));
     thumbs.forEach((thumb) => thumb.classList.remove("active"));
 

@@ -28,7 +28,6 @@ async function loadGames() {
       }
     });
 
-    // Ensure the carousel script runs after the games are loaded
     initializeCarousel();
   } catch (error) {
     console.error("Error al cargar los juegos:", error);
@@ -70,7 +69,7 @@ function generateGameHTML(juego) {
   }
 
   return `
-    <a class="store_main_capsule" href="/sites/${pageOrigin}.html?name=${pageName}&id=${
+    <a class="store_main_capsule" href="/${pageOrigin}.html?name=${pageName}&id=${
     juego.id
   }" data-bs-interval="5000">
       <div class="capsule main_capsule" style="background-image: url(${
