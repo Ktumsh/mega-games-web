@@ -2135,9 +2135,14 @@ span.platform_img.epicgames {
   height: 66px;
 }
 
+.home_ctn {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
 .home_page_content {
   position: relative;
-  width: 940px;
+  width: 960px;
   margin: 0 auto;
   transition: padding 0.25s;
 }

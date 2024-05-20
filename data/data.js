@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   async function cargarYAgregarTarjetas(carouselId) {
     try {
       const response = await fetch("/data/api/apiStore.json");
@@ -158,9 +158,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  cargarYAgregarTarjetas(1);
-  cargarYAgregarTarjetas(2);
-  cargarYAgregarTarjetas(3);
+  await cargarYAgregarTarjetas(1);
+  initializeOfferCarousel();
+
+  await cargarYAgregarTarjetas(2);
+  initializeGamesCarousel();
+
+  await cargarYAgregarTarjetas(3);
+  initializeGiftCarousel();
 
   async function cargarTarjetasGeneros() {
     try {
@@ -191,5 +196,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  cargarTarjetasGeneros();
+  await cargarTarjetasGeneros();
+  initializeGenreCarousel();
 });
