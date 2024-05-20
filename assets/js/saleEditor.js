@@ -241,7 +241,6 @@ window.onload = () => {
       timeoutId = setTimeout(() => {
         func.apply(this, args);
       }, 200);
-      console.log("hola");
     };
   }
 

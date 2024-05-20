@@ -53,6 +53,7 @@
       crossorigin="anonymous"
     />
     <script src="/data/loadLayout.js"></script>
+    <script src="/data/data_details/giftDetails.js"></script>
   </head>
   <body class="position-relative">
     <!-- HEADER 🔴 -->
@@ -134,6 +135,7 @@
                     </div>
                   </div>
                   <div class="likes_area">
+                    <div id="likeAlert" class="like_badge alert-danger"></div>
                     <span class="likes_label">
                       <button
                         class="likes_button"
@@ -206,7 +208,7 @@
                     gustarle!</span
                   >
                   <div role="button" class="share_btn">
-                    <div class="share_copy_badge"></div>
+                    <div class="share_copy_badge">¡Copiado!</div>
                     <button type="button">
                       <span>Compartir</span>
                       <span>
@@ -456,176 +458,3 @@
     <script src="/assets/js/search.js"></script>
   </body>
 </html>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const queryParams = new URLSearchParams(window.location.search);
-    const gameTitle = queryParams.get("name");
-    const gameId = parseInt(queryParams.get("id"));
-    document.title = gameTitle;
-
-    fetch("/data/api/apiStore.json")
-      .then((response) => response.json())
-      .then((apiStore) => {
-        const games = apiStore.tarjetasCards;
-        const gameFound = games.find((game) => game.id === gameId);
-
-        const gameImage = document.getElementById("gameImage");
-        const gameName = document.getElementById("gameName");
-        const discount = document.getElementById("discount");
-        const price = document.getElementById("price");
-        const platform = document.getElementById("platform");
-        const keyAvailable = document.getElementById("keyAvailable");
-        const keyTitle = document.getElementById("keyTitle");
-        const keyActivation = document.getElementById("keyActivation");
-        const gameLikes = document.getElementById("gameLikes");
-
-        const genderList = document.getElementById("genderList");
-
-        const descGameName = document.getElementById("descGameName");
-        const descCharacteristicsGameName = document.getElementById(
-          "descCharacteristicsGameName"
-        );
-        const descGameDescription = document.getElementById(
-          "descGameDescription"
-        );
-        const introCharacteristics = document.getElementById(
-          "introCharacteristics"
-        );
-        const characteristicsList = document.getElementById(
-          "characteristicsList"
-        );
-
-        const additionalDesc = document.getElementById("additionalDesc");
-        const additionalDescText =
-          document.getElementById("additionalDescText");
-
-        const galery = document.getElementById("galery");
-
-        const detailDesc = document.querySelectorAll(
-          "#requirements .detail_desc"
-        );
-
-        const lenguages = document.querySelector("#details .detail_desc");
-
-        const releaseDate = document.getElementById("releaseDate");
-        const publisher = document.getElementById("publisher");
-        const developers = document.getElementById("developers");
-
-        const restriction = document.getElementById("pegi");
-        if (gameFound) {
-          gameImage.src = gameFound.imagen;
-          gameName.textContent = gameFound.nombre;
-          price.textContent = `CLP$ ${gameFound.precio}`;
-          gameFound.disponibleEn.forEach((plataforma) => {
-            const availableIn = document.createElement("span");
-            availableIn.title = `Disponible en ${plataforma}`;
-            availableIn.classList.add("platform_img");
-            availableIn.classList.add(plataforma);
-            platform.appendChild(availableIn);
-          });
-          keyAvailable.src = gameFound.keyImg;
-          keyTitle.textContent = gameFound.key;
-          keyActivation.href = gameFound.keyLink;
-          keyActivation.textContent = gameFound.key;
-
-          const galeria = gameFound.galeria;
-          galeria.forEach((imagen) => {
-            const galeryItem = document.createElement("div");
-            galeryItem.classList.add("galery_item");
-            galeryItem.innerHTML = `
-              <div class="galery_image">
-                <button type="button">
-                  <img class="gameGaleryImage" src="${imagen}" alt="${gameFound.nombre}" />
-                </button>
-              </div>
-            `;
-            galery.appendChild(galeryItem);
-          });
-
-          gameLikes.textContent = gameFound.likes;
-          console.log(gameFound.likes);
-
-          descGameName.textContent = gameFound.nombre;
-          const adicional = gameFound.adicional;
-          if (adicional) {
-            descCharacteristicsGameName.textContent = `Características de ${gameFound.nombre}`;
-          }
-          descGameDescription.textContent = gameFound.descripcion;
-          introCharacteristics.textContent = gameFound.introCaracteristicas;
-
-          const generos = gameFound.generos;
-          generos.forEach((genero) => {
-            const linkItem = document.createElement("a");
-            linkItem.classList.add("gameType");
-            linkItem.href = "";
-            linkItem.textContent = genero;
-            const listItem = document.createElement("li");
-            listItem.classList.add("gender");
-            listItem.appendChild(linkItem);
-            genderList.appendChild(listItem);
-          });
-
-          const caracteristicas = gameFound.caracteristicas;
-          caracteristicas.forEach((caracteristica) => {
-            const charactTitle = document.createElement("strong");
-            charactTitle.textContent = caracteristica.titulo;
-
-            const descripcionElement = document.createElement("span");
-            descripcionElement.textContent = caracteristica.descripcion;
-
-            const listItem = document.createElement("li");
-            listItem.textContent = "• ";
-            listItem.appendChild(charactTitle);
-            listItem.appendChild(descripcionElement);
-
-            characteristicsList.appendChild(listItem);
-          });
-
-          const descripcionAdicional = gameFound.descripcionAdicional;
-          descripcionAdicional.forEach((adicional) => {
-            additionalDesc.textContent = adicional.titulo;
-            additionalDescText.textContent = adicional.descripcion;
-          });
-
-          detailDesc.forEach((element, index) => {
-            element.textContent = gameFound.requisitos[index];
-          });
-
-          const detalles = gameFound.detalles;
-          if (detalles.length > 0 && detalles[0].idiomas.length > 0) {
-            const lenguagesList = document.querySelector(
-              "#details .lenguages .detail_desc"
-            );
-            const idiomas = detalles[0].idiomas[0].split(", ");
-            idiomas.forEach((idioma) => {
-              const idiomaItem = document.createElement("li");
-              const spanIdioma = document.createElement("span");
-              spanIdioma.textContent = idioma;
-              idiomaItem.appendChild(spanIdioma);
-              lenguagesList.appendChild(idiomaItem);
-            });
-          }
-          releaseDate.textContent = detalles[0].lanzamiento;
-          publisher.textContent = detalles[0].editor;
-          developers.textContent = detalles[0].desarrolladores;
-
-          restriction.src = gameFound.restriccionImg;
-          restriction.alt = gameFound.restriccion;
-          restriction.title = `Restricción: ${gameFound.restriccion}`;
-        } else {
-          console.log("Juego no encontrado");
-        }
-      })
-      .catch((error) =>
-        console.error("Error al cargar los datos del juego:", error)
-      );
-    const readMore = document.getElementById("readMore");
-    const gameDescArea = document.querySelector(".game_description_area");
-
-    readMore.addEventListener("click", function () {
-      gameDescArea.style.maxHeight = "100%";
-      readMore.style.display = "none";
-    });
-  });
-</script>

@@ -1,5 +1,7 @@
-window.onload = () => {
+function initializeCarousel() {
   const carousel = document.getElementById("carouselMaincap");
+
+  if (!carousel) return;
 
   const items = carousel.querySelectorAll(
     ".carousel_items .store_main_capsule"
@@ -7,6 +9,7 @@ window.onload = () => {
   const thumbs = carousel.querySelectorAll(".carousel_thumbs div");
 
   function activateItem(index) {
+    if (!items[index] || !thumbs[index]) return; // Check if the elements exist
     items.forEach((item) => item.classList.remove("active"));
     thumbs.forEach((thumb) => thumb.classList.remove("active"));
 
@@ -60,7 +63,9 @@ window.onload = () => {
 
   carousel.addEventListener("mouseenter", stopAutoSlide);
   carousel.addEventListener("mouseleave", startAutoSlide);
+}
 
+function initializeOfferCarousel() {
   //CARRUSEL OFERTAS
   const carousel1 = document.querySelector("#carouselOfertas");
 
@@ -127,7 +132,9 @@ window.onload = () => {
         }
       });
   }
+}
 
+function initializeGamesCarousel() {
   //CARRUSEL JUEGOS
   const carousel2 = document.querySelector("#carouselJuegos");
 
@@ -194,7 +201,9 @@ window.onload = () => {
         }
       });
   }
+}
 
+function initializeGiftCarousel() {
   //CARRUSEL TARJETAS
   const carousel3 = document.querySelector("#carouselTarjetas");
 
@@ -261,7 +270,9 @@ window.onload = () => {
         }
       });
   }
+}
 
+function initializeGenreCarousel() {
   const loadBtn = document.getElementById("load-more-generos");
   const generosContainer = document.getElementById("genCardContainer");
   const loader = document.getElementById("loader");
@@ -277,4 +288,4 @@ window.onload = () => {
       loadBtn.style.display = "none";
     }, 300);
   });
-};
+}

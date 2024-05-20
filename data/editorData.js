@@ -225,4 +225,4 @@ async function loadEditorData() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", loadEditorData);
+loadEditorData();

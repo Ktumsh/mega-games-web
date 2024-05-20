@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", async () => {
+async function loadGames() {
   try {
     const response = await fetch("/data/api/apiStore.json");
     const apiStore = await response.json();
@@ -27,10 +27,15 @@ document.addEventListener("DOMContentLoaded", async () => {
         carruselContainer.innerHTML += generateGameHTML(juego);
       }
     });
+
+    // Ensure the carousel script runs after the games are loaded
+    initializeCarousel();
   } catch (error) {
     console.error("Error al cargar los juegos:", error);
   }
-});
+}
+
+document.addEventListener("DOMContentLoaded", loadGames);
 
 function generateGameHTML(juego) {
   const gameName = juego.nombre;
