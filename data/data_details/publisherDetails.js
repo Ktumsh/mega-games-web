@@ -46,8 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "#requirements .detail_desc"
       );
 
-      const lenguages = document.querySelector("#details .detail_desc");
-
       const releaseDate = document.getElementById("releaseDate");
       const publisher = document.getElementById("publisher");
       const developers = document.getElementById("developers");
@@ -329,9 +327,6 @@ function shareLink() {
         .share({
           title: document.title,
           url: pageUrl,
-        })
-        .then(() => {
-          console.log("Compartido exitosamente");
         })
         .catch(console.error);
     } else {

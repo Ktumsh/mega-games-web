@@ -153,16 +153,16 @@ document.addEventListener("DOMContentLoaded", () => {
                       <div class="popup_body popup_menu_twocol_new">
                         <div class="popup_menu popup_menu_browse">
                           <div class="popup_menu_subheader responsive_hidden">Populares</div>
-                          <a href="/sites/juegos-populares.html" class="popup_menu_item">Lo más vendido</a>
-                          <a href="/sites/juegos-populares.html" class="popup_menu_item">Lo más jugado</a>
+                          <a href="/juegos-populares.html" class="popup_menu_item">Lo más vendido</a>
+                          <a href="/juegos-populares.html" class="popup_menu_item">Lo más jugado</a>
                           <div class="category_hr responsive_hidden"></div>
                           <a href="#" class="popup_menu_item">Novedades</a>
                           <a href="#" class="popup_menu_item">Próximos lanzamientos</a>
                         </div>
                         <div class="popup_menu popup_menu_browse leftborder">
                           <div class="popup_menu_subheader responsive_hidden">Promociones y eventos</div>
-                          <a href="/sites/ofertas-especiales.html" class="popup_menu_item">Ofertas especiales</a>
-                          <a href="/sites/ActivisionPublisherSale2024.html" class="popup_menu_item">Eventos de rebajas</a>
+                          <a href="/ofertas-especiales.html" class="popup_menu_item">Ofertas especiales</a>
+                          <a href="/ActivisionPublisherSale2024.html" class="popup_menu_item">Eventos de rebajas</a>
                         </div>
                       </div>
                     </div>
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
                           <a href="#" class="popup_menu_item">Todas las ofertas</a>
                           <div class="category_hr responsive_hidden"></div>
                           <a href="#" class="popup_menu_item">Juegos</a>
-                          <a href="/sites/juegos-y-tarjetas.html" class="popup_menu_item">Juegos y tarjetas</a>
+                          <a href="/juegos-y-tarjetas.html" class="popup_menu_item">Juegos y tarjetas</a>
                           <a href="#" class="popup_menu_item">eTarjetas</a>
                           <div class="category_hr responsive_hidden"></div>
                           <a href="#" class="popup_menu_item">Xbox</a>
@@ -325,16 +325,16 @@ document.addEventListener("DOMContentLoaded", () => {
                   <div class="popup_body popup_menu_twocol_new">
                     <div class="popup_menu popup_menu_browse">
                       <div class="popup_menu_subheader responsive_hidden">Populares</div>
-                      <a href="/sites/juegos-populares.html" class="popup_menu_item">Lo más vendido</a>
-                      <a href="/sites/juegos-populares.html" class="popup_menu_item">Lo más jugado</a>
+                      <a href="/juegos-populares.html" class="popup_menu_item">Lo más vendido</a>
+                      <a href="/juegos-populares.html" class="popup_menu_item">Lo más jugado</a>
                       <div class="category_hr responsive_hidden"></div>
                       <a href="#" class="popup_menu_item">Novedades</a>
                       <a href="#" class="popup_menu_item">Próximos lanzamientos</a>
                     </div>
                     <div class="popup_menu popup_menu_browse leftborder">
                       <div class="popup_menu_subheader responsive_hidden">Promociones y eventos</div>
-                      <a href="/sites/ofertas-especiales.html" class="popup_menu_item">Ofertas especiales</a>
-                      <a href="/sites/ActivisionPublisherSale2024.html" class="popup_menu_item">Eventos de rebajas</a>
+                      <a href="/ofertas-especiales.html" class="popup_menu_item">Ofertas especiales</a>
+                      <a href="/ActivisionPublisherSale2024.html" class="popup_menu_item">Eventos de rebajas</a>
                     </div>
                   </div>
                 </div>
@@ -351,7 +351,7 @@ document.addEventListener("DOMContentLoaded", () => {
                       <a href="#" class="popup_menu_item">Todas las ofertas</a>
                       <div class="category_hr responsive_hidden"></div>
                       <a href="#" class="popup_menu_item">Juegos</a>
-                      <a href="/sites/juegos-y-tarjetas.html" class="popup_menu_item">Juegos y tarjetas</a>
+                      <a href="/juegos-y-tarjetas.html" class="popup_menu_item">Juegos y tarjetas</a>
                       <a href="#" class="popup_menu_item">eTarjetas</a>
                       <div class="category_hr responsive_hidden"></div>
                       <a href="#" class="popup_menu_item">Xbox</a>

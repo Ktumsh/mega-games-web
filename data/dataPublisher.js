@@ -1,4 +1,5 @@
-async function loadEditorData() {
+import { loadPulisherCards } from "/assets/js/salePublisher.js";
+async function loadPublisherData() {
   try {
     const response = await fetch("/data/api/apiStore.json");
     const apiStore = await response.json();
@@ -220,9 +221,11 @@ async function loadEditorData() {
       [0, 1],
       "regular2"
     );
+
+    loadPulisherCards();
   } catch (error) {
     console.error("Error al cargar las tarjetas:", error);
   }
 }
 
-loadEditorData();
+loadPublisherData();

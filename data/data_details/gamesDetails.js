@@ -45,8 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "#requirements .detail_desc"
       );
 
-      const lenguages = document.querySelector("#details .detail_desc");
-
       const releaseDate = document.getElementById("releaseDate");
       const publisher = document.getElementById("publisher");
       const developers = document.getElementById("developers");
@@ -83,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         gameLikes.textContent = gameFound.likes;
-        console.log(gameFound.likes);
 
         descGameName.textContent = gameFound.nombre;
         const adicional = gameFound.adicional;
@@ -324,9 +321,6 @@ function shareLink() {
         .share({
           title: document.title,
           url: pageUrl,
-        })
-        .then(() => {
-          console.log("Compartido exitosamente");
         })
         .catch(console.error);
     } else {
