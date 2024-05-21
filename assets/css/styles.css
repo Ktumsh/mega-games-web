@@ -3111,3 +3111,13 @@ a.pulldown_mobile {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
+
+.popup_body.search_v2 .match.match_v2.selected {
+  background-color: rgba(229, 216, 254, 0.8);
+}
+
+.popup_body.search_v2 .match.match_v2.selected .match_name,
+.popup_body.search_v2 .match.match_v2.selected .match_subtitle {
+  color: #151515;
+  text-shadow: unset;
+}
