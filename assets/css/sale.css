@@ -248,10 +248,21 @@ body.hidden_body {
   flex-direction: row;
 }
 
+.loader {
+  width: 21px;
+  height: 21px;
+}
+
+.loader::after {
+  background: #131019;
+}
+
 .follow_btn_curator {
   position: relative;
   display: flex;
   position: relative;
+  max-height: 30px;
+  min-width: 86px;
   padding: 6px 25px 6px 25px;
   border-radius: 2px;
   color: #dfe3e6;
@@ -267,6 +278,16 @@ body.hidden_body {
   justify-content: center;
 }
 
+.follow_btn_curator.active {
+  min-width: 0;
+  padding: 6px 10px 6px 10px;
+  background: #864af9;
+}
+
+.follow_btn_curator.active:hover {
+  background: rgba(134, 74, 249, 0.7);
+}
+
 .follow_btn_curator:hover {
   color: #fff;
   background: #464d58;
@@ -276,6 +297,10 @@ body.hidden_body {
 
 .follow_btn_curator div {
   font-size: 12px;
+}
+
+.follow_btn_curator.active svg {
+  width: 21px;
 }
 
 .followers_curator {
