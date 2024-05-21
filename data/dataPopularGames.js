@@ -43,7 +43,7 @@ async function loadInitialCards() {
               </div>
             </div>
             <div class="card_bottom_body">
-              <a class="card_link" href="/games-details?name=${pageName}&id=${tarjeta.id}">
+              <a class="card_link" href="/games-details?game=${pageName}&item=${tarjeta.id}">
                 <div class="card_price">
                   <span class="card_text">Desde</span>
                   <span class="price">CLP$ ${tarjeta.precio}</span>
@@ -121,7 +121,7 @@ async function loadCards() {
                 </div>
               </div>
               <div class="card_bottom_body">
-                <a class="card_link" href="/games-details?name=${pageName}&id=${tarjeta.id}">
+                <a class="card_link" href="/games-details?game=${pageName}&item=${tarjeta.id}">
                   <div class="card_price">
                     <span class="card_text">Desde</span>
                     <span class="price">CLP$ ${tarjeta.precio}</span>

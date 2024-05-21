@@ -180,37 +180,37 @@ function addSearchEvents() {
       switch (game.origen) {
         case "offerCards":
           return (
-            "/offer-details?name=" +
+            "/offer-details?game=" +
             encodeURIComponent(game.nombre) +
-            "&id=" +
+            "&item=" +
             game.id
           );
         case "editorSalePage":
           return (
-            "/publisher-sale-details?name=" +
+            "/publisher-sale-details?game=" +
             encodeURIComponent(game.nombre) +
-            "&id=" +
+            "&item=" +
             game.id
           );
         case "gamesCards":
           return (
-            "/games-details?name=" +
+            "/games-details?game=" +
             encodeURIComponent(game.nombre) +
-            "&id=" +
+            "&item=" +
             game.id
           );
         case "tarjetasCards":
           return (
-            "/gift-details?name=" +
+            "/gift-details?game=" +
             encodeURIComponent(game.nombre) +
-            "&id=" +
+            "&item=" +
             game.id
           );
         default:
           return (
-            "/default-details?name=" +
+            "/default-details?game=" +
             encodeURIComponent(game.nombre) +
-            "&id=" +
+            "&item=" +
             game.id
           );
       }
