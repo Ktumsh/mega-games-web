@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="mainmenu_footer_spacer"></div>
           <div class="mainmenu_footer">
             <div class="mainmenu_footer_logo">
-              <img src="/assets/public/mega-games-logo.svg" height="36" />
+              <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
               <span class="grotesk d-lg-block fs-6">Mega Games</span>
             </div>
             Copyright © 2024 Mega Games. Todos los derechos reservados.
