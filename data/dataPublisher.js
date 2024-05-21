@@ -67,7 +67,7 @@ async function loadPublisherData() {
       return `
         <div class="sale_section_card">
           <div class="sale_section_card_ctn">
-            <a href="publisher-sale-details.html?name=${pageName}&id=${tarjeta.id}" style="display: block; cursor: pointer">
+            <a href="publisher-sale-details?name=${pageName}&id=${tarjeta.id}" style="display: block; cursor: pointer">
               <div class="capsule_decorators"></div>
               <div class="hero_capsule_image_ctn">
                 <img class="hero_image" src="${tarjeta.imagen}" alt="${tarjeta.nombre}">
@@ -96,7 +96,7 @@ async function loadPublisherData() {
       return `
         <div class="sale_section_card">
           <div class="sale_section_card_ctn">
-            <a href="publisher-sale-details.html?name=${pageName}&id=${tarjeta.id}" style="display: block; cursor: pointer">
+            <a href="publisher-sale-details?name=${pageName}&id=${tarjeta.id}" style="display: block; cursor: pointer">
               <div class="capsule_decorators"></div>
               <div class="capsule_image_ctn">
                 <img src="${tarjeta.imagenAlternativa}" alt="${tarjeta.nombre}" />
@@ -126,7 +126,7 @@ async function loadPublisherData() {
       return `
         <div class="sale_section_card">
           <div class="sale_section_card_ctn">
-            <a href="publisher-sale-details.html?name=${pageName}&id=${tarjeta.id}" style="display: block; cursor: pointer">
+            <a href="publisher-sale-details?name=${pageName}&id=${tarjeta.id}" style="display: block; cursor: pointer">
               <div class="capsule_decorators"></div>
               <div class="hero_capsule_image_ctn">
                 <div class="hero_capsule_image" style="background-image: url('${tarjeta.imagen}');"></div>
