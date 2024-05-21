@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const queryParams = new URLSearchParams(window.location.search);
   const gameTitle = queryParams.get("name");
-  const gameId = parseInt(queryParams.get("id"));
+  const gameId = parseInt(queryParams.get("item"));
   document.title = gameTitle;
 
   fetch("/data/api/apiStore.json")
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function giveALike() {
   const queryParams = new URLSearchParams(window.location.search);
-  const gameId = parseInt(queryParams.get("id"));
+  const gameId = parseInt(queryParams.get("item"));
 
   fetch("/data/api/apiStore.json")
     .then((response) => response.json())
