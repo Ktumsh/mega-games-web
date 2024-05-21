@@ -1440,6 +1440,15 @@ span.platform_img.epicgames {
   background-image: url("/assets/public/icons/icon_platform_epicgames.png");
 }
 
+span.platform_img.android {
+  background-image: url("/assets/public/icons/icon_platform_android.png");
+  background-size: cover;
+}
+
+span.platform_img.ios {
+  background-image: url("/assets/public/icons/icon_platform_mac.png");
+}
+
 @media (min-width: 576px) {
   .carousel_cards .inner_carousel::-webkit-scrollbar {
     height: 6px;

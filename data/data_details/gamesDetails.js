@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const queryParams = new URLSearchParams(window.location.search);
-  const gameTitle = queryParams.get("name");
+  const gameTitle = queryParams.get("game");
   const gameId = parseInt(queryParams.get("item"));
   document.title = gameTitle;
 
