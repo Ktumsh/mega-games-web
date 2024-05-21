@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   headerContainerMobile.innerHTML = `
     <div class="responsive_header_content">
       <div id="responsive_menu_logo">
-        <img src="/assets/public/icons/header_menu_hamburger.png" height="100%" />
+        <img src="/assets/public/icons/header_menu_hamburger.webp" height="100%" />
       </div>
       <div class="responsive_header_logo">
         <a href="/">

@@ -232,14 +232,14 @@ function addSearchEvents() {
           .attr("href", "javascript:void(0)")
           .attr("data-ds-options", "0").html(`
               <div class="match_background_image">
-                  <img src="/assets/public/search-bg.png">
+                  <img src="/assets/public/search-bg.webp">
               </div>
               <div class="match_name">
                   <div>Etiqueta:</div>
                   <span>Juegos encontrados</span>
               </div>
               <div class="match_img">
-                  <img src="https://store.akamai.steamstatic.com/public/images/icon_SearchTagResult.png">
+                  <img src="https://store.akamai.steamstatic.com/public/images/icon_SearchTagResult.webp">
               </div>
               <div class="match_subtitle">${totalGamesFound}&nbsp;juegos</div>
           `);
