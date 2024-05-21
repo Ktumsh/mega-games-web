@@ -69,7 +69,7 @@ function generateGameHTML(juego) {
   }
 
   return `
-    <a class="store_main_capsule" href="/${pageOrigin}.html?name=${pageName}&id=${
+    <a class="store_main_capsule" href="/${pageOrigin}?name=${pageName}&id=${
     juego.id
   }" data-bs-interval="5000">
       <div class="capsule main_capsule" style="background-image: url(${
