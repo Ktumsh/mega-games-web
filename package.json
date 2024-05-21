@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "bootstrap": "^5.3.3",
-    "sharp": "^0.33.4"
+    "bootstrap": "^5.3.3"
   }
 }
