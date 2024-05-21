@@ -2,5 +2,8 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "sharp": "^0.33.4"
+  },
+  "scripts": {
+    "minify-css": "postcss assets/css/sale.css -o assets/css/sale.min.css"
   }
 }
