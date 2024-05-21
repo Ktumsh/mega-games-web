@@ -1,0 +1,20 @@
+{
+  "name": "Mega Games Store",
+  "short_name": "Mega Games",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#131019",
+  "icons": [
+    {
+      "src": "/assets/public/mega-games-logo.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    },
+    {
+      "src": "/assets/public/mega-games-logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}
