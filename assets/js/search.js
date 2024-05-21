@@ -29,16 +29,43 @@ function addSearchEvents() {
     const $searchInput = $("#searchInput");
     const $searchLink = $("#store_search_link");
     const $resultsContainer = $("#searchterm_options");
+    let selectedIndex = -1;
 
     let allGames = [];
 
     await loadAllGames();
 
     $searchInput.on("input", handleSearch);
+
+    $searchInput.on("keydown", function (event) {
+      const $results = $("#search_suggestion_contents a.match_app");
+      if (event.key === "Enter") {
+        event.preventDefault();
+        if (selectedIndex >= 0 && selectedIndex < $results.length) {
+          window.location.href = $results.eq(selectedIndex).attr("href");
+        } else {
+          $searchLink.click();
+        }
+      } else if (event.key === "ArrowDown") {
+        event.preventDefault();
+        if (selectedIndex < $results.length - 1) {
+          selectedIndex++;
+          updateSelectedResult($results);
+        }
+      } else if (event.key === "ArrowUp") {
+        event.preventDefault();
+        if (selectedIndex > 0) {
+          selectedIndex--;
+          updateSelectedResult($results);
+        }
+      }
+    });
+
     $searchLink.on("click", function (event) {
       event.preventDefault();
-      handleSearch({ target: $searchInput[0] });
-      history.pushState({ searchOpen: true }, "");
+      if ($searchLink.attr("href") !== "#") {
+        window.location.href = $searchLink.attr("href");
+      }
     });
 
     $(document).on("click", function (event) {
@@ -113,10 +140,12 @@ function addSearchEvents() {
         const searchTerm = normalizeString(event.target.value);
         const $resultsContainer = $("#searchterm_options");
         const $suggestionsContainer = $("#search_suggestion_contents");
+        selectedIndex = -1;
 
         if (!searchTerm) {
           $resultsContainer.hide();
-          $suggestionsContainer.empty(); // Elimina el contenido del suggestionsContainer
+          $suggestionsContainer.empty();
+          $("#store_search_link").attr("href", "#");
           return;
         }
 
@@ -144,6 +173,7 @@ function addSearchEvents() {
         const displayedGames = filteredGames.slice(0, 5);
 
         displayResults(displayedGames, totalGamesFound);
+        updateSearchLinkHref(displayedGames);
       }, 300);
     }
 
@@ -202,14 +232,14 @@ function addSearchEvents() {
           .attr("href", "javascript:void(0)")
           .attr("data-ds-options", "0").html(`
               <div class="match_background_image">
-                  <img src="/assets/public/search-bg.png">
+                  <img src="/assets/public/search-bg.webp">
               </div>
               <div class="match_name">
                   <div>Etiqueta:</div>
                   <span>Juegos encontrados</span>
               </div>
               <div class="match_img">
-                  <img src="https://store.akamai.steamstatic.com/public/images/icon_SearchTagResult.png">
+                  <img src="https://store.akamai.steamstatic.com/public/images/icon_SearchTagResult.webp">
               </div>
               <div class="match_subtitle">${totalGamesFound}&nbsp;juegos</div>
           `);
@@ -236,6 +266,22 @@ function addSearchEvents() {
         $suggestionsContainer.append($tagElement);
 
         $resultsContainer.show();
+      }
+    }
+
+    function updateSelectedResult($results) {
+      $results.removeClass("selected");
+      if (selectedIndex >= 0) {
+        $results.eq(selectedIndex).addClass("selected");
+      }
+    }
+
+    function updateSearchLinkHref(games) {
+      if (games.length > 0) {
+        const firstResultHref = generateGameHref(games[0]);
+        $("#store_search_link").attr("href", firstResultHref);
+      } else {
+        $("#store_search_link").attr("href", "#");
       }
     }
   });

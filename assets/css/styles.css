@@ -230,7 +230,7 @@ div#store_search {
   width: auto;
   height: 30px;
   color: #a6a5a2;
-  background-image: url(/assets/public/icons/search_icon_btn.png);
+  background-image: url(/assets/public/icons/search_icon_btn.webp);
   cursor: text;
 }
 
@@ -874,7 +874,7 @@ a#store_search_link i {
 .arrow > div {
   width: 23px;
   height: 36px;
-  background-image: url(/assets/public/arrows.png);
+  background-image: url(/assets/public/arrows.webp);
 }
 
 @media screen and (max-width: 910px) {
@@ -960,7 +960,7 @@ a#store_search_link i {
 .store_main_capsule:hover {
   display: flex;
   color: #fff;
-  background-image: url(/assets/public/background_maincap_2.jpg);
+  background-image: url(/assets/public/background_maincap_2.webp);
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -1372,72 +1372,72 @@ span.platform_img {
 span.platform_img.steamplay {
   width: 64px;
   padding-right: 5px;
-  background-image: url("/assets/public/icons/icon_platform_win.png");
+  background-image: url("/assets/public/icons/icon_platform_win.webp");
 }
 
 span.platform_img.battlenet {
-  background-image: url("/assets/public/icons/icon_platform_battlenet.png");
+  background-image: url("/assets/public/icons/icon_platform_battlenet.webp");
 }
 
 span.platform_img.xbox {
-  background-image: url("/assets/public/icons/icon_platform_xbox.png");
+  background-image: url("/assets/public/icons/icon_platform_xbox.webp");
 }
 
 span.platform_img.playstation {
-  background-image: url("/assets/public/icons/icon_platform_playstation.png");
+  background-image: url("/assets/public/icons/icon_platform_playstation.webp");
 }
 
 span.platform_img.nintendo {
-  background-image: url("/assets/public/icons/icon_platform_nintendo.png");
+  background-image: url("/assets/public/icons/icon_platform_nintendo.webp");
 }
 
 span.platform_img.win {
-  background-image: url("/assets/public/icons/icon_platform_win.png");
+  background-image: url("/assets/public/icons/icon_platform_win.webp");
 }
 
 span.platform_img.mac {
-  background-image: url("/assets/public/icons/icon_platform_mac.png");
+  background-image: url("/assets/public/icons/icon_platform_mac.webp");
 }
 
 span.platform_img.steam {
-  background-image: url("/assets/public/icons/icon_platform_steam.png");
+  background-image: url("/assets/public/icons/icon_platform_steam.webp");
 }
 
 span.platform_img.streamingvideo {
-  background-image: url("/assets/public/icons/icon_platform_win.png");
+  background-image: url("/assets/public/icons/icon_platform_win.webp");
 }
 
 span.platform_img.streamingvideoseries {
-  background-image: url("/assets/public/icons/icon_platform_win.png");
+  background-image: url("/assets/public/icons/icon_platform_win.webp");
 }
 
 span.platform_img.streaming360video {
-  background-image: url("/assets/public/icons/icon_platform_windowsmr.png");
+  background-image: url("/assets/public/icons/icon_platform_windowsmr.webp");
 }
 
 span.platform_img.htcvive {
-  background-image: url("/assets/public/icons/icon_platform_htcvive.png");
+  background-image: url("/assets/public/icons/icon_platform_htcvive.webp");
 }
 
 span.platform_img.oculusrift {
-  background-image: url("/assets/public/icons/icon_platform_oculusrift.png");
+  background-image: url("/assets/public/icons/icon_platform_oculusrift.webp");
 }
 
 span.platform_img.windowsmr {
-  background-image: url("/assets/public/icons/icon_platform_windowsmr.png");
+  background-image: url("/assets/public/icons/icon_platform_windowsmr.webp");
 }
 
 span.platform_img.valveindex {
   width: 26px;
-  background-image: url("/assets/public/icons/icon_platform_win.png");
+  background-image: url("/assets/public/icons/icon_platform_win.webp");
 }
 
 span.platform_img.music {
-  background-image: url("/public/images/v6/icon_platform_music.png");
+  background-image: url("/public/images/v6/icon_platform_music.webp");
 }
 
 span.platform_img.epicgames {
-  background-image: url("/assets/public/icons/icon_platform_epicgames.png");
+  background-image: url("/assets/public/icons/icon_platform_epicgames.webp");
 }
 
 @media (min-width: 576px) {
@@ -3110,4 +3110,8 @@ a.pulldown_mobile {
   grid-area: price;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+}
+
+.selected {
+  background-color: rgba(229, 216, 254, 0.8);
 }

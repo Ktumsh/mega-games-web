@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   headerContainerMobile.innerHTML = `
     <div class="responsive_header_content">
       <div id="responsive_menu_logo">
-        <img src="/assets/public/icons/header_menu_hamburger.png" height="100%" />
+        <img src="/assets/public/icons/header_menu_hamburger.webp" height="100%" />
       </div>
       <div class="responsive_header_logo">
         <a href="/">
@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <form name="searchform" role="search">
                           <div class="searchbox">
                             <input id="searchInput" class="store_nav_search_term default" type="search" placeholder="buscar" size="22" autocomplete="off" maxlength="64" />
-                            <a href="#" id="store_search_link" class="store_search_link text-w" aria-label="Buscar en Mega Games"><i class="fa-solid fa-magnifying-glass fa"></i></a>
+                            <a type="button" id="store_search_link" class="store_search_link text-w" aria-label="Buscar en Mega Games"><i class="fa-solid fa-magnifying-glass fa"></i></a>
                           </div>
                         </form>
                       </div>
@@ -407,7 +407,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <form name="searchform" role="search">
                       <div class="searchbox">
                         <input id="searchInput" class="store_nav_search_term default" type="search" placeholder="buscar" size="22" autocomplete="off" maxlength="64" />
-                        <a href="#" id="store_search_link" class="store_search_link text-w" aria-label="Buscar en Mega Games"><i class="fa-solid fa-magnifying-glass fa"></i></a>
+                        <a id="store_search_link" class="store_search_link text-w" aria-label="Buscar en Mega Games"><i class="fa-solid fa-magnifying-glass fa"></i></a>
                       </div>
                     </form>
                   </div>
