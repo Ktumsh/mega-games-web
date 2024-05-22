@@ -5,6 +5,22 @@
 @font-face {
   font-family: "Motiva Sans";
   font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(/assets/public/fonts/motiva-sans/MotivaSansThin.ttf);
+}
+
+@font-face {
+  font-family: "Motiva Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/assets/public/fonts/motiva-sans/MotivaSansLight.woff.ttf);
+}
+
+@font-face {
+  font-family: "Motiva Sans";
+  font-style: normal;
   font-weight: normal;
   font-display: swap;
   src: url(/assets/public/fonts/motiva-sans/MotivaSansRegular.woff.ttf);
@@ -2674,7 +2690,7 @@ a.pulldown_mobile {
   left: 0;
 
   background: rgba(0, 0, 0, 0.5);
-  z-index: 15;
+  z-index: 90;
 }
 
 .responsive_page_menu_ctn.mainmenu {
@@ -2694,7 +2710,7 @@ a.pulldown_mobile {
   top: 0;
   bottom: 0;
   overflow: hidden;
-  z-index: 30;
+  z-index: 100;
   width: 280px;
   background: black;
   transition: left 0.5s, right 0.5s;
@@ -3126,4 +3142,354 @@ a.pulldown_mobile {
 .popup_body.search_v2 .match.match_v2.selected .match_subtitle {
   color: #151515;
   text-shadow: unset;
+}
+
+#downloadAppModal.full_modal_overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 300ms;
+}
+
+#downloadAppModal.full_modal_overlay.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+#downloadAppModal .modal_overlay_background {
+  z-index: 7;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#downloadAppModal .modal_overlay_content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#downloadAppModal .modal_overlay_content.active {
+  z-index: 10;
+}
+
+#downloadAppModal .modal_position {
+  display: flex;
+  height: 100%;
+  align-content: center;
+  flex-direction: column;
+}
+
+#downloadAppModal.full_modal_overlay .modal_position_content {
+  height: initial;
+  width: initial;
+  max-width: 92vw;
+  max-height: 90vh;
+  transform: translate(0, -100px);
+  transition: transform 300ms ease-in-out;
+}
+
+#downloadAppModal.full_modal_overlay .modal_position_content.show {
+  transform: translate(0, 0);
+}
+
+@media screen and (max-width: 640px) {
+  #downloadAppModal.full_modal_overlay .modal_position_content {
+    max-height: 95vh;
+  }
+}
+
+#downloadAppModal .modal_position_content {
+  box-shadow: 0px 8px 38px 5px rgba(0, 0, 0, 0.75);
+  margin: auto;
+  font-weight: 300;
+  color: #969696;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#downloadAppModal .modal_position_content > * {
+  min-height: 0;
+  min-width: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+#downloadAppModal .modal_position_top_bar {
+  background: linear-gradient(to right, #cbb0fc 0%, #6f26f7 60%);
+  min-height: 1px;
+  min-width: initial;
+  flex-grow: initial;
+  flex-shrink: initial;
+}
+
+#downloadAppModal div.modal_position_dismiss {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  z-index: 1;
+  box-sizing: content-box;
+  min-width: initial;
+  min-height: initial;
+  flex-grow: initial;
+  flex-shrink: initial;
+}
+
+#downloadAppModal .modal_position_dismiss .close_button {
+  width: 14px;
+  height: 14px;
+  padding: 4px;
+  border-radius: 4px;
+  box-sizing: content-box;
+  background-size: cover;
+  background-image: none;
+  cursor: pointer;
+}
+
+#downloadAppModal .close_button svg {
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+  fill: #fff;
+  max-width: 320px;
+  max-height: 320px;
+}
+
+#downloadAppModal .modal_position_dismiss .close_button line {
+  stroke: rgba(255, 255, 255, 0.6);
+  stroke-width: 24px;
+}
+
+#downloadAppModal .dialog_center_vertically {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#downloadAppModal .dialog_content {
+  display: flex;
+  overflow: visible;
+  position: relative;
+  padding: 16px;
+}
+
+#downloadAppModal .dialog_content,
+#downloadAppModal .dialog_content_transition {
+  background: radial-gradient(
+      circle at top left,
+      rgba(37, 4, 98, 0.4) 10%,
+      rgba(75, 81, 92, 0) 100%
+    ),
+    #131019;
+  user-select: none;
+}
+
+#downloadAppModal .dialog_content_inner_width {
+  display: flex;
+  overflow: auto;
+  max-width: 500px;
+  flex: 1;
+  flex-direction: column;
+}
+
+#downloadAppModal .dialog_content_inner_width > div:first-child {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
+}
+
+#downloadAppModal .about_greeting_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 26px;
+  margin-bottom: 4px;
+  user-select: none;
+  font-size: 28px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+#downloadAppModal .about_greeting_header div {
+  margin-right: 1rem;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+#downloadAppModal .about_greeting_header img {
+  height: 58px;
+  width: 58px;
+}
+
+#downloadAppModal .about_greeting_header span {
+  display: inline;
+  margin-top: -8px;
+  font-size: 10px;
+}
+
+.about_subtitle {
+  text-align: center;
+  margin-top: 18px;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.about_subtitle span {
+  line-height: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.about_install_wrapper {
+  margin-top: auto;
+  padding-top: 16px;
+  flex-shrink: 0;
+}
+
+.about_install button {
+  display: block;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 15px 50px 15px 25px;
+  border: none;
+  border-radius: 3px;
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: #fff !important;
+  position: relative;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  background: linear-gradient(
+    to right,
+    rgba(190, 157, 251, 1) 20%,
+    rgba(88, 9, 236, 1) 100%
+  );
+  background-size: 200%;
+  background-position: right 0;
+  transition: background-position 300ms ease-in;
+}
+
+.about_install button:active {
+  background-position: 0 0;
+}
+
+.about_install button::after {
+  content: "";
+  background-position: top right;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 14px;
+  right: 25px;
+  background-image: url(/assets/public/icons/download.svg);
+}
+
+@media screen and (max-width: 700px) {
+  .dialog_label {
+    flex-direction: column;
+  }
+
+  .dialog_label_content {
+    margin-top: 2px;
+    padding: 0px;
+    background: none;
+  }
+
+  .share_link {
+    min-width: 250px;
+    min-height: 80px;
+  }
+
+  .share_link_ctn span {
+    display: none;
+  }
+
+  .share_link_button_ctn {
+    display: none !important;
+  }
+
+  .share_section_ctn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .share_button img {
+    height: 30px;
+    padding: 5px 25px;
+  }
+}
+
+.bottom_navbar_pwa {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #131019;
+  display: flex;
+  z-index: 10;
+}
+
+.bottom_nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.pwa_nav_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 62px;
+  text-align: center;
+  flex-grow: 1;
+  text-decoration: none;
+}
+
+.pwa_nav_item.active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 30px;
+  right: 30px;
+  height: 3px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #cbb0fc 0%, #5809ec 60%);
+  background-size: 200%;
+  background-position: 25%;
+}
+
+.pwa_nav_item svg {
+  color: #e0e0e0;
+  height: 24px;
+  transition: transform 100ms;
+}
+
+.pwa_nav_item.active svg {
+  color: rgba(190, 157, 251, 1);
+}
+
+.pwa_nav_item:active svg {
+  transform: scale(1.1);
 }
