@@ -304,8 +304,8 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="store_nav">
                 <div id="foryou_tab" data-flyout="foryou_flyout" class="tab">
                   <span class="pulldown">
-                    <a class="pulldown_desktop" href="/index.html">Tu tienda</a>
-                    <a class="pulldown_mobile" href="/index.html">Tu tienda</a>
+                    <a class="pulldown_desktop" href="javascript:void(0)">Tu tienda</a>
+                    <a class="pulldown_mobile" href="javascript:void(0)">Tu tienda</a>
                   </span>
                 </div>
                 <div id="foryou_flyout" class="popup_block_new responsive_slidedown sub_menu">
