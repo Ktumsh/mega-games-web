@@ -43,6 +43,14 @@
 }
 
 @font-face {
+  font-family: "Motiva Sans";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/assets/public/fonts/motiva-sans/MotivaSansExtraBold.ttf);
+}
+
+@font-face {
   font-family: "metropolis";
   font-weight: 400;
   font-display: swap;
@@ -2736,7 +2744,7 @@ a.pulldown_mobile {
 
 .mainmenu_contents_items {
   font-family: "Motiva Sans", Sans-serif;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .mainmenu_contents .menuitem,
@@ -2746,7 +2754,7 @@ a.pulldown_mobile {
   align-items: center;
   overflow: hidden;
   border-top: 1px solid #1c1825;
-  padding: 12px 12px;
+  padding: 14px 12px;
   color: #bdbdbd !important;
   white-space: nowrap;
   line-height: 18px;
@@ -2765,8 +2773,8 @@ a.pulldown_mobile {
   display: flex;
   align-items: center;
   width: 100%;
-  margin: 8px 6px;
-  padding: 4px 6px;
+  margin: 9px 6px;
+  padding: 5px 6px;
   border-radius: 3px;
   background: linear-gradient(to right, #1c1825 20%, #250462 100%);
   background-position: 25%;
@@ -2779,7 +2787,7 @@ a.pulldown_mobile {
 }
 
 .mainmenu_contents .menuitem svg {
-  width: 24px;
+  width: 26px;
   margin-right: 10px;
 }
 
@@ -2791,11 +2799,11 @@ a.pulldown_mobile {
   color: rgba(255, 255, 255, 0.5) !important;
   font-weight: normal;
   border: none;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .mainmenu .minor_menu_items .menuitem svg {
-  width: 13px;
+  width: 14px;
   margin-left: 2px;
 }
 
@@ -2807,8 +2815,8 @@ a.pulldown_mobile {
 .mainmenu_contents .menuitem .chevron {
   background-image: url("/assets/public/icons/chevron.png");
   background-size: 100% 100%;
-  width: 20px;
-  height: 12px;
+  width: 18px;
+  height: 10px;
   position: absolute;
   right: 12px;
   top: calc(50% - 6px);
@@ -2832,18 +2840,18 @@ a.pulldown_mobile {
 
 .mainmenu_contents .submenuitem {
   display: block;
-  padding: 12px 12px;
+  padding: 14px 12px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  line-height: 13px;
+  line-height: 14px;
   text-decoration: none;
   cursor: pointer;
 }
 
 .menuitem_submenu_wrapper .submenuitem {
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: #bdbdbd !important;
   padding-left: 44px;
