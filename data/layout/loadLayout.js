@@ -430,11 +430,10 @@ document.addEventListener("DOMContentLoaded", () => {
     addSearchEvents();
   }
 
-  function createPWANavbar() {
-    const isPWA = window.matchMedia("(display-mode: standalone)").matches;
+  const isPWA = window.matchMedia("(display-mode: standalone)").matches;
 
-    if (isPWA) {
-      const navbarContent = `
+  if (isPWA) {
+    const navbarContent = `
             <div class="bottom_navbar_pwa">
                 <nav class="bottom_nav">
                     <a href="/index.html" class="pwa_nav_item">
@@ -442,7 +441,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <path fill="currentColor" d="M22.83 12.99L11.83 2H2v9.83l10.99 10.99zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4S7 4.67 7 5.5S6.33 7 5.5 7"/>
                         </svg>
                     </a>
-                    <a href="/juegos-populares.html" class="pwa_nav_item">
+                    <a href="/ActivisionPublisherSale2024.html" class="pwa_nav_item">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                             <path fill="currentColor" d="M9.19 6.35c-2.04 2.29-3.44 5.58-3.57 5.89L2 10.69l4.81-4.81zM11.17 17s3.74-1.55 5.89-3.7c5.4-5.4 4.5-9.62 4.21-10.57c-.95-.3-5.17-1.19-10.57 4.21C8.55 9.09 7 12.83 7 12.83zm6.48-2.19c-2.29 2.04-5.58 3.44-5.89 3.57L13.31 22l4.81-4.81zM9 18c0 .83-.34 1.58-.88 2.12C6.94 21.3 2 22 2 22s.7-4.94 1.88-6.12A2.996 2.996 0 0 1 9 18m4-9c0-1.1.9-2 2-2s2 .9 2 2s-.9 2-2 2s-2-.9-2-2"/>
                         </svg>
@@ -466,18 +465,17 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         `;
 
-      const navbarSlot = document.querySelector(".NavbarSlotPWA");
-      navbarSlot.innerHTML = navbarContent;
+    const navbarSlot = document.querySelector(".NavbarSlotPWA");
+    navbarSlot.innerHTML = navbarContent;
 
-      const currentPath = window.location.pathname;
-      const navItems = document.querySelectorAll(".pwa_nav_item");
+    const currentPath = window.location.pathname;
+    const navItems = document.querySelectorAll(".pwa_nav_item");
 
-      navItems.forEach((item) => {
-        if (item.getAttribute("href") === currentPath) {
-          item.classList.add("active");
-        }
-      });
-    }
+    navItems.forEach((item) => {
+      if (item.getAttribute("href") === currentPath) {
+        item.classList.add("active");
+      }
+    });
   }
 
   function removeDesktopNavbar() {
