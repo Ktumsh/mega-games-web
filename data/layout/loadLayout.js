@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <img src="/assets/public/icons/header_menu_hamburger.webp" height="100%" />
       </div>
       <div class="responsive_header_logo">
-        <a href="/index">
+        <a href="/index.html">
           <div class="d-flex align-items-center">
             <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
             <span class="grotesk ps-2 fs-6">Mega Games</span>
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                     <div id="foryou_flyout" class="popup_block_new responsive_slidedown" style="visibility: visible; top: 42px; left: 0px; display: none; opacity: 0">
                       <div class="popup_body popup_menu popup_menu_browse">
-                        <a href="/index" class="popup_menu_item">Inicio</a>
+                        <a href="/" class="popup_menu_item">Inicio</a>
                         <a href="#" class="popup_menu_item">Recomendaciones</a>
                         <a href="#" class="popup_menu_item">Vistos recientemente</a>
                       </div>
@@ -304,13 +304,13 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="store_nav">
                 <div id="foryou_tab" data-flyout="foryou_flyout" class="tab">
                   <span class="pulldown">
-                    <a class="pulldown_desktop" href="#">Tu tienda</a>
-                    <a class="pulldown_mobile" href="#">Tu tienda</a>
+                    <a class="pulldown_desktop" href="/index.html">Tu tienda</a>
+                    <a class="pulldown_mobile" href="/index.html">Tu tienda</a>
                   </span>
                 </div>
                 <div id="foryou_flyout" class="popup_block_new responsive_slidedown sub_menu">
                   <div class="popup_body popup_menu popup_menu_browse">
-                    <a href="/index" class="popup_menu_item">Inicio</a>
+                    <a href="/index.html" class="popup_menu_item">Inicio</a>
                     <a href="#" class="popup_menu_item">Recomendaciones</a>
                     <a href="#" class="popup_menu_item">Vistos recientemente</a>
                   </div>
@@ -436,12 +436,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const navbarContent = `
           <div class="bottom_navbar_pwa">
               <nav class="bottom_nav">
-                  <a href="/" class="pwa_nav_item">
+                  <a href="/index.html" class="pwa_nav_item">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                           <path fill="currentColor" d="M22.83 12.99L11.83 2H2v9.83l10.99 10.99zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4S7 4.67 7 5.5S6.33 7 5.5 7"/>
                       </svg>
                   </a>
-                  <a href="/ActivisionPublisherSale2024" class="pwa_nav_item">
+                  <a href="/ofertas-especiales" class="pwa_nav_item">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                           <path fill="currentColor" d="M9.19 6.35c-2.04 2.29-3.44 5.58-3.57 5.89L2 10.69l4.81-4.81zM11.17 17s3.74-1.55 5.89-3.7c5.4-5.4 4.5-9.62 4.21-10.57c-.95-.3-5.17-1.19-10.57 4.21C8.55 9.09 7 12.83 7 12.83zm6.48-2.19c-2.29 2.04-5.58 3.44-5.89 3.57L13.31 22l4.81-4.81zM9 18c0 .83-.34 1.58-.88 2.12C6.94 21.3 2 22 2 22s.7-4.94 1.88-6.12A2.996 2.996 0 0 1 9 18m4-9c0-1.1.9-2 2-2s2 .9 2 2s-.9 2-2 2s-2-.9-2-2"/>
                       </svg>
