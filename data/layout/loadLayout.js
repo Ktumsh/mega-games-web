@@ -434,47 +434,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (isPWA) {
     const navbarContent = `
-            <div class="bottom_navbar_pwa">
-                <nav class="bottom_nav">
-                    <a href="/index" class="pwa_nav_item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M22.83 12.99L11.83 2H2v9.83l10.99 10.99zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4S7 4.67 7 5.5S6.33 7 5.5 7"/>
-                        </svg>
-                    </a>
-                    <a href="/ofertas-especiales" class="pwa_nav_item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M9.19 6.35c-2.04 2.29-3.44 5.58-3.57 5.89L2 10.69l4.81-4.81zM11.17 17s3.74-1.55 5.89-3.7c5.4-5.4 4.5-9.62 4.21-10.57c-.95-.3-5.17-1.19-10.57 4.21C8.55 9.09 7 12.83 7 12.83zm6.48-2.19c-2.29 2.04-5.58 3.44-5.89 3.57L13.31 22l4.81-4.81zM9 18c0 .83-.34 1.58-.88 2.12C6.94 21.3 2 22 2 22s.7-4.94 1.88-6.12A2.996 2.996 0 0 1 9 18m4-9c0-1.1.9-2 2-2s2 .9 2 2s-.9 2-2 2s-2-.9-2-2"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="pwa_nav_item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M5 19q-.425 0-.712-.288T4 18t.288-.712T5 17h1v-7q0-2.075 1.25-3.687T10.5 4.2v-.7q0-.625.438-1.062T12 2t1.063.438T13.5 3.5v.7q2 .5 3.25 2.113T18 10v7h1q.425 0 .713.288T20 18t-.288.713T19 19zm7 3q-.825 0-1.412-.587T10 20h4q0 .825-.587 1.413T12 22"/>
-                        </svg>
-                    </a>
-                    <a href="/cart" class="pwa_nav_item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                            <g fill="none">
-                                <path fill="currentColor" d="M18 15H7L5.5 6H21z"/>
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.5 3m0 0L7 15h11l3-9z"/>
-                                <circle cx="8" cy="20" r="1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                                <circle cx="17" cy="20" r="1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                            </g>
-                        </svg>
-                    </a>
-                </nav>
-            </div>
-        `;
+          <div class="bottom_navbar_pwa">
+              <nav class="bottom_nav">
+                  <a href="/index.html" class="pwa_nav_item">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M22.83 12.99L11.83 2H2v9.83l10.99 10.99zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4S7 4.67 7 5.5S6.33 7 5.5 7"/>
+                      </svg>
+                  </a>
+                  <a href="/ofertas-especiales.html" class="pwa_nav_item">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M9.19 6.35c-2.04 2.29-3.44 5.58-3.57 5.89L2 10.69l4.81-4.81zM11.17 17s3.74-1.55 5.89-3.7c5.4-5.4 4.5-9.62 4.21-10.57c-.95-.3-5.17-1.19-10.57 4.21C8.55 9.09 7 12.83 7 12.83zm6.48-2.19c-2.29 2.04-5.58 3.44-5.89 3.57L13.31 22l4.81-4.81zM9 18c0 .83-.34 1.58-.88 2.12C6.94 21.3 2 22 2 22s.7-4.94 1.88-6.12A2.996 2.996 0 0 1 9 18m4-9c0-1.1.9-2 2-2s2 .9 2 2s-.9 2-2 2s-2-.9-2-2"/>
+                      </svg>
+                  </a>
+                  <a href="/" class="pwa_nav_item">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M5 19q-.425 0-.712-.288T4 18t.288-.712T5 17h1v-7q0-2.075 1.25-3.687T10.5 4.2v-.7q0-.625.438-1.062T12 2t1.063.438T13.5 3.5v.7q2 .5 3.25 2.113T18 10v7h1q.425 0 .713.288T20 18t-.288.713T19 19zm7 3q-.825 0-1.412-.587T10 20h4q0 .825-.587 1.413T12 22"/>
+                      </svg>
+                  </a>
+                  <a href="/cart.html" class="pwa_nav_item">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                          <g fill="none">
+                              <path fill="currentColor" d="M18 15H7L5.5 6H21z"/>
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.5 3m0 0L7 15h11l3-9z"/>
+                              <circle cx="8" cy="20" r="1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                              <circle cx="17" cy="20" r="1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                          </g>
+                      </svg>
+                  </a>
+              </nav>
+          </div>
+      `;
 
     const navbarSlot = document.querySelector(".NavbarSlotPWA");
     navbarSlot.innerHTML = navbarContent;
 
     const currentPath = window.location.pathname;
     console.log(currentPath);
-    const navItems = document.querySelectorAll(".pwa_nav_item");
+    const navItems = document.querySelectorAll(".bottom_nav .pwa_nav_item");
 
     navItems.forEach((item) => {
-      console.log(item.getAttribute("href"));
-      if (item.getAttribute("href") === currentPath) {
+      const itemPath = new URL(item.href, window.location.origin).pathname;
+      console.log(itemPath);
+      if (itemPath === currentPath) {
         item.classList.add("active");
       }
     });
