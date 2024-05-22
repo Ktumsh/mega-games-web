@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <img src="/assets/public/icons/header_menu_hamburger.webp" height="100%" />
       </div>
       <div class="responsive_header_logo">
-        <a href="/index.html">
+        <a href="/">
           <div class="d-flex align-items-center">
             <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
             <span class="grotesk ps-2 fs-6">Mega Games</span>
@@ -310,7 +310,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <div id="foryou_flyout" class="popup_block_new responsive_slidedown sub_menu">
                   <div class="popup_body popup_menu popup_menu_browse">
-                    <a href="/index.html" class="popup_menu_item">Inicio</a>
+                    <a href="/" class="popup_menu_item">Inicio</a>
                     <a href="#" class="popup_menu_item">Recomendaciones</a>
                     <a href="#" class="popup_menu_item">Vistos recientemente</a>
                   </div>
@@ -436,7 +436,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const navbarContent = `
           <div class="bottom_navbar_pwa">
               <nav class="bottom_nav">
-                  <a href="/index.html" class="pwa_nav_item">
+                  <a href="/" class="pwa_nav_item">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                           <path fill="currentColor" d="M22.83 12.99L11.83 2H2v9.83l10.99 10.99zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4S7 4.67 7 5.5S6.33 7 5.5 7"/>
                       </svg>
