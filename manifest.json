@@ -44,13 +44,27 @@
       "name": "Ofertas del editor",
       "short_name": "Ofertas del editor",
       "description": "Activision Publisher Sale 2024",
-      "url": "/ActivisionPublisherSale2024"
+      "url": "/ActivisionPublisherSale2024",
+      "icons": [
+        {
+          "src": "/assets/public/icons/publisher.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
     },
     {
       "name": "Ofertas especiales",
       "short_name": "Ofertas especiales",
       "description": "Mira las mejores ofertas de la semana",
-      "url": "/ofertas-especiales"
+      "url": "/ofertas-especiales",
+      "icons": [
+        {
+          "src": "/assets/public/icons/offers.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
     }
   ]
 }
