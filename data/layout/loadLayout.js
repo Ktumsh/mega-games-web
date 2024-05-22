@@ -469,14 +469,15 @@ document.addEventListener("DOMContentLoaded", () => {
     navbarSlot.innerHTML = navbarContent;
 
     const currentPath = window.location.pathname;
-    console.log(currentPath);
     const navItems = document.querySelectorAll(".bottom_nav .pwa_nav_item");
+    let isActive = false;
 
     navItems.forEach((item) => {
       const itemPath = new URL(item.href, window.location.origin).pathname;
       console.log(itemPath);
       if (itemPath === currentPath) {
         item.classList.add("active");
+        isActive = true;
       }
     });
 
