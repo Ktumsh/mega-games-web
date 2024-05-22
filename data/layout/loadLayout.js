@@ -479,6 +479,10 @@ document.addEventListener("DOMContentLoaded", () => {
         item.classList.add("active");
       }
     });
+
+    if (!isActive) {
+      navItems[0].classList.add("active");
+    }
   }
 
   function removeDesktopNavbar() {
