@@ -71,12 +71,61 @@ document.addEventListener("DOMContentLoaded", () => {
       <div id="responsive_page_menu" class="responsive_page_menu">
         <div class="mainmenu_contents">
           <div class="mainmenu_contents_items">
-            <a class="menuitem" href="#">Iniciar sesión</a>
-            <a class="menuitem" href="#">Registrarse</a>
-            <a class="menuitem supernav" href="#">Acerca de</a>
-            <a class="menuitem supernav" href="#">Soporte</a>
+            <a class="menuitem" href="#">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10 11H4V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-8h6v3l5-4l-5-4z"/></svg>
+                Iniciar sesión
+              </span>
+            </a>
+            <a class="menuitem supernav supernav_active" href="javascript:void(0)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M22.83 12.99L11.83 2H2v9.83l10.99 10.99zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4S7 4.67 7 5.5S6.33 7 5.5 7"/>
+              </svg>
+              Tienda
+              <div class="chevron"></div>
+            </a>
+            <div class="menuitem_submenu_wrapper" style="height: 0px">
+            <div class="submenu_Store">
+              <a class="submenuitem" href="/"> Página principal </a>
+              <a class="submenuitem" href="/ofertas-especiales"> Ofertas especiales </a>
+              <a class="submenuitem" href="/activisionpublishersale2024"> Eventos de rebajas </a>
+              <a class="submenuitem" href="/juegos-populares"> Juegos populares </a>
+              <a class="submenuitem" href="/juegos-y-tarjetas"> Juegos y tarjetas </a>
+              <a class="submenuitem" href="javascript:void(0)"> Géneros </a>
+            </div>
           </div>
-          <div class="menuitem_end"></div>
+            <a class="menuitem supernav" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M5 19q-.425 0-.712-.288T4 18t.288-.712T5 17h1v-7q0-2.075 1.25-3.687T10.5 4.2v-.7q0-.625.438-1.062T12 2t1.063.438T13.5 3.5v.7q2 .5 3.25 2.113T18 10v7h1q.425 0 .713.288T20 18t-.288.713T19 19zm7 3q-.825 0-1.412-.587T10 20h4q0 .825-.587 1.413T12 22"/>
+              </svg>
+              Notificaciones
+            </a>
+            <a class="menuitem supernav" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <g fill="none">
+                  <path fill="currentColor" d="M18 15H7L5.5 6H21z"/>
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.5 3m0 0L7 15h11l3-9z"/>
+                  <circle cx="8" cy="20" r="1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                  <circle cx="17" cy="20" r="1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </g>
+              </svg>
+              Carro de compras
+            </a>
+            <div class="minor_menu_items">
+              <div class="menuitem">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M12 17q.425 0 .713-.288T13 16v-4q0-.425-.288-.712T12 11t-.712.288T11 12v4q0 .425.288.713T12 17m0-8q.425 0 .713-.288T13 8t-.288-.712T12 7t-.712.288T11 8t.288.713T12 9m0 13q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/>
+                </svg>
+                Acerca de
+              </div>
+              <div class="menuitem">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M11.95 18q.525 0 .888-.363t.362-.887t-.362-.888t-.888-.362t-.887.363t-.363.887t.363.888t.887.362m-.9-3.85h1.85q0-.825.188-1.3t1.062-1.3q.65-.65 1.025-1.238T15.55 8.9q0-1.4-1.025-2.15T12.1 6q-1.425 0-2.312.75T8.55 8.55l1.65.65q.125-.45.563-.975T12.1 7.7q.8 0 1.2.438t.4.962q0 .5-.3.938t-.75.812q-1.1.975-1.35 1.475t-.25 1.825M12 22q-2.075 0-3.9-.787t-3.175-2.138T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/>
+                </svg>
+                Soporte
+              </div>
+            </div>
+          </div>
           <div class="mainmenu_footer_spacer"></div>
           <div class="mainmenu_footer">
             <div class="mainmenu_footer_logo">
@@ -85,8 +134,8 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             Copyright © 2024 Mega Games. Todos los derechos reservados.
             <span class="mainmenu_footer_links">
-              <a class="text-decoration-none text-white fw-medium opacity-75 footer_link2 mb-4" href="#">Términos y condiciones</a>
-              <a class="text-decoration-none text-white fw-medium opacity-75 footer_link2 mb-4" href="#">Aviso de privacidad</a>
+              <a class="text-white fw-medium opacity-75 footer_link2 mb-4" href="#">Términos y condiciones</a>
+              <a class="text-white fw-medium opacity-75 footer_link2 mb-4" href="#">Aviso de privacidad</a>
             </span>
           </div>
         </div>
@@ -110,6 +159,19 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburgerMenuSlot.classList.remove("mainmenu_active");
     overlayBg.style.display = "none";
     body.classList.remove("hidden_body");
+  });
+
+  const superNavActive = document.querySelector(".supernav_active");
+  const subMenu = document.querySelector(".menuitem_submenu_wrapper");
+
+  superNavActive.addEventListener("click", () => {
+    superNavActive.classList.toggle("submenu_active");
+    subMenu.classList.toggle("active");
+    if (superNavActive.classList.contains("submenu_active")) {
+      subMenu.style.height = "222px";
+    } else {
+      subMenu.style.height = "0px";
+    }
   });
 
   function createDesktopNavbar() {
@@ -437,29 +499,34 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="bottom_navbar_pwa">
               <nav class="bottom_nav">
                   <a href="/" class="pwa_nav_item">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                          <path fill="currentColor" d="M22.83 12.99L11.83 2H2v9.83l10.99 10.99zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4S7 4.67 7 5.5S6.33 7 5.5 7"/>
-                      </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M22.83 12.99L11.83 2H2v9.83l10.99 10.99zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4S7 4.67 7 5.5S6.33 7 5.5 7"/>
+                    </svg>
                   </a>
                   <a href="/ofertas-especiales" class="pwa_nav_item">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                          <path fill="currentColor" d="M9.19 6.35c-2.04 2.29-3.44 5.58-3.57 5.89L2 10.69l4.81-4.81zM11.17 17s3.74-1.55 5.89-3.7c5.4-5.4 4.5-9.62 4.21-10.57c-.95-.3-5.17-1.19-10.57 4.21C8.55 9.09 7 12.83 7 12.83zm6.48-2.19c-2.29 2.04-5.58 3.44-5.89 3.57L13.31 22l4.81-4.81zM9 18c0 .83-.34 1.58-.88 2.12C6.94 21.3 2 22 2 22s.7-4.94 1.88-6.12A2.996 2.996 0 0 1 9 18m4-9c0-1.1.9-2 2-2s2 .9 2 2s-.9 2-2 2s-2-.9-2-2"/>
+                        <path fill="currentColor" d="M9.19 6.35c-2.04 2.29-3.44 5.58-3.57 5.89L2 10.69l4.81-4.81zM11.17 17s3.74-1.55 5.89-3.7c5.4-5.4 4.5-9.62 4.21-10.57c-.95-.3-5.17-1.19-10.57 4.21C8.55 9.09 7 12.83 7 12.83zm6.48-2.19c-2.29 2.04-5.58 3.44-5.89 3.57L13.31 22l4.81-4.81zM9 18c0 .83-.34 1.58-.88 2.12C6.94 21.3 2 22 2 22s.7-4.94 1.88-6.12A2.996 2.996 0 0 1 9 18m4-9c0-1.1.9-2 2-2s2 .9 2 2s-.9 2-2 2s-2-.9-2-2"/>
                       </svg>
+                  </a>
+                  <a href="/activisionpublishersale2024" class="pwa_nav_item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M12 16q1.2 0 2.138-.712T15.5 13.45h-7q.425 1.125 1.363 1.838T12 16m-2.5-4q.625 0 1.063-.437T11 10.5t-.437-1.062T9.5 9t-1.062.438T8 10.5t.438 1.063T9.5 12m5 0q.625 0 1.063-.437T16 10.5t-.437-1.062T14.5 9t-1.062.438T13 10.5t.438 1.063T14.5 12M7.625 6.4L12 .725L16.375 6.4l6.85 2.3l-4.325 6.125l.175 6.825L12 19.675L4.925 21.65L5.1 14.8L.8 8.7z"/>
+                    </svg>
                   </a>
                   <a href="/notifications" class="pwa_nav_item">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                          <path fill="currentColor" d="M5 19q-.425 0-.712-.288T4 18t.288-.712T5 17h1v-7q0-2.075 1.25-3.687T10.5 4.2v-.7q0-.625.438-1.062T12 2t1.063.438T13.5 3.5v.7q2 .5 3.25 2.113T18 10v7h1q.425 0 .713.288T20 18t-.288.713T19 19zm7 3q-.825 0-1.412-.587T10 20h4q0 .825-.587 1.413T12 22"/>
-                      </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M5 19q-.425 0-.712-.288T4 18t.288-.712T5 17h1v-7q0-2.075 1.25-3.687T10.5 4.2v-.7q0-.625.438-1.062T12 2t1.063.438T13.5 3.5v.7q2 .5 3.25 2.113T18 10v7h1q.425 0 .713.288T20 18t-.288.713T19 19zm7 3q-.825 0-1.412-.587T10 20h4q0 .825-.587 1.413T12 22"/>
+                    </svg>
                   </a>
                   <a href="/cart" class="pwa_nav_item">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                          <g fill="none">
-                              <path fill="currentColor" d="M18 15H7L5.5 6H21z"/>
-                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.5 3m0 0L7 15h11l3-9z"/>
-                              <circle cx="8" cy="20" r="1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                              <circle cx="17" cy="20" r="1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                          </g>
-                      </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                      <g fill="none">
+                        <path fill="currentColor" d="M18 15H7L5.5 6H21z"/>
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.5 3m0 0L7 15h11l3-9z"/>
+                        <circle cx="8" cy="20" r="1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                        <circle cx="17" cy="20" r="1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                      </g>
+                    </svg>
                   </a>
               </nav>
           </div>
@@ -655,9 +722,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const footerSlot = document.querySelector(".FooterSlot");
   const footerContainer = document.createElement("div");
-  footerContainer.classList.add("container");
 
-  footerContainer.innerHTML = `
+  if (!isPWA) {
+    footerContainer.classList.add("container");
+
+    footerContainer.innerHTML = `
     <footer class="pt-5">
       <div class="row px-2 justify-content-center">
         ${generateFooterColumn("Sobre Mega Games", [
@@ -740,7 +809,11 @@ document.addEventListener("DOMContentLoaded", () => {
     </footer>
   `;
 
-  footerSlot.appendChild(footerContainer);
+    footerSlot.appendChild(footerContainer);
+  } else {
+    footerContainer.classList.add("void_div");
+    footerSlot.appendChild(footerContainer);
+  }
 });
 
 function generateFooterColumn(title, items) {
