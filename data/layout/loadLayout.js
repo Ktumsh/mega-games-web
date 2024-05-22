@@ -472,6 +472,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const navItems = document.querySelectorAll(".pwa_nav_item");
 
     navItems.forEach((item) => {
+      console.log(currentPath);
+      console.log(item.getAttribute("href"));
       if (item.getAttribute("href") === currentPath) {
         item.classList.add("active");
       }
