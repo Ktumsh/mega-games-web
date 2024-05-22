@@ -472,7 +472,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const navItems = document.querySelectorAll(".pwa_nav_item");
 
     navItems.forEach((item) => {
-      if (item.getAttribute("href") === currentPath) {
+      const itemPath = new URL(item.getAttribute("href")).pathname;
+      if (itemPath === currentPath) {
         item.classList.add("active");
       }
     });
