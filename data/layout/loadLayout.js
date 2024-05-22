@@ -50,13 +50,15 @@ document.addEventListener("DOMContentLoaded", () => {
       <div id="responsive_menu_logo">
         <img src="/assets/public/icons/header_menu_hamburger.webp" height="100%" />
       </div>
-      <div class="responsive_header_logo">
-        <a href="/">
-          <div class="d-flex align-items-center">
-            <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
-            <span class="grotesk ps-2 fs-6">Mega Games</span>
-          </div>
-        </a>
+      <div id="responsive_header_title">
+        <div class="responsive_header_logo">
+          <a href="/">
+            <div id="responsive_header_logo">
+              <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
+              <span class="grotesk ps-2 fs-6">Mega Games</span>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   `;
@@ -71,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div id="responsive_page_menu" class="responsive_page_menu">
         <div class="mainmenu_contents">
           <div class="mainmenu_contents_items">
+            <div class="void_div"></div>
             <a class="menuitem" href="#">
               <span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10 11H4V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-8h6v3l5-4l-5-4z"/></svg>
@@ -137,6 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <a class="text-white fw-medium opacity-75 footer_link2 mb-4" href="#">Términos y condiciones</a>
               <a class="text-white fw-medium opacity-75 footer_link2 mb-4" href="#">Aviso de privacidad</a>
             </span>
+            <div class="void_div"></div>
           </div>
         </div>
       </div>
@@ -148,17 +152,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburgerMenuOpenBtn = document.getElementById("responsive_menu_logo");
   const overlayBg = document.querySelector(".overlay_menu_bg");
   const body = document.querySelector("body");
+  const headerTitle = document.getElementById("responsive_header_title");
 
   hamburgerMenuOpenBtn.addEventListener("click", () => {
-    hamburgerMenuSlot.classList.add("mainmenu_active");
-    overlayBg.style.display = "block";
-    body.classList.add("hidden_body");
-  });
-
-  overlayBg.addEventListener("click", () => {
-    hamburgerMenuSlot.classList.remove("mainmenu_active");
-    overlayBg.style.display = "none";
-    body.classList.remove("hidden_body");
+    hamburgerMenuOpenBtn.classList.toggle("chevron");
+    if (hamburgerMenuOpenBtn.classList.contains("chevron")) {
+      hamburgerMenuOpenBtn.innerHTML = "";
+    } else {
+      hamburgerMenuOpenBtn.innerHTML = `<img src="/assets/public/icons/header_menu_hamburger.webp" height="100%" />`;
+    }
+    hamburgerMenuSlot.classList.toggle("mainmenu_active");
+    if (hamburgerMenuSlot.classList.contains("mainmenu_active")) {
+      headerTitle.innerHTML = `<div class="responsive_menu_title">Menú</div>`;
+      overlayBg.style.display = "block";
+      overlayBg.classList.add("open");
+    } else {
+      headerTitle.innerHTML = `
+      <div class="responsive_header_logo">
+        <a href="/">
+          <div id="responsive_header_logo">
+            <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
+            <span class="grotesk ps-2 fs-6">Mega Games</span>
+          </div>
+        </a>
+      </div>
+    `;
+      overlayBg.classList.remove("open");
+      setTimeout(() => {
+        overlayBg.style.display = "none";
+      }, 500);
+    }
+    body.classList.toggle("hidden_body");
   });
 
   const superNavActive = document.querySelector(".supernav_active");
