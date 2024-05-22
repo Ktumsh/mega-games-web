@@ -3471,8 +3471,8 @@ a.pulldown_mobile {
   content: "";
   position: absolute;
   top: 0;
-  left: 30px;
-  right: 30px;
+  left: 25px;
+  right: 25px;
   height: 3px;
   border-radius: 10px;
   background: linear-gradient(to right, #cbb0fc 0%, #5809ec 60%);
