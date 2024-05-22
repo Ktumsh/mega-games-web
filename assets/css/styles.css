@@ -2651,7 +2651,7 @@ a.pulldown_mobile {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 110;
   overflow: hidden;
   padding: 13px 8px;
   text-align: center;
@@ -2659,17 +2659,48 @@ a.pulldown_mobile {
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.75);
 }
 
+#responsive_header_logo {
+  display: flex;
+  align-items: center;
+}
+
 #responsive_menu_logo {
   left: 8px;
+}
+
+.responsive_menu_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #bdbdbd;
 }
 
 #responsive_menu_logo,
 #responsive_header_search_btn {
   position: absolute;
-  top: 9px;
+  top: 16px;
+  left: 12px;
   width: 36px;
   height: 31px;
   cursor: pointer;
+}
+
+#responsive_menu_logo.chevron {
+  background-image: url("/assets/public/icons/chevron.png");
+  background-size: 100% 100%;
+  width: 26px;
+  height: 16px;
+  position: absolute;
+  left: 12px;
+  top: 24px;
+  rotate: 90deg;
+  transition: transform 0.25s;
 }
 
 .responsive_header_logo {
@@ -2696,13 +2727,20 @@ a.pulldown_mobile {
   right: 0;
   bottom: 0;
   left: 0;
-
+  opacity: 0;
   background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  transition: visibility 0.5s, opacity 0.5s;
   z-index: 90;
 }
 
+.overlay_menu_bg.open {
+  visibility: visible;
+  opacity: 1;
+}
+
 .responsive_page_menu_ctn.mainmenu {
-  left: -280px;
+  left: -100%;
 }
 
 .HamburgerMenuSlot.mainmenu_active .responsive_page_menu_ctn {
@@ -2719,7 +2757,7 @@ a.pulldown_mobile {
   bottom: 0;
   overflow: hidden;
   z-index: 100;
-  width: 280px;
+  width: 100%;
   background: black;
   transition: left 0.5s, right 0.5s;
 }
@@ -2733,12 +2771,17 @@ a.pulldown_mobile {
   overflow: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.responsive_page_menu::-webkit-scrollbar {
+  display: none;
 }
 
 .mainmenu_contents {
   position: relative;
   font-size: 18px;
-  background: #131019;
+  background: #1c1825;
   min-height: 100%;
 }
 
@@ -2753,19 +2796,19 @@ a.pulldown_mobile {
   display: flex;
   align-items: center;
   overflow: hidden;
-  border-top: 1px solid #1c1825;
+  border-top: 1px solid #252031;
   padding: 14px 12px;
   color: #bdbdbd !important;
   white-space: nowrap;
   line-height: 18px;
   text-decoration: none;
-  background: #131019;
+  background: #1c1825;
   transition: background 0.25s, color 0.25s;
   text-overflow: ellipsis;
   cursor: pointer;
 }
 
-.mainmenu_contents .menuitem:first-child {
+.mainmenu_contents .menuitem:nth-child(2):not(.minor_menu_items > .menuitem) {
   padding: 0 0;
 }
 
@@ -2776,7 +2819,7 @@ a.pulldown_mobile {
   margin: 9px 6px;
   padding: 5px 6px;
   border-radius: 3px;
-  background: linear-gradient(to right, #1c1825 20%, #250462 100%);
+  background: linear-gradient(to right, #252031 20%, #5809ec 100%);
   background-position: 25%;
   background-size: 200%;
   transition: background-position 150ms ease-in;
@@ -2792,7 +2835,7 @@ a.pulldown_mobile {
 }
 
 .mainmenu_contents .menuitem.submenu_active {
-  background: #1c1825;
+  background: #252031;
 }
 
 .mainmenu .minor_menu_items .menuitem {
@@ -2808,7 +2851,7 @@ a.pulldown_mobile {
 }
 
 .mainmenu_contents .minor_menu_items .menuitem:first-child {
-  border-top: 1px solid #1c1825;
+  border-top: 1px solid #252031;
   padding: 12px 12px;
 }
 
@@ -2830,12 +2873,12 @@ a.pulldown_mobile {
 
 .menuitem_submenu_wrapper {
   overflow: hidden;
-  background: #131019;
+  background: #1c1825;
   transition: height 0.5s, background 0.25s, color 0.25s;
 }
 
 .menuitem_submenu_wrapper.active {
-  background: #1c1825;
+  background: #252031;
 }
 
 .mainmenu_contents .submenuitem {
@@ -3562,7 +3605,7 @@ a.pulldown_mobile {
   right: 0;
   background-color: #131019;
   display: flex;
-  z-index: 10;
+  z-index: 100;
 }
 
 .bottom_nav {
