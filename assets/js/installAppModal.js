@@ -52,6 +52,6 @@ document.getElementById("installApp").addEventListener("click", () => {
       deferredPrompt = null;
     });
   } else {
-    alert("PWA no instalada");
+    alert("La aplicación está instalada. Ábrela desde tu dispositivo.");
   }
 });
