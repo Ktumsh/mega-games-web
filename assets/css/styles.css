@@ -125,7 +125,6 @@ img {
 
 a {
   text-decoration: none !important;
-  color: inherit !important;
 }
 
 a,
@@ -1671,6 +1670,7 @@ span.platform_img.ios {
 }
 
 .card_struct .card_title {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   overflow: hidden;
   margin-bottom: 8px;
 }
@@ -1755,6 +1755,7 @@ span.platform_img.ios {
 
 .price {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  color: #f3ecfe;
   margin-top: 4px;
   font-size: 1rem;
 }
@@ -1804,7 +1805,7 @@ span.platform_img.ios {
 }
 
 .descuento_label {
-  font-family: "Motiva Sans", Sans-serif;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   color: #f9ea76;
   background: #9d8b07;
 }
@@ -1813,10 +1814,12 @@ span.platform_img.ios {
   display: flex;
   height: 140px;
   padding: 15px 5px 0;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 1;
   text-align: center;
+  color: #e6d8fd;
   background: #5108d9;
   transition: background 150ms ease-in-out;
   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.3);
@@ -2257,12 +2260,15 @@ div#store_header .content {
 }
 
 a.pulldown_desktop {
+  color: #e5e5e5;
   display: inline;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 a.pulldown_mobile {
+  color: #e5e5e5;
   display: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .popup_block_new {
@@ -2685,7 +2691,7 @@ a.pulldown_mobile {
 #responsive_header_search_btn {
   position: absolute;
   top: 16px;
-  left: 12px;
+  left: 14px;
   width: 36px;
   height: 31px;
   cursor: pointer;
@@ -2697,7 +2703,7 @@ a.pulldown_mobile {
   width: 26px;
   height: 16px;
   position: absolute;
-  left: 12px;
+  left: 14px;
   top: 24px;
   rotate: 90deg;
   transition: transform 0.25s;
@@ -2797,8 +2803,8 @@ a.pulldown_mobile {
   align-items: center;
   overflow: hidden;
   border-top: 1px solid #252031;
-  padding: 14px 12px;
-  color: #bdbdbd !important;
+  padding: 16px 14px;
+  color: #e0e0e0;
   white-space: nowrap;
   line-height: 18px;
   text-decoration: none;
@@ -2812,12 +2818,16 @@ a.pulldown_mobile {
   padding: 0 0;
 }
 
+.mainmenu_contents .menuitem:nth-child(6) {
+  border-bottom: 1px solid #252031;
+}
+
 .mainmenu_contents .menuitem span {
   display: flex;
   align-items: center;
   width: 100%;
-  margin: 9px 6px;
-  padding: 5px 6px;
+  margin: 10px 7px;
+  padding: 6px 7px;
   border-radius: 3px;
   background: linear-gradient(to right, #252031 20%, #5809ec 100%);
   background-position: 25%;
@@ -2831,7 +2841,7 @@ a.pulldown_mobile {
 
 .mainmenu_contents .menuitem svg {
   width: 26px;
-  margin-right: 10px;
+  margin-right: 11px;
 }
 
 .mainmenu_contents .menuitem.submenu_active {
@@ -2839,7 +2849,7 @@ a.pulldown_mobile {
 }
 
 .mainmenu .minor_menu_items .menuitem {
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.6);
   font-weight: normal;
   border: none;
   font-size: 14px;
@@ -2850,18 +2860,13 @@ a.pulldown_mobile {
   margin-left: 2px;
 }
 
-.mainmenu_contents .minor_menu_items .menuitem:first-child {
-  border-top: 1px solid #252031;
-  padding: 12px 12px;
-}
-
 .mainmenu_contents .menuitem .chevron {
   background-image: url("/assets/public/icons/chevron.png");
   background-size: 100% 100%;
   width: 18px;
   height: 10px;
   position: absolute;
-  right: 12px;
+  right: 14px;
   top: calc(50% - 6px);
   transition: transform 0.25s;
 }
@@ -2883,7 +2888,7 @@ a.pulldown_mobile {
 
 .mainmenu_contents .submenuitem {
   display: block;
-  padding: 14px 12px;
+  padding: 16px 14px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -2896,12 +2901,12 @@ a.pulldown_mobile {
   display: block;
   font-size: 14px;
   font-weight: 600;
-  color: #bdbdbd !important;
+  color: #e0e0e0;
   padding-left: 44px;
 }
 
 .mainmenu_footer_spacer {
-  height: 160px;
+  height: 182px;
 }
 
 .mainmenu_footer {
@@ -2909,26 +2914,27 @@ a.pulldown_mobile {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 0 12px 24px 12px;
+  padding: 0 14px 80px 14px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-size: 14px;
   white-space: normal;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .mainmenu_footer_logo {
   display: flex;
-  margin-bottom: 8px;
+  margin: 8px 0px;
   align-items: center;
   gap: 8px;
 }
 
 .mainmenu_footer_logo span {
-  color: #bdbdbd;
+  color: #e0e0e0;
 }
 
 .mainmenu_footer .mainmenu_footer_links > a {
   text-decoration: underline !important;
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 @media screen and (max-width: 910px) {
@@ -3562,6 +3568,18 @@ a.pulldown_mobile {
   background-image: url(/assets/public/icons/download.svg);
 }
 
+#footer .about_install button::after {
+  width: 14px;
+  height: 14px;
+  right: 15px;
+}
+
+#footer .about_install button {
+  padding: 15px 50px 15px 15px;
+  font-size: 12px;
+  line-height: 12px;
+}
+
 @media screen and (max-width: 700px) {
   .dialog_label {
     flex-direction: column;
@@ -3651,6 +3669,10 @@ a.pulldown_mobile {
 
 .pwa_nav_item:active svg {
   transform: scale(1.1);
+}
+
+.mainmenu_contents .void_div {
+  min-height: 62px;
 }
 
 .void_div {
