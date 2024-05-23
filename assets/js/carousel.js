@@ -63,6 +63,29 @@ function initializeCarousel() {
 
   carousel.addEventListener("mouseenter", stopAutoSlide);
   carousel.addEventListener("mouseleave", startAutoSlide);
+
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  function handleTouchStart(event) {
+    touchStartX = event.touches[0].clientX;
+  }
+
+  function handleTouchMove(event) {
+    touchEndX = event.touches[0].clientX;
+  }
+
+  function handleTouchEnd() {
+    if (touchStartX - touchEndX > 50) {
+      nextItem();
+    } else if (touchEndX - touchStartX > 50) {
+      prevItem();
+    }
+  }
+
+  carousel.addEventListener("touchstart", handleTouchStart);
+  carousel.addEventListener("touchmove", handleTouchMove);
+  carousel.addEventListener("touchend", handleTouchEnd);
 }
 
 function initializeOfferCarousel() {
