@@ -6,6 +6,7 @@ function initializeCarousel() {
   const itemsContainer = carousel.querySelector(".carousel_items");
   const items = itemsContainer.querySelectorAll(".store_main_capsule");
   const thumbs = carousel.querySelectorAll(".carousel_thumbs div");
+  let isTouching = false;
 
   function activateItem(index) {
     if (!items[index] || !thumbs[index]) return;
@@ -86,6 +87,7 @@ function initializeCarousel() {
   let touchEndX = 0;
 
   function handleTouchStart(event) {
+    isTouching = true;
     touchStartX = event.touches[0].clientX;
   }
 
@@ -94,18 +96,18 @@ function initializeCarousel() {
   }
 
   function handleTouchEnd() {
+    isTouching = false;
     const threshold = 20;
     const swipeDistance = touchStartX - touchEndX;
-    const itemWidth = items[0].offsetWidth;
 
     if (Math.abs(swipeDistance) > 110) {
       itemsContainer.scrollTo({
-        left: itemsContainer.scrollLeft + swipeDistance,
+        left: itemsContainer.scrollLeft,
         behavior: "smooth",
       });
-      alignToNearestItem();
-    } else if (Math.abs(swipeDistance) > itemWidth / 2) {
-      nextItem();
+      if (isTouching) {
+        alignToNearestItem();
+      }
     } else if (swipeDistance > threshold) {
       nextItem();
     } else if (swipeDistance < -threshold) {
@@ -134,6 +136,14 @@ function initializeCarousel() {
 
     activateItem(closestIndex);
   }
+
+  let scrollTimeout;
+  itemsContainer.addEventListener("scroll", () => {
+    if (!isTouching) {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(alignToNearestItem, 150);
+    }
+  });
 
   carousel.addEventListener("touchstart", handleTouchStart);
   carousel.addEventListener("touchmove", handleTouchMove);
