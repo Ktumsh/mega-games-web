@@ -98,7 +98,7 @@ function initializeCarousel() {
     const swipeDistance = touchStartX - touchEndX;
     const itemWidth = items[0].offsetWidth;
 
-    if (Math.abs(swipeDistance) > 80) {
+    if (Math.abs(swipeDistance) > 110) {
       itemsContainer.scrollTo({
         left: itemsContainer.scrollLeft + swipeDistance,
         behavior: "smooth",
