@@ -567,7 +567,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     navItems.forEach((item) => {
       const itemPath = new URL(item.href, window.location.origin).pathname;
-      console.log(itemPath);
       if (itemPath === currentPath) {
         item.classList.add("active");
         isActive = true;
