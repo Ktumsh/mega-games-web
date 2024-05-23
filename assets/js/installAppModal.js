@@ -17,16 +17,19 @@ const downloadAppModal = document.getElementById("downloadAppModal");
 const modalCtn = document.querySelector(".modal_position_content");
 
 window.addEventListener("load", () => {
-  if (
-    isMobileDevice() &&
-    !window.matchMedia("(display-mode: standalone)").matches
-  ) {
-    downloadAppModal.style.display = "block";
-    setTimeout(() => {
-      body.classList.add("hidden_body");
-      downloadAppModal.classList.add("show");
-      modalCtn.classList.add("show");
-    }, 2000);
+  if (isMobileDevice()) {
+    if (!window.matchMedia("(display-mode: standalone)").matches) {
+      downloadAppModal.style.display = "block";
+      setTimeout(() => {
+        body.classList.add("hidden_body");
+        downloadAppModal.classList.add("show");
+        modalCtn.classList.add("show");
+      }, 2000);
+    } else {
+      if (window.matchMedia("(display-mode: standalone)").matches) {
+        alert("La aplicación está instalada. Ábrela desde tu dispositivo.");
+      }
+    }
   }
 });
 
@@ -40,6 +43,15 @@ document.querySelector(".close_button").addEventListener("click", () => {
 document.getElementById("installApp").addEventListener("click", () => {
   if (deferredPrompt) {
     deferredPrompt.prompt();
-    deferredPrompt = null;
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === "accepted") {
+        console.log("User accepted the A2HS prompt");
+      } else {
+        console.log("User dismissed the A2HS prompt");
+      }
+      deferredPrompt = null;
+    });
+  } else {
+    alert("PWA no instalada");
   }
 });
