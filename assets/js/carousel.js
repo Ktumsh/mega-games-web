@@ -29,8 +29,8 @@ function initializeCarousel() {
     const currentIndex = Array.from(items).indexOf(current);
     const nextIndex =
       window.innerWidth > 910
-        ? (currentIndex + 1) % items.length // Loop en escritorio
-        : Math.min(currentIndex + 1, items.length - 1); // Detenerse en el último elemento en móvil
+        ? (currentIndex + 1) % items.length
+        : Math.min(currentIndex + 1, items.length - 1);
     activateItem(nextIndex);
   }
 
@@ -41,8 +41,8 @@ function initializeCarousel() {
     const currentIndex = Array.from(items).indexOf(current);
     const prevIndex =
       window.innerWidth > 910
-        ? (currentIndex - 1 + items.length) % items.length // Loop en escritorio
-        : Math.max(currentIndex - 1, 0); // Detenerse en el primer elemento en móvil
+        ? (currentIndex - 1 + items.length) % items.length
+        : Math.max(currentIndex - 1, 0);
     activateItem(prevIndex);
   }
 
@@ -66,7 +66,7 @@ function initializeCarousel() {
           ".carousel_items .store_main_capsule.active"
         );
         const currentIndex = Array.from(items).indexOf(current);
-        nextItem(); // Continuar al siguiente elemento en el loop
+        nextItem();
       }, 5000);
     }
   }
@@ -82,7 +82,6 @@ function initializeCarousel() {
     carousel.addEventListener("mouseleave", startAutoSlide);
   }
 
-  // Eventos de deslizamiento para móviles
   let touchStartX = 0;
   let touchEndX = 0;
 
@@ -95,12 +94,11 @@ function initializeCarousel() {
   }
 
   function handleTouchEnd() {
-    const threshold = 20; // Umbral mínimo para contar como deslizamiento
+    const threshold = 20;
     const swipeDistance = touchStartX - touchEndX;
     const itemWidth = items[0].offsetWidth;
 
     if (Math.abs(swipeDistance) > 80) {
-      // Deslizar libremente si la distancia es suficientemente larga
       itemsContainer.scrollTo({
         left: itemsContainer.scrollLeft + swipeDistance,
         behavior: "smooth",
@@ -109,10 +107,8 @@ function initializeCarousel() {
     } else if (Math.abs(swipeDistance) > itemWidth / 2) {
       nextItem();
     } else if (swipeDistance > threshold) {
-      // Deslizar hacia la izquierda
       nextItem();
     } else if (swipeDistance < -threshold) {
-      // Deslizar hacia la derecha
       prevItem();
     }
   }
