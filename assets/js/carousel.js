@@ -3,9 +3,8 @@ function initializeCarousel() {
 
   if (!carousel) return;
 
-  const items = carousel.querySelectorAll(
-    ".carousel_items .store_main_capsule"
-  );
+  const itemsContainer = carousel.querySelector(".carousel_items");
+  const items = itemsContainer.querySelectorAll(".store_main_capsule");
   const thumbs = carousel.querySelectorAll(".carousel_thumbs div");
 
   function activateItem(index) {
@@ -15,6 +14,12 @@ function initializeCarousel() {
 
     items[index].classList.add("active");
     thumbs[index].classList.add("active");
+
+    // Mueve el contenedor para alinear el elemento activo
+    itemsContainer.scrollTo({
+      left: items[index].offsetLeft,
+      behavior: "smooth",
+    });
   }
 
   function nextItem() {
@@ -22,7 +27,10 @@ function initializeCarousel() {
       ".carousel_items .store_main_capsule.active"
     );
     const currentIndex = Array.from(items).indexOf(current);
-    const nextIndex = (currentIndex + 1) % items.length;
+    const nextIndex =
+      window.innerWidth > 910
+        ? (currentIndex + 1) % items.length // Loop en escritorio
+        : Math.min(currentIndex + 1, items.length - 1); // Detenerse en el último elemento en móvil
     activateItem(nextIndex);
   }
 
@@ -31,16 +39,15 @@ function initializeCarousel() {
       ".carousel_items .store_main_capsule.active"
     );
     const currentIndex = Array.from(items).indexOf(current);
-    const prevIndex = (currentIndex - 1 + items.length) % items.length;
+    const prevIndex =
+      window.innerWidth > 910
+        ? (currentIndex - 1 + items.length) % items.length // Loop en escritorio
+        : Math.max(currentIndex - 1, 0); // Detenerse en el primer elemento en móvil
     activateItem(prevIndex);
   }
 
-  carousel
-    .querySelector(".maincap .arrow.left")
-    .addEventListener("click", prevItem);
-  carousel
-    .querySelector(".maincap .arrow.right")
-    .addEventListener("click", nextItem);
+  carousel.querySelector(".arrow.left").addEventListener("click", prevItem);
+  carousel.querySelector(".arrow.right").addEventListener("click", nextItem);
 
   thumbs.forEach((thumb, index) => {
     thumb.addEventListener("click", () => {
@@ -51,8 +58,17 @@ function initializeCarousel() {
   activateItem(0);
 
   let intervalId;
+
   function startAutoSlide() {
-    intervalId = setInterval(nextItem, 5000);
+    if (window.innerWidth > 910) {
+      intervalId = setInterval(() => {
+        const current = carousel.querySelector(
+          ".carousel_items .store_main_capsule.active"
+        );
+        const currentIndex = Array.from(items).indexOf(current);
+        nextItem(); // Continuar al siguiente elemento en el loop
+      }, 5000);
+    }
   }
 
   function stopAutoSlide() {
@@ -61,9 +77,12 @@ function initializeCarousel() {
 
   startAutoSlide();
 
-  carousel.addEventListener("mouseenter", stopAutoSlide);
-  carousel.addEventListener("mouseleave", startAutoSlide);
+  if (window.innerWidth > 910) {
+    carousel.addEventListener("mouseenter", stopAutoSlide);
+    carousel.addEventListener("mouseleave", startAutoSlide);
+  }
 
+  // Eventos de deslizamiento para móviles
   let touchStartX = 0;
   let touchEndX = 0;
 
@@ -76,11 +95,48 @@ function initializeCarousel() {
   }
 
   function handleTouchEnd() {
-    if (touchStartX - touchEndX > 50) {
+    const threshold = 20; // Umbral mínimo para contar como deslizamiento
+    const swipeDistance = touchStartX - touchEndX;
+    const itemWidth = items[0].offsetWidth;
+
+    if (Math.abs(swipeDistance) > 80) {
+      // Deslizar libremente si la distancia es suficientemente larga
+      itemsContainer.scrollTo({
+        left: itemsContainer.scrollLeft + swipeDistance,
+        behavior: "smooth",
+      });
+      alignToNearestItem();
+    } else if (Math.abs(swipeDistance) > itemWidth / 2) {
       nextItem();
-    } else if (touchEndX - touchStartX > 50) {
+    } else if (swipeDistance > threshold) {
+      // Deslizar hacia la izquierda
+      nextItem();
+    } else if (swipeDistance < -threshold) {
+      // Deslizar hacia la derecha
       prevItem();
     }
+  }
+
+  function alignToNearestItem() {
+    const currentScrollPosition = itemsContainer.scrollLeft;
+    let closestIndex = 0;
+    let minDistance = Infinity;
+
+    items.forEach((item, index) => {
+      const itemPosition = item.offsetLeft;
+      const distance = Math.abs(currentScrollPosition - itemPosition);
+      if (distance < minDistance) {
+        minDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    itemsContainer.scrollTo({
+      left: items[closestIndex].offsetLeft,
+      behavior: "smooth",
+    });
+
+    activateItem(closestIndex);
   }
 
   carousel.addEventListener("touchstart", handleTouchStart);
