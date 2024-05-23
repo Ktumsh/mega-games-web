@@ -1,4 +1,5 @@
 let deferredPrompt;
+const isPWA = window.matchMedia("(display-mode: standalone)").matches;
 
 window.addEventListener("beforeinstallprompt", (e) => {
   deferredPrompt = e;
@@ -27,8 +28,10 @@ window.addEventListener("load", () => {
       downloadAppModal.classList.add("show");
       modalCtn.classList.add("show");
     }, 2000);
-  } else if (isMobileDevice() && pwaInstalled) {
-    alert("La aplicación está instalada. Ábrela desde tu dispositivo.");
+  } else if (isMobileDevice() && pwaInstalled && !isPWA) {
+    alert(
+      "Tienes la aplicación de Mega Games instalada, prefiere utilizarla para una mejor experiencia ♥️"
+    );
   }
 });
 
