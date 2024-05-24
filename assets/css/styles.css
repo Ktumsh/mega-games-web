@@ -1998,7 +1998,7 @@ span.platform_img.ios {
     letter-spacing: 5px;
     font-weight: 700;
     font-size: 32px !important;
-    color: #ff00e6 !important;
+    color: #ff00e6;
     animation: text-flicker 3s linear infinite;
   }
 
@@ -2019,7 +2019,7 @@ span.platform_img.ios {
   letter-spacing: 5px;
   font-weight: 700;
   font-size: 16px;
-  color: #ff00e6 !important;
+  color: #ff00e6;
   animation: text-flicker 3s linear infinite;
 }
 

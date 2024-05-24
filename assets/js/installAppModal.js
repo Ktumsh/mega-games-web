@@ -19,19 +19,16 @@ const downloadAppModal = document.getElementById("downloadAppModal");
 const modalCtn = document.querySelector(".modal_position_content");
 
 window.addEventListener("load", () => {
-  const pwaInstalled = localStorage.getItem("pwaInstalled") === "true";
+  const modalShown = sessionStorage.getItem("modalShown") === "true";
 
-  if (isMobileDevice() && !pwaInstalled) {
+  if (isMobileDevice() && !modalShown) {
     downloadAppModal.style.display = "block";
     setTimeout(() => {
       body.classList.add("hidden_body");
       downloadAppModal.classList.add("show");
       modalCtn.classList.add("show");
     }, 2000);
-  } else if (isMobileDevice() && pwaInstalled && !isPWA) {
-    alert(
-      "Tienes la aplicación de Mega Games instalada, prefiere utilizarla para una mejor experiencia ♥️"
-    );
+    sessionStorage.setItem("modalShown", "true");
   }
 });
 
@@ -55,6 +52,8 @@ document.getElementById("installApp").addEventListener("click", () => {
       deferredPrompt = null;
     });
   } else {
-    alert("Aplicación ya instalada.");
+    alert(
+      "Aplicación ya instalada, si crees que se trata de un error, instala la app al final de la página."
+    );
   }
 });
