@@ -142,7 +142,6 @@ body.hidden_body {
 
 .curator_box {
   position: relative;
-  overflow: hidden;
   border-radius: 4px;
   background: radial-gradient(
     ellipse at top left,
@@ -222,6 +221,7 @@ body.hidden_body {
   font-size: 21px;
   line-height: 21px;
   font-weight: 300;
+  color: #fff;
 }
 
 .curator_top > div {
