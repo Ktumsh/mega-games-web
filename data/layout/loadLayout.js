@@ -155,8 +155,42 @@ document.addEventListener("DOMContentLoaded", () => {
   const overlayBg = document.querySelector(".overlay_menu_bg");
   const body = document.querySelector("body");
   const headerTitle = document.getElementById("responsive_header_title");
+  let touchStartX = 0;
+  let touchEndX = 0;
 
-  overlayBg.addEventListener("click", () => {
+  overlayBg.addEventListener("click", closeMenu);
+
+  hamburgerMenuOpenBtn.addEventListener("click", toggleMenu);
+
+  const superNavActive = document.querySelector(".supernav_active");
+  const subMenu = document.querySelector(".menuitem_submenu_wrapper");
+
+  superNavActive.addEventListener("click", () => {
+    superNavActive.classList.toggle("submenu_active");
+    subMenu.classList.toggle("active");
+    if (superNavActive.classList.contains("submenu_active")) {
+      subMenu.style.height = subMenu.scrollHeight + "px";
+    } else {
+      subMenu.style.height = "0px";
+    }
+  });
+
+  document.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  document.addEventListener("touchend", (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    slideToClose();
+  });
+
+  function slideToClose() {
+    if (touchEndX < touchStartX - 50) {
+      closeMenu();
+    }
+  }
+
+  function closeMenu() {
     hamburgerMenuOpenBtn.classList.remove("chevron");
     if (hamburgerMenuOpenBtn.classList.contains("chevron")) {
       hamburgerMenuOpenBtn.innerHTML = "";
@@ -176,9 +210,9 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     overlayBg.classList.remove("open");
     body.classList.remove("hidden_body");
-  });
+  }
 
-  hamburgerMenuOpenBtn.addEventListener("click", () => {
+  function toggleMenu() {
     hamburgerMenuOpenBtn.classList.toggle("chevron");
     if (hamburgerMenuOpenBtn.classList.contains("chevron")) {
       hamburgerMenuOpenBtn.innerHTML = "";
@@ -191,34 +225,21 @@ document.addEventListener("DOMContentLoaded", () => {
       overlayBg.classList.add("open");
     } else {
       headerTitle.innerHTML = `
-      <div class="responsive_header_logo">
-        <a href="/">
-          <div id="responsive_header_logo">
-            <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
-            <span class="grotesk ps-2 fs-6 text-white">Mega Games</span>
-          </div>
-        </a>
-      </div>
-    `;
+        <div class="responsive_header_logo">
+          <a href="/">
+            <div id="responsive_header_logo">
+              <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
+              <span class="grotesk ps-2 fs-6 text-white">Mega Games</span>
+            </div>
+          </a>
+        </div>
+      `;
       overlayBg.classList.remove("open");
     }
     body.classList.toggle("hidden_body");
-  });
+  }
 
-  const superNavActive = document.querySelector(".supernav_active");
-  const subMenu = document.querySelector(".menuitem_submenu_wrapper");
-
-  superNavActive.addEventListener("click", () => {
-    superNavActive.classList.toggle("submenu_active");
-    subMenu.classList.toggle("active");
-    if (superNavActive.classList.contains("submenu_active")) {
-      subMenu.style.height = "276px";
-    } else {
-      subMenu.style.height = "0px";
-    }
-  });
-
-  function createDesktopNavbar() {
+  function addDesktopNavbar() {
     const navbarSlot = document.querySelector(".NavbarSlotDesktop");
     const navbarContainer = document.createElement("div");
     navbarContainer.id = "responsive_store_nav_desktop";
@@ -397,7 +418,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function createMobileNavbar() {
+  function addMobileNavbar() {
     const navbarSlot = document.querySelector(".NavbarSlotMobile");
     const navbarContainer = document.createElement("div");
     navbarContainer.id = "responsive_store_nav_mobile";
@@ -414,7 +435,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a class="pulldown_mobile" href="javascript:void(0)">Tu tienda</a>
                   </span>
                 </div>
-                <div id="foryou_flyout" class="popup_block_new responsive_slidedown sub_menu">
+                <div id="foryou_flyout" class="popup_block_new responsive_slidedown sub_menu" style="height: 0px">
                   <div class="popup_body popup_menu popup_menu_browse">
                     <a href="/" class="popup_menu_item">Inicio</a>
                     <a href="#" class="popup_menu_item">Recomendaciones</a>
@@ -427,7 +448,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a href="javascript:void(0)" class="pulldown_mobile">Nuevo y destacable</a>
                   </span>
                 </div>
-                <div id="noteworthy_flyout" class="popup_block_new responsive_slidedown sub_menu">
+                <div id="noteworthy_flyout" class="popup_block_new responsive_slidedown sub_menu" style="height: 0px">
                   <div class="popup_body popup_menu_twocol_new">
                     <div class="popup_menu popup_menu_browse">
                       <div class="popup_menu_subheader responsive_hidden">Populares</div>
@@ -450,7 +471,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a href="javascript:void(0)" class="pulldown_mobile">Categorías</a>
                   </span>
                 </div>
-                <div id="genre_flyout" class="popup_block_new responsive_slidedown sub_menu">
+                <div id="genre_flyout" class="popup_block_new responsive_slidedown sub_menu" style="height: 0px">
                   <div class="popup_body popup_menu_twocol_new">
                     <div class="popup_menu popup_menu_browse">
                       <div class="popup_menu_subheader responsive_hidden">Miscelánea</div>
@@ -616,16 +637,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function screenSizeChange(mq) {
     if (mq.matches) {
-      createMobileNavbar();
+      addMobileNavbar();
       removeDesktopNavbar();
       removeFooter();
-      createFooter();
+      addFooter();
       addMobileNavbarEventListeners();
     } else {
-      createDesktopNavbar();
+      addDesktopNavbar();
       removeMobileNavbar();
       removeFooter();
-      createFooter();
+      addFooter();
       addDesktopNavbarEventListeners();
     }
   }
@@ -638,10 +659,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     menuItems.forEach(function (item) {
       item.addEventListener("click", function () {
+        console.log(item);
         const flyoutId = this.dataset.flyout;
         const flyout = document.getElementById(flyoutId);
-        const isOpen =
-          flyout.style.height === "0px" || flyout.style.height === "";
+        const isOpen = flyout.style.height === "0px";
         if (isOpen) {
           flyout.style.height = flyout.scrollHeight + "px";
         } else {
@@ -784,7 +805,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 
-  function createFooter() {
+  function addFooter() {
     const footerSlot = document.querySelector(".FooterSlot");
     if (!isPWA) {
       let footerContainer = "";
