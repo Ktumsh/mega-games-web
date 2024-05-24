@@ -157,9 +157,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const headerTitle = document.getElementById("responsive_header_title");
   let touchStartX = 0;
   let touchEndX = 0;
+  const swipeAreaWidth = 50;
 
   overlayBg.addEventListener("click", closeMenu);
-
   hamburgerMenuOpenBtn.addEventListener("click", toggleMenu);
 
   const superNavActive = document.querySelector(".supernav_active");
@@ -181,24 +181,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("touchend", (e) => {
     touchEndX = e.changedTouches[0].screenX;
-    slideToClose();
+    handleSwipe();
   });
 
-  function slideToClose() {
+  function handleSwipe() {
     if (touchEndX < touchStartX - 50) {
       closeMenu();
+    } else if (touchEndX > touchStartX + 50 && touchStartX <= swipeAreaWidth) {
+      openMenu();
+    }
+  }
+
+  function openMenu() {
+    if (!hamburgerMenuSlot.classList.contains("mainmenu_active")) {
+      toggleMenu();
     }
   }
 
   function closeMenu() {
-    hamburgerMenuOpenBtn.classList.remove("chevron");
-    if (hamburgerMenuOpenBtn.classList.contains("chevron")) {
-      hamburgerMenuOpenBtn.innerHTML = "";
-    } else {
-      hamburgerMenuOpenBtn.innerHTML = `<img src="/assets/public/icons/header_menu_hamburger.webp" height="100%" />`;
-    }
-    hamburgerMenuSlot.classList.remove("mainmenu_active");
-    headerTitle.innerHTML = `
+    if (hamburgerMenuSlot.classList.contains("mainmenu_active")) {
+      hamburgerMenuOpenBtn.classList.remove("chevron");
+      if (hamburgerMenuOpenBtn.classList.contains("chevron")) {
+        hamburgerMenuOpenBtn.innerHTML = "";
+      } else {
+        hamburgerMenuOpenBtn.innerHTML = `<img src="/assets/public/icons/header_menu_hamburger.webp" height="100%" />`;
+      }
+      hamburgerMenuSlot.classList.remove("mainmenu_active");
+      headerTitle.innerHTML = `
       <div class="responsive_header_logo">
         <a href="/">
           <div id="responsive_header_logo">
@@ -208,8 +217,9 @@ document.addEventListener("DOMContentLoaded", () => {
         </a>
       </div>
     `;
-    overlayBg.classList.remove("open");
-    body.classList.remove("hidden_body");
+      overlayBg.classList.remove("open");
+      body.classList.remove("hidden_body");
+    }
   }
 
   function toggleMenu() {
