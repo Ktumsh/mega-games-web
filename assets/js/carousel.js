@@ -16,7 +16,6 @@ function initializeCarousel() {
     items[index].classList.add("active");
     thumbs[index].classList.add("active");
 
-    // Mueve el contenedor para alinear el elemento activo
     itemsContainer.scrollTo({
       left: items[index].offsetLeft,
       behavior: "smooth",
@@ -100,14 +99,11 @@ function initializeCarousel() {
     const threshold = 20;
     const swipeDistance = touchStartX - touchEndX;
 
-    if (Math.abs(swipeDistance) > 110) {
+    if (Math.abs(swipeDistance) > 150) {
       itemsContainer.scrollTo({
         left: itemsContainer.scrollLeft,
         behavior: "smooth",
       });
-      if (isTouching) {
-        alignToNearestItem();
-      }
     } else if (swipeDistance > threshold) {
       nextItem();
     } else if (swipeDistance < -threshold) {
