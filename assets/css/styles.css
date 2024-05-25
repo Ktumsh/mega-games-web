@@ -125,6 +125,7 @@ img {
 
 a {
   text-decoration: none !important;
+  color: #fff !important;
 }
 
 a,
@@ -518,9 +519,9 @@ a#store_search_link i {
     rgba(249, 234, 118, 0.7) 0%,
     rgba(249, 234, 118, 0.5) 2%,
     rgba(255, 0, 230, 0.3) 15%,
-    rgba(19, 16, 25, 0.8) 35%,
-    rgba(19, 16, 25, 1) 50%,
-    rgba(19, 16, 25, 0.8) 65%,
+    rgba(19, 16, 25, 0.2) 35%,
+    rgba(19, 16, 25, 0.2) 50%,
+    rgba(19, 16, 25, 0.2) 65%,
     rgba(255, 0, 230, 0.3) 85%,
     rgba(249, 234, 118, 0.5) 98%,
     rgba(249, 234, 118, 0.7) 100%
@@ -552,6 +553,43 @@ a#store_search_link i {
       rgba(50, 50, 51, 0) 50%
     ),
     linear-gradient(180deg, #644f7d 11.6%, #48456d 54.73%, #503f64 100%);
+}
+
+header#global_header {
+  padding-left: 16px;
+  padding-right: 16px;
+  background: #131019;
+  background-position: center top;
+  min-width: 960px;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+header#global_header .content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 960px;
+  height: 104px;
+  margin: 0px auto;
+  z-index: 402;
+}
+
+header#global_header div.logo {
+  float: left;
+  margin-right: 40px;
+  width: 100%;
+  height: 36px;
+}
+
+header#global_header span#logo_holder {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Space Grotesk", Sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 910px) {
@@ -2243,13 +2281,11 @@ div#store_header .content {
 a.pulldown_desktop {
   color: #e5e5e5;
   display: inline;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 a.pulldown_mobile {
   color: #e5e5e5;
   display: none;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .popup_block_new {

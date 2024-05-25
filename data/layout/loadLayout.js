@@ -3,29 +3,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const headerSlot = document.querySelector(".HeaderSlotDesktop");
   const headerContainer = document.createElement("header");
-  headerContainer.classList.add(
-    "navbar",
-    "navbar-expand-lg",
-    "navbar-dark",
-    "my-3"
-  );
+  headerContainer.id = "global_header";
 
   headerContainer.innerHTML = `
-    <nav class="container flex-nowrap flex-lg-wrap">
-      <a class="navbar-brand mx-0" href="/index">
-        <img width="36px" height="auto" src="${logoPath}" alt="Mega Games Logo" />
-      </a>
+    <nav class="content">
+      <div class="logo">
+        <span id="logo_holder">
+          <a href="/" aria-label="Enlace a la página de inicio de Mega Games">
+            <img src="/assets/public/mega-games-logo.svg" width="36" height="36" alt="Enlace a la página de inicio de Mega Games">
+          </a>
+          <a href="/">Mega Games</a>
+        </span>
+      </div>
       <div class="navbar-collapse d-flex justify-content-end" id="navbarButtonsExample">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link grotesk text-w d-none d-lg-block fs-6" aria-current="page" href="/">Mega Games</a>
-          </li>
-        </ul>
         <div class="d-flex align-items-center ms-lg-auto">
           <ul class="navbar-nav me-2">
             <li class="nav-item d-flex">
               <a class="nav-link position-relative p-2" href="#"><span><i class="fa-regular fa-heart text-w"></i></span></a>
-              <a class="nav-link position-relative p-2" href="#">
+              <a class="nav-link position-relative p-2" href="/cart.html">
                 <span class="badge position-absolute top-0 end-0 bg-danger rounded-1 p-1 d-none">1</span>
                 <span><i class="fas fa-shopping-cart text-w"></i></span>
               </a>
@@ -33,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </ul>
           <button type="button" class="bg-transparent px-2 me-2 border-0 text-w fs-sm motiva-sans">Iniciar sesión</button>
           <button type="button" class="main_btn border-0 me-lg-2 fs-sm motiva-sans">Registrarse</button>
-          <a class="btn btn-neon d-none d-lg-block" href="https://github.com/Ktumsh/mega-games-web" target="_blank" role="button"><i class="fab fa-github"></i></a>
+          <a class="btn btn-neon" href="https://github.com/Ktumsh/mega-games-web" target="_blank" role="button"><i class="fab fa-github"></i></a>
         </div>
       </div>
     </nav>

@@ -271,7 +271,7 @@ body.hidden_body {
   transition-property: background, color, box-shadow;
   transition-duration: 0.2s;
   transition-timing-function: ease-out;
-  background: #3d4450;
+  background: #413993;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   flex-direction: row;
   align-items: center;
@@ -290,7 +290,7 @@ body.hidden_body {
 
 .follow_btn_curator:hover {
   color: #fff;
-  background: #464d58;
+  background: #584fba;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
@@ -560,8 +560,8 @@ body.hidden_body {
 .panel_card_grid {
   display: grid;
   border-top-right-radius: 5px;
-  background: -webkit-linear-gradient(top, #3b3b3b 5%, #171717 95%);
-  background: linear-gradient(to bottom, #3b3b3b 5%, #171717 95%);
+  background: -webkit-linear-gradient(top, #2d2867 5%, #1a173b 95%);
+  background: linear-gradient(to bottom, #2d2867 5%, #1a173b 95%);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
   grid-template-columns: 25% auto 25% 25%;
   grid-template-rows: auto auto;
@@ -783,7 +783,7 @@ body.hidden_body {
   width: 150%;
   height: 150%;
   opacity: 0.3;
-  filter: blur(60px);
+  filter: blur(20px);
 }
 
 .share_with_friends {
