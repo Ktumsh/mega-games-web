@@ -29,10 +29,7 @@ function initializeCarousel() {
       ".carousel_items .store_main_capsule.active"
     );
     const currentIndex = Array.from(items).indexOf(current);
-    const nextIndex =
-      window.innerWidth > 910
-        ? (currentIndex + 1) % items.length
-        : Math.min(currentIndex + 1, items.length - 1);
+    const nextIndex = (currentIndex + 1) % items.length;
     activateItem(nextIndex);
   }
 
@@ -62,15 +59,9 @@ function initializeCarousel() {
   let intervalId;
 
   function startAutoSlide() {
-    if (window.innerWidth > 910) {
-      intervalId = setInterval(() => {
-        const current = carousel.querySelector(
-          ".carousel_items .store_main_capsule.active"
-        );
-        const currentIndex = Array.from(items).indexOf(current);
-        nextItem();
-      }, 5000);
-    }
+    intervalId = setInterval(() => {
+      nextItem();
+    }, 5000);
   }
 
   function stopAutoSlide() {
@@ -82,6 +73,9 @@ function initializeCarousel() {
   if (window.innerWidth > 910) {
     carousel.addEventListener("mouseenter", stopAutoSlide);
     carousel.addEventListener("mouseleave", startAutoSlide);
+  } else {
+    carousel.addEventListener("touchstart", stopAutoSlide);
+    carousel.addEventListener("touchend", startAutoSlide);
   }
 
   let touchStartX = 0;
