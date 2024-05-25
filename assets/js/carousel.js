@@ -7,6 +7,8 @@ function initializeCarousel() {
   const items = itemsContainer.querySelectorAll(".store_main_capsule");
   const thumbs = carousel.querySelectorAll(".carousel_thumbs div");
   let isTouching = false;
+  let isUserScrolling = false;
+  let scrollTimeout;
 
   function activateItem(index) {
     if (!items[index] || !thumbs[index]) return;
@@ -104,6 +106,11 @@ function initializeCarousel() {
         left: itemsContainer.scrollLeft,
         behavior: "smooth",
       });
+      scrollTimeout = setTimeout(() => {
+        if (!isUserScrolling) {
+          alignToNearestItem();
+        }
+      }, 200);
     } else if (swipeDistance > threshold) {
       nextItem();
     } else if (swipeDistance < -threshold) {
@@ -133,11 +140,10 @@ function initializeCarousel() {
     activateItem(closestIndex);
   }
 
-  let scrollTimeout;
   itemsContainer.addEventListener("scroll", () => {
     if (!isTouching) {
       clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(alignToNearestItem, 150);
+      scrollTimeout = setTimeout(alignToNearestItem, 50);
     }
   });
 
