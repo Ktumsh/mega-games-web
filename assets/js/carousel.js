@@ -98,24 +98,6 @@ function initializeCarousel() {
 
   function handleTouchEnd() {
     isTouching = false;
-    const threshold = 20;
-    const swipeDistance = touchStartX - touchEndX;
-
-    if (Math.abs(swipeDistance) > 150) {
-      itemsContainer.scrollTo({
-        left: itemsContainer.scrollLeft,
-        behavior: "smooth",
-      });
-      scrollTimeout = setTimeout(() => {
-        if (!isUserScrolling) {
-          alignToNearestItem();
-        }
-      }, 200);
-    } else if (swipeDistance > threshold) {
-      nextItem();
-    } else if (swipeDistance < -threshold) {
-      prevItem();
-    }
   }
 
   function alignToNearestItem() {
