@@ -2932,7 +2932,7 @@ a.pulldown_mobile {
   gap: 20px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 991px) {
   #gameOfferCardsContainer,
   #popularGamesCardsContainer,
   #gamesAndCardsContainer {
@@ -2948,7 +2948,7 @@ a.pulldown_mobile {
   }
 }
 
-@media (max-width: 767px) and (min-width: 577px) {
+@media (max-width: 768px) and (min-width: 576px) {
   #gameOfferCardsContainer,
   #popularGamesCardsContainer,
   #gamesAndCardsContainer {
