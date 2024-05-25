@@ -6,9 +6,6 @@ function initializeCarousel() {
   const itemsContainer = carousel.querySelector(".carousel_items");
   const items = itemsContainer.querySelectorAll(".store_main_capsule");
   const thumbs = carousel.querySelectorAll(".carousel_thumbs div");
-  let isTouching = false;
-  let isUserScrolling = false;
-  let scrollTimeout;
 
   function activateItem(index) {
     if (!items[index] || !thumbs[index]) return;
@@ -29,7 +26,10 @@ function initializeCarousel() {
       ".carousel_items .store_main_capsule.active"
     );
     const currentIndex = Array.from(items).indexOf(current);
-    const nextIndex = (currentIndex + 1) % items.length;
+    const nextIndex =
+      window.innerWidth > 910
+        ? (currentIndex + 1) % items.length
+        : Math.min(currentIndex + 1, items.length - 1);
     activateItem(nextIndex);
   }
 
@@ -77,55 +77,6 @@ function initializeCarousel() {
     carousel.addEventListener("touchstart", stopAutoSlide);
     carousel.addEventListener("touchend", startAutoSlide);
   }
-
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  function handleTouchStart(event) {
-    isTouching = true;
-    touchStartX = event.touches[0].clientX;
-  }
-
-  function handleTouchMove(event) {
-    touchEndX = event.touches[0].clientX;
-  }
-
-  function handleTouchEnd() {
-    isTouching = false;
-  }
-
-  function alignToNearestItem() {
-    const currentScrollPosition = itemsContainer.scrollLeft;
-    let closestIndex = 0;
-    let minDistance = Infinity;
-
-    items.forEach((item, index) => {
-      const itemPosition = item.offsetLeft;
-      const distance = Math.abs(currentScrollPosition - itemPosition);
-      if (distance < minDistance) {
-        minDistance = distance;
-        closestIndex = index;
-      }
-    });
-
-    itemsContainer.scrollTo({
-      left: items[closestIndex].offsetLeft,
-      behavior: "smooth",
-    });
-
-    activateItem(closestIndex);
-  }
-
-  itemsContainer.addEventListener("scroll", () => {
-    if (!isTouching) {
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(alignToNearestItem, 50);
-    }
-  });
-
-  carousel.addEventListener("touchstart", handleTouchStart);
-  carousel.addEventListener("touchmove", handleTouchMove);
-  carousel.addEventListener("touchend", handleTouchEnd);
 }
 
 function initializeOfferCarousel() {
