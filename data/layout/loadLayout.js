@@ -185,9 +185,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function handleSwipe() {
-    if (touchEndX < touchStartX - 30) {
+    if (touchEndX < touchStartX - 10) {
       closeMenu();
-    } else if (touchEndX > touchStartX + 30 && touchStartX <= swipeAreaWidth) {
+    } else if (touchEndX > touchStartX + 10 && touchStartX <= swipeAreaWidth) {
       openMenu();
     }
   }
