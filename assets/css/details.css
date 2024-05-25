@@ -780,7 +780,7 @@ body {
 }
 
 .platform_label {
-  display: block;
+  display: flex;
   padding-top: 5px;
   color: rgba(255, 255, 255, 0.6);
   max-width: 576px;
@@ -1196,4 +1196,346 @@ body {
 .alert.show {
   visibility: visible;
   opacity: 1;
+}
+
+.page_game_bg {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  inset: 0;
+  top: -104px;
+  opacity: 0.4;
+  filter: saturate(0);
+  z-index: -2;
+}
+
+#page_root {
+  position: relative;
+}
+
+.cart_page_overlay_bg {
+  position: absolute;
+  inset: 0;
+  max-height: calc(100vh + 62px);
+  background: #250462;
+  background: -moz-radial-gradient(
+    circle,
+    rgba(37, 4, 98, 0.2) 0%,
+    rgba(37, 4, 98, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(37, 4, 98, 0.2) 0%,
+    rgba(37, 4, 98, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(37, 4, 98, 0.2) 0%,
+    rgba(37, 4, 98, 1) 100%
+  );
+  opacity: 1;
+  z-index: -1;
+}
+
+.cart_page_container {
+  max-width: 960px;
+  min-height: calc(100vh - 170px);
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+
+.cart_page_title {
+  font-weight: 900;
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.cart_details_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cart_details_container .cart_details_area {
+  width: 615px;
+  flex-grow: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart_details_container .cart_topay_area {
+  flex-shrink: 0;
+}
+
+.cart_top_area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.top_area_ctn {
+  position: relative;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.top_area {
+  display: flex;
+  gap: 15px;
+}
+
+.cart_details_container .game_image {
+  background-color: rgba(0, 0, 0, 0.2) 5;
+  width: 200px;
+  flex-shrink: 0;
+  height: 94px;
+}
+
+.cart_details_container .game_info_ctn {
+  flex-grow: 1;
+}
+
+.game_info {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+
+.cart_details_container .game_title {
+  margin-top: 0px;
+}
+
+.game_title .title {
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.cart_details_container .game_platform {
+  justify-content: space-between;
+}
+
+.cart_details_container .platform_label {
+  padding-top: 0px;
+}
+
+.cart_details_container .platform_img:first-child {
+  margin-left: 0px;
+}
+
+.cart_details_container .game_price {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.cart_details_container .game_price .price {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cart_details_container .game_price .price div {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 5px;
+  background: transparent;
+  background-color: transparent;
+  padding-right: 0px;
+}
+
+.cart_details_container .game_additional {
+  justify-content: end;
+}
+
+.game_additional .add_delete {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  color: #606f7f;
+  font-size: 12px;
+}
+
+.add_delete .add,
+.add_delete .delete {
+  color: #7f68a1;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.add_delete .add:hover,
+.add_delete .delete:hover {
+  color: #fff;
+}
+
+.cart_bottom_area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart_page_btn {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: 0;
+  font: inherit;
+  overflow: visible;
+  padding: 0;
+  margin: 2px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  display: block;
+  line-height: 32px;
+  color: #dfe3e6;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 100%;
+  transition-property: opacity, background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  background: #413993;
+  background-position: 99% 1%;
+  background-size: 300% 300%;
+  position: relative;
+}
+
+.cart_page_btn {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.cart_page_btn::before {
+  pointer-events: none;
+  user-select: none;
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.cart_page_btn:hover {
+  background: #584fba;
+  color: #fff;
+}
+
+.cart_page_btn:hover::before {
+  opacity: 1;
+}
+
+.cart_page_btn:active {
+  background: #342e76;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.6);
+  transition-duration: 0.04s;
+}
+
+.cart_page_btn:active::before {
+  opacity: 0;
+}
+
+.delete_article {
+  color: #7f68a1;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+.delete_article:hover {
+  color: #fff;
+}
+
+.cart_details_container .divider {
+  margin-top: 48px;
+}
+
+.topay_area_ctn {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.25);
+  max-width: 280px;
+  position: sticky;
+  top: 10px;
+}
+
+.topay_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.topay_top div:first-child {
+  color: #fff;
+  font-size: 13px;
+}
+
+.topay_top div:last-child {
+  font-weight: 800;
+  color: #fff;
+  font-size: 15px;
+}
+
+.topay_middle {
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #ccd5e0;
+}
+
+.topay_bottom {
+  margin-bottom: 10px;
+  width: auto;
+}
+
+.topay_bottom.cart_page_btn {
+  background: transparent;
+  background: linear-gradient(
+    to right,
+    rgba(190, 157, 251, 1) 20%,
+    rgba(88, 9, 236, 1) 100%
+  );
+  background-position: right 0;
+  background-size: 200%;
+}
+
+.topay_bottom.cart_page_btn:hover {
+  background: linear-gradient(
+    to right,
+    rgba(190, 157, 251, 1) 20%,
+    rgba(88, 9, 236, 1) 100%
+  );
+  background-position: 0%;
+  background-size: 200%;
+  color: #fff;
+}
+
+.topay_bottom.cart_page_btn:active {
+  background: linear-gradient(
+    to right,
+    rgba(190, 157, 251, 1) 20%,
+    rgba(88, 9, 236, 1) 100%
+  );
+  background-position: 40%;
+  transition-duration: 0.04s;
 }
