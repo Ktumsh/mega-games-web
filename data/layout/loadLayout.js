@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const headerTitle = document.getElementById("responsive_header_title");
   let touchStartX = 0;
   let touchEndX = 0;
-  const swipeAreaWidth = 50;
+  const swipeAreaWidth = 20;
 
   overlayBg.addEventListener("click", closeMenu);
   hamburgerMenuOpenBtn.addEventListener("click", toggleMenu);
@@ -185,9 +185,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function handleSwipe() {
-    if (touchEndX < touchStartX - 10) {
+    if (touchEndX < touchStartX - 20) {
       closeMenu();
-    } else if (touchEndX > touchStartX + 10 && touchStartX <= swipeAreaWidth) {
+    } else if (touchEndX > touchStartX + 20 && touchStartX <= swipeAreaWidth) {
       openMenu();
     }
   }
