@@ -3,7 +3,10 @@ const path = require("path");
 const sharp = require("sharp");
 
 // Directorio de entrada y salida
-const inputDir = path.resolve(__dirname, "public");
+const inputDir = path.resolve(
+  __dirname,
+  "/workspace/mega-games-web/assets/public/cards-ofertas/backgrounds"
+);
 const outputDir = path.resolve(__dirname, "public-webp");
 
 // Crear el directorio de salida si no existe
