@@ -199,7 +199,7 @@ function addSearchEvents() {
             "&item=" +
             game.id
           );
-        case "tarjetasCards":
+        case "giftCards":
           return (
             "/gift-details?game=" +
             encodeURIComponent(game.nombre) +
@@ -255,7 +255,7 @@ function addSearchEvents() {
                       <img src="${game.imagen}" alt="${game.nombre}">
                   </div>
                   <div class="match_subtitle">CLP$ ${
-                    game.precioDescuento || game.precio
+                    game.precioDescuento || game.precioOriginal
                   }</div>
               `);
 

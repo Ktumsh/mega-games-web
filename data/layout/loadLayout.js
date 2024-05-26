@@ -1,40 +1,122 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const logoPath = "../assets/public/mega-games-logo.svg";
+function changeOpacity(target, duration, fromOpacity, toOpacity) {
+  const opacityIncrement = (toOpacity - fromOpacity) / (duration / 10);
+  let currentOpacity = fromOpacity;
+  target.style.opacity = currentOpacity;
+  const timer = setInterval(function () {
+    currentOpacity += opacityIncrement;
+    currentOpacity = Math.min(Math.max(currentOpacity, 0), 1);
+    target.style.opacity = currentOpacity;
+    if (
+      (opacityIncrement > 0 && currentOpacity >= toOpacity) ||
+      (opacityIncrement < 0 && currentOpacity <= toOpacity)
+    ) {
+      clearInterval(timer);
+    }
+  }, 10);
+}
 
+function ShowMenu(menuId, alignment) {
+  const menu = document.getElementById(menuId);
+  menu.style[alignment] = "0";
+  if (menu.style.display === "none" || menu.style.display === "") {
+    menu.style.display = "block";
+    requestAnimationFrame(() => {
+      changeOpacity(menu, 150, 0, 1);
+    });
+  } else {
+    menu.style.display = "none";
+    menu.style.opacity = "0";
+  }
+}
+
+function ChangeLanguage(language) {
+  window.location.href = `?l=${language}`;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
   const headerSlot = document.querySelector(".HeaderSlotDesktop");
   const headerContainer = document.createElement("header");
   headerContainer.id = "global_header";
 
   headerContainer.innerHTML = `
     <nav class="content">
-      <div class="logo">
-        <span id="logo_holder">
-          <a href="/" aria-label="Enlace a la página de inicio de Mega Games">
-            <img src="/assets/public/mega-games-logo.svg" width="36" height="36" alt="Enlace a la página de inicio de Mega Games">
-          </a>
-          <a href="/">Mega Games</a>
-        </span>
-      </div>
-      <div class="navbar-collapse d-flex justify-content-end" id="navbarButtonsExample">
-        <div class="d-flex align-items-center ms-lg-auto">
-          <ul class="navbar-nav me-2">
-            <li class="nav-item d-flex">
-              <a class="nav-link position-relative p-2" href="#"><span><i class="fa-regular fa-heart text-w"></i></span></a>
-              <a class="nav-link position-relative p-2" href="/cart.html">
-                <span class="badge position-absolute top-0 end-0 bg-danger rounded-1 p-1 d-none">1</span>
-                <span><i class="fas fa-shopping-cart text-w"></i></span>
-              </a>
-            </li>
-          </ul>
-          <button type="button" class="bg-transparent px-2 me-2 border-0 text-w fs-sm motiva-sans">Iniciar sesión</button>
-          <button type="button" class="main_btn border-0 me-lg-2 fs-sm motiva-sans">Registrarse</button>
-          <a class="btn btn-neon" href="https://github.com/Ktumsh/mega-games-web" target="_blank" role="button"><i class="fab fa-github"></i></a>
+        <div class="logo">
+            <span id="logo_holder">
+                <a href="/" aria-label="Enlace a la página de inicio de Mega Games">
+                    <img src="../assets/public/mega-games-logo.svg" width="36" height="36" alt="Enlace a la página de inicio de Mega Games">
+                </a>
+                <a href="/">Mega Games</a>
+            </span>
         </div>
-      </div>
+        <div role="navigation" class="supernav_container" aria-label="Menú global">
+            <a class="menuitem supernav" href="/">Tienda</a>
+            <a class="menuitem supernav" href="/community.html">Comunidad</a>
+            <a class="menuitem supernav" href="/about.html">Acerca de</a>
+            <a class="menuitem supernav" href="/help.html">Soporte</a>
+        </div>
+        <div id="global_actions">
+            <div id="global_action_menu" role="navigation" aria-label="Menú de la cuenta">
+                <a class="header_login_btn" href="#">
+                    <div class="main_btn">Instalar Mega Games</div>
+                </a>
+                <a class="global_action_link" href="#">Iniciar sesión</a>
+                &nbsp;|&nbsp;
+                <span class="pulldown global_action_link" id="language_pulldown" onclick="ShowMenu('language_dropdown', 'right');">idioma</span>
+                <div id="language_dropdown" class="popup_block_new" style="display: none;">
+                  <div class="popup_body popup_menu">
+                    <a class="popup_menu_item tight" href="?l=schinese" onclick="ChangeLanguage( 'schinese' ); return false;">简体中文 (chino simplificado)</a>
+                    <a class="popup_menu_item tight" href="?l=tchinese" onclick="ChangeLanguage( 'tchinese' ); return false;">繁體中文 (chino tradicional)</a>
+                    <a class="popup_menu_item tight" href="?l=japanese" onclick="ChangeLanguage( 'japanese' ); return false;">日本語 (japonés)</a>
+                    <a class="popup_menu_item tight" href="?l=koreana" onclick="ChangeLanguage( 'koreana' ); return false;">한국어 (coreano)</a>
+                    <a class="popup_menu_item tight" href="?l=thai" onclick="ChangeLanguage( 'thai' ); return false;">ไทย (tailandés)</a>
+                    <a class="popup_menu_item tight" href="?l=bulgarian" onclick="ChangeLanguage( 'bulgarian' ); return false;">Български (búlgaro)</a>
+                    <a class="popup_menu_item tight" href="?l=czech" onclick="ChangeLanguage( 'czech' ); return false;">Čeština (checo)</a>
+                    <a class="popup_menu_item tight" href="?l=danish" onclick="ChangeLanguage( 'danish' ); return false;">Dansk (danés)</a>
+                    <a class="popup_menu_item tight" href="?l=german" onclick="ChangeLanguage( 'german' ); return false;">Deutsch (alemán)</a>
+                    <a class="popup_menu_item tight" href="?l=english" onclick="ChangeLanguage( 'english' ); return false;">English (inglés)</a>
+                                        <a class="popup_menu_item tight" href="?l=latam" onclick="ChangeLanguage( 'latam' ); return false;">Español de Hispanoamérica</a>
+                    <a class="popup_menu_item tight" href="?l=greek" onclick="ChangeLanguage( 'greek' ); return false;">Ελληνικά (griego)</a>
+                    <a class="popup_menu_item tight" href="?l=french" onclick="ChangeLanguage( 'french' ); return false;">Français (francés)</a>
+                    <a class="popup_menu_item tight" href="?l=italian" onclick="ChangeLanguage( 'italian' ); return false;">Italiano</a>
+                    <a class="popup_menu_item tight" href="?l=indonesian" onclick="ChangeLanguage( 'indonesian' ); return false;">Bahasa Indonesia (indonesio)</a>
+                    <a class="popup_menu_item tight" href="?l=hungarian" onclick="ChangeLanguage( 'hungarian' ); return false;">Magyar (húngaro)</a>
+                    <a class="popup_menu_item tight" href="?l=dutch" onclick="ChangeLanguage( 'dutch' ); return false;">Nederlands (holandés)</a>
+                    <a class="popup_menu_item tight" href="?l=norwegian" onclick="ChangeLanguage( 'norwegian' ); return false;">Norsk (noruego)</a>
+                    <a class="popup_menu_item tight" href="?l=polish" onclick="ChangeLanguage( 'polish' ); return false;">Polski (polaco)</a>
+                    <a class="popup_menu_item tight" href="?l=portuguese" onclick="ChangeLanguage( 'portuguese' ); return false;">Português (Portugués de Portugal)</a>
+                    <a class="popup_menu_item tight" href="?l=brazilian" onclick="ChangeLanguage( 'brazilian' ); return false;">Português-Brasil (portugués de Brasil)</a>
+                    <a class="popup_menu_item tight" href="?l=romanian" onclick="ChangeLanguage( 'romanian' ); return false;">Română (rumano)</a>
+                    <a class="popup_menu_item tight" href="?l=russian" onclick="ChangeLanguage( 'russian' ); return false;">Русский (ruso)</a>
+                    <a class="popup_menu_item tight" href="?l=finnish" onclick="ChangeLanguage( 'finnish' ); return false;">Suomi (finés)</a>
+                    <a class="popup_menu_item tight" href="?l=swedish" onclick="ChangeLanguage( 'swedish' ); return false;">Svenska (sueco)</a>
+                    <a class="popup_menu_item tight" href="?l=turkish" onclick="ChangeLanguage( 'turkish' ); return false;">Türkçe (turco)</a>
+                    <a class="popup_menu_item tight" href="?l=vietnamese" onclick="ChangeLanguage( 'vietnamese' ); return false;">Tiếng Việt (vietnamita)</a>
+                    <a class="popup_menu_item tight" href="?l=ukrainian" onclick="ChangeLanguage( 'ukrainian' ); return false;">Українська (ucraniano)</a>
+                    <a class="popup_menu_item tight" href="https://www.valvesoftware.com/en/contact?contact-person=Translation%20Team%20Feedback" target="_blank">Comunicar un error de traducción</a>
+                  </div> 
+                </div>
+            </div>
+        </div>
     </nav>
-  `;
+`;
 
   headerSlot.appendChild(headerContainer);
+
+  const currentPath = window.location.pathname;
+  const navItems = document.querySelectorAll(".supernav");
+  let isActive = false;
+
+  navItems.forEach((item) => {
+    const itemPath = new URL(item.href, window.location.origin).pathname;
+    if (itemPath === currentPath) {
+      item.classList.add("supernav_active");
+      isActive = true;
+    }
+  });
+
+  if (!isActive) {
+    navItems[0].classList.add("supernav_active");
+  }
 
   const headerSlotMobile = document.querySelector(".HeaderSlotMobile");
   const headerContainerMobile = document.createElement("div");
@@ -252,13 +334,26 @@ document.addEventListener("DOMContentLoaded", () => {
     navbarContainer.style.position = "absolute";
     navbarContainer.style.left = "0";
     navbarContainer.style.right = "0";
-    navbarContainer.style.zIndex = "999";
 
     navbarContainer.innerHTML = `
       <div class="home_page_content container" style="position: absolute; left: 0; right: 0">
         <div class="responsive_store_nav_ctn_spacer">
           <div id="store_header" role="navigation" aria-label="Menú de la tienda" style="visibility: visible; display: block">
             <div class="content">
+              <div id="store_controls">
+                <div id="cart_status_data" class="cart_status_flex">
+                  <div data-featuretarget="shoppingcart-count-widget" data-props="{}">
+                    <div class="cart_control">
+                      <a class="cart_link" href="/cart.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="none" class="cart_icon">
+                          <path d="M33.63 8.05005L30.11 20.81C29.9416 21.453 29.5645 22.0219 29.0378 22.4273C28.5111 22.8328 27.8647 23.0518 27.2 23.05H14.75C14.1022 23.0507 13.4715 22.8416 12.9524 22.4541C12.4333 22.0665 12.0536 21.5213 11.87 20.9L7.56 8.05005H2V4.05005H8.28C8.90845 4.05122 9.52067 4.24973 10.0302 4.61755C10.5398 4.98538 10.921 5.50394 11.12 6.10005L11.78 8.10005L33.63 8.05005ZM15 27.05C14.5055 27.05 14.0222 27.1967 13.6111 27.4714C13.2 27.7461 12.8795 28.1365 12.6903 28.5933C12.5011 29.0502 12.4516 29.5528 12.548 30.0378C12.6445 30.5227 12.8826 30.9682 13.2322 31.3178C13.5819 31.6674 14.0273 31.9056 14.5123 32.002C14.9972 32.0985 15.4999 32.049 15.9567 31.8597C16.4135 31.6705 16.804 31.3501 17.0787 30.939C17.3534 30.5278 17.5 30.0445 17.5 29.55C17.5 28.887 17.2366 28.2511 16.7678 27.7823C16.2989 27.3134 15.663 27.05 15 27.05ZM27 27.05C26.5055 27.05 26.0222 27.1967 25.6111 27.4714C25.2 27.7461 24.8795 28.1365 24.6903 28.5933C24.5011 29.0502 24.4516 29.5528 24.548 30.0378C24.6445 30.5227 24.8826 30.9682 25.2322 31.3178C25.5819 31.6674 26.0273 31.9056 26.5123 32.002C26.9972 32.0985 27.4999 32.049 27.9567 31.8597C28.4135 31.6705 28.804 31.3501 29.0787 30.939C29.3534 30.5278 29.5 30.0445 29.5 29.55C29.5 28.887 29.2366 28.2511 28.7678 27.7823C28.2989 27.3134 27.663 27.05 27 27.05Z" fill="currentColor"></path>
+                        </svg>
+                        Carro
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <nav id="store_nav_area">
                 <div class="store_nav_bg nav-bg">
                   <div class="store_nav">
@@ -387,40 +482,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     addStoreNavSearchEvents();
     addSearchEvents();
-
-    document.querySelectorAll(".tab").forEach((tab) => {
-      const flyoutId = tab.dataset.flyout;
-      tab.addEventListener("mouseenter", () => {
-        hideAllMenus();
-        currentMenuId = tab.id;
-        currentMenuTimeoutId = setTimeout(() => {
-          showMenuWithOpacity(
-            tab.id,
-            flyoutId,
-            currentMenuTimeoutId,
-            currentMenuIsMouseOverMenu
-          );
-        }, 300);
-      });
-      tab.addEventListener("mouseleave", () => {
-        clearTimeout(currentMenuTimeoutId);
-      });
-    });
-
-    document.querySelectorAll(".popup_block_new").forEach((flyout) => {
-      flyout.addEventListener("mouseenter", () => {
-        currentMenuIsMouseOverMenu = true;
-      });
-      flyout.addEventListener("mouseleave", () => {
-        currentMenuIsMouseOverMenu = false;
-        hideMenuWithOpacity(
-          flyout.dataset.tab,
-          flyout.id,
-          currentMenuTimeoutId,
-          currentMenuIsMouseOverMenu
-        );
-      });
-    });
   }
 
   function addMobileNavbar() {
@@ -440,7 +501,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a class="pulldown_mobile" href="javascript:void(0)">Tu tienda</a>
                   </span>
                 </div>
-                <div id="foryou_flyout" class="popup_block_new responsive_slidedown sub_menu" style="height: 0px">
+                <div id="foryou_flyout" class="popup_block_new responsive_slidedown sub_menu" data-tab="foryou_tab" style="height: 0px">
                   <div class="popup_body popup_menu popup_menu_browse">
                     <a href="/" class="popup_menu_item">Inicio</a>
                     <a href="#" class="popup_menu_item">Recomendaciones</a>
@@ -453,7 +514,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a href="javascript:void(0)" class="pulldown_mobile">Nuevo y destacable</a>
                   </span>
                 </div>
-                <div id="noteworthy_flyout" class="popup_block_new responsive_slidedown sub_menu" style="height: 0px">
+                <div id="noteworthy_flyout" class="popup_block_new responsive_slidedown sub_menu" data-tab="noteworthy_tab" style="height: 0px">
                   <div class="popup_body popup_menu_twocol_new">
                     <div class="popup_menu popup_menu_browse">
                       <div class="popup_menu_subheader responsive_hidden">Populares</div>
@@ -476,7 +537,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a href="javascript:void(0)" class="pulldown_mobile">Categorías</a>
                   </span>
                 </div>
-                <div id="genre_flyout" class="popup_block_new responsive_slidedown sub_menu" style="height: 0px">
+                <div id="genre_flyout" class="popup_block_new responsive_slidedown sub_menu" data-tab="genre_tab" style="height: 0px">
                   <div class="popup_body popup_menu_twocol_new">
                     <div class="popup_menu popup_menu_browse">
                       <div class="popup_menu_subheader responsive_hidden">Miscelánea</div>
@@ -659,24 +720,6 @@ document.addEventListener("DOMContentLoaded", () => {
   screenSizeChange(mobileMediaQuery);
   mobileMediaQuery.addEventListener("change", screenSizeChange);
 
-  function addMobileNavbarEventListeners() {
-    const menuItems = document.querySelectorAll(".tab");
-
-    menuItems.forEach(function (item) {
-      item.addEventListener("click", function () {
-        console.log(item);
-        const flyoutId = this.dataset.flyout;
-        const flyout = document.getElementById(flyoutId);
-        const isOpen = flyout.style.height === "0px";
-        if (isOpen) {
-          flyout.style.height = flyout.scrollHeight + "px";
-        } else {
-          flyout.style.height = "0";
-        }
-      });
-    });
-  }
-
   function addDesktopNavbarEventListeners() {
     document.querySelectorAll(".tab").forEach((tab) => {
       const flyoutId = tab.dataset.flyout;
@@ -684,12 +727,7 @@ document.addEventListener("DOMContentLoaded", () => {
         hideAllMenus();
         currentMenuId = tab.id;
         currentMenuTimeoutId = setTimeout(() => {
-          showMenuWithOpacity(
-            tab.id,
-            flyoutId,
-            currentMenuTimeoutId,
-            currentMenuIsMouseOverMenu
-          );
+          showMenuWithOpacity(tab.id, flyoutId);
         }, 300);
       });
       tab.addEventListener("mouseleave", () => {
@@ -703,59 +741,38 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       flyout.addEventListener("mouseleave", () => {
         currentMenuIsMouseOverMenu = false;
-        hideMenuWithOpacity(
-          flyout.dataset.tab,
-          flyout.id,
-          currentMenuTimeoutId,
-          currentMenuIsMouseOverMenu
-        );
+        hideMenuWithOpacity(flyout.dataset.tab, flyout.id);
       });
     });
   }
 
-  function changeOpacity(target, duration, fromOpacity, toOpacity) {
-    const opacityIncrement = (toOpacity - fromOpacity) / (duration / 10);
-    let currentOpacity = fromOpacity;
-    target.style.opacity = currentOpacity; // Set initial opacity to avoid flicker
-    const timer = setInterval(function () {
-      currentOpacity += opacityIncrement;
-      currentOpacity = Math.min(Math.max(currentOpacity, 0), 1);
-      target.style.opacity = currentOpacity;
-      if (
-        (opacityIncrement > 0 && currentOpacity >= toOpacity) ||
-        (opacityIncrement < 0 && currentOpacity <= toOpacity)
-      ) {
-        clearInterval(timer);
-      }
-    }, 10);
-  }
-
-  function showMenuWithOpacity(tabId, flyoutId, timeoutId, isMouseOverMenu) {
+  function showMenuWithOpacity(tabId, flyoutId) {
     const tab = document.getElementById(tabId);
     const flyout = document.getElementById(flyoutId);
     if (flyout.style.display === "none" && !flyout.classList.contains("open")) {
-      clearTimeout(timeoutId);
       flyout.style.display = "block";
       requestAnimationFrame(() => {
         changeOpacity(flyout, 150, 0, 1);
         flyout.classList.add("open");
       });
       toggleTabFocusClass(tab, true);
-      isMouseOverMenu = true;
+      currentMenuIsMouseOverMenu = true;
     }
   }
 
-  function hideMenuWithOpacity(tabId, flyoutId, timeoutId, isMouseOverMenu) {
+  function hideMenuWithOpacity(tabId, flyoutId) {
     const tab = document.getElementById(tabId);
     const flyout = document.getElementById(flyoutId);
-    clearTimeout(timeoutId);
-    if (!isMouseOverMenu) {
+    clearTimeout(currentMenuTimeoutId);
+    if (!currentMenuIsMouseOverMenu) {
       changeOpacity(flyout, 150, 1, 0);
       setTimeout(function () {
         flyout.style.display = "none";
         flyout.classList.remove("open");
       }, 150);
-      toggleTabFocusClass(tab, false);
+      if (tab) {
+        toggleTabFocusClass(tab, false);
+      }
     }
   }
 

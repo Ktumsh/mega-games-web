@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (gameFound) {
         gameImage.src = gameFound.imagen;
         gameName.textContent = gameFound.nombre;
-        price.textContent = `CLP$ ${gameFound.precio}`;
+        price.textContent = `CLP$ ${gameFound.precioOriginal}`;
         gameFound.disponibleEn.forEach((plataforma) => {
           const availableIn = document.createElement("span");
           availableIn.title = `Disponible en ${plataforma}`;

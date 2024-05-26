@@ -15,7 +15,7 @@ async function loadInitialCards() {
   try {
     const response = await fetch("/data/api/apiStore.json");
     const apiStore = await response.json();
-    const tarjetas = apiStore.tarjetasCards;
+    const tarjetas = apiStore.giftCards;
     const cardsContainer = document.getElementById("gamesAndCardsContainer");
 
     updateCounter(tarjetas.length);
@@ -51,7 +51,7 @@ async function loadCardsOnScroll() {
   try {
     const response = await fetch("/data/api/apiStore.json");
     const apiStore = await response.json();
-    const tarjetas = apiStore.tarjetasCards;
+    const tarjetas = apiStore.giftCards;
     const cardsContainer = document.getElementById("gamesAndCardsContainer");
     const loader = document.getElementById("loader");
 
@@ -102,7 +102,7 @@ function renderCards(cardsForLoad, cardsContainer) {
             <a class="card_link" href="/gift-details?game=${pageName}&item=${tarjeta.id}">
               <div class="card_price">
                 <span class="card_text">Desde</span>
-                <span class="price">CLP$ ${tarjeta.precio}</span>
+                <span class="price">CLP$ ${tarjeta.precioOriginal}</span>
               </div>
               <div class="like_badge">
                 <span class="like_span">

@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const games = apiStore.offerCards;
       const gameFound = games.find((game) => game.id === gameId);
 
+      const backgroundPage = document.getElementById("pageGameBg");
+      console.log(backgroundPage);
       const gameImage = document.getElementById("gameImage");
       const gameName = document.getElementById("gameName");
       const discount = document.getElementById("discount");
@@ -52,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const restriction = document.getElementById("pegi");
       if (gameFound) {
+        backgroundPage.style.backgroundImage = `url('${gameFound.background}')`;
         gameImage.src = gameFound.imagen;
         gameName.textContent = gameFound.nombre;
         discount.textContent = gameFound.descuento;

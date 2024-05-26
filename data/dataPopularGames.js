@@ -106,7 +106,7 @@ function renderCards(cardsForLoad, cardsContainer) {
             <a class="card_link" href="/games-details?game=${pageName}&item=${tarjeta.id}">
               <div class="card_price">
                 <span class="card_text">Desde</span>
-                <span class="price">CLP$ ${tarjeta.precio}</span>
+                <span class="price">CLP$ ${tarjeta.precioOriginal}</span>
               </div>
               <div class="like_badge">
                 <span class="like_span">

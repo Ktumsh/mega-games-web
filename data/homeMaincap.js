@@ -62,7 +62,7 @@ function generateGameHTML(juego) {
     precioHTML = `
       <div class="discount_block no_discount discount_block_inline">
         <div class="discount_prices">
-          <div class="discount_final_price">CLP$ ${juego.precio}</div>
+          <div class="discount_final_price">CLP$ ${juego.precioOriginal}</div>
         </div>
       </div>
     `;

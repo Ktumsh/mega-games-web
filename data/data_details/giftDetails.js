@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch("/data/api/apiStore.json")
     .then((response) => response.json())
     .then((apiStore) => {
-      const games = apiStore.tarjetasCards;
+      const games = apiStore.giftCards;
       const gameFound = games.find((game) => game.id === gameId);
 
       const gameImage = document.getElementById("gameImage");
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (gameFound) {
         gameImage.src = gameFound.imagen;
         gameName.textContent = gameFound.nombre;
-        price.textContent = `CLP$ ${gameFound.precio}`;
+        price.textContent = `CLP$ ${gameFound.precioOriginal}`;
         gameFound.disponibleEn.forEach((plataforma) => {
           const availableIn = document.createElement("span");
           availableIn.title = `Disponible en ${plataforma}`;
@@ -172,9 +172,7 @@ function giveALike() {
   fetch("/data/api/apiStore.json")
     .then((response) => response.json())
     .then((apiStore) => {
-      const gameFound = apiStore.tarjetasCards.find(
-        (game) => game.id === gameId
-      );
+      const gameFound = apiStore.giftCards.find((game) => game.id === gameId);
       if (gameFound) {
         const gameLikes = document.getElementById("gameLikes");
         if (gameLikes) {
@@ -215,9 +213,7 @@ function giveALike() {
     fetch("/data/api/apiStore.json")
       .then((response) => response.json())
       .then((apiStore) => {
-        const gameFound = apiStore.tarjetasCards.find(
-          (game) => game.id === gameId
-        );
+        const gameFound = apiStore.giftCards.find((game) => game.id === gameId);
         if (gameFound) {
           if (liked) {
             gameFound.likes;
