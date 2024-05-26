@@ -1,15 +1,187 @@
 let lastCard = 0;
 let isLoading = false;
-
-function updateCounter(total) {
-  const counterElement = document.getElementById("counter");
-  counterElement.textContent = total;
-}
+let cardData = [];
+let currentSlideIndex = 0;
+const maxImages = 10;
+const transitionTime = 5000;
 
 function getMaxCards() {
   const isTablet = window.innerWidth <= 1024 && window.innerWidth >= 768;
   return isTablet ? 9 : 8;
 }
+
+async function fetchCardData() {
+  try {
+    const response = await fetch("/data/api/apiStore.json");
+    const apiStore = await response.json();
+    cardData = apiStore.offerCards.slice(0, maxImages);
+    renderCarouselItems();
+    updateBackground();
+    updateScrollBar(); // Ensure scrollbar is set correctly on load
+  } catch (error) {
+    console.error("Error al cargar las tarjetas:", error);
+  }
+}
+
+function renderCarouselItems() {
+  const sliderTray = document.getElementById("sliderTray");
+  sliderTray.innerHTML = "";
+
+  cardData.forEach((card, index) => {
+    const carouselItem = document.createElement("div");
+    carouselItem.classList.add("carousel_item");
+    carouselItem.setAttribute("data-index", index);
+    carouselItem.style.width = "10%";
+    carouselItem.style.paddingBottom = "unset";
+    carouselItem.style.height = "unset";
+
+    const lanzamiento =
+      card.detalles && card.detalles.length > 0
+        ? card.detalles[0].lanzamiento
+        : "Fecha no disponible";
+    const dlcSpan = card.dlc ? `<span class="dlc_span">DLC</span>` : "";
+    carouselItem.innerHTML = `
+      <div class="slider_inner" style="position: unset">
+        <div>
+          <div class="carousel_capsule">
+            <div class="ImpressionTrackedElement">
+              <div class="capsule">
+                <div class="background_capsule">
+                  <div class="background" style="background-image: url('${
+                    card.background
+                  }');"></div>
+                </div>
+                <div class="capsule_ctn">
+                  <a href="#" class="capsule_img_ctn">
+                    <div class="capsule_decorators"></div>
+                    <div class="capsule_img">
+                      <img src="${card.imagen}" alt="${card.nombreMaincap}" />
+                    </div>
+                    <div>
+                      <div class="capsule_bottom_bar">
+                        <span class="platform_label">
+                          <span class="platform_img battlenet"></span>
+                        </span>
+                        <span class="price_ctn">
+                          <div class="disconunt_label">
+                            <div class="discount">${card.descuento}</div>
+                            <div class="price_label">
+                              <div class="original_price">CLP$${
+                                card.precioOriginal
+                              }</div>
+                              <div class="final_price">CLP$${
+                                card.precioDescuento
+                              }</div>
+                            </div>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="capsule_body_ctn">
+                    <div class="capsule_top">
+                      <div class="capsule_top_ctn">
+                        <a href="#" class="capsule_title">
+                          ${dlcSpan}${card.nombreMaincap}
+                        </a>
+                        <div class="release_date">Fecha de lanzamiento: <span>${lanzamiento}</span></div>
+                        <div class="review">
+                          <a href="#" class="review_link" target="_blank">
+                            <div class="review_ctn">
+                              <div>Mayormente positivas</div>
+                              <div class="review_likes">| ${
+                                card.likes
+                              } Reseñas de usuarios</div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="capsule_tags">
+                      ${card.generos
+                        .map(
+                          (tag) => `<a href="#" class="widget_tag">${tag}</a>`
+                        )
+                        .join("")}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    sliderTray.appendChild(carouselItem);
+  });
+
+  updateVisibleItems();
+}
+
+function updateVisibleItems() {
+  const sliderTray = document.getElementById("sliderTray");
+  const translateXValue = -(currentSlideIndex * 10);
+  sliderTray.style.transform = `translateX(${translateXValue}%) translateX(0px)`;
+  updateScrollBar();
+}
+
+function updateBackground() {
+  const pageGameBg = document.getElementById("pageGameBg");
+  if (cardData[currentSlideIndex]) {
+    pageGameBg.style.backgroundImage = `url(${cardData[currentSlideIndex].background})`;
+  }
+}
+
+function updateScrollBar() {
+  const leftBar = document.getElementById("leftBar");
+  const rightBar = document.getElementById("rightBar");
+  const barThumb = document.querySelector(".bar_thumb");
+
+  const scrollPercentage =
+    (currentSlideIndex / (cardData.length - 1)) * 85.7143;
+  barThumb.style.left = `${scrollPercentage}%`;
+  barThumb.style.right = `${85.7143 - scrollPercentage}%`;
+  leftBar.style.width = `${scrollPercentage}%`;
+  rightBar.style.width = `${92.8571 - scrollPercentage}%`;
+
+  // Ensure initial state is correct
+  if (currentSlideIndex === 0) {
+    leftBar.style.width = `7.14286%`;
+    rightBar.style.width = `92.8571%`;
+    barThumb.style.left = `0%`;
+    barThumb.style.right = `85.7143%`;
+  }
+}
+
+document.getElementById("carouselBackButton").addEventListener("click", () => {
+  currentSlideIndex =
+    (currentSlideIndex - 1 + cardData.length) % cardData.length;
+  updateVisibleItems();
+  updateBackground();
+});
+
+document.getElementById("carouselNextButton").addEventListener("click", () => {
+  currentSlideIndex = (currentSlideIndex + 1) % cardData.length;
+  updateVisibleItems();
+  updateBackground();
+});
+
+document.getElementById("leftBar").addEventListener("click", () => {
+  currentSlideIndex =
+    (currentSlideIndex - 1 + cardData.length) % cardData.length;
+  updateVisibleItems();
+  updateBackground();
+});
+
+document.getElementById("rightBar").addEventListener("click", () => {
+  currentSlideIndex = (currentSlideIndex + 1) % cardData.length;
+  updateVisibleItems();
+  updateBackground();
+});
+
+document.addEventListener("DOMContentLoaded", fetchCardData);
+
+let cardImages = [];
 
 async function loadInitialCards() {
   try {
@@ -18,8 +190,6 @@ async function loadInitialCards() {
     const tarjetas = apiStore.offerCards;
     const cardsContainer = document.getElementById("gameOfferCardsContainer");
 
-    updateCounter(tarjetas.length);
-
     const maxCards = getMaxCards();
     const cardsForLoad = tarjetas.slice(lastCard, lastCard + maxCards);
 
@@ -27,10 +197,27 @@ async function loadInitialCards() {
 
     lastCard += cardsForLoad.length;
 
+    cardImages = tarjetas.slice(0, maxImages).map((tarjeta) => tarjeta.imagen);
+
+    preloadImages(cardImages);
+
     window.addEventListener("scroll", loadCardsOnScroll);
   } catch (error) {
     console.error("Error al cargar las tarjetas:", error);
   }
+}
+
+function preloadImages(images) {
+  return Promise.all(
+    images.map((src) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    })
+  );
 }
 
 document.addEventListener("DOMContentLoaded", loadInitialCards);

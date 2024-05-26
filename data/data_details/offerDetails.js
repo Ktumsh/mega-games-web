@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const gameFound = games.find((game) => game.id === gameId);
 
       const backgroundPage = document.getElementById("pageGameBg");
-      console.log(backgroundPage);
       const gameImage = document.getElementById("gameImage");
       const gameName = document.getElementById("gameName");
       const discount = document.getElementById("discount");
