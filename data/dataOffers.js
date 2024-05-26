@@ -17,7 +17,7 @@ async function fetchCardData() {
     cardData = apiStore.offerCards.slice(0, maxImages);
     renderCarouselItems();
     updateBackground();
-    updateScrollBar(); // Ensure scrollbar is set correctly on load
+    updateScrollBar();
   } catch (error) {
     console.error("Error al cargar las tarjetas:", error);
   }
@@ -128,8 +128,24 @@ function updateVisibleItems() {
 function updateBackground() {
   const pageGameBg = document.getElementById("pageGameBg");
   if (cardData[currentSlideIndex]) {
-    pageGameBg.style.backgroundImage = `url(${cardData[currentSlideIndex].background})`;
+    const imageUrl = cardData[currentSlideIndex].background;
+    preloadImage(imageUrl)
+      .then(() => {
+        pageGameBg.style.backgroundImage = `url(${imageUrl})`;
+      })
+      .catch((error) => {
+        console.error("Error al cargar la imagen de fondo:", error);
+      });
   }
+}
+
+function preloadImage(url) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.src = url;
+    img.onload = resolve;
+    img.onerror = reject;
+  });
 }
 
 function updateScrollBar() {
@@ -141,10 +157,9 @@ function updateScrollBar() {
     (currentSlideIndex / (cardData.length - 1)) * 85.7143;
   barThumb.style.left = `${scrollPercentage}%`;
   barThumb.style.right = `${85.7143 - scrollPercentage}%`;
-  leftBar.style.width = `${scrollPercentage}%`;
+  leftBar.style.width = `${7.14286 + scrollPercentage}%`;
   rightBar.style.width = `${92.8571 - scrollPercentage}%`;
 
-  // Ensure initial state is correct
   if (currentSlideIndex === 0) {
     leftBar.style.width = `7.14286%`;
     rightBar.style.width = `92.8571%`;

@@ -1,3 +1,12 @@
+function preloadImage(url) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.src = url;
+    img.onload = resolve;
+    img.onerror = reject;
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const queryParams = new URLSearchParams(window.location.search);
   const gameTitle = queryParams.get("game");
@@ -53,6 +62,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const restriction = document.getElementById("pegi");
       if (gameFound) {
+        const imageUrl = gameFound.background;
+        preloadImage(imageUrl)
+          .then(() => {
+            backgroundPage.style.backgroundImage = `url(${imageUrl})`;
+          })
+          .catch((error) => {
+            console.error("Error al cargar la imagen de fondo:", error);
+          });
         backgroundPage.style.backgroundImage = `url('${gameFound.background}')`;
         gameImage.src = gameFound.imagen;
         gameName.textContent = gameFound.nombre;

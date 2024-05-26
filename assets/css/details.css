@@ -1261,7 +1261,17 @@ body {
   -webkit-mask-composite: source-in;
   mask-composite: source-in;
   transition: background-image 0.1s ease-out;
+  animation: bg_anim 1s;
   z-index: -1;
+}
+
+@keyframes bg_anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 #page_root {
