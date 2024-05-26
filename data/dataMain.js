@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           tarjetas = apiStore.gamesCards;
           break;
         case 3:
-          tarjetas = apiStore.tarjetasCards;
+          tarjetas = apiStore.giftCards;
           break;
         default:
           throw new Error("Invalid carouselId");
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <a class="card_link" href="/games-details?game=${pageName}&item=${tarjeta.id}">
                       <div class="card_price">
                         <span class="card_text">Desde</span>
-                        <span class="price">CLP$ ${tarjeta.precio}</span>
+                        <span class="price">CLP$ ${tarjeta.precioOriginal}</span>
                       </div>
                       <div class="like_badge">
                         <span class="like_span">
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <a class="card_link" href="/gift-details?game=${pageName}&item=${tarjeta.id}">
                       <div class="card_price">
                         <span class="card_text">Desde</span>
-                        <span class="price">CLP$ ${tarjeta.precio}</span>
+                        <span class="price">CLP$ ${tarjeta.precioOriginal}</span>
                       </div>
                       <div class="like_badge">
                         <span class="like_span">
