@@ -1,29 +1,84 @@
-let lastCard = 0;
+let lastCard = 10;
 let isLoading = false;
 let cardData = [];
 let currentSlideIndex = 0;
 const maxImages = 10;
-const transitionTime = 5000;
+const transitionTime = 8000;
 
 function getMaxCards() {
   const isTablet = window.innerWidth <= 1024 && window.innerWidth >= 768;
   return isTablet ? 9 : 8;
 }
 
-async function fetchCardData() {
+async function fetchDesktopCardData() {
   try {
     const response = await fetch("/data/api/apiStore.json");
     const apiStore = await response.json();
     cardData = apiStore.offerCards.slice(0, maxImages);
-    renderCarouselItems();
-    updateBackground();
+    removeMobileCarousel();
+    renderDesktopCarouselItems();
     updateScrollBar();
+    updateBackground();
   } catch (error) {
     console.error("Error al cargar las tarjetas:", error);
   }
 }
 
-function renderCarouselItems() {
+async function fetchMobileCardData() {
+  try {
+    const response = await fetch("/data/api/apiStore.json");
+    const apiStore = await response.json();
+    cardData = apiStore.offerCards.slice(0, maxImages);
+    removeDesktopCarousel();
+    renderMobileCarouselItems();
+  } catch (error) {
+    console.error("Error al cargar las tarjetas:", error);
+  }
+}
+
+function loadDesktopCarousel() {
+  const carousel = document.getElementById("carousel");
+  carousel.innerHTML = "";
+  const carouselBody = document.createElement("div");
+  carouselBody.classList.add("slider_body");
+
+  carouselBody.innerHTML = `
+    <button id="carouselBackButton" type="button" aria-label="previous" class="carousel_back_button carousel_button">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50px" height="100px" viewBox="0 0 50 100">
+        <polygon fill="#ffffff" points="0,0.093 0,25.702 24.323,50.026 0,74.349 0,99.955 49.929,50.026"></polygon>
+      </svg>
+    </button>
+    <div class="carousel_slider horizontal_slider">
+      <div class="slider_wrapper">
+        <div id="sliderTray" class="slider_tray" style="display: flex; align-items: stretch; width: 1000%; transform: translateX(0%) translateX(0px); flex-direction: row;"></div>
+      </div>
+    </div>
+    <button id="carouselNextButton" type="button" aria-label="next" class="carousel_next_button carousel_button">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50px" height="100px" viewBox="0 0 50 100">
+        <polygon fill="#ffffff" points="0,0.093 0,25.702 24.323,50.026 0,74.349 0,99.955 49.929,50.026"></polygon>
+      </svg>
+    </button>
+  `;
+
+  const carouselScrollBar = document.createElement("div");
+  carouselScrollBar.classList.add("slider_bar");
+  carouselScrollBar.innerHTML = `
+    <div class="slider_bar_ctn">
+      <div class="bar_fill"></div>
+      <div class="bar_thumb" style="left: 0%; right: 85.7143%"></div>
+      <div id="leftBar" class="scroll_bar" style="left: 0%; width: 7.14286%">
+        <button type="button" aria-label="previous" class="carousel_back_button bar_btn bar_buttons"></button>
+      </div>
+      <div id="rightBar" class="scroll_bar" style="right: 0%; width: 92.8571%">
+        <button type="button" aria-label="next" class="carousel_next_button bar_btn bar_buttons"></button>
+      </div>
+    </div>
+  `;
+  carousel.appendChild(carouselBody);
+  carousel.appendChild(carouselScrollBar);
+}
+
+function renderDesktopCarouselItems() {
   const sliderTray = document.getElementById("sliderTray");
   sliderTray.innerHTML = "";
 
@@ -35,6 +90,13 @@ function renderCarouselItems() {
     carouselItem.style.paddingBottom = "unset";
     carouselItem.style.height = "unset";
 
+    const isTablet = window.matchMedia(
+      "(min-width: 576px) and (max-width: 910px)"
+    ).matches;
+    const capsule = isTablet ? card.imagenAlternativa : card.imagen;
+
+    const gameName = card.nombre;
+    const pageName = gameName;
     const lanzamiento =
       card.detalles && card.detalles.length > 0
         ? card.detalles[0].lanzamiento
@@ -52,15 +114,22 @@ function renderCarouselItems() {
                   }');"></div>
                 </div>
                 <div class="capsule_ctn">
-                  <a href="#" class="capsule_img_ctn">
+                  <a href="offer-details?game=${pageName}&item=${card.id}"
+                    class="capsule_img_ctn">
                     <div class="capsule_decorators"></div>
                     <div class="capsule_img">
-                      <img src="${card.imagen}" alt="${card.nombreMaincap}" />
+                      <img src="${capsule}" alt="${card.nombreMaincap}" />
                     </div>
                     <div>
                       <div class="capsule_bottom_bar">
                         <span class="platform_label">
-                          <span class="platform_img battlenet"></span>
+                          ${card.disponibleEn
+                            .slice(0, 2)
+                            .map(
+                              (platform) =>
+                                `<span title="Disponible en ${platform}" class="platform_img ${platform}"></span>`
+                            )
+                            .join("")}
                         </span>
                         <span class="price_ctn">
                           <div class="disconunt_label">
@@ -81,7 +150,8 @@ function renderCarouselItems() {
                   <div class="capsule_body_ctn">
                     <div class="capsule_top">
                       <div class="capsule_top_ctn">
-                        <a href="#" class="capsule_title">
+                        <a href="offer-details?game=${pageName}&item=${card.id}"
+                          class="capsule_title">
                           ${dlcSpan}${card.nombreMaincap}
                         </a>
                         <div class="release_date">Fecha de lanzamiento: <span>${lanzamiento}</span></div>
@@ -98,11 +168,55 @@ function renderCarouselItems() {
                       </div>
                     </div>
                     <div class="capsule_tags">
+                      <div class="date_and_platform">
+                        <div class="release_date"><span>${lanzamiento}</span></div>
+                        <span class="platform_label">
+                          ${card.disponibleEn
+                            .map(
+                              (platform) =>
+                                `<span class="platform_img ${platform}"></span>`
+                            )
+                            .join("")}
+                        </span>
+                      </div>
                       ${card.generos
                         .map(
                           (tag) => `<a href="#" class="widget_tag">${tag}</a>`
                         )
                         .join("")}
+                    </div>
+                    <div class="capsule_description">
+                      <div class="capsule_title_description">Por qué te puede interesar este juego:</div>
+                      <div class="capsule_description_ctn">
+                        <div class="desc_item">
+                          <div class="desc_check">
+                            <svg version="1.1" id="base" xmlns="http://www.w3.org/2000/svg" class="SVGIcon_Button SVGIcon_Check" x="0px" y="0px" width="256px" height="256px" viewBox="0 0 256 256" stroke-width="24" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><polyline fill="none" points="49.5,147.75 95,210.75 206.5,45.25 "></polyline></svg>
+                          </div>
+                          <div class="desc_text">
+                            <div>
+                              <span class="desc_span">Clasificados</span>
+                              entre los más vendidos
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="capsule_price">
+                      <div class="capsule_price_ctn">
+                        <div class="c_add_to_cart">
+                          <span>Agregar al carrito</span>
+                        </div>
+                        <div class="c_price_content">
+                          <div class="c_price">CLP$${card.precioDescuento}</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="additional_image_capsule">
+                      <div class="additional_image_ctn">
+                        <img class="additional_image" src="${
+                          card.imagenAlternativa
+                        }" alt="${card.nombreMaincap}">
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -115,8 +229,119 @@ function renderCarouselItems() {
     sliderTray.appendChild(carouselItem);
   });
 
-  updateVisibleItems();
+  startCarouselAutoChange();
 }
+
+function removeDesktopCarousel() {
+  const desktopCarousel = document.getElementById("carousel");
+  if (desktopCarousel) {
+    desktopCarousel.innerHTML = "";
+  }
+}
+
+function renderMobileCarouselItems() {
+  const mobileContentCarousel = document.getElementById("mobileCarousel");
+  mobileContentCarousel.style.gap = "12px";
+  mobileContentCarousel.innerHTML = "";
+
+  cardData.forEach((card) => {
+    const carouselItem = document.createElement("div");
+    carouselItem.classList.add("carousel_item");
+    const gameName = card.nombre;
+    const pageName = gameName;
+    const plataformas =
+      card.disponibleEn && card.disponibleEn.length > 0
+        ? card.disponibleEn
+        : ["win"];
+    const dlcSpan = card.dlc ? `<span class="dlc_span">DLC</span>` : "";
+    carouselItem.innerHTML = `
+            <div class="ImpressionTrackedElement">
+              <div>
+                <div class="capsule">
+                  <div class="capsule_ctn">
+                    <a href="offer-details?game=${pageName}&item=${card.id}"
+                      class="capsule_img_ctn">
+                      <div class="capsule_decorators"></div>
+                      <div class="capsule_img">
+                        <img src="${card.imagen}" alt="${card.nombreMaincap}" />
+                      </div>
+                    </a>
+                    <div class="capsule_body_ctn">
+                      <div class="capsule_top">
+                        <div class="capsule_top_ctn">
+                          <a href="offer-details?game=${pageName}&item=${
+      card.id
+    }"
+                            class="capsule_title">
+                            ${dlcSpan}${card.nombreMaincap}
+                          </a>
+                        </div>
+                      </div>
+                      <div class="capsule_tags">
+                        <div class="date_and_platform">
+                          <span class="platform_label">
+                            ${plataformas
+                              .map(
+                                (platform) =>
+                                  `<span class="platform_img ${platform}"></span>`
+                              )
+                              .join("")}
+                          </span>
+                        </div>
+                      </div>
+                      <div class="capsule_price">
+                        <div class="capsule_price_ctn">
+                          <div class="c_add_to_cart">
+                            <span>Agregar al carrito</span>
+                          </div>
+                          <div class="c_price_content">
+                            <div class="c_price">CLP$${
+                              card.precioDescuento
+                            }</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="additional_image_capsule">
+                        <div class="additional_image_ctn">
+                          <img class="additional_image" src="${
+                            card.imagenAlternativa
+                          }" alt="${card.nombreMaincap}">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    `;
+    mobileContentCarousel.appendChild(carouselItem);
+  });
+}
+
+function removeMobileCarousel() {
+  const mobileCarousel = document.getElementById("mobileCarousel");
+  if (mobileCarousel) {
+    mobileCarousel.innerHTML = "";
+  }
+}
+
+const mobileMediaQuery = window.matchMedia("(max-width: 576px)");
+
+function screenSizeChange(mq) {
+  if (mq.matches) {
+    fetchMobileCardData();
+  } else {
+    removeDesktopCarousel();
+    loadDesktopCarousel();
+    fetchDesktopCardData().then(() => {
+      addCarouselEventListeners();
+      updateVisibleItems();
+    });
+  }
+}
+
+screenSizeChange(mobileMediaQuery);
+mobileMediaQuery.addEventListener("change", screenSizeChange);
 
 function updateVisibleItems() {
   const sliderTray = document.getElementById("sliderTray");
@@ -168,33 +393,41 @@ function updateScrollBar() {
   }
 }
 
-document.getElementById("carouselBackButton").addEventListener("click", () => {
-  currentSlideIndex =
-    (currentSlideIndex - 1 + cardData.length) % cardData.length;
-  updateVisibleItems();
-  updateBackground();
-});
+function addCarouselEventListeners() {
+  document
+    .getElementById("carouselBackButton")
+    .addEventListener("click", () => {
+      currentSlideIndex =
+        (currentSlideIndex - 1 + cardData.length) % cardData.length;
+      updateVisibleItems();
+      updateBackground();
+      stopCarouselAutoChange();
+    });
 
-document.getElementById("carouselNextButton").addEventListener("click", () => {
-  currentSlideIndex = (currentSlideIndex + 1) % cardData.length;
-  updateVisibleItems();
-  updateBackground();
-});
+  document
+    .getElementById("carouselNextButton")
+    .addEventListener("click", () => {
+      currentSlideIndex = (currentSlideIndex + 1) % cardData.length;
+      updateVisibleItems();
+      updateBackground();
+      stopCarouselAutoChange();
+    });
 
-document.getElementById("leftBar").addEventListener("click", () => {
-  currentSlideIndex =
-    (currentSlideIndex - 1 + cardData.length) % cardData.length;
-  updateVisibleItems();
-  updateBackground();
-});
+  document.getElementById("leftBar").addEventListener("click", () => {
+    currentSlideIndex =
+      (currentSlideIndex - 1 + cardData.length) % cardData.length;
+    updateVisibleItems();
+    updateBackground();
+    stopCarouselAutoChange();
+  });
 
-document.getElementById("rightBar").addEventListener("click", () => {
-  currentSlideIndex = (currentSlideIndex + 1) % cardData.length;
-  updateVisibleItems();
-  updateBackground();
-});
-
-document.addEventListener("DOMContentLoaded", fetchCardData);
+  document.getElementById("rightBar").addEventListener("click", () => {
+    currentSlideIndex = (currentSlideIndex + 1) % cardData.length;
+    updateVisibleItems();
+    updateBackground();
+    stopCarouselAutoChange();
+  });
+}
 
 let cardImages = [];
 
@@ -329,4 +562,19 @@ function renderCards(cardsForLoad, cardsContainer) {
     cardElement.innerHTML = cardContent;
     cardsContainer.appendChild(cardElement);
   });
+}
+
+let intervalId;
+function startCarouselAutoChange() {
+  if (window.innerWidth > 576) {
+    intervalId = setInterval(() => {
+      currentSlideIndex = (currentSlideIndex + 1) % cardData.length;
+      updateVisibleItems();
+      updateBackground();
+    }, transitionTime);
+  }
+}
+
+function stopCarouselAutoChange() {
+  clearInterval(intervalId);
 }

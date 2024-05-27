@@ -3530,7 +3530,7 @@
       "nombreMaincap": "Fortnite - Rogue Scout Pack",
       "dlc": true,
       "imagen": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/01.webp",
-      "imagenAlternativa": "",
+      "imagenAlternativa": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/grids/01.webp",
       "background": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/backgrounds/01.webp",
       "descuento": "-35%",
       "precioOriginal": "9.990",
@@ -3582,29 +3582,50 @@
       "nombreMaincap": "Fornite - Rebirth Harley Quinn Skin",
       "dlc": true,
       "imagen": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/02.webp",
-      "imagenAlternativa": "",
+      "imagenAlternativa": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/grids/02.webp",
       "background": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/backgrounds/02.webp",
       "descuento": "-35%",
       "precioOriginal": "9.990",
       "precioDescuento": "6.494",
       "plataforma": "",
       "plataforma_2": "",
-      "disponibleEn": [],
+      "disponibleEn": ["epicgames", "xbox", "playstation"],
       "key": "",
       "keyImg": "",
       "keyLink": "",
       "likes": 41808,
       "galeria": [],
-      "generos": [],
+      "generos": [
+        "Acción",
+        "Multijugador",
+        "Cooperativo",
+        "Tercera persona",
+        "Aventuras"
+      ],
       "descripcion": "",
       "adicional": false,
       "introCaracteristicas": "",
       "caracteristicas": [],
       "descripcionAdicional": [],
-      "requisitos": [],
-      "detalles": [],
-      "restriccion": "",
-      "restriccionImg": "",
+      "requisitos": [
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "Sin notas adicionales"
+      ],
+      "detalles": [
+        {
+          "idiomas": ["Inglés"],
+          "lanzamiento": "21 de diciembre de 2023",
+          "editor": "Epic Games",
+          "desarrolladores": "Epic Games"
+        }
+      ],
+      "restriccion": "PEGI 12",
+      "restriccionImg": "https://store-megagames.netlify.app/assets/public/pegi_12.svg",
       "origen": "offerCards"
     },
     {
@@ -3613,29 +3634,82 @@
       "nombreMaincap": "Minecraft: Java & Bedrock Edition",
       "dlc": false,
       "imagen": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/03.webp",
-      "imagenAlternativa": "",
+      "imagenAlternativa": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/grids/03.webp",
       "background": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/backgrounds/03.webp",
       "descuento": "-50%",
       "precioOriginal": "19.990",
       "precioDescuento": "9.995",
       "plataforma": "",
       "plataforma_2": "",
-      "disponibleEn": [],
-      "key": "",
-      "keyImg": "",
-      "keyLink": "",
+      "disponibleEn": [
+        "win",
+        "xbox",
+        "playstation",
+        "ios",
+        "nintendo",
+        "android"
+      ],
+      "key": "Windows Store",
+      "keyImg": "https://store-megagames.netlify.app/../assets/public/windows-store.svg",
+      "keyLink": "https://www.microsoft.com/",
       "likes": 21494,
-      "galeria": [],
-      "generos": [],
-      "descripcion": "",
-      "adicional": false,
+      "galeria": [
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/03-01.webp",
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/03-02.webp",
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/03-03.webp",
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/03-04.webp",
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/03-05.webp",
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/03-06.webp"
+      ],
+      "generos": [
+        "Acción",
+        "Un solo jugador",
+        "Multijugador",
+        "Cooperativo",
+        "Pantalla dividida",
+        "Tercera persona",
+        "Primera persona",
+        "Realidad virtual",
+        "Simulación",
+        "Aventuras"
+      ],
+      "descripcion": "Cuando hablamos de la clave Minecraft Java & Bedrock Edition (PC), es difícil determinar por dónde empezar. El videojuego sandbox fue creado por Markus Persson y posteriormente desarrollado por Mojang. Es una reminiscencia de los juegos de 8 bits, donde tu creatividad es el único factor limitante. Imagina jugar con Lego: es más o menos lo mismo con Minecraft, ¡solo que los bloques que usas para construir tus obras maestras son infinitos!",
+      "adicional": true,
       "introCaracteristicas": "",
-      "caracteristicas": [],
+      "caracteristicas": [
+        {
+          "titulo": "¡El mundo es tu patio de recreo! - ",
+          "descripcion": "Con la clave Minecraft Java & Bedrock Edition (PC), todo el mundo que te rodea está hecho de bloques, ¡la realidad misma está hecha de bloques! ¡Los pájaros, las ovejas, las nubes y el agua son bloques! ¡Un mundo interminable, o mejor dicho, eterno, está lleno de cuevas, mazmorras, monstruos y otros diseños en bloques! ¡Y la mejor parte es que puedes coleccionar todo y usar cualquier cosa mientras construyes tus propios diseños! Ah, por cierto, también hay portales a otras dimensiones."
+        },
+        {
+          "titulo": "¡Se trata de explorar! - ",
+          "descripcion": "¡Existen innumerables posibilidades de lo que puedes crear con la clave Minecraft Java & Bedrock Edition (PC) en tu mano! ¡Combina diferentes materiales y crea elementos para la construcción, la supervivencia, la caza y las batallas! Más aún, ¡el juego ofrece numerosos modos de juego diferentes para tu mejor experiencia! ¡Con la clave Minecraft Java & Bedrock Edition (PC) puedes sumergirte en bastantes desafíos complejos!"
+        },
+        {
+          "titulo": "¿En línea? - ",
+          "descripcion": "Sin embargo, los modos de juego en solitario están lejos de ser el final de lo que el juego Minecraft puede ofrecer. Compra la clave de Minecraft Java & Bedrock Edition (PC) y únete a millones de jugadores en línea, donde lo que suceda dependerá del reino al que decidas unirte. Desde campos de batalla hasta partidas de supervivencia limitadas y mundos de construcción masivos, ¡la clave de Minecraft lo ofrece todo! ¡Explora, crea, crea y disfruta al máximo!"
+        }
+      ],
       "descripcionAdicional": [],
-      "requisitos": [],
-      "detalles": [],
-      "restriccion": "",
-      "restriccionImg": "",
+      "requisitos": [
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "Sin notas adicionales"
+      ],
+      "detalles": [
+        {
+          "idiomas": ["Inglés"],
+          "lanzamiento": "7 de junio de 2022",
+          "editor": "Microsoft Studios",
+          "desarrolladores": "Mojang AB"
+        }
+      ],
+      "restriccion": "PEGI 7",
+      "restriccionImg": "https://store-megagames.netlify.app/../assets/public/pegi_7.svg",
       "origen": "offerCards"
     },
     {
@@ -3644,27 +3718,81 @@
       "nombreMaincap": "Xbox Game Pass Ultimate",
       "dlc": false,
       "imagen": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/04.webp",
-      "imagenAlternativa": "",
+      "imagenAlternativa": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/grids/04.webp",
       "background": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/backgrounds/04.webp",
       "descuento": "-30%",
       "precioOriginal": "8.890",
       "precioDescuento": "6.223",
       "plataforma": "",
       "plataforma_2": "",
-      "disponibleEn": [],
-      "key": "",
-      "keyImg": "",
-      "keyLink": "",
+      "disponibleEn": ["xbox", "win"],
+      "key": "Xbox Live",
+      "keyImg": "https://store-megagames.netlify.app/../assets/public/xbox.svg",
+      "keyLink": "https://www.xbox.com/",
       "likes": 47456,
       "galeria": [],
-      "generos": [],
-      "descripcion": "",
-      "adicional": false,
+      "generos": ["Tarjetas de regalo"],
+      "descripcion": "¡Prepárate para una experiencia de juego sin precedentes con Xbox Game Pass Ultimate 1 mes! Microsoft Ultimate 1m. ¡El código te otorgará todos los beneficios de la membresía Xbox Live Gold junto con acceso a una colección de más de 100 juegos de Xbox Game Pass lanzados para consolas Xbox y PC! En lugar de comprar cada una de estas suscripciones de Xbox por separado, tienes la opción conveniente de adquirirlas todas con una única compra de código de Xbox Game Pass Ultimate.",
+      "adicional": true,
       "introCaracteristicas": "",
-      "caracteristicas": [],
-      "descripcionAdicional": [],
-      "requisitos": [],
-      "detalles": [],
+      "caracteristicas": [
+        {
+          "titulo": "Catálogo de juegos de Xbox Game Pass Ultimate: ",
+          "descripcion": "Explore una biblioteca digital en constante crecimiento de títulos de juegos populares publicados para consolas Xbox y Windows 10. La colección incluye más de 100 juegos y al menos 20 de ellos están disponibles para PC. El catálogo de Xbox Game Pass Ultimate de 1 mes incluye exclusivas de Microsoft como Forza Horizon 4, Sea of ​​Thieves, Halo: The Master Chief Collection, Gears of War y muchos otros juegos de editores externos. Cada título es compatible con Xbox One, pero numerosos juegos también se ejecutan en la consola Xbox 360 de séptima generación."
+        },
+        {
+          "titulo": "Ofertas exclusivas de Xbox Game Pass: ",
+          "descripcion": "Todos los juegos de Xbox Game Pass Ultimate estarán disponibles mientras dure la suscripción, pero una vez finalizada la membresía, el acceso al catálogo digital de Xbox Game Pass estará cerrado hasta que se renueve el servicio. Sin embargo, todo tu progreso se guardará, por lo que una vez que decidas regresar, podrás continuar jugando fácilmente desde donde lo dejaste. Por último, Xbox Game Pass Ultimate 1 mes significa que podrás disfrutar de ofertas especiales de Xbox Game Pass: 20 % de descuento para cada juego que desees adquirir de forma permanente junto con 10 % de descuento para todos los complementos y DLC."
+        },
+        {
+          "titulo": "Ventajas y beneficios de Xbox Live Gold: ",
+          "descripcion": "Con el mismo código de Xbox Game Pass Ultimate, también recibirás una de las suscripciones de Xbox más populares: ¡Xbox Live Gold! El servicio permite modos multijugador y cooperativo en línea para todos tus juegos de Xbox y brinda beneficios adicionales. Los suscriptores Gold tienen la oportunidad de recibir de 2 a 4 juegos gratis cada mes y disfrutar de descuentos aún más exclusivos que llegan hasta el 50% o el 75%. Junto con las ofertas de Xbox Game Pass, Microsoft Ultimate 1 m. ¡El código sigue siendo una de las mejores opciones para quienes buscan ahorrar mientras compran en Xbox Live!"
+        },
+        {
+          "titulo": "Dos formas de activar: ",
+          "descripcion": "Bien, ya compraste el código de Xbox Game Pass Ultimate, ¿qué sigue? ¿Cómo recibir todos los beneficios antes mencionados? ¿Cómo activar esta clave? ¿De qué se trata este código? ¡No busques más porque estás completamente cubierto! ¡Estas son las dos formas más convenientes de activar sus códigos clave prepagos!"
+        }
+      ],
+      "descripcionAdicional": [
+        {
+          "titulo": "Si quieres activar tu Microsoft Ultimate 1 m. membresía a través del navegador web:"
+        },
+        {
+          "descripcion": "Mientras esté en un navegador, seleccione la función Canjear código"
+        },
+        {
+          "descripcion": "Haga clic en la opción Iniciar sesión"
+        },
+        {
+          "descripcion": "Inicie sesión en su cuenta de Microsoft"
+        },
+        {
+          "descripcion": "Haga clic en la opción Canjear"
+        },
+        {
+          "descripcion": "Ingrese el código de 25 caracteres y haga clic en Confirmar"
+        },
+        {
+          "descripcion": "Disfruta de tu compra"
+        }
+      ],
+      "requisitos": [
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "Sin notas adicionales"
+      ],
+      "detalles": [
+        {
+          "idiomas": ["Sin especificación"],
+          "lanzamiento": "9 de junio de 2019",
+          "editor": "Microsoft Studios",
+          "desarrolladores": "Microsoft Studios"
+        }
+      ],
       "restriccion": "",
       "restriccionImg": "",
       "origen": "offerCards"
@@ -3675,14 +3803,14 @@
       "nombreMaincap": "Genshin Impact Genesis Crystals",
       "dlc": false,
       "imagen": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/05.webp",
-      "imagenAlternativa": "",
+      "imagenAlternativa": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/grids/05.webp",
       "background": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/backgrounds/05.webp",
       "descuento": "-50%",
       "precioOriginal": "2.000",
       "precioDescuento": "1.000",
       "plataforma": "",
       "plataforma_2": "",
-      "disponibleEn": [],
+      "disponibleEn": ["win", "playstation", "android", "ios"],
       "key": "",
       "keyImg": "",
       "keyLink": "",
@@ -3706,29 +3834,50 @@
       "nombreMaincap": "Fortnite - Chill Vibez Pack",
       "dlc": true,
       "imagen": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/06.webp",
-      "imagenAlternativa": "",
+      "imagenAlternativa": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/grids/06.webp",
       "background": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/backgrounds/06.webp",
       "descuento": "-35%",
       "precioOriginal": "9.990",
       "precioDescuento": "6.494",
       "plataforma": "",
       "plataforma_2": "",
-      "disponibleEn": [],
+      "disponibleEn": ["epicgames", "xbox", "playstation"],
       "key": "",
       "keyImg": "",
       "keyLink": "",
       "likes": 20218,
       "galeria": [],
-      "generos": [],
+      "generos": [
+        "Acción",
+        "Multijugador",
+        "Cooperativo",
+        "Tercera persona",
+        "Aventuras"
+      ],
       "descripcion": "",
       "adicional": false,
       "introCaracteristicas": "",
       "caracteristicas": [],
       "descripcionAdicional": [],
-      "requisitos": [],
-      "detalles": [],
-      "restriccion": "",
-      "restriccionImg": "",
+      "requisitos": [
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "Sin notas adicionales"
+      ],
+      "detalles": [
+        {
+          "idiomas": ["Inglés"],
+          "lanzamiento": "21 de diciembre de 2023",
+          "editor": "Epic Games",
+          "desarrolladores": "Epic Games"
+        }
+      ],
+      "restriccion": "PEGI 12",
+      "restriccionImg": "https://store-megagames.netlify.app/assets/public/pegi_12.svg",
       "origen": "offerCards"
     },
     {
@@ -3737,29 +3886,117 @@
       "nombreMaincap": "Grand Theft Auto V: Edición Online Premium",
       "dlc": false,
       "imagen": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/07.webp",
-      "imagenAlternativa": "",
+      "imagenAlternativa": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/grids/07.webp",
       "background": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/backgrounds/07.webp",
       "descuento": "-66%",
       "precioOriginal": "22.995",
       "precioDescuento": "10.118",
       "plataforma": "",
       "plataforma_2": "",
-      "disponibleEn": [],
-      "key": "",
-      "keyImg": "",
-      "keyLink": "",
+      "disponibleEn": ["win", "playstation", "xbox"],
+      "key": "Rockstar Games Launcher",
+      "keyImg": "https://store-megagames.netlify.app/../assets/public/rockstar.svg",
+      "keyLink": "https://socialclub.rockstargames.com/rockstar-games-launcher",
       "likes": 46329,
-      "galeria": [],
-      "generos": [],
-      "descripcion": "",
-      "adicional": false,
-      "introCaracteristicas": "",
-      "caracteristicas": [],
-      "descripcionAdicional": [],
-      "requisitos": [],
-      "detalles": [],
-      "restriccion": "",
-      "restriccionImg": "",
+      "galeria": [
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/07-01.webp",
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/07-02.webp",
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/07-03.webp",
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/07-04.webp",
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/07-05.webp",
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/07-06.webp"
+      ],
+      "generos": [
+        "Acción",
+        "Un solo jugador",
+        "Multijugador",
+        "Primera persona",
+        "Aventuras"
+      ],
+      "descripcion": "Al comprar Grand Theft Auto V: Edición online Premium te sumergirás en el inmenso mundo de GTA online con un montón de contenido. No sólo obtendrás el juego base, Grand Theft Auto V, sino que también encontrarás Criminal Enterprise Starter Pack. ¡Vale la pena adentrarte en él!",
+      "adicional": true,
+      "introCaracteristicas": "Grand Theft Auto V - Criminal Enterprise Paquete de inicio es una de las mejores maneras de comenzar su viaje de GTA V online. Con este paquete exclusivo, su personaje en el juego obtendrás instantáneamente contenido estimado en más de diez millones de GTA $, ¡y un bono adicional!¡Tus nuevas aventuras te esperan!",
+      "caracteristicas": [
+        {
+          "descripcion": "Oficina en Maze Bank West"
+        },
+        {
+          "descripcion": "Bunker de asalto Paleto Bosque"
+        },
+        {
+          "descripcion": "Fábrica de efectivo en el Desierto de Senora"
+        },
+        {
+          "descripcion": "Club para moteros - Great Chaparral"
+        },
+        {
+          "descripcion": "Un apartamento en 1561 San Vitas Calle"
+        },
+        {
+          "descripcion": "1337 Garaje 10 vehículos"
+        }
+      ],
+      "descripcionAdicional": [
+        {
+          "titulo": "Prepárate para algunos paseos ¡increíbles!"
+        },
+        {
+          "descripcion": "Dune FAV"
+        },
+        {
+          "descripcion": "Huntley S"
+        },
+        {
+          "descripcion": "Turismo R"
+        },
+        {
+          "descripcion": "Coquette Classic"
+        },
+        {
+          "descripcion": "Obey Omnis"
+        },
+        {
+          "descripcion": "Enus Windsor"
+        },
+        {
+          "descripcion": "Maibatsu Frogger"
+        },
+        {
+          "descripcion": "Pegassi Vortex"
+        },
+        {
+          "descripcion": "Banshee"
+        },
+        {
+          "descripcion": "Zombi Chopper occidental"
+        },
+        {
+          "descripcion": "Nuevas propiedades inmobiliarias, vehículos exclusivos y algo de dinero extra en la cuenta bancaria, también te podrás equipar con un rifle markman, un lanzagranadas, un rifle, trajes atractivos y, finalmente, ¡tatuajes de motero! No te pierdas este starter pack."
+        },
+        {
+          "descripcion": "Cuando quieras disfrutar de la experiencia de un solo jugador puedes cargar el legendario GTA V y jugar a través de su historia o simplemente explorar el mundo abierto, ¡siempre, buscando problemas!"
+        }
+      ],
+      "requisitos": [
+        "Sí",
+        "Windows 10 64 Bit, Windows 8.1 64 Bit",
+        "Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs) / AMD Phenom 9850 Quad-Core (4 CPUs) @ 2.5GHz",
+        "4 GB RAM",
+        "NVIDIA 9800 GT 1GB / AMD HD 4870 1GB (DX 10, 10.1, 11)",
+        "72 GB"
+      ],
+      "detalles": [
+        {
+          "idiomas": [
+            "Alemán, Coreano, Español - España, Francés, Inglés, Italiano, Japonés, Polaco, Ruso, Simpified Chinese, Traditional Chinese"
+          ],
+          "lanzamiento": "17 de junio de 2013",
+          "editor": "Rockstar Games",
+          "desarrolladores": "Rockstar North"
+        }
+      ],
+      "restriccion": "PEGI 18",
+      "restriccionImg": "https://store-megagames.netlify.app/../assets/public/pegi_18.svg",
       "origen": "offerCards"
     },
     {
@@ -3776,35 +4013,83 @@
       "plataforma": "",
       "plataforma_2": "",
       "disponibleEn": ["win", "xbox", "playstation"],
-      "key": "",
-      "keyImg": "",
-      "keyLink": "",
+      "key": "Battle.net",
+      "keyImg": "https://store-megagames.netlify.app/../assets/public/blizzard.svg",
+      "keyLink": "https://www.blizzard.com/",
       "likes": 48705,
       "galeria": [
         "https://store-megagames.netlify.app/assets/public/carousel-screenshots/diablo4-01.webp",
         "https://store-megagames.netlify.app/assets/public/carousel-screenshots/diablo4-02.webp",
         "https://store-megagames.netlify.app/assets/public/carousel-screenshots/diablo4-03.webp",
-        "https://store-megagames.netlify.app/assets/public/carousel-screenshots/diablo4-04.webp"
+        "https://store-megagames.netlify.app/assets/public/carousel-screenshots/diablo4-04.webp",
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/08-05.webp",
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/08-06.webp"
       ],
-      "generos": [],
-      "descripcion": "",
-      "adicional": false,
-      "introCaracteristicas": "",
-      "caracteristicas": [],
-      "descripcionAdicional": [],
-      "requisitos": [],
-      "detalles": [],
-      "restriccion": "",
-      "restriccionImg": "",
+      "generos": ["Acción", "Aventuras"],
+      "descripcion": "Con un montón de maldades que derrotar, innumerables habilidades que dominar y desgarradoras mazmorras repletas de tesoros, Diablo IV promete ofrecerte la experiencia RPG definitiva repleta de acción. Tanto si eliges enfrentarte al Infierno en solitario como si lo haces con compañeros, recorrerás escenarios de gran belleza e incluso explorarás un mundo compartido en el que podrás comerciar con otros jugadores en ciudades, formar equipos para derrotar a poderosos jefes o incluso participar en batallas PvP para demostrar tus habilidades. Compra Diablo IV Código más barato - ¡explora las fosas del Infierno antes que nadie!",
+      "adicional": true,
+      "introCaracteristicas": "Crea y personaliza a tu propio héroe para librar la guerra contra los innombrables terrores que asolan la tierra. Elige entre cinco clases distintas, desentierra y prueba una amplia variedad de potente equipo, y escoge cuidadosamente tus talentos y habilidades para convertirte en inquebrantable en presencia de la oscuridad. Sin embargo, tus decisiones tienen un gran peso; el destino de tu reino pende de un hilo. ¿A quién elegirás?",
+      "caracteristicas": [
+        {
+          "titulo": "Bárbaro: ",
+          "descripcion": "El bárbaro empuña varias armas con una fuerza incomparable, gritos de guerra intimidatorios y golpes que hacen temblar el suelo"
+        },
+        {
+          "titulo": "Druida: ",
+          "descripcion": "El druida se transforma en oso u hombre lobo y domina las fuerzas de la naturaleza, manejando la tierra, el viento y la tormenta para desatar la devastación"
+        },
+        {
+          "titulo": "Nigromante: ",
+          "descripcion": "Los nigromantes invocan con astucia hordas de muertos vivientes, utilizando tres poderosos baluartes de Hueso, Sangre o Sombra para derrotar a sus enemigos"
+        },
+        {
+          "titulo": "Pícaro: ",
+          "descripcion": "El pícaro es un guerrero versátil especializado en el combate a distancia o cuerpo a cuerpo. Emplea armas imbuidas, poderosos combos, venenos mortales y magia de las sombras para acabar con los demonios con facilidad"
+        },
+        {
+          "titulo": "Hechicera: ",
+          "descripcion": "La Hechicera moldea los elementos para adaptarlos a sus necesidades y emplea rayos, púas heladas y meteoritos ardientes para triunfar sobre sus enemigos"
+        }
+      ],
+      "descripcionAdicional": [
+        {
+          "titulo": "Vence la oscuridad"
+        },
+        {
+          "descripcion": "El Santuario está al borde del caos mientras el mal y la impiedad siguen asolando la tierra. Demonios depravados y fauna corrupta vagan libremente, aterrorizando a la población, que se acobarda y lucha por sobrevivir día a día. Al despertar la hija de Mefisto, su mera presencia enciende una pasión ardiente en los corazones de quienes la rodean, ya sean demonios, humanos o bestias. Su influencia obliga incluso a las emociones más profundas y reprimidas, como miedos profundos, rabia descontrolada, impulsos reprimidos y deseos pecaminosos, a surgir violenta e irresistiblemente a la superficie. Con la oscuridad descendiendo de nuevo sobre Santuario, sólo un puñado de los más valientes se atreve a enfrentarse a la amenaza que se cierne. Sin embargo, en una tierra desprovista de esperanza, valor, sabiduría y justicia, ¿qué destino aguarda a estos pocos valientes? ¡Compra el Código de Diablo IV más barato y enfréntate al reino de Lilith!"
+        }
+      ],
+      "requisitos": [
+        "Sí",
+        "Windows 10 64-bit",
+        "Intel® Core™ i5-2500K or AMD™ FX-8350",
+        "8 GB RAM",
+        "NVIDIA® GeForce® GTX 660 or AMD Radeon™ R9 280",
+        "90 GB SSD",
+        "Sin notas adicionales"
+      ],
+      "detalles": [
+        {
+          "idiomas": [
+            "Alemán, Francés, Inglés, Italiano, Polaco, Ruso, Español - España"
+          ],
+          "lanzamiento": "1 de junio de 2023",
+          "editor": "Blizzard Entertainment",
+          "desarrolladores": "Blizzard Entertainment"
+        }
+      ],
+      "restriccion": "PEGI 18",
+      "restriccionImg": "https://store-megagames.netlify.app/../assets/public/pegi_18.svg",
       "origen": "offerCards"
     },
     {
       "id": 9,
+
       "nombre": "Minecraft: Java & Bedrock Edition Deluxe Collection (PC)  - Windows Store Key GLOBAL",
       "nombreMaincap": "Minecraft: Java & Bedrock Edition",
       "dlc": false,
       "imagen": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/09.webp",
-      "imagenAlternativa": "",
+      "imagenAlternativa": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/grids/09.webp",
       "background": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/backgrounds/09.webp",
       "descuento": "-50%",
       "precioOriginal": "39.990",
@@ -3819,21 +4104,74 @@
         "nintendo",
         "android"
       ],
-      "key": "",
-      "keyImg": "",
-      "keyLink": "",
+      "key": "Microsoft Store",
+      "keyImg": "https://store-megagames.netlify.app/../assets/public/windows-store.svg",
+      "keyLink": "https://www.microsoft.com/",
       "likes": 14982,
-      "galeria": [],
-      "generos": [],
-      "descripcion": "",
+      "galeria": [
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/03-01.webp",
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/03-02.webp",
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/03-03.webp",
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/03-04.webp",
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/03-05.webp",
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/03-06.webp"
+      ],
+      "generos": [
+        "Acción",
+        "Un solo jugador",
+        "Multijugador",
+        "Cooperativo",
+        "Pantalla dividida",
+        "Tercera persona",
+        "Primera persona",
+        "Realidad virtual",
+        "Simulación",
+        "Aventuras"
+      ],
+      "descripcion": "Deluxe Collection incluye este contenido adicional además de Minecraft:",
       "adicional": false,
       "introCaracteristicas": "",
-      "caracteristicas": [],
-      "descripcionAdicional": [],
-      "requisitos": [],
-      "detalles": [],
-      "restriccion": "",
-      "restriccionImg": "",
+      "caracteristicas": [
+        {
+          "descripcion": "1600 monedas Minecoins;"
+        },
+        {
+          "descripcion": "Cinco mapas (Skyblock One Block, Hacker Tools, Pets Collection, Parkour Spiral y Original Bed Wars)"
+        },
+        {
+          "descripcion": "Tres paquetes de aspectos (Spy Mobs, Cute Anime Teens y Cute Mob Skins)"
+        },
+        {
+          "descripcion": "Un paquete de texturas (Clarity)"
+        },
+        {
+          "descripcion": "Cinco elementos de Character Creator y tres gestos."
+        }
+      ],
+      "descripcionAdicional": [
+        {
+          "descripcion": "Para los jugadores que *no* usan Windows 10 o Windows 11, vaya a Minecraft.net/download para obtener el Iniciador para su sistema operativo y acceder a su juego."
+        }
+      ],
+      "requisitos": [
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "Sin notas adicionales"
+      ],
+      "detalles": [
+        {
+          "idiomas": ["Inglés"],
+          "lanzamiento": "7 de junio de 2022",
+          "editor": "Microsoft Studios",
+          "desarrolladores": "Mojang AB"
+        }
+      ],
+      "restriccion": "PEGI 7",
+      "restriccionImg": "https://store-megagames.netlify.app/../assets/public/pegi_7.svg",
       "origen": "offerCards"
     },
     {
@@ -3850,26 +4188,73 @@
       "plataforma": "",
       "plataforma_2": "",
       "disponibleEn": ["win", "mac", "xbox", "playstation"],
-      "key": "",
-      "keyImg": "",
-      "keyLink": "",
+      "key": "Steam",
+      "keyImg": "https://store-megagames.netlify.app/../assets/public/steam.svg",
+      "keyLink": "https://store.steampowered.com/",
       "likes": 52601,
       "galeria": [
-        "https://store-megagames.netlify.app/assets/public/carousel-screenshots/re4-01.webp",
-        "https://store-megagames.netlify.app/assets/public/carousel-screenshots/re4-02.webp",
-        "https://store-megagames.netlify.app/assets/public/carousel-screenshots/re4-03.webp",
-        "https://store-megagames.netlify.app/assets/public/carousel-screenshots/re4-04.webp"
+        "https://store-megagames.netlify.app/../assets/public/carousel-screenshots/re4-01.webp",
+        "https://store-megagames.netlify.app/../assets/public/carousel-screenshots/re4-02.webp",
+        "https://store-megagames.netlify.app/../assets/public/carousel-screenshots/re4-03.webp",
+        "https://store-megagames.netlify.app/../assets/public/carousel-screenshots/re4-04.webp",
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/10-05.webp",
+        "https://store-megagames.netlify.app/../assets/public/cards-ofertas/galery/10-06.webp"
       ],
-      "generos": [],
-      "descripcion": "",
-      "adicional": false,
-      "introCaracteristicas": "",
-      "caracteristicas": [],
-      "descripcionAdicional": [],
-      "requisitos": [],
-      "detalles": [],
-      "restriccion": "",
-      "restriccionImg": "",
+      "generos": [
+        "Acción",
+        "Un solo jugador",
+        "Tercera persona",
+        "Horror",
+        "Aventuras"
+      ],
+      "descripcion": "Disfruta del remake del juego de survival horror que cambió por completo el género. Resident Evil 4, adaptado a las consolas y PC modernos con gráficos y mecánicas de juego renovados, te lleva de vuelta a un remoto pueblo europeo infectado por el parásito que controla la mente: Las Plagas. Tras los remakes de RE2 y RE3, Capcom nos ofrece otro remake de un juego clásico. Si nunca has jugado al RE4 original, el Resident Evil 4 Código de Steam es una forma perfecta de experimentar uno de los mejores juegos, si no el mejor, de la serie Resident Evil.",
+      "adicional": true,
+      "introCaracteristicas": "Estas características del juego Resident Evil 4 hacen que el remake parezca nuevo pero muy familiar:",
+      "caracteristicas": [
+        {
+          "titulo": "Nueva capa de pintura: ",
+          "descripcion": "El remake de Resident Evil 4 tiene un aspecto fenomenal con gráficos, iluminación y sombras renovados"
+        },
+        {
+          "titulo": "Nuevo pero familiar: ",
+          "descripcion": "Leon todavía puede dar patadas en la cara a los enemigos, pero ahora puede parar los ataques enemigos con un cuchillo y tiene algunos trucos más en la manga"
+        },
+        {
+          "titulo": "La esencia de RE4: ",
+          "descripcion": "Con gráficos y jugabilidad modernizados, el remake de RE4 conserva la esencia del original"
+        },
+        {
+          "titulo": "Nuevas secuencias",
+          "descripcion": "El remake de RE4 cuenta con una historia y secuencias de juego nuevas y ampliadas"
+        },
+        {
+          "descripcion": "Resident Evil 4 al mejor precio."
+        }
+      ],
+      "descripcionAdicional": [
+        {
+          "titulo": "Una clase magistral de survival-horror"
+        },
+        {
+          "descripcion": "Cuando se lanzó por primera vez en 2005, Resident Evil 4 redefinió por completo el género del survival-horror. Ahora puedes disfrutar de uno de los mejores juegos de la serie. Seis años después del brote en Racoon City, Leon Kennedy recibe el encargo de encontrar a la hija del Presidente de los Estados Unidos. La búsqueda lleva a Leon a un pequeño pueblo rural europeo donde una nueva amenaza se ha apoderado de la población local y la ha infectado. Compra Resident Evil 4 Código de Steam, y enfréntate a los terroríficos enemigos en tu misión de encontrar a quien secuestró a la hija del Presidente."
+        }
+      ],
+      "requisitos": [
+        "Sí",
+        "Windows 10 (64 bit)",
+        "AMD Ryzen 3 1200 / Intel Core i5-7500",
+        "8 GB RAM",
+        "AMD Radeon RX 560 with 4GB VRAM / NVIDIA GeForce GTX 1050 Ti with 4GB VRAM",
+        "No especificado",
+        "Estimated performance (when set to Prioritize Performance): 1080p/60fps. ・Framerate might drop in graphics-intensive scenes. ・AMD Radeon RX 6700 XT or NVIDIA GeForce RTX 2060 required to support ray tracing"
+      ],
+      "detalles": [
+        {
+          "idiomas": ["Alemán, Francés, Inglés, Italiano, Español - España"]
+        }
+      ],
+      "restriccion": "PEGI 18",
+      "restriccionImg": "https://store-megagames.netlify.app/../assets/public/pegi_18.svg",
       "origen": "offerCards"
     },
     {
@@ -4912,48 +5297,12 @@
     },
     {
       "id": 44,
-      "nombre": "Sekiro™: Shadows Die Twice - GOTY Edition",
-      "nombreMaincap": "Sekiro™: Shadows Die Twice - GOTY Edition",
-      "dlc": false,
-      "imagen": "https://store-megagames.netlify.app/../assets/public/capsules/hero_capsule_02.webp",
-      "imagenAlternativa": "https://store-megagames.netlify.app/../assets/public/sekiro-carrusel.webp",
-      "background": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/backgrounds/44.webp",
-      "descuento": "-50%",
-      "precioOriginal": "47.650",
-      "precioDescuento": "23.825",
-      "plataforma": "",
-      "plataforma_2": "",
-      "disponibleEn": ["win", "xbox", "playstation"],
-      "key": "",
-      "keyImg": "",
-      "keyLink": "",
-      "likes": 11454,
-      "galeria": [
-        "https://store-megagames.netlify.app/assets/public/carousel-screenshots/sekiro-01.webp",
-        "https://store-megagames.netlify.app/assets/public/carousel-screenshots/sekiro-02.webp",
-        "https://store-megagames.netlify.app/assets/public/carousel-screenshots/sekiro-03.webp",
-        "https://store-megagames.netlify.app/assets/public/carousel-screenshots/sekiro-04.webp"
-      ],
-      "generos": [],
-      "descripcion": "",
-      "adicional": false,
-      "introCaracteristicas": "",
-      "caracteristicas": [],
-      "descripcionAdicional": [],
-      "requisitos": [],
-      "detalles": [],
-      "restriccion": "",
-      "restriccionImg": "",
-      "origen": "offerCards"
-    },
-    {
-      "id": 45,
       "nombre": "Manor Lords Steam Key LATAM",
       "nombreMaincap": "Manor Lords",
       "dlc": false,
       "imagen": "https://store-megagames.netlify.app/../assets/public/manor-lords-carrusel.webp",
       "imagenAlternativa": "https://store-megagames.netlify.app/../assets/public/manor-lords-carrusel.webp",
-      "background": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/backgrounds/45.webp",
+      "background": "https://store-megagames.netlify.app/../assets/public/cards-ofertas/backgrounds/44.webp",
       "descuento": "-25%",
       "precioOriginal": "19.900",
       "precioDescuento": "14.925",

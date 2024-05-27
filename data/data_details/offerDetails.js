@@ -47,8 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
         "characteristicsList"
       );
 
-      const additionalDesc = document.getElementById("additionalDesc");
-      const additionalDescText = document.getElementById("additionalDescText");
+      const additionalDescription = document.getElementById(
+        "additionalDescription"
+      );
 
       const galery = document.getElementById("galery");
 
@@ -141,9 +142,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         const descripcionAdicional = gameFound.descripcionAdicional;
-        descripcionAdicional.forEach((adicional) => {
+
+        descripcionAdicional.forEach((adicional, index) => {
+          const listItem = document.createElement("li");
+          const additionalDesc = document.createElement("strong");
+          const additionalDescText = document.createElement("span");
+
           additionalDesc.textContent = adicional.titulo;
           additionalDescText.textContent = adicional.descripcion;
+
+          if (index !== 0) {
+            listItem.textContent = "• ";
+          }
+          listItem.appendChild(additionalDesc);
+          listItem.appendChild(additionalDescText);
+
+          additionalDescription.appendChild(listItem);
         });
 
         detailDesc.forEach((element, index) => {

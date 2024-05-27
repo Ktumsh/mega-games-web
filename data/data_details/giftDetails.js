@@ -122,8 +122,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const descripcionAdicional = gameFound.descripcionAdicional;
         descripcionAdicional.forEach((adicional) => {
+          const desc = document.createElement("span");
           additionalDesc.textContent = adicional.titulo;
           additionalDescText.textContent = adicional.descripcion;
+          desc.appendChild(additionalDesc);
+          desc.appendChild(additionalDescText);
         });
 
         detailDesc.forEach((element, index) => {
