@@ -3590,9 +3590,9 @@
       "plataforma": "",
       "plataforma_2": "",
       "disponibleEn": ["epicgames", "xbox", "playstation"],
-      "key": "",
-      "keyImg": "",
-      "keyLink": "",
+      "key": "Epic Games",
+      "keyImg": "https://store-megagames.netlify.app/assets/public/epic_games.svg",
+      "keyLink": "https://store.epicgames.com/",
       "likes": 41808,
       "galeria": [],
       "generos": [
@@ -3600,13 +3600,36 @@
         "Multijugador",
         "Cooperativo",
         "Tercera persona",
-        "Aventuras"
+        "FPS / TPS"
       ],
-      "descripcion": "",
-      "adicional": false,
-      "introCaracteristicas": "",
-      "caracteristicas": [],
-      "descripcionAdicional": [],
+      "descripcion": "El código de Epic Games de Fortnite - Rebirth Harley Quinn Skin DLC está disponible para todos los que la quieran. Si bien al principio solo podías conseguirla comprando el cómic DC Zero Point y canjeando el código que se proporciona en él, ahora está disponible para todos los entusiastas de Fortnite que quieran darle un toque especial a la apariencia de Harley Quinn en el juego. Consigue esta opción de personalización cosmética para vestirte con una variación exclusiva y única del traje de Harley Quinn que antes solo estaba disponible como objeto promocional de DC. Las skins son uno de los mejores aspectos de Fortnite porque añaden mucha variedad, así como expresión propia a esta experiencia de battle royale y la skin Rebirth Harley Quinn no es una excepción. Compra este DLC de skins de Fortnite: ¡no pierdas esta gran oportunidad de disfrutar del juego al máximo!",
+      "adicional": true,
+      "introCaracteristicas": "Vístete tu avatar con el nuevo código de skin de Rebirth Harley Quinn de Fortnite, dale un cambio de imagen completo a Harley Quinn y sumérgete en el mundo de Fortnite. El juego cuenta con tres modos: Salvar el mundo, Creativo y el más popular de todos: Battle Royale. Juega en solitario o forma un escuadrón con tus amigos y lucha en la remota isla hasta que solo quedes tú con vida. Disfruta de un juego con un gratificante sistema de progresión, una gran variedad de contenidos y una mecánica de construcción única inspirada en juegos como Minecraft. Mientras que los elegantes gráficos caricaturescos de Fortnite recuerdan a juegos como Overwatch o Team Fortress 2, los objetos cosméticos como el código de Epic Games Rebirth Harley Quinn Skin de Fortnite realmente dan vida al juego como ningún otro.",
+      "caracteristicas": [
+        {
+          "titulo": "¿Cómo canjear el skin Harley Quinn Rebirth en PC?"
+        }
+      ],
+      "descripcionAdicional": [
+        {
+          "descripcion": "Si quieres canjear un skin de Fortnite, solo tienes que seguir las instrucciones que te proporcionamos a continuación:"
+        },
+        {
+          "descripcion": "Haz clic en Iniciar sesión en la esquina superior derecha de la página de inicio de Fortnite"
+        },
+        {
+          "descripcion": "Inicia sesión con tu cuenta de Epic Games"
+        },
+        {
+          "descripcion": "Pasa el cursor del ratón por encima del nombre de tu cuenta en la esquina superior derecha"
+        },
+        {
+          "descripcion": "Selecciona la opción Canjear código"
+        },
+        {
+          "descripcion": "Introduce el código clave y haz clic en Canjear"
+        }
+      ],
       "requisitos": [
         "No especificado",
         "No especificado",
@@ -3619,7 +3642,7 @@
       "detalles": [
         {
           "idiomas": ["Inglés"],
-          "lanzamiento": "21 de diciembre de 2023",
+          "lanzamiento": "21 de abril de 2021",
           "editor": "Epic Games",
           "desarrolladores": "Epic Games"
         }
@@ -3842,9 +3865,9 @@
       "plataforma": "",
       "plataforma_2": "",
       "disponibleEn": ["epicgames", "xbox", "playstation"],
-      "key": "",
-      "keyImg": "",
-      "keyLink": "",
+      "key": "Xbox Live",
+      "keyImg": "https://store-megagames.netlify.app/assets/public/xbox.svg",
+      "keyLink": "https://www.xbox.com/",
       "likes": 20218,
       "galeria": [],
       "generos": [
