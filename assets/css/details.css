@@ -1009,6 +1009,15 @@ body {
   list-style: none;
 }
 
+#additionalDescription {
+  padding-left: 0;
+}
+
+#additionalDescription > li {
+  margin-bottom: 5px;
+  list-style: none;
+}
+
 .system_requirements {
   position: relative;
   padding: 20px;

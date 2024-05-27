@@ -68,7 +68,7 @@
     <style>
       body {
         color: white !important;
-        font-family: Arial, Helvetica, sans-serif !important;
+        font-family: "Motiva Sans", Arial, Helvetica, sans-serif !important;
         background-color: #131019 !important;
       }
     </style>
@@ -90,7 +90,10 @@
       <div class="NavbarSlotDesktop"></div>
       <div class="divider_header"></div>
       <div id="pageGameBg" class="page_game_bg"></div>
-      <div class="sale_outer_container" style="margin-top: 3rem">
+      <div
+        class="sale_outer_container"
+        style="margin-top: 34px; overflow: hidden"
+      >
         <div class="sale_section_tab_list_container">
           <div class="content_hub_title">
             <div class="content_hub_title_ctn">
@@ -98,106 +101,16 @@
             </div>
           </div>
           <div class="content_hub_main_carousel">
-            <div class="content_hub_main_carousel_ctn">
-              <div id="carousel">
-                <div class="slider_body">
-                  <button
-                    id="carouselBackButton"
-                    type="button"
-                    aria-label="previous"
-                    class="carousel_back_button carousel_button"
-                  >
-                    <svg
-                      version="1.1"
-                      id="Layer_1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0px"
-                      y="0px"
-                      width="50px"
-                      height="100px"
-                      viewBox="0 0 50 100"
-                    >
-                      <polygon
-                        fill="#ffffff"
-                        points="0,0.093 0,25.702 24.323,50.026 0,74.349 0,99.955 49.929,50.026 "
-                      ></polygon>
-                    </svg>
-                  </button>
-                  <div class="carousel_slider horizontal_slider">
-                    <div class="slider_wrapper">
-                      <div
-                        id="sliderTray"
-                        class="slider_tray"
-                        style="
-                          display: flex;
-                          align-items: stretch;
-                          width: 1000%;
-                          transform: translateX(0%) translateX(0px);
-                          flex-direction: row;
-                        "
-                      ></div>
-                    </div>
-                  </div>
-                  <button
-                    id="carouselNextButton"
-                    type="button"
-                    aria-label="next"
-                    class="carousel_next_button carousel_button"
-                  >
-                    <svg
-                      version="1.1"
-                      id="Layer_1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0px"
-                      y="0px"
-                      width="50px"
-                      height="100px"
-                      viewBox="0 0 50 100"
-                    >
-                      <polygon
-                        fill="#ffffff"
-                        points="0,0.093 0,25.702 24.323,50.026 0,74.349 0,99.955 49.929,50.026 "
-                      ></polygon>
-                    </svg>
-                  </button>
-                </div>
-                <div class="slider_bar">
-                  <div class="slider_bar_ctn">
-                    <div class="bar_fill"></div>
-                    <div
-                      class="bar_thumb"
-                      style="left: 0%; right: 85.7143%"
-                    ></div>
-                    <div
-                      id="leftBar"
-                      class="scroll_bar"
-                      style="left: 0%; width: 7.14286%"
-                    >
-                      <button
-                        type="button"
-                        aria-label="previous"
-                        class="carousel_back_button bar_btn bar_buttons"
-                      ></button>
-                    </div>
-                    <div
-                      id="rightBar"
-                      class="scroll_bar"
-                      style="right: 0%; width: 92.8571%"
-                    >
-                      <button
-                        type="button"
-                        aria-label="next"
-                        class="carousel_next_button bar_btn bar_buttons"
-                      ></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div
+              id="mobileCarousel"
+              class="content_hub_main_carousel_ctn"
+            ></div>
+            <div id="carousel"></div>
           </div>
         </div>
       </div>
       <div class="container py-5">
+        <h2 class="page_title">Más ofertas</h2>
         <div
           id="gameOfferCardsContainer"
           class="home_page_cards_ctn mt-4"

@@ -746,6 +746,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function addMobileNavbarEventListeners() {
+    const menuItems = document.querySelectorAll(".tab");
+    menuItems.forEach(function (item) {
+      item.addEventListener("click", function () {
+        const flyoutId = this.dataset.flyout;
+        const flyout = document.getElementById(flyoutId);
+        const isOpen =
+          flyout.style.height === "0px" || flyout.style.height === "";
+        if (isOpen) {
+          flyout.style.height = flyout.scrollHeight + "px";
+        } else {
+          flyout.style.height = "0";
+        }
+      });
+    });
+  }
+
   function showMenuWithOpacity(tabId, flyoutId) {
     const tab = document.getElementById(tabId);
     const flyout = document.getElementById(flyoutId);
