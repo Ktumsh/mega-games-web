@@ -1,11 +1,6 @@
 [build]
-publish = "sites"
+publish = "."
 functions = "netlify/functions"
-
-[[redirects]]
-from = "/"
-to = "/sites/index.html"
-status = 200
 
 [[redirects]]
 from = "/about"
