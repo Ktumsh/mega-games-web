@@ -10,9 +10,9 @@
     "sharp": "^0.33.4"
   },
   "scripts": {
-    "minify-css": "postcss assets/css/sale.css -o assets/css/sale.min.css",
     "start": "node server/server.js",
-    "dev": "nodemon server/server.js"
+    "dev": "nodemon server/server.js",
+    "minify-css": "postcss assets/css/sale.css -o assets/css/sale.min.css"
   },
   "devDependencies": {
     "nodemon": "^3.1.1"
