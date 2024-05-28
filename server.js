@@ -10,13 +10,13 @@ const PORT = process.env.PORT || 4000;
 app.use(bodyParser.json());
 
 // Middleware para servir archivos estáticos
-app.use(express.static(path.join(__dirname, "../public")));
-app.use(express.static(path.join(__dirname, "../assets")));
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "assets")));
 app.use(express.static(path.join(__dirname, "../"))); // Para servir index.html desde la raíz
 
 // Ruta para la API
 app.get("/api/products", (req, res) => {
-  const filePath = path.join(__dirname, "../data/api/apiStore.json");
+  const filePath = path.join(__dirname, "data/api/apiStore.json");
   fs.readFile(filePath, "utf8", (err, data) => {
     if (err) {
       res.status(500).send("Error al leer la API");
