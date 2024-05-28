@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 // Middleware para servir archivos estáticos
 app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.static(path.join(__dirname, "../assets")));
-app.use(express.static(path.join(__dirname, "../")));
+app.use(express.static(path.join(__dirname, "../"))); // Para servir index.html desde la raíz
 
 // Ruta para la API
 app.get("/api/products", (req, res) => {
