@@ -1126,25 +1126,25 @@ body {
   }
 
   .shopping_title {
-    margin-right: -20px;
-    margin-left: -20px;
+    margin-right: -15px;
+    margin-left: -15px;
   }
 
   .shopping_price_ctn {
-    margin-right: -20px;
-    margin-left: -20px;
+    margin-right: -15px;
+    margin-left: -15px;
   }
 
   .game_description_area {
-    margin: 0 -20px 40px;
+    margin: 0 -15px 40px;
   }
 
   .system_requirements {
-    margin: 0 -20px 40px;
+    margin: 0 -15px 40px;
   }
 
   .order_details {
-    margin: 0 -20px 40px;
+    margin: 0 -15px 40px;
   }
 }
 

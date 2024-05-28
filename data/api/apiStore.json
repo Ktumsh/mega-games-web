@@ -4273,7 +4273,10 @@
       ],
       "detalles": [
         {
-          "idiomas": ["Alemán, Francés, Inglés, Italiano, Español - España"]
+          "idiomas": ["Alemán, Francés, Inglés, Italiano, Español - España"],
+          "lanzamiento": "24 de marzo de 2023",
+          "editor": "CAPCOM Co., Ltd.",
+          "desarrolladores": "CAPCOM Co., Ltd."
         }
       ],
       "restriccion": "PEGI 18",

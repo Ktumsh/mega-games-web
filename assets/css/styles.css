@@ -4351,6 +4351,42 @@ a.pulldown_mobile {
   transition: none;
 }
 
+@media (min-width: 576px) and (max-width: 910px) {
+  .slider_wrapper {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-padding: 0px 24px;
+    padding: 4px 24px 8px 24px;
+  }
+
+  .slider_wrapper::-webkit-scrollbar {
+    height: 12px;
+    width: 14px;
+    background: transparent;
+    z-index: 12;
+    overflow: visible;
+  }
+
+  .slider_wrapper::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    z-index: 12;
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    transition: background-color 0.32s ease-in-out;
+    margin: 4px;
+    min-height: 32px;
+    min-width: 32px;
+  }
+
+  .slider_wrapper::selection {
+    background: #54a5d4;
+    text-shadow: 1px 1px 2px #000000aa;
+    color: #fff;
+  }
+}
+
 @media screen and (min-width: 910px) {
   .carousel_item {
     position: relative;
@@ -4602,7 +4638,8 @@ a.pulldown_mobile {
   margin-left: auto;
 }
 
-#carousel .disconunt_label {
+#carousel .disconunt_label,
+#mobileCarousel .disconunt_label {
   display: flex;
   margin: 0;
   padding: 0px;
@@ -4611,7 +4648,8 @@ a.pulldown_mobile {
   align-items: center;
 }
 
-#carousel .discount {
+#carousel .discount,
+#mobileCarousel .discount {
   display: flex;
   padding: 4px 8px;
   height: 100%;
@@ -4626,7 +4664,8 @@ a.pulldown_mobile {
   word-break: keep-all;
 }
 
-#carousel .price_label {
+#carousel .price_label,
+#mobileCarousel .price_label {
   display: flex;
   padding-right: 8px;
   padding-left: 8px;
@@ -4636,7 +4675,8 @@ a.pulldown_mobile {
   gap: 0;
 }
 
-#carousel .original_price {
+#carousel .original_price,
+#mobileCarousel .original_price {
   position: relative;
   margin-top: 2px;
   color: rgb(255 255 255 / 60%);
@@ -4645,7 +4685,8 @@ a.pulldown_mobile {
   line-height: 11px;
 }
 
-#carousel .original_price::before {
+#carousel .original_price::before,
+#mobileCarousel .original_price::before {
   left: 0px;
   right: 0px;
   position: absolute;
@@ -4656,7 +4697,8 @@ a.pulldown_mobile {
   content: "";
 }
 
-#carousel .final_price {
+#carousel .final_price,
+#mobileCarousel .final_price {
   padding: 0px;
   line-height: 16px;
   font-size: 15px;
@@ -4965,8 +5007,11 @@ a.pulldown_mobile {
   padding: 0px;
 }
 
-#carousel .platform_label {
+#carousel .platform_label,
+#mobileCarousel .platform_label {
   padding-top: 0px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 @media screen and (min-width: 910px) {
@@ -4979,7 +5024,8 @@ a.pulldown_mobile {
   }
 }
 
-#carousel .platform_img:first-child {
+#carousel .platform_img:first-child,
+#mobileCarousel .platform_img:first-child {
   margin-left: 0px;
 }
 
@@ -5036,11 +5082,14 @@ a.pulldown_mobile {
   }
 
   .c_add_to_cart {
-    background-image: radial-gradient(
-      circle at top left,
-      #85a805 10%,
-      #6a8704 80%
+    background: transparent;
+    background: linear-gradient(
+      to right,
+      rgba(190, 157, 251, 1) 20%,
+      rgba(88, 9, 236, 1) 100%
     );
+    background-position: right 0;
+    background-size: 200%;
     display: flex;
     flex-basis: 50%;
     flex-grow: 1;
@@ -5059,8 +5108,33 @@ a.pulldown_mobile {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
     align-self: center;
+    cursor: pointer;
+    user-select: none;
+    transition-property: opacity, background, color, box-shadow;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+  }
+
+  .c_add_to_cart:hover {
+    background: linear-gradient(
+      to right,
+      rgba(190, 157, 251, 1) 20%,
+      rgba(88, 9, 236, 1) 100%
+    );
+    background-position: 0%;
+    background-size: 200%;
+    color: #fff;
+  }
+
+  .c_add_to_cart:active {
+    background: linear-gradient(
+      to right,
+      rgba(190, 157, 251, 1) 20%,
+      rgba(88, 9, 236, 1) 100%
+    );
+    background-position: 40%;
+    transition-duration: 0.04s;
   }
 
   .c_price_content {
@@ -5122,5 +5196,18 @@ a.pulldown_mobile {
 
   .capsule_tags .widget_tag {
     display: none;
+  }
+
+  .capsule_top {
+    margin-bottom: 0px;
+  }
+
+  .capsule_top_ctn {
+    padding-left: 0px;
+  }
+
+  .capsule_title {
+    font-size: 17px;
+    line-height: 19px;
   }
 }
