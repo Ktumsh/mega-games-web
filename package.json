@@ -11,8 +11,7 @@
   },
   "scripts": {
     "start": "node server/server.js",
-    "dev": "nodemon server/server.js",
-    "minify-css": "postcss assets/css/sale.css -o assets/css/sale.min.css"
+    "dev": "nodemon server/server.js"
   },
   "devDependencies": {
     "nodemon": "^3.1.1"
