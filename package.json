@@ -2,7 +2,7 @@
   "name": "mega-games-store",
   "version": "1.0.0",
   "description": "",
-  "main": "server/server.js",
+  "main": "server.js",
   "dependencies": {
     "body-parser": "^1.20.2",
     "bootstrap": "^5.3.3",
@@ -10,8 +10,8 @@
     "sharp": "^0.33.4"
   },
   "scripts": {
-    "start": "node server/server.js",
-    "dev": "nodemon server/server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "devDependencies": {
     "nodemon": "^3.1.1"
