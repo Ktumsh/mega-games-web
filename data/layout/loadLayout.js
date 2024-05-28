@@ -50,9 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <div role="navigation" class="supernav_container" aria-label="Menú global">
             <a class="menuitem supernav" href="/">Tienda</a>
-            <a class="menuitem supernav" href="/community.html">Comunidad</a>
-            <a class="menuitem supernav" href="/about.html">Acerca de</a>
-            <a class="menuitem supernav" href="/help.html">Soporte</a>
+            <a class="menuitem supernav" href="/community">Comunidad</a>
+            <a class="menuitem supernav" href="/about">Acerca de</a>
+            <a class="menuitem supernav" href="/help">Soporte</a>
         </div>
         <div id="global_actions">
             <div id="global_action_menu" role="navigation" aria-label="Menú de la cuenta">
@@ -167,10 +167,10 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="menuitem_submenu_wrapper" style="height: 0px">
             <div class="submenu_Store">
               <a class="submenuitem" href="/"> Página principal </a>
-              <a class="submenuitem" href="/ofertas-especiales.html"> Ofertas especiales </a>
-              <a class="submenuitem" href="/ActivisionPublisherSale2024.html"> Eventos de rebajas </a>
-              <a class="submenuitem" href="/juegos-populares.html"> Juegos populares </a>
-              <a class="submenuitem" href="/juegos-y-tarjetas.html"> Juegos y tarjetas </a>
+              <a class="submenuitem" href="/ofertas-especiales"> Ofertas especiales </a>
+              <a class="submenuitem" href="/ActivisionPublisherSale2024"> Eventos de rebajas </a>
+              <a class="submenuitem" href="/juegos-populares"> Juegos populares </a>
+              <a class="submenuitem" href="/juegos-y-tarjetas"> Juegos y tarjetas </a>
               <a class="submenuitem" href="javascript:void(0)"> Géneros </a>
             </div>
           </div>
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </svg>
               Notificaciones
             </a>
-            <a class="menuitem supernav" href="/cart.html">
+            <a class="menuitem supernav" href="/cart">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                 <g fill="none">
                   <path fill="currentColor" d="M18 15H7L5.5 6H21z"/>
@@ -344,7 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div id="cart_status_data" class="cart_status_flex">
                   <div data-featuretarget="shoppingcart-count-widget" data-props="{}">
                     <div class="cart_control">
-                      <a class="cart_link" href="/cart.html.html">
+                      <a class="cart_link" href="/cart">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="none" class="cart_icon">
                           <path d="M33.63 8.05005L30.11 20.81C29.9416 21.453 29.5645 22.0219 29.0378 22.4273C28.5111 22.8328 27.8647 23.0518 27.2 23.05H14.75C14.1022 23.0507 13.4715 22.8416 12.9524 22.4541C12.4333 22.0665 12.0536 21.5213 11.87 20.9L7.56 8.05005H2V4.05005H8.28C8.90845 4.05122 9.52067 4.24973 10.0302 4.61755C10.5398 4.98538 10.921 5.50394 11.12 6.10005L11.78 8.10005L33.63 8.05005ZM15 27.05C14.5055 27.05 14.0222 27.1967 13.6111 27.4714C13.2 27.7461 12.8795 28.1365 12.6903 28.5933C12.5011 29.0502 12.4516 29.5528 12.548 30.0378C12.6445 30.5227 12.8826 30.9682 13.2322 31.3178C13.5819 31.6674 14.0273 31.9056 14.5123 32.002C14.9972 32.0985 15.4999 32.049 15.9567 31.8597C16.4135 31.6705 16.804 31.3501 17.0787 30.939C17.3534 30.5278 17.5 30.0445 17.5 29.55C17.5 28.887 17.2366 28.2511 16.7678 27.7823C16.2989 27.3134 15.663 27.05 15 27.05ZM27 27.05C26.5055 27.05 26.0222 27.1967 25.6111 27.4714C25.2 27.7461 24.8795 28.1365 24.6903 28.5933C24.5011 29.0502 24.4516 29.5528 24.548 30.0378C24.6445 30.5227 24.8826 30.9682 25.2322 31.3178C25.5819 31.6674 26.0273 31.9056 26.5123 32.002C26.9972 32.0985 27.4999 32.049 27.9567 31.8597C28.4135 31.6705 28.804 31.3501 29.0787 30.939C29.3534 30.5278 29.5 30.0445 29.5 29.55C29.5 28.887 29.2366 28.2511 28.7678 27.7823C28.2989 27.3134 27.663 27.05 27 27.05Z" fill="currentColor"></path>
                         </svg>
@@ -380,16 +380,16 @@ document.addEventListener("DOMContentLoaded", () => {
                       <div class="popup_body popup_menu_twocol_new">
                         <div class="popup_menu popup_menu_browse">
                           <div class="popup_menu_subheader responsive_hidden">Populares</div>
-                          <a href="/juegos-populares.html" class="popup_menu_item">Lo más vendido</a>
-                          <a href="/juegos-populares.html" class="popup_menu_item">Lo más jugado</a>
+                          <a href="/juegos-populares" class="popup_menu_item">Lo más vendido</a>
+                          <a href="/juegos-populares" class="popup_menu_item">Lo más jugado</a>
                           <div class="category_hr responsive_hidden"></div>
                           <a href="#" class="popup_menu_item">Novedades</a>
                           <a href="#" class="popup_menu_item">Próximos lanzamientos</a>
                         </div>
                         <div class="popup_menu popup_menu_browse leftborder">
                           <div class="popup_menu_subheader responsive_hidden">Promociones y eventos</div>
-                          <a href="/ofertas-especiales.html" class="popup_menu_item">Ofertas especiales</a>
-                          <a href="/ActivisionPublisherSale2024.html" class="popup_menu_item">Eventos de rebajas</a>
+                          <a href="/ofertas-especiales" class="popup_menu_item">Ofertas especiales</a>
+                          <a href="/ActivisionPublisherSale2024" class="popup_menu_item">Eventos de rebajas</a>
                         </div>
                       </div>
                     </div>
@@ -406,7 +406,7 @@ document.addEventListener("DOMContentLoaded", () => {
                           <a href="#" class="popup_menu_item">Todas las ofertas</a>
                           <div class="category_hr responsive_hidden"></div>
                           <a href="#" class="popup_menu_item">Juegos</a>
-                          <a href="/juegos-y-tarjetas.html" class="popup_menu_item">Juegos y tarjetas</a>
+                          <a href="/juegos-y-tarjetas" class="popup_menu_item">Juegos y tarjetas</a>
                           <a href="#" class="popup_menu_item">eTarjetas</a>
                           <div class="category_hr responsive_hidden"></div>
                           <a href="#" class="popup_menu_item">Xbox</a>
@@ -518,16 +518,16 @@ document.addEventListener("DOMContentLoaded", () => {
                   <div class="popup_body popup_menu_twocol_new">
                     <div class="popup_menu popup_menu_browse">
                       <div class="popup_menu_subheader responsive_hidden">Populares</div>
-                      <a href="/juegos-populares.html" class="popup_menu_item">Lo más vendido</a>
-                      <a href="/juegos-populares.html" class="popup_menu_item">Lo más jugado</a>
+                      <a href="/juegos-populares" class="popup_menu_item">Lo más vendido</a>
+                      <a href="/juegos-populares" class="popup_menu_item">Lo más jugado</a>
                       <div class="category_hr responsive_hidden"></div>
                       <a href="#" class="popup_menu_item">Novedades</a>
                       <a href="#" class="popup_menu_item">Próximos lanzamientos</a>
                     </div>
                     <div class="popup_menu popup_menu_browse leftborder">
                       <div class="popup_menu_subheader responsive_hidden">Promociones y eventos</div>
-                      <a href="/ofertas-especiales.html" class="popup_menu_item">Ofertas especiales</a>
-                      <a href="/ActivisionPublisherSale2024.html.html" class="popup_menu_item">Eventos de rebajas</a>
+                      <a href="/ofertas-especiales" class="popup_menu_item">Ofertas especiales</a>
+                      <a href="/ActivisionPublisherSale2024" class="popup_menu_item">Eventos de rebajas</a>
                     </div>
                   </div>
                 </div>
@@ -544,7 +544,7 @@ document.addEventListener("DOMContentLoaded", () => {
                       <a href="#" class="popup_menu_item">Todas las ofertas</a>
                       <div class="category_hr responsive_hidden"></div>
                       <a href="#" class="popup_menu_item">Juegos</a>
-                      <a href="/juegos-y-tarjetas.html" class="popup_menu_item">Juegos y tarjetas</a>
+                      <a href="/juegos-y-tarjetas" class="popup_menu_item">Juegos y tarjetas</a>
                       <a href="#" class="popup_menu_item">eTarjetas</a>
                       <div class="category_hr responsive_hidden"></div>
                       <a href="#" class="popup_menu_item">Xbox</a>
@@ -634,7 +634,7 @@ document.addEventListener("DOMContentLoaded", () => {
                       <path fill="currentColor" d="M22.83 12.99L11.83 2H2v9.83l10.99 10.99zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4S7 4.67 7 5.5S6.33 7 5.5 7"/>
                     </svg>
                   </a>
-                  <a href="/ofertas-especiales.html" class="pwa_nav_item">
+                  <a href="/ofertas-especiales" class="pwa_nav_item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                       <path fill="currentColor" d="M9.19 6.35c-2.04 2.29-3.44 5.58-3.57 5.89L2 10.69l4.81-4.81zM11.17 17s3.74-1.55 5.89-3.7c5.4-5.4 4.5-9.62 4.21-10.57c-.95-.3-5.17-1.19-10.57 4.21C8.55 9.09 7 12.83 7 12.83zm6.48-2.19c-2.29 2.04-5.58 3.44-5.89 3.57L13.31 22l4.81-4.81zM9 18c0 .83-.34 1.58-.88 2.12C6.94 21.3 2 22 2 22s.7-4.94 1.88-6.12A2.996 2.996 0 0 1 9 18m4-9c0-1.1.9-2 2-2s2 .9 2 2s-.9 2-2 2s-2-.9-2-2"/>
                     </svg>

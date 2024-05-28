@@ -41,10 +41,10 @@ function generateGameHTML(juego) {
   const pageName = gameName;
   const pageOrigin =
     juego.origen === "offerCards"
-      ? "offer-details.html"
+      ? "offer-details"
       : juego.origen === "editorSalePage"
-      ? "publisher-sale-details.html"
-      : "games-details.html";
+      ? "publisher-sale-details"
+      : "games-details";
 
   let precioHTML = "";
 
