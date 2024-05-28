@@ -4,6 +4,7 @@ let cardData = [];
 let currentSlideIndex = 0;
 const maxImages = 10;
 const transitionTime = 8000;
+let intervalId;
 
 function getMaxCards() {
   const isTablet = window.innerWidth <= 1024 && window.innerWidth >= 768;
@@ -78,6 +79,61 @@ function loadDesktopCarousel() {
   carousel.appendChild(carouselScrollBar);
 }
 
+let isTablet;
+let isMobile;
+
+function updateIsTablet() {
+  isTablet = window.innerWidth >= 576 && window.innerWidth <= 910;
+  updateImages();
+}
+
+function updateIsMobile() {
+  isMobile = window.innerWidth <= 576;
+  updateImages();
+}
+
+function updateImages() {
+  const cards = document.querySelectorAll(".capsule_img img");
+  cards.forEach((card, index) => {
+    const cardInfo = cardData[index];
+    if (cardInfo) {
+      const imageUrl =
+        isTablet || isMobile ? cardInfo.imagenAlternativa : cardInfo.imagen;
+      card.src = imageUrl;
+    }
+  });
+}
+
+window.addEventListener("resize", () => {
+  updateIsTablet();
+  updateIsMobile();
+  stopCarouselAutoChange();
+  startCarouselAutoChange();
+});
+
+updateIsTablet();
+updateIsMobile();
+
+function formatDate(dateString) {
+  const months = {
+    enero: "ene",
+    febrero: "feb",
+    marzo: "mar",
+    abril: "abr",
+    mayo: "may",
+    junio: "jun",
+    julio: "jul",
+    agosto: "ago",
+    septiembre: "sep",
+    octubre: "oct",
+    noviembre: "nov",
+    diciembre: "dic",
+  };
+
+  const [day, month, year] = dateString.split(" de ");
+  return `${parseInt(day)} ${months[month]} ${year}`;
+}
+
 function renderDesktopCarouselItems() {
   const sliderTray = document.getElementById("sliderTray");
   sliderTray.innerHTML = "";
@@ -90,16 +146,11 @@ function renderDesktopCarouselItems() {
     carouselItem.style.paddingBottom = "unset";
     carouselItem.style.height = "unset";
 
-    const isTablet = window.matchMedia(
-      "(min-width: 576px) and (max-width: 910px)"
-    ).matches;
-    const capsule = isTablet ? card.imagenAlternativa : card.imagen;
-
     const gameName = card.nombre;
     const pageName = gameName;
     const lanzamiento =
       card.detalles && card.detalles.length > 0
-        ? card.detalles[0].lanzamiento
+        ? formatDate(card.detalles[0].lanzamiento)
         : "Fecha no disponible";
     const dlcSpan = card.dlc ? `<span class="dlc_span">DLC</span>` : "";
     carouselItem.innerHTML = `
@@ -108,17 +159,12 @@ function renderDesktopCarouselItems() {
           <div class="carousel_capsule">
             <div class="ImpressionTrackedElement">
               <div class="capsule">
-                <div class="background_capsule">
-                  <div class="background" style="background-image: url('${
-                    card.background
-                  }');"></div>
-                </div>
                 <div class="capsule_ctn">
                   <a href="offer-details?game=${pageName}&item=${card.id}"
                     class="capsule_img_ctn">
                     <div class="capsule_decorators"></div>
                     <div class="capsule_img">
-                      <img src="${capsule}" alt="${card.nombreMaincap}" />
+                      <img src="" alt="${card.nombreMaincap}" />
                     </div>
                     <div>
                       <div class="capsule_bottom_bar">
@@ -206,9 +252,19 @@ function renderDesktopCarouselItems() {
                         <div class="c_add_to_cart">
                           <span>Agregar al carrito</span>
                         </div>
-                        <div class="c_price_content">
-                          <div class="c_price">CLP$${card.precioDescuento}</div>
-                        </div>
+                        <span class="price_ctn">
+                          <div class="disconunt_label">
+                            <div class="discount">${card.descuento}</div>
+                            <div class="price_label">
+                              <div class="original_price">CLP$${
+                                card.precioOriginal
+                              }</div>
+                              <div class="final_price">CLP$${
+                                card.precioDescuento
+                              }</div>
+                            </div>
+                          </div>
+                        </span>
                       </div>
                     </div>
                     <div class="additional_image_capsule">
@@ -228,8 +284,7 @@ function renderDesktopCarouselItems() {
     `;
     sliderTray.appendChild(carouselItem);
   });
-
-  startCarouselAutoChange();
+  updateImages();
 }
 
 function removeDesktopCarousel() {
@@ -255,64 +310,66 @@ function renderMobileCarouselItems() {
         : ["win"];
     const dlcSpan = card.dlc ? `<span class="dlc_span">DLC</span>` : "";
     carouselItem.innerHTML = `
-            <div class="ImpressionTrackedElement">
-              <div>
-                <div class="capsule">
-                  <div class="capsule_ctn">
-                    <a href="offer-details?game=${pageName}&item=${card.id}"
-                      class="capsule_img_ctn">
-                      <div class="capsule_decorators"></div>
-                      <div class="capsule_img">
-                        <img src="${card.imagen}" alt="${card.nombreMaincap}" />
-                      </div>
-                    </a>
-                    <div class="capsule_body_ctn">
-                      <div class="capsule_top">
-                        <div class="capsule_top_ctn">
-                          <a href="offer-details?game=${pageName}&item=${
-      card.id
-    }"
-                            class="capsule_title">
-                            ${dlcSpan}${card.nombreMaincap}
-                          </a>
-                        </div>
-                      </div>
-                      <div class="capsule_tags">
-                        <div class="date_and_platform">
-                          <span class="platform_label">
-                            ${plataformas
-                              .map(
-                                (platform) =>
-                                  `<span class="platform_img ${platform}"></span>`
-                              )
-                              .join("")}
-                          </span>
-                        </div>
-                      </div>
-                      <div class="capsule_price">
-                        <div class="capsule_price_ctn">
-                          <div class="c_add_to_cart">
-                            <span>Agregar al carrito</span>
-                          </div>
-                          <div class="c_price_content">
-                            <div class="c_price">CLP$${
-                              card.precioDescuento
-                            }</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="additional_image_capsule">
-                        <div class="additional_image_ctn">
-                          <img class="additional_image" src="${
-                            card.imagenAlternativa
-                          }" alt="${card.nombreMaincap}">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+<div class="ImpressionTrackedElement">
+  <div>
+    <div class="capsule">
+      <div class="capsule_ctn">
+        <a href="offer-details?game=${pageName}&item=${card.id}"
+          class="capsule_img_ctn">
+          <div class="capsule_decorators"></div>
+          <div class="capsule_img">
+            <img src="${card.imagenAlternativa}" alt="${card.nombreMaincap}" />
+          </div>
+        </a>
+        <div class="capsule_body_ctn">
+          <div class="capsule_top">
+            <div class="capsule_top_ctn">
+              <a href="offer-details?game=${pageName}&item=${card.id}"
+                class="capsule_title">
+                ${dlcSpan}${card.nombreMaincap}
+              </a>
+            </div>
+          </div>
+          <div class="capsule_tags">
+            <div class="date_and_platform">
+              <span class="platform_label">
+                ${plataformas
+                  .map(
+                    (platform) =>
+                      `<span class="platform_img ${platform}"></span>`
+                  )
+                  .join("")}
+              </span>
+            </div>
+          </div>
+          <div class="capsule_price">
+          <div class="capsule_price_ctn">
+            <div class="c_add_to_cart">
+              <span>Agregar al carrito</span>
+            </div>
+            <span class="price_ctn">
+              <div class="disconunt_label">
+                <div class="discount">${card.descuento}</div>
+                <div class="price_label">
+                  <div class="original_price">CLP$${card.precioOriginal}</div>
+                  <div class="final_price">CLP$${card.precioDescuento}</div>
                 </div>
               </div>
+            </span>
+          </div>
+        </div>
+          <div class="additional_image_capsule">
+            <div class="additional_image_ctn">
+              <img class="additional_image" src="${
+                card.imagenAlternativa
+              }" alt="${card.nombreMaincap}">
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     `;
     mobileContentCarousel.appendChild(carouselItem);
   });
@@ -391,6 +448,20 @@ function updateScrollBar() {
     barThumb.style.left = `0%`;
     barThumb.style.right = `85.7143%`;
   }
+}
+
+function startCarouselAutoChange() {
+  if (window.innerWidth > 576) {
+    intervalId = setInterval(() => {
+      currentSlideIndex = (currentSlideIndex + 1) % cardData.length;
+      updateVisibleItems();
+      updateBackground();
+    }, transitionTime);
+  }
+}
+
+function stopCarouselAutoChange() {
+  clearInterval(intervalId);
 }
 
 function addCarouselEventListeners() {
@@ -562,19 +633,4 @@ function renderCards(cardsForLoad, cardsContainer) {
     cardElement.innerHTML = cardContent;
     cardsContainer.appendChild(cardElement);
   });
-}
-
-let intervalId;
-function startCarouselAutoChange() {
-  if (window.innerWidth > 576) {
-    intervalId = setInterval(() => {
-      currentSlideIndex = (currentSlideIndex + 1) % cardData.length;
-      updateVisibleItems();
-      updateBackground();
-    }, transitionTime);
-  }
-}
-
-function stopCarouselAutoChange() {
-  clearInterval(intervalId);
 }
