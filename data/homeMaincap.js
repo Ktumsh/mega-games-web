@@ -41,10 +41,10 @@ function generateGameHTML(juego) {
   const pageName = gameName;
   const pageOrigin =
     juego.origen === "offerCards"
-      ? "offer-details"
+      ? "offer-details.html"
       : juego.origen === "editorSalePage"
-      ? "publisher-sale-details"
-      : "games-details";
+      ? "publisher-sale-details.html"
+      : "games-details.html";
 
   let precioHTML = "";
 
@@ -69,7 +69,7 @@ function generateGameHTML(juego) {
   }
 
   return `
-    <a class="store_main_capsule" href="/${pageOrigin}?game=${pageName}&item=${
+    <a class="store_main_capsule" href="/sites/${pageOrigin}?game=${pageName}&item=${
     juego.id
   }" data-bs-interval="5000">
       <div class="capsule main_capsule" style="background-image: url(${
