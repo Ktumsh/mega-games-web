@@ -42,12 +42,13 @@ body {
 
 #popularGames .route > li:last-child::after,
 #specialOffers .route > li:last-child::after,
-#gamesAndCards .route > li:last-child::after {
+#gamesAndCards .route > li:last-child::after,
+#page_root .route > li:last-child::after {
   display: none;
 }
 
 .route > li > a {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7) !important;
   transition: color 150ms ease-in-out 0s;
 }
 
@@ -1315,7 +1316,9 @@ body {
   max-width: 960px;
   min-height: calc(100vh - 170px);
   margin: 0 auto;
-  padding-top: 3rem;
+  padding: 0 2%;
+  padding-top: 25px;
+  box-sizing: content-box;
 }
 
 .cart_page_title {
@@ -1615,4 +1618,60 @@ body {
   );
   background-position: 40%;
   transition-duration: 0.04s;
+}
+
+.cart_topay_area.mobile {
+  display: none;
+}
+
+#page_root .route_container {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 910px) {
+  #page_root .route_container {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .cart_details_container .cart_details_area {
+    width: auto;
+  }
+
+  .cart_topay_area {
+    display: none;
+  }
+
+  .cart_topay_area.mobile {
+    display: block;
+  }
+
+  .topay_area_ctn {
+    position: static;
+    margin: 0 auto;
+    max-width: none;
+  }
+
+  .cart_details_container {
+    flex-direction: column;
+    max-width: 615px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .top_area {
+    flex-direction: column;
+  }
+
+  .cart_details_container .game_image {
+    flex-direction: column;
+    align-self: center;
+    width: auto;
+    height: auto;
+  }
+
+  #page_root .route > li {
+    font-size: 12px;
+  }
 }

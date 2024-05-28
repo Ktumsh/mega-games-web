@@ -1,9 +1,25 @@
 {
+  "name": "mega-games-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "bootstrap": "^5.3.3",
+    "express": "^4.19.2",
     "sharp": "^0.33.4"
   },
   "scripts": {
-    "minify-css": "postcss assets/css/sale.css -o assets/css/sale.min.css"
-  }
+    "minify-css": "postcss assets/css/sale.css -o assets/css/sale.min.css",
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.1"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "author": "",
+  "license": "ISC"
 }
