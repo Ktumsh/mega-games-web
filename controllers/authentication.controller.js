@@ -55,6 +55,7 @@ async function login(req, res) {
     ),
     path: "/",
     secure: process.env.NODE_ENV === "production",
+    sameSite: "none",
   };
 
   console.log("Setting cookie with options:", cookieOptions);
