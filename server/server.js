@@ -23,23 +23,9 @@ app.listen(PORT, () => {
 
 app.use(
   cors({
-    origin: (origin, callback) => {
-      const ALLOWED_ORIGIN = [
-        "https://store-megagames.vercel.app",
-        "http://localhost:4000",
-        "https://store-megagames.onrender.com",
-        "https://store-megagames.onrender.com/api/login",
-        "https://store-megagames.onrender.com/api/store",
-        "https://store-megagames.onrender.com/api/users",
-      ];
-      if (ALLOWED_ORIGIN.includes(origin)) {
-        return callback(null, true);
-      }
-      if (!origin) {
-        return callback(null, true);
-      }
-      return callback(new Error("No permitido por CORS"));
-    },
+    origin: "https://store-megagames.vercel.app",
+    credentials: true,
+    optionsSuccessStatus: 200,
   })
 );
 
