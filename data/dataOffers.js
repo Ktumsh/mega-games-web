@@ -5,6 +5,8 @@ let currentSlideIndex = 0;
 const maxImages = 10;
 const transitionTime = 8000;
 let intervalId;
+let currentBackgroundIndex = 0;
+let backgroundIntervalId;
 
 function getMaxCards() {
   const isTablet = window.innerWidth <= 1024 && window.innerWidth >= 768;
@@ -20,6 +22,8 @@ async function fetchDesktopCardData() {
     renderDesktopCarouselItems();
     updateScrollBar();
     updateBackground();
+    stopCarouselAutoChange();
+    startCarouselAutoChange();
   } catch (error) {
     console.error("Error al cargar las tarjetas:", error);
   }
@@ -32,6 +36,8 @@ async function fetchMobileCardData() {
     cardData = apiStore.offerCards.slice(0, maxImages);
     removeDesktopCarousel();
     renderMobileCarouselItems();
+    updateBackground();
+    startBackgroundAutoChange();
   } catch (error) {
     console.error("Error al cargar las tarjetas:", error);
   }
@@ -250,7 +256,7 @@ function renderDesktopCarouselItems() {
                     <div class="capsule_price">
                       <div class="capsule_price_ctn">
                         <div class="c_add_to_cart">
-                          <span>Agregar al carrito</span>
+                          <span>Añadir al carro</span>
                         </div>
                         <span class="price_ctn">
                           <div class="disconunt_label">
@@ -345,7 +351,7 @@ function renderMobileCarouselItems() {
           <div class="capsule_price">
           <div class="capsule_price_ctn">
             <div class="c_add_to_cart">
-              <span>Agregar al carrito</span>
+              <span>Añadir al carro</span>
             </div>
             <span class="price_ctn">
               <div class="disconunt_label">
@@ -409,8 +415,9 @@ function updateVisibleItems() {
 
 function updateBackground() {
   const pageGameBg = document.getElementById("pageGameBg");
-  if (cardData[currentSlideIndex]) {
-    const imageUrl = cardData[currentSlideIndex].background;
+  if (cardData.length > 0) {
+    const imageUrl =
+      cardData[currentBackgroundIndex % cardData.length].background;
     preloadImage(imageUrl)
       .then(() => {
         pageGameBg.style.backgroundImage = `url(${imageUrl})`;
@@ -418,7 +425,17 @@ function updateBackground() {
       .catch((error) => {
         console.error("Error al cargar la imagen de fondo:", error);
       });
+    currentBackgroundIndex = (currentBackgroundIndex + 1) % cardData.length;
   }
+}
+
+function startBackgroundAutoChange() {
+  if (backgroundIntervalId) {
+    clearInterval(backgroundIntervalId);
+  }
+  backgroundIntervalId = setInterval(() => {
+    updateBackground();
+  }, 8000);
 }
 
 function preloadImage(url) {

@@ -1,0 +1,29 @@
+[
+  {
+    "username": "john_doe",
+    "password": "$2b$10$KbQi1JHJ3/5zkJZ5BvvzCuy1QlHz5gZ0Gm2h5jOqppQOmKJXjSOXS",
+    "email": "john_doe@example.com",
+    "role": "user",
+    "lastLogin": "2024-05-29T10:20:30Z",
+    "createdAt": "2024-01-15T08:00:00Z",
+    "isActive": true
+  },
+  {
+    "username": "jane_smith",
+    "password": "$2b$10$KbQi1JHJ3/5zkJZ5BvvzCuy1QlHz5gZ0Gm2h5jOqppQOmKJXjSOXS",
+    "email": "jane_smith@example.com",
+    "role": "admin",
+    "lastLogin": "2024-05-28T14:35:00Z",
+    "createdAt": "2024-02-20T10:00:00Z",
+    "isActive": true
+  },
+  {
+    "email": "jbz.january@gmail.com",
+    "username": "ktumsh",
+    "password": "$2a$05$aVrPAxyRoPhv34seoxO4/uLHH9JwU1Tc.WHccDf3ZcFhQWS7u5EEO",
+    "role": "user",
+    "createdAt": "2024-05-29T23:41:26.791Z",
+    "isActive": true,
+    "lastLogin": null
+  }
+]

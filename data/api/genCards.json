@@ -2,109 +2,109 @@
   {
     "id": 1,
     "titulo": "Acción",
-    "imagen": "assets/public/icons/action.svg",
+    "imagen": "../assets/public/icons/action.svg",
     "cantidad": 6929
   },
   {
     "id": 2,
     "titulo": "Aventuras",
-    "imagen": "assets/public/icons/adventure.svg",
+    "imagen": "../assets/public/icons/adventure.svg",
     "cantidad": 4990
   },
   {
     "id": 3,
     "titulo": "FPS / TPS",
-    "imagen": "assets/public/icons/fps.svg",
+    "imagen": "../assets/public/icons/fps.svg",
     "cantidad": 2853
   },
   {
     "id": 4,
     "titulo": "RPG",
-    "imagen": "assets/public/icons/rpg.svg",
+    "imagen": "../assets/public/icons/rpg.svg",
     "cantidad": 2535
   },
   {
     "id": 5,
     "titulo": "Indie",
-    "imagen": "assets/public/icons/indie.svg",
+    "imagen": "../assets/public/icons/indie.svg",
     "cantidad": 2422
   },
   {
     "id": 6,
     "titulo": "Simulación",
-    "imagen": "assets/public/icons/simulation.svg",
+    "imagen": "../assets/public/icons/simulation.svg",
     "cantidad": 2011
   },
   {
     "id": 7,
     "titulo": "Estrategia",
-    "imagen": "assets/public/icons/strategy.svg",
+    "imagen": "../assets/public/icons/strategy.svg",
     "cantidad": 1936
   },
   {
     "id": 8,
     "titulo": "Carreras",
-    "imagen": "assets/public/icons/racing.svg",
+    "imagen": "../assets/public/icons/racing.svg",
     "cantidad": 950
   },
   {
     "id": 9,
     "titulo": "Lucha",
-    "imagen": "assets/public/icons/fighting.svg",
+    "imagen": "../assets/public/icons/fighting.svg",
     "cantidad": 648
   },
   {
     "id": 10,
     "titulo": "Hack & Slash",
-    "imagen": "assets/public/icons/hack-slash.svg",
+    "imagen": "../assets/public/icons/hack-slash.svg",
     "cantidad": 543
   },
   {
     "id": 11,
     "titulo": "Deporte",
-    "imagen": "assets/public/icons/sport.svg",
+    "imagen": "../assets/public/icons/sport.svg",
     "cantidad": 538
   },
   {
     "id": 12,
     "titulo": "Plataforma",
-    "imagen": "assets/public/icons/platform.svg",
+    "imagen": "../assets/public/icons/platform.svg",
     "cantidad": 508
   },
   {
     "id": 13,
     "titulo": "Rompecabezas",
-    "imagen": "assets/public/icons/puzzle.svg",
+    "imagen": "../assets/public/icons/puzzle.svg",
     "cantidad": 483
   },
   {
     "id": 14,
     "titulo": "Arcade",
-    "imagen": "assets/public/icons/arcade.svg",
+    "imagen": "../assets/public/icons/arcade.svg",
     "cantidad": 232
   },
   {
     "id": 15,
     "titulo": "MMO",
-    "imagen": "assets/public/icons/mmo.svg",
+    "imagen": "../assets/public/icons/mmo.svg",
     "cantidad": 183
   },
   {
     "id": 16,
     "titulo": "Point & Click",
-    "imagen": "assets/public/icons/point-click.svg",
+    "imagen": "../assets/public/icons/point-click.svg",
     "cantidad": 172
   },
   {
     "id": 17,
     "titulo": "Educativo",
-    "imagen": "assets/public/icons/educational.svg",
+    "imagen": "../assets/public/icons/educational.svg",
     "cantidad": 34
   },
   {
     "id": 18,
     "titulo": "Música",
-    "imagen": "assets/public/icons/music.svg",
+    "imagen": "../assets/public/icons/music.svg",
     "cantidad": 22
   }
 ]
