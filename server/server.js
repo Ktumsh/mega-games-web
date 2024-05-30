@@ -158,7 +158,3 @@ app.post("/api/users", authentication.register);
 app.post("/api/newUsers", authentication.login);
 
 app.use("/", logoutRouter);
-
-if (logoutRouter) {
-  console.log("cookie deslogeada");
-}
