@@ -180,28 +180,28 @@ function addSearchEvents() {
       switch (game.origen) {
         case "offerCards":
           return (
-            "/offer-details?game=" +
+            "/store/offer-details?game=" +
             encodeURIComponent(game.nombre) +
             "&item=" +
             game.id
           );
         case "editorSalePage":
           return (
-            "/publisher-sale-details?game=" +
+            "/store/publisher-sale-details?game=" +
             encodeURIComponent(game.nombre) +
             "&item=" +
             game.id
           );
         case "gamesCards":
           return (
-            "/games-details?game=" +
+            "/store/games-details?game=" +
             encodeURIComponent(game.nombre) +
             "&item=" +
             game.id
           );
         case "giftCards":
           return (
-            "/gift-details?game=" +
+            "/store/gift-details?game=" +
             encodeURIComponent(game.nombre) +
             "&item=" +
             game.id

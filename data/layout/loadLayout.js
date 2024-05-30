@@ -1,65 +1,292 @@
-function changeOpacity(target, duration, fromOpacity, toOpacity) {
-  const opacityIncrement = (toOpacity - fromOpacity) / (duration / 10);
-  let currentOpacity = fromOpacity;
-  target.style.opacity = currentOpacity;
-  const timer = setInterval(function () {
-    currentOpacity += opacityIncrement;
-    currentOpacity = Math.min(Math.max(currentOpacity, 0), 1);
-    target.style.opacity = currentOpacity;
-    if (
-      (opacityIncrement > 0 && currentOpacity >= toOpacity) ||
-      (opacityIncrement < 0 && currentOpacity <= toOpacity)
-    ) {
-      clearInterval(timer);
-    }
-  }, 10);
-}
-
-function ShowMenu(menuId, alignment) {
-  const menu = document.getElementById(menuId);
-  menu.style[alignment] = "0";
-  if (menu.style.display === "none" || menu.style.display === "") {
-    menu.style.display = "block";
-    requestAnimationFrame(() => {
-      changeOpacity(menu, 150, 0, 1);
-    });
-  } else {
-    menu.style.display = "none";
-    menu.style.opacity = "0";
-  }
-}
-
-function ChangeLanguage(language) {
-  window.location.href = `?l=${language}`;
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-  const headerSlot = document.querySelector(".HeaderSlotDesktop");
-  const headerContainer = document.createElement("header");
-  headerContainer.id = "global_header";
+  const currentPath = window.location.pathname;
 
-  headerContainer.innerHTML = `
+  function addHamburgerMenu() {
+    const hamburgerMenuSlot = document.querySelector(".HamburgerMenuSlot");
+    const hamburgerMenuContainer = document.createElement("div");
+
+    hamburgerMenuContainer.innerHTML = `
+    <div class="overlay_menu_bg"></div>
+    <div role="navigation" class="responsive_page_menu_ctn mainmenu" aria-label="Menú móvil">
+      <div id="responsive_page_menu" class="responsive_page_menu">
+        <div class="mainmenu_contents">
+          <div class="mainmenu_contents_items">
+            <div class="void_div"></div>
+            <div id="menu_user_area" class="menu_user_area">
+              <div class="menu_user_person person online">
+                <div class="playerAvatar online">
+                  <a href="#" aria-label="Ver tu perfil">
+                    <img id="user_avatar" src="/assets/public/icons/user-avatar.jpg" alt="">
+                  </a>
+                </div>
+                <a id="user_name" href="#">Username</a>
+              </div>
+            </div>
+            <a id="hamburger_session_link" class="menuitem" href="/login">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10 11H4V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-8h6v3l5-4l-5-4z"/></svg>
+                Iniciar sesión
+              </span>
+            </a>
+            <a class="menuitem supernav supernav_active" href="javascript:void(0)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M22.83 12.99L11.83 2H2v9.83l10.99 10.99zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4S7 4.67 7 5.5S6.33 7 5.5 7"/>
+              </svg>
+              Tienda
+              <div class="chevron"></div>
+            </a>
+            <div class="menuitem_submenu_wrapper" style="height: 0px">
+            <div class="submenu_Store">
+              <a class="submenuitem" href="/store"> Página principal </a>
+              <a class="submenuitem" href="/store/ofertas-especiales"> Ofertas especiales </a>
+              <a class="submenuitem" href="/store/ActivisionPublisherSale2024"> Eventos de rebajas </a>
+              <a class="submenuitem" href="/store/juegos-populares"> Juegos populares </a>
+              <a class="submenuitem" href="/store/juegos-y-tarjetas"> Juegos y tarjetas </a>
+              <a class="submenuitem" href="javascript:void(0)"> Géneros </a>
+            </div>
+          </div>
+            <a class="menuitem supernav" href="/store/notifications">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M5 19q-.425 0-.712-.288T4 18t.288-.712T5 17h1v-7q0-2.075 1.25-3.687T10.5 4.2v-.7q0-.625.438-1.062T12 2t1.063.438T13.5 3.5v.7q2 .5 3.25 2.113T18 10v7h1q.425 0 .713.288T20 18t-.288.713T19 19zm7 3q-.825 0-1.412-.587T10 20h4q0 .825-.587 1.413T12 22"/>
+              </svg>
+              Notificaciones
+            </a>
+            <a class="menuitem supernav" href="/store/cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <g fill="none">
+                  <path fill="currentColor" d="M18 15H7L5.5 6H21z"/>
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.5 3m0 0L7 15h11l3-9z"/>
+                  <circle cx="8" cy="20" r="1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                  <circle cx="17" cy="20" r="1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </g>
+              </svg>
+              Carro de compras
+            </a>
+            <div class="minor_menu_items">
+              <a class="menuitem" href="/about/about">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M12 17q.425 0 .713-.288T13 16v-4q0-.425-.288-.712T12 11t-.712.288T11 12v4q0 .425.288.713T12 17m0-8q.425 0 .713-.288T13 8t-.288-.712T12 7t-.712.288T11 8t.288.713T12 9m0 13q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/>
+                </svg>
+                Acerca de
+              </a>
+              <a class="menuitem" href="/about/help">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M11.95 18q.525 0 .888-.363t.362-.887t-.362-.888t-.888-.362t-.887.363t-.363.887t.363.888t.887.362m-.9-3.85h1.85q0-.825.188-1.3t1.062-1.3q.65-.65 1.025-1.238T15.55 8.9q0-1.4-1.025-2.15T12.1 6q-1.425 0-2.312.75T8.55 8.55l1.65.65q.125-.45.563-.975T12.1 7.7q.8 0 1.2.438t.4.962q0 .5-.3.938t-.75.812q-1.1.975-1.35 1.475t-.25 1.825M12 22q-2.075 0-3.9-.787t-3.175-2.138T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/>
+                </svg>
+                Soporte
+              </a>
+              <a id="logout" class="menuitem" href="/login">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M5 2h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1m4 9V8l-5 4l5 4v-3h6v-2z"/>
+                </svg>
+                Cerrar sesión
+              </a>
+            </div>
+          </div>
+          <div class="mainmenu_footer_spacer"></div>
+          <div class="mainmenu_footer">
+            <div class="mainmenu_footer_logo">
+              <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
+              <span class="grotesk fs-6">Mega Games</span>
+            </div>
+            © 2024 Mega Games Store. Página creada con fines didácticos e inspirada en Steam y Eneba. No tiene relación oficial con estas marcas. Las imágenes utilizadas son para prácticas educativas. Nombres y marcas mencionados son propiedad de sus respectivos dueños.
+            <span class="mainmenu_footer_links">
+              <a class="fw-medium footer_link2 mb-4 me-1" href="#">Términos y condiciones</a>
+              |
+              <a class="fw-medium footer_link2 mb-4 ms-1 me-1" href="#">Aviso de privacidad</a>
+              |
+              <a class="fw-medium footer_link2 mb-4 ms-1" href="#">Reembolsos</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+    hamburgerMenuSlot.appendChild(hamburgerMenuContainer);
+
+    const hamburgerMenuOpenBtn = document.getElementById(
+      "responsive_menu_logo"
+    );
+    const overlayBg = document.querySelector(".overlay_menu_bg");
+    const body = document.querySelector("body");
+    const headerTitle = document.getElementById("responsive_header_title");
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const swipeAreaWidth = 20;
+
+    overlayBg.addEventListener("click", closeMenu);
+    hamburgerMenuOpenBtn.addEventListener("click", toggleMenu);
+
+    const superNavActive = document.querySelector(".supernav_active");
+    const subMenu = document.querySelector(".menuitem_submenu_wrapper");
+
+    superNavActive.addEventListener("click", () => {
+      superNavActive.classList.toggle("submenu_active");
+      subMenu.classList.toggle("active");
+      if (superNavActive.classList.contains("submenu_active")) {
+        subMenu.style.height = subMenu.scrollHeight + "px";
+      } else {
+        subMenu.style.height = "0px";
+      }
+    });
+
+    document.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    document.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    });
+
+    function handleSwipe() {
+      if (touchEndX < touchStartX - 20) {
+        closeMenu();
+      } else if (
+        touchEndX > touchStartX + 20 &&
+        touchStartX <= swipeAreaWidth
+      ) {
+        openMenu();
+      }
+    }
+
+    function openMenu() {
+      if (!hamburgerMenuSlot.classList.contains("mainmenu_active")) {
+        toggleMenu();
+      }
+    }
+
+    function closeMenu() {
+      if (hamburgerMenuSlot.classList.contains("mainmenu_active")) {
+        hamburgerMenuOpenBtn.classList.remove("chevron");
+        if (hamburgerMenuOpenBtn.classList.contains("chevron")) {
+          hamburgerMenuOpenBtn.innerHTML = "";
+        } else {
+          hamburgerMenuOpenBtn.innerHTML = `<img src="/assets/public/icons/header_menu_hamburger.webp" height="100%" />`;
+        }
+        hamburgerMenuSlot.classList.remove("mainmenu_active");
+        headerTitle.innerHTML = `
+      <div class="responsive_header_logo">
+        <a href="/store">
+          <div id="responsive_header_logo">
+            <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
+            <span class="grotesk ps-2 fs-6 text-white">Mega Games</span>
+          </div>
+        </a>
+      </div>
+    `;
+        overlayBg.classList.remove("open");
+        body.classList.remove("hidden_body");
+      }
+    }
+
+    function toggleMenu() {
+      hamburgerMenuOpenBtn.classList.toggle("chevron");
+      if (hamburgerMenuOpenBtn.classList.contains("chevron")) {
+        hamburgerMenuOpenBtn.innerHTML = "";
+      } else {
+        hamburgerMenuOpenBtn.innerHTML = `<img src="/assets/public/icons/header_menu_hamburger.webp" height="100%" />`;
+      }
+      hamburgerMenuSlot.classList.toggle("mainmenu_active");
+      if (hamburgerMenuSlot.classList.contains("mainmenu_active")) {
+        headerTitle.innerHTML = `<div class="responsive_menu_title">Menú</div>`;
+        overlayBg.classList.add("open");
+      } else {
+        headerTitle.innerHTML = `
+        <div class="responsive_header_logo">
+          <a href="/store">
+            <div id="responsive_header_logo">
+              <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
+              <span class="grotesk ps-2 fs-6 text-white">Mega Games</span>
+            </div>
+          </a>
+        </div>
+      `;
+        overlayBg.classList.remove("open");
+      }
+      body.classList.toggle("hidden_body");
+    }
+
+    const menuUserArea = document.getElementById("menu_user_area");
+    const userName = document.getElementById("user_name");
+    const hamburgerSessionLink = document.getElementById(
+      "hamburger_session_link"
+    );
+    const hamburgerLogoutLink = document.getElementById("logout");
+    const jwtToken = getCookie("jwt");
+    if (jwtToken) {
+      if (jwtToken) {
+        const payload = parseJwt(jwtToken);
+        hamburgerSessionLink.style.display = "none";
+        userName.textContent = payload.username;
+        menuUserArea.style.display = "block";
+        hamburgerLogoutLink.style.display = "flex";
+
+        hamburgerLogoutLink.addEventListener("click", function (event) {
+          event.preventDefault();
+          document.cookie =
+            "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+          window.location.href = "/";
+        });
+      } else {
+        menuUserArea.style.display = "none";
+        hamburgerSessionLink.style.display = "flex";
+        hamburgerLogoutLink.style.display = "none";
+      }
+    }
+  }
+
+  function addDesktopHeader() {
+    const headerSlot = document.querySelector(".HeaderSlotDesktop");
+    const headerContainer = document.createElement("header");
+    headerContainer.id = "global_header";
+
+    headerContainer.innerHTML = `
     <nav class="content">
         <div class="logo">
             <span id="logo_holder">
-                <a href="/" aria-label="Enlace a la página de inicio de Mega Games">
+                <a href="/store" aria-label="Enlace a la página de inicio de Mega Games">
                     <img src="../assets/public/mega-games-logo.svg" width="36" height="36" alt="Enlace a la página de inicio de Mega Games">
                 </a>
-                <a href="/">Mega Games</a>
+                <a href="/store">Mega Games</a>
             </span>
         </div>
         <div role="navigation" class="supernav_container" aria-label="Menú global">
-            <a class="menuitem supernav" href="/">Tienda</a>
-            <a class="menuitem supernav" href="/community">Comunidad</a>
-            <a class="menuitem supernav" href="/about">Acerca de</a>
-            <a class="menuitem supernav" href="/help">Soporte</a>
+            <a class="menuitem supernav" href="/store">Tienda</a>
+            <a class="menuitem supernav" href="/about/community">Comunidad</a>
+            <a class="menuitem supernav" href="/about/about">Acerca de</a>
+            <a class="menuitem supernav" href="/about/help">Soporte</a>
         </div>
         <div id="global_actions">
             <div id="global_action_menu" role="navigation" aria-label="Menú de la cuenta">
                 <a class="header_login_btn" href="#">
                     <div class="main_btn">Instalar Mega Games</div>
                 </a>
-                <a class="global_action_link" href="#">Iniciar sesión</a>
+                <a id="session_link" class="global_action_link" href="/login.html">Iniciar sesión</a>
+                <div id="header_notification_area" style="display: none; position: relative">
+                <div>
+                  <div>
+                    <div id="green_envelope_menu_root" class="notification_ctn">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="none" class="notification_svg">
+                        <g class="SVGIcon_Notification">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M32 24V26H4V24L8 19V12C8 9.34784 9.05357 6.8043 10.9289 4.92893C12.8043 3.05357 15.3478 2 18 2C20.6522 2 23.1957 3.05357 25.0711 4.92893C26.9464 6.8043 28 9.34784 28 12V19L32 24Z" fill="currentColor"></path>
+                          <path class="SVGIcon_Notification_Uvula" fill-rule="evenodd" clip-rule="evenodd" d="M18 34C19.2396 33.9986 20.4483 33.6133 21.46 32.897C22.4718 32.1807 23.2368 31.1687 23.65 30H12.35C12.7632 31.1687 13.5282 32.1807 14.54 32.897C15.5517 33.6133 16.7604 33.9986 18 34Z" fill="currentColor"></path>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div id="header_notification_link" class="header_notification_btn global_header_toggle_button header_notification_bell" style="background-color: rgba(0, 0, 0, 0)"></div>
+                </div>
+                <span class="pulldown global_action_link persona_name_text_content" id="account_pulldown" onclick="ShowMenu('account_dropdown')" style="display: none;">User</span>
+                <div id="account_dropdown" class="popup_block_new" style="visibility: visible; top: 25px; left: 24.7344px; right: 65px; display: none; opacity: 1;">
+                  <div class="popup_body popup_menu">
+                    <a class="popup_menu_item" href="#">Ver mi perfil</a>
+                    <a class="popup_menu_item" href="#">Detalles de la cuenta: <span id="account_name" class="account_name"></span></a>
+                    <a id="logout_link" class="popup_menu_item" href="/login.html">Cerrar sesión...</a>
+                  </div>
+                </div>
                 &nbsp;|&nbsp;
                 <span class="pulldown global_action_link" id="language_pulldown" onclick="ShowMenu('language_dropdown', 'right');">idioma</span>
                 <div id="language_dropdown" class="popup_block_new" style="display: none;">
@@ -100,36 +327,44 @@ document.addEventListener("DOMContentLoaded", () => {
     </nav>
 `;
 
-  headerSlot.appendChild(headerContainer);
+    headerSlot.appendChild(headerContainer);
 
-  const currentPath = window.location.pathname;
-  const navItems = document.querySelectorAll(".supernav");
-  let isActive = false;
+    const navItems = document.querySelectorAll(".supernav");
+    let isActive = false;
 
-  navItems.forEach((item) => {
-    const itemPath = new URL(item.href, window.location.origin).pathname;
-    if (itemPath === currentPath) {
-      item.classList.add("supernav_active");
-      isActive = true;
+    navItems.forEach((item) => {
+      const itemPath = new URL(item.href, window.location.origin).pathname;
+      if (itemPath === currentPath) {
+        item.classList.add("supernav_active");
+        isActive = true;
+      }
+    });
+
+    if (!isActive) {
+      navItems[0].classList.add("supernav_active");
     }
-  });
-
-  if (!isActive) {
-    navItems[0].classList.add("supernav_active");
   }
 
-  const headerSlotMobile = document.querySelector(".HeaderSlotMobile");
-  const headerContainerMobile = document.createElement("div");
-  headerContainerMobile.classList.add("responsive_header");
+  function addMobileHeader() {
+    const headerSlotMobile = document.querySelector(".HeaderSlotMobile");
+    const headerContainerMobile = document.createElement("div");
+    headerContainerMobile.classList.add("responsive_header");
 
-  headerContainerMobile.innerHTML = `
+    const hamburgerIcon = document.createElement("div");
+    hamburgerIcon.id = "responsive_menu_logo";
+
+    headerContainerMobile.appendChild(hamburgerIcon);
+
+    headerContainerMobile.innerHTML = `
     <div class="responsive_header_content">
-      <div id="responsive_menu_logo">
-        <img src="/assets/public/icons/header_menu_hamburger.webp" height="100%" />
-      </div>
+      ${
+        currentPath === "/login.html" || currentPath === "/join.html"
+          ? ""
+          : `<div id="responsive_menu_logo"><img src="/assets/public/icons/header_menu_hamburger.webp" height="100%" /></div>`
+      }
       <div id="responsive_header_title">
         <div class="responsive_header_logo">
-          <a href="/">
+          <a href="/store">
             <div id="responsive_header_logo">
               <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
               <span class="grotesk ps-2 fs-6 text-white">Mega Games</span>
@@ -140,190 +375,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   `;
 
-  headerSlotMobile.appendChild(headerContainerMobile);
-
-  const hamburgerMenuSlot = document.querySelector(".HamburgerMenuSlot");
-  const hamburgerMenuContainer = document.createElement("div");
-  hamburgerMenuContainer.innerHTML = `
-    <div class="overlay_menu_bg"></div>
-    <div role="navigation" class="responsive_page_menu_ctn mainmenu" aria-label="Menú móvil">
-      <div id="responsive_page_menu" class="responsive_page_menu">
-        <div class="mainmenu_contents">
-          <div class="mainmenu_contents_items">
-            <div class="void_div"></div>
-            <a class="menuitem" href="#">
-              <span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M10 11H4V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-8h6v3l5-4l-5-4z"/></svg>
-                Iniciar sesión
-              </span>
-            </a>
-            <a class="menuitem supernav supernav_active" href="javascript:void(0)">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M22.83 12.99L11.83 2H2v9.83l10.99 10.99zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4S7 4.67 7 5.5S6.33 7 5.5 7"/>
-              </svg>
-              Tienda
-              <div class="chevron"></div>
-            </a>
-            <div class="menuitem_submenu_wrapper" style="height: 0px">
-            <div class="submenu_Store">
-              <a class="submenuitem" href="/"> Página principal </a>
-              <a class="submenuitem" href="/ofertas-especiales"> Ofertas especiales </a>
-              <a class="submenuitem" href="/ActivisionPublisherSale2024"> Eventos de rebajas </a>
-              <a class="submenuitem" href="/juegos-populares"> Juegos populares </a>
-              <a class="submenuitem" href="/juegos-y-tarjetas"> Juegos y tarjetas </a>
-              <a class="submenuitem" href="javascript:void(0)"> Géneros </a>
-            </div>
-          </div>
-            <a class="menuitem supernav" href="/notifications">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M5 19q-.425 0-.712-.288T4 18t.288-.712T5 17h1v-7q0-2.075 1.25-3.687T10.5 4.2v-.7q0-.625.438-1.062T12 2t1.063.438T13.5 3.5v.7q2 .5 3.25 2.113T18 10v7h1q.425 0 .713.288T20 18t-.288.713T19 19zm7 3q-.825 0-1.412-.587T10 20h4q0 .825-.587 1.413T12 22"/>
-              </svg>
-              Notificaciones
-            </a>
-            <a class="menuitem supernav" href="/cart">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                <g fill="none">
-                  <path fill="currentColor" d="M18 15H7L5.5 6H21z"/>
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.5 3m0 0L7 15h11l3-9z"/>
-                  <circle cx="8" cy="20" r="1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                  <circle cx="17" cy="20" r="1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                </g>
-              </svg>
-              Carro de compras
-            </a>
-            <div class="minor_menu_items">
-              <div class="menuitem">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                  <path fill="currentColor" d="M12 17q.425 0 .713-.288T13 16v-4q0-.425-.288-.712T12 11t-.712.288T11 12v4q0 .425.288.713T12 17m0-8q.425 0 .713-.288T13 8t-.288-.712T12 7t-.712.288T11 8t.288.713T12 9m0 13q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/>
-                </svg>
-                Acerca de
-              </div>
-              <div class="menuitem">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                  <path fill="currentColor" d="M11.95 18q.525 0 .888-.363t.362-.887t-.362-.888t-.888-.362t-.887.363t-.363.887t.363.888t.887.362m-.9-3.85h1.85q0-.825.188-1.3t1.062-1.3q.65-.65 1.025-1.238T15.55 8.9q0-1.4-1.025-2.15T12.1 6q-1.425 0-2.312.75T8.55 8.55l1.65.65q.125-.45.563-.975T12.1 7.7q.8 0 1.2.438t.4.962q0 .5-.3.938t-.75.812q-1.1.975-1.35 1.475t-.25 1.825M12 22q-2.075 0-3.9-.787t-3.175-2.138T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/>
-                </svg>
-                Soporte
-              </div>
-            </div>
-          </div>
-          <div class="mainmenu_footer_spacer"></div>
-          <div class="mainmenu_footer">
-            <div class="mainmenu_footer_logo">
-              <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
-              <span class="grotesk fs-6">Mega Games</span>
-            </div>
-            © 2024 Mega Games Store. Página creada con fines didácticos e inspirada en Steam y Eneba. No tiene relación oficial con estas marcas. Las imágenes utilizadas son para prácticas educativas. Nombres y marcas mencionados son propiedad de sus respectivos dueños.
-            <span class="mainmenu_footer_links">
-              <a class="fw-medium footer_link2 mb-4 me-1" href="#">Términos y condiciones</a>
-              |
-              <a class="fw-medium footer_link2 mb-4 ms-1 me-1" href="#">Aviso de privacidad</a>
-              |
-              <a class="fw-medium footer_link2 mb-4 ms-1" href="#">Reembolsos</a>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-
-  hamburgerMenuSlot.appendChild(hamburgerMenuContainer);
-
-  const hamburgerMenuOpenBtn = document.getElementById("responsive_menu_logo");
-  const overlayBg = document.querySelector(".overlay_menu_bg");
-  const body = document.querySelector("body");
-  const headerTitle = document.getElementById("responsive_header_title");
-  let touchStartX = 0;
-  let touchEndX = 0;
-  const swipeAreaWidth = 20;
-
-  overlayBg.addEventListener("click", closeMenu);
-  hamburgerMenuOpenBtn.addEventListener("click", toggleMenu);
-
-  const superNavActive = document.querySelector(".supernav_active");
-  const subMenu = document.querySelector(".menuitem_submenu_wrapper");
-
-  superNavActive.addEventListener("click", () => {
-    superNavActive.classList.toggle("submenu_active");
-    subMenu.classList.toggle("active");
-    if (superNavActive.classList.contains("submenu_active")) {
-      subMenu.style.height = subMenu.scrollHeight + "px";
-    } else {
-      subMenu.style.height = "0px";
-    }
-  });
-
-  document.addEventListener("touchstart", (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  });
-
-  document.addEventListener("touchend", (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-  });
-
-  function handleSwipe() {
-    if (touchEndX < touchStartX - 20) {
-      closeMenu();
-    } else if (touchEndX > touchStartX + 20 && touchStartX <= swipeAreaWidth) {
-      openMenu();
-    }
-  }
-
-  function openMenu() {
-    if (!hamburgerMenuSlot.classList.contains("mainmenu_active")) {
-      toggleMenu();
-    }
-  }
-
-  function closeMenu() {
-    if (hamburgerMenuSlot.classList.contains("mainmenu_active")) {
-      hamburgerMenuOpenBtn.classList.remove("chevron");
-      if (hamburgerMenuOpenBtn.classList.contains("chevron")) {
-        hamburgerMenuOpenBtn.innerHTML = "";
-      } else {
-        hamburgerMenuOpenBtn.innerHTML = `<img src="/assets/public/icons/header_menu_hamburger.webp" height="100%" />`;
-      }
-      hamburgerMenuSlot.classList.remove("mainmenu_active");
-      headerTitle.innerHTML = `
-      <div class="responsive_header_logo">
-        <a href="/">
-          <div id="responsive_header_logo">
-            <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
-            <span class="grotesk ps-2 fs-6 text-white">Mega Games</span>
-          </div>
-        </a>
-      </div>
-    `;
-      overlayBg.classList.remove("open");
-      body.classList.remove("hidden_body");
-    }
-  }
-
-  function toggleMenu() {
-    hamburgerMenuOpenBtn.classList.toggle("chevron");
-    if (hamburgerMenuOpenBtn.classList.contains("chevron")) {
-      hamburgerMenuOpenBtn.innerHTML = "";
-    } else {
-      hamburgerMenuOpenBtn.innerHTML = `<img src="/assets/public/icons/header_menu_hamburger.webp" height="100%" />`;
-    }
-    hamburgerMenuSlot.classList.toggle("mainmenu_active");
-    if (hamburgerMenuSlot.classList.contains("mainmenu_active")) {
-      headerTitle.innerHTML = `<div class="responsive_menu_title">Menú</div>`;
-      overlayBg.classList.add("open");
-    } else {
-      headerTitle.innerHTML = `
-        <div class="responsive_header_logo">
-          <a href="/">
-            <div id="responsive_header_logo">
-              <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
-              <span class="grotesk ps-2 fs-6 text-white">Mega Games</span>
-            </div>
-          </a>
-        </div>
-      `;
-      overlayBg.classList.remove("open");
-    }
-    body.classList.toggle("hidden_body");
+    headerSlotMobile.appendChild(headerContainerMobile);
   }
 
   function addDesktopNavbar() {
@@ -344,7 +396,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div id="cart_status_data" class="cart_status_flex">
                   <div data-featuretarget="shoppingcart-count-widget" data-props="{}">
                     <div class="cart_control">
-                      <a class="cart_link" href="/cart">
+                      <a class="cart_link" href="/store/cart">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="none" class="cart_icon">
                           <path d="M33.63 8.05005L30.11 20.81C29.9416 21.453 29.5645 22.0219 29.0378 22.4273C28.5111 22.8328 27.8647 23.0518 27.2 23.05H14.75C14.1022 23.0507 13.4715 22.8416 12.9524 22.4541C12.4333 22.0665 12.0536 21.5213 11.87 20.9L7.56 8.05005H2V4.05005H8.28C8.90845 4.05122 9.52067 4.24973 10.0302 4.61755C10.5398 4.98538 10.921 5.50394 11.12 6.10005L11.78 8.10005L33.63 8.05005ZM15 27.05C14.5055 27.05 14.0222 27.1967 13.6111 27.4714C13.2 27.7461 12.8795 28.1365 12.6903 28.5933C12.5011 29.0502 12.4516 29.5528 12.548 30.0378C12.6445 30.5227 12.8826 30.9682 13.2322 31.3178C13.5819 31.6674 14.0273 31.9056 14.5123 32.002C14.9972 32.0985 15.4999 32.049 15.9567 31.8597C16.4135 31.6705 16.804 31.3501 17.0787 30.939C17.3534 30.5278 17.5 30.0445 17.5 29.55C17.5 28.887 17.2366 28.2511 16.7678 27.7823C16.2989 27.3134 15.663 27.05 15 27.05ZM27 27.05C26.5055 27.05 26.0222 27.1967 25.6111 27.4714C25.2 27.7461 24.8795 28.1365 24.6903 28.5933C24.5011 29.0502 24.4516 29.5528 24.548 30.0378C24.6445 30.5227 24.8826 30.9682 25.2322 31.3178C25.5819 31.6674 26.0273 31.9056 26.5123 32.002C26.9972 32.0985 27.4999 32.049 27.9567 31.8597C28.4135 31.6705 28.804 31.3501 29.0787 30.939C29.3534 30.5278 29.5 30.0445 29.5 29.55C29.5 28.887 29.2366 28.2511 28.7678 27.7823C28.2989 27.3134 27.663 27.05 27 27.05Z" fill="currentColor"></path>
                         </svg>
@@ -359,13 +411,13 @@ document.addEventListener("DOMContentLoaded", () => {
                   <div class="store_nav">
                     <div id="foryou_tab" data-flyout="foryou_flyout" class="tab">
                       <span class="pulldown">
-                        <a class="pulldown_desktop" href="/">Tu tienda</a>
-                        <a class="pulldown_mobile" href="/">Tu tienda</a>
+                        <a class="pulldown_desktop" href="/store">Tu tienda</a>
+                        <a class="pulldown_mobile" href="/store">Tu tienda</a>
                       </span>
                     </div>
                     <div id="foryou_flyout" class="popup_block_new responsive_slidedown" style="visibility: visible; top: 42px; left: 0px; display: none; opacity: 0">
                       <div class="popup_body popup_menu popup_menu_browse">
-                        <a href="/" class="popup_menu_item">Inicio</a>
+                        <a href="/store" class="popup_menu_item">Inicio</a>
                         <a href="#" class="popup_menu_item">Recomendaciones</a>
                         <a href="#" class="popup_menu_item">Vistos recientemente</a>
                       </div>
@@ -380,16 +432,16 @@ document.addEventListener("DOMContentLoaded", () => {
                       <div class="popup_body popup_menu_twocol_new">
                         <div class="popup_menu popup_menu_browse">
                           <div class="popup_menu_subheader responsive_hidden">Populares</div>
-                          <a href="/juegos-populares" class="popup_menu_item">Lo más vendido</a>
-                          <a href="/juegos-populares" class="popup_menu_item">Lo más jugado</a>
+                          <a href="/store/juegos-populares" class="popup_menu_item">Lo más vendido</a>
+                          <a href="/store/juegos-populares" class="popup_menu_item">Lo más jugado</a>
                           <div class="category_hr responsive_hidden"></div>
                           <a href="#" class="popup_menu_item">Novedades</a>
                           <a href="#" class="popup_menu_item">Próximos lanzamientos</a>
                         </div>
                         <div class="popup_menu popup_menu_browse leftborder">
                           <div class="popup_menu_subheader responsive_hidden">Promociones y eventos</div>
-                          <a href="/ofertas-especiales" class="popup_menu_item">Ofertas especiales</a>
-                          <a href="/ActivisionPublisherSale2024" class="popup_menu_item">Eventos de rebajas</a>
+                          <a href="/store/ofertas-especiales" class="popup_menu_item">Ofertas especiales</a>
+                          <a href="/store/ActivisionPublisherSale2024" class="popup_menu_item">Eventos de rebajas</a>
                         </div>
                       </div>
                     </div>
@@ -406,7 +458,7 @@ document.addEventListener("DOMContentLoaded", () => {
                           <a href="#" class="popup_menu_item">Todas las ofertas</a>
                           <div class="category_hr responsive_hidden"></div>
                           <a href="#" class="popup_menu_item">Juegos</a>
-                          <a href="/juegos-y-tarjetas" class="popup_menu_item">Juegos y tarjetas</a>
+                          <a href="/store/juegos-y-tarjetas" class="popup_menu_item">Juegos y tarjetas</a>
                           <a href="#" class="popup_menu_item">eTarjetas</a>
                           <div class="category_hr responsive_hidden"></div>
                           <a href="#" class="popup_menu_item">Xbox</a>
@@ -503,7 +555,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <div id="foryou_flyout" class="popup_block_new responsive_slidedown sub_menu" data-tab="foryou_tab" style="height: 0px">
                   <div class="popup_body popup_menu popup_menu_browse">
-                    <a href="/" class="popup_menu_item">Inicio</a>
+                    <a href="/store" class="popup_menu_item">Inicio</a>
                     <a href="#" class="popup_menu_item">Recomendaciones</a>
                     <a href="#" class="popup_menu_item">Vistos recientemente</a>
                   </div>
@@ -518,16 +570,16 @@ document.addEventListener("DOMContentLoaded", () => {
                   <div class="popup_body popup_menu_twocol_new">
                     <div class="popup_menu popup_menu_browse">
                       <div class="popup_menu_subheader responsive_hidden">Populares</div>
-                      <a href="/juegos-populares" class="popup_menu_item">Lo más vendido</a>
-                      <a href="/juegos-populares" class="popup_menu_item">Lo más jugado</a>
+                      <a href="/store/juegos-populares" class="popup_menu_item">Lo más vendido</a>
+                      <a href="/store/juegos-populares" class="popup_menu_item">Lo más jugado</a>
                       <div class="category_hr responsive_hidden"></div>
                       <a href="#" class="popup_menu_item">Novedades</a>
                       <a href="#" class="popup_menu_item">Próximos lanzamientos</a>
                     </div>
                     <div class="popup_menu popup_menu_browse leftborder">
                       <div class="popup_menu_subheader responsive_hidden">Promociones y eventos</div>
-                      <a href="/ofertas-especiales" class="popup_menu_item">Ofertas especiales</a>
-                      <a href="/ActivisionPublisherSale2024" class="popup_menu_item">Eventos de rebajas</a>
+                      <a href="/store/ofertas-especiales" class="popup_menu_item">Ofertas especiales</a>
+                      <a href="/store/ActivisionPublisherSale2024" class="popup_menu_item">Eventos de rebajas</a>
                     </div>
                   </div>
                 </div>
@@ -544,7 +596,7 @@ document.addEventListener("DOMContentLoaded", () => {
                       <a href="#" class="popup_menu_item">Todas las ofertas</a>
                       <div class="category_hr responsive_hidden"></div>
                       <a href="#" class="popup_menu_item">Juegos</a>
-                      <a href="/juegos-y-tarjetas" class="popup_menu_item">Juegos y tarjetas</a>
+                      <a href="/store/juegos-y-tarjetas" class="popup_menu_item">Juegos y tarjetas</a>
                       <a href="#" class="popup_menu_item">eTarjetas</a>
                       <div class="category_hr responsive_hidden"></div>
                       <a href="#" class="popup_menu_item">Xbox</a>
@@ -625,31 +677,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const isPWA = window.matchMedia("(display-mode: standalone)").matches;
 
-  if (isPWA) {
-    const navbarContent = `
+  function addPWANavbar() {
+    if (isPWA) {
+      const navbarContent = `
           <div class="bottom_navbar_pwa">
               <nav class="bottom_nav">
-                  <a href="/" class="pwa_nav_item">
+                  <a href="/store" class="pwa_nav_item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                       <path fill="currentColor" d="M22.83 12.99L11.83 2H2v9.83l10.99 10.99zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4S7 4.67 7 5.5S6.33 7 5.5 7"/>
                     </svg>
                   </a>
-                  <a href="/ofertas-especiales" class="pwa_nav_item">
+                  <a href="/store/ofertas-especiales" class="pwa_nav_item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                       <path fill="currentColor" d="M9.19 6.35c-2.04 2.29-3.44 5.58-3.57 5.89L2 10.69l4.81-4.81zM11.17 17s3.74-1.55 5.89-3.7c5.4-5.4 4.5-9.62 4.21-10.57c-.95-.3-5.17-1.19-10.57 4.21C8.55 9.09 7 12.83 7 12.83zm6.48-2.19c-2.29 2.04-5.58 3.44-5.89 3.57L13.31 22l4.81-4.81zM9 18c0 .83-.34 1.58-.88 2.12C6.94 21.3 2 22 2 22s.7-4.94 1.88-6.12A2.996 2.996 0 0 1 9 18m4-9c0-1.1.9-2 2-2s2 .9 2 2s-.9 2-2 2s-2-.9-2-2"/>
                     </svg>
                   </a>
-                  <a href="/activisionpublishersale2024" class="pwa_nav_item">
+                  <a href="/store/ActivisionPublisherSale2024" class="pwa_nav_item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                       <path fill="currentColor" d="M12 16q1.2 0 2.138-.712T15.5 13.45h-7q.425 1.125 1.363 1.838T12 16m-2.5-4q.625 0 1.063-.437T11 10.5t-.437-1.062T9.5 9t-1.062.438T8 10.5t.438 1.063T9.5 12m5 0q.625 0 1.063-.437T16 10.5t-.437-1.062T14.5 9t-1.062.438T13 10.5t.438 1.063T14.5 12M7.625 6.4L12 .725L16.375 6.4l6.85 2.3l-4.325 6.125l.175 6.825L12 19.675L4.925 21.65L5.1 14.8L.8 8.7z"/>
                     </svg>
                   </a>
-                  <a href="/notifications" class="pwa_nav_item">
+                  <a href="/store/notifications" class="pwa_nav_item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                       <path fill="currentColor" d="M5 19q-.425 0-.712-.288T4 18t.288-.712T5 17h1v-7q0-2.075 1.25-3.687T10.5 4.2v-.7q0-.625.438-1.062T12 2t1.063.438T13.5 3.5v.7q2 .5 3.25 2.113T18 10v7h1q.425 0 .713.288T20 18t-.288.713T19 19zm7 3q-.825 0-1.412-.587T10 20h4q0 .825-.587 1.413T12 22"/>
                     </svg>
                   </a>
-                  <a href="/cart" class="pwa_nav_item">
+                  <a href="/store/cart" class="pwa_nav_item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                       <g fill="none">
                         <path fill="currentColor" d="M18 15H7L5.5 6H21z"/>
@@ -663,168 +716,25 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
       `;
 
-    const navbarSlot = document.querySelector(".NavbarSlotPWA");
-    navbarSlot.innerHTML = navbarContent;
+      const navbarSlot = document.querySelector(".NavbarSlotPWA");
+      navbarSlot.innerHTML = navbarContent;
 
-    const currentPath = window.location.pathname;
-    const navItems = document.querySelectorAll(".bottom_nav .pwa_nav_item");
-    let isActive = false;
+      const currentPath = window.location.pathname;
+      const navItems = document.querySelectorAll(".bottom_nav .pwa_nav_item");
+      let isActive = false;
 
-    navItems.forEach((item) => {
-      const itemPath = new URL(item.href, window.location.origin).pathname;
-      if (itemPath === currentPath) {
-        item.classList.add("active");
-        isActive = true;
-      }
-    });
-
-    if (!isActive) {
-      navItems[0].classList.add("active");
-    }
-  }
-
-  function removeDesktopNavbar() {
-    const desktopNavbar = document.getElementById(
-      "responsive_store_nav_desktop"
-    );
-    if (desktopNavbar) {
-      desktopNavbar.remove();
-    }
-  }
-
-  function removeMobileNavbar() {
-    const mobileNavbar = document.getElementById("responsive_store_nav_mobile");
-    if (mobileNavbar) {
-      mobileNavbar.remove();
-    }
-  }
-
-  const mobileMediaQuery = window.matchMedia("(max-width: 910px)");
-
-  function screenSizeChange(mq) {
-    if (mq.matches) {
-      addMobileNavbar();
-      removeDesktopNavbar();
-      removeFooter();
-      addFooter();
-      addMobileNavbarEventListeners();
-    } else {
-      addDesktopNavbar();
-      removeMobileNavbar();
-      removeFooter();
-      addFooter();
-      addDesktopNavbarEventListeners();
-    }
-  }
-
-  screenSizeChange(mobileMediaQuery);
-  mobileMediaQuery.addEventListener("change", screenSizeChange);
-
-  function addDesktopNavbarEventListeners() {
-    document.querySelectorAll(".tab").forEach((tab) => {
-      const flyoutId = tab.dataset.flyout;
-      tab.addEventListener("mouseenter", () => {
-        hideAllMenus();
-        currentMenuId = tab.id;
-        currentMenuTimeoutId = setTimeout(() => {
-          showMenuWithOpacity(tab.id, flyoutId);
-        }, 300);
-      });
-      tab.addEventListener("mouseleave", () => {
-        clearTimeout(currentMenuTimeoutId);
-      });
-    });
-
-    document.querySelectorAll(".popup_block_new").forEach((flyout) => {
-      flyout.addEventListener("mouseenter", () => {
-        currentMenuIsMouseOverMenu = true;
-      });
-      flyout.addEventListener("mouseleave", () => {
-        currentMenuIsMouseOverMenu = false;
-        hideMenuWithOpacity(flyout.dataset.tab, flyout.id);
-      });
-    });
-  }
-
-  function addMobileNavbarEventListeners() {
-    const menuItems = document.querySelectorAll(".tab");
-    menuItems.forEach(function (item) {
-      item.addEventListener("click", function () {
-        const flyoutId = this.dataset.flyout;
-        const flyout = document.getElementById(flyoutId);
-        const isOpen =
-          flyout.style.height === "0px" || flyout.style.height === "";
-        if (isOpen) {
-          flyout.style.height = flyout.scrollHeight + "px";
-        } else {
-          flyout.style.height = "0";
+      navItems.forEach((item) => {
+        const itemPath = new URL(item.href, window.location.origin).pathname;
+        if (itemPath === currentPath) {
+          item.classList.add("active");
+          isActive = true;
         }
       });
-    });
-  }
 
-  function showMenuWithOpacity(tabId, flyoutId) {
-    const tab = document.getElementById(tabId);
-    const flyout = document.getElementById(flyoutId);
-    if (flyout.style.display === "none" && !flyout.classList.contains("open")) {
-      flyout.style.display = "block";
-      requestAnimationFrame(() => {
-        changeOpacity(flyout, 150, 0, 1);
-        flyout.classList.add("open");
-      });
-      toggleTabFocusClass(tab, true);
-      currentMenuIsMouseOverMenu = true;
-    }
-  }
-
-  function hideMenuWithOpacity(tabId, flyoutId) {
-    const tab = document.getElementById(tabId);
-    const flyout = document.getElementById(flyoutId);
-    clearTimeout(currentMenuTimeoutId);
-    if (!currentMenuIsMouseOverMenu) {
-      changeOpacity(flyout, 150, 1, 0);
-      setTimeout(function () {
-        flyout.style.display = "none";
-        flyout.classList.remove("open");
-      }, 150);
-      if (tab) {
-        toggleTabFocusClass(tab, false);
+      if (!isActive) {
+        navItems[0].classList.add("active");
       }
     }
-  }
-
-  function toggleTabFocusClass(tab, isFocused) {
-    if (isFocused) {
-      if (!tab.classList.contains("focus")) {
-        tab.classList.add("focus");
-      }
-    } else {
-      tab.classList.remove("focus");
-    }
-  }
-
-  let currentMenuTimeoutId;
-  let currentMenuIsMouseOverMenu = false;
-  let currentMenuId;
-
-  function hideAllMenus() {
-    clearTimeout(currentMenuTimeoutId);
-    document
-      .querySelectorAll("#responsive_store_nav_desktop .popup_block_new")
-      .forEach(function (flyout) {
-        if (flyout.id !== currentMenuId) {
-          changeOpacity(flyout, 150, 1, 0);
-          setTimeout(function () {
-            flyout.style.display = "none";
-            flyout.classList.remove("open");
-          }, 150);
-        }
-      });
-    document.querySelectorAll(".tab").forEach(function (tab) {
-      if (tab.id !== currentMenuId) {
-        toggleTabFocusClass(tab, false);
-      }
-    });
   }
 
   function generateFooterColumn(title, items) {
@@ -972,12 +882,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  const footerSlot = document.querySelector(".FooterSlot");
-  const footerContainer = document.createElement("div");
+  function removeHamburgerMenu() {
+    const hamburgerMenu = document.querySelector(".HamburgerMenuSlot");
+    if (hamburgerMenu) {
+      hamburgerMenu.innerHTML = "";
+    }
+  }
 
-  if (isPWA) {
-    footerContainer.classList.add("void_div");
-    footerSlot.appendChild(footerContainer);
+  function removeDesktopNavbar() {
+    const desktopNavbar = document.getElementById(
+      "responsive_store_nav_desktop"
+    );
+    if (desktopNavbar) {
+      desktopNavbar.remove();
+    }
+  }
+
+  function removeMobileNavbar() {
+    const mobileNavbar = document.getElementById("responsive_store_nav_mobile");
+    if (mobileNavbar) {
+      mobileNavbar.remove();
+    }
   }
 
   function removeFooter() {
@@ -986,4 +911,214 @@ document.addEventListener("DOMContentLoaded", () => {
       footerSlot.innerHTML = "";
     }
   }
+
+  function addDesktopNavbarEventListeners() {
+    document.querySelectorAll(".tab").forEach((tab) => {
+      const flyoutId = tab.dataset.flyout;
+      tab.addEventListener("mouseenter", () => {
+        hideAllMenus();
+        currentMenuId = tab.id;
+        currentMenuTimeoutId = setTimeout(() => {
+          showMenuWithOpacity(tab.id, flyoutId);
+        }, 300);
+      });
+      tab.addEventListener("mouseleave", () => {
+        clearTimeout(currentMenuTimeoutId);
+      });
+    });
+
+    document.querySelectorAll(".popup_block_new").forEach((flyout) => {
+      flyout.addEventListener("mouseenter", () => {
+        currentMenuIsMouseOverMenu = true;
+      });
+      flyout.addEventListener("mouseleave", () => {
+        currentMenuIsMouseOverMenu = false;
+        hideMenuWithOpacity(flyout.dataset.tab, flyout.id);
+      });
+    });
+  }
+
+  function addMobileNavbarEventListeners() {
+    const menuItems = document.querySelectorAll(".tab");
+    menuItems.forEach(function (item) {
+      item.addEventListener("click", function () {
+        const flyoutId = this.dataset.flyout;
+        const flyout = document.getElementById(flyoutId);
+        const isOpen =
+          flyout.style.height === "0px" || flyout.style.height === "";
+        if (isOpen) {
+          flyout.style.height = flyout.scrollHeight + "px";
+        } else {
+          flyout.style.height = "0";
+        }
+      });
+    });
+  }
+
+  function screenSizeChange(mq) {
+    if (currentPath !== "/login.html" && currentPath !== "/join.html") {
+      if (mq.matches) {
+        addHamburgerMenu();
+        addMobileNavbar();
+        removeDesktopNavbar();
+        addPWANavbar();
+      } else {
+        removeHamburgerMenu();
+        addDesktopNavbar();
+        removeMobileNavbar();
+      }
+    } else {
+      removeHamburgerMenu();
+      removeDesktopNavbar();
+      removeMobileNavbar();
+    }
+    removeFooter();
+    addFooter();
+    if (mq.matches) {
+      addMobileNavbarEventListeners();
+    } else {
+      addDesktopNavbarEventListeners();
+    }
+  }
+
+  addDesktopHeader();
+  addMobileHeader();
+
+  const mobileMediaQuery = window.matchMedia("(max-width: 910px)");
+
+  screenSizeChange(mobileMediaQuery);
+  mobileMediaQuery.addEventListener("change", screenSizeChange);
+
+  const footerSlot = document.querySelector(".FooterSlot");
+  const footerContainer = document.createElement("div");
+
+  if (isPWA) {
+    footerContainer.classList.add("void_div");
+    footerSlot.appendChild(footerContainer);
+  }
 });
+
+function changeOpacity(target, duration, fromOpacity, toOpacity) {
+  const opacityIncrement = (toOpacity - fromOpacity) / (duration / 10);
+  let currentOpacity = fromOpacity;
+  target.style.opacity = currentOpacity;
+  const timer = setInterval(function () {
+    currentOpacity += opacityIncrement;
+    currentOpacity = Math.min(Math.max(currentOpacity, 0), 1);
+    target.style.opacity = currentOpacity;
+    if (
+      (opacityIncrement > 0 && currentOpacity >= toOpacity) ||
+      (opacityIncrement < 0 && currentOpacity <= toOpacity)
+    ) {
+      clearInterval(timer);
+    }
+  }, 10);
+}
+
+let currentMenuTimeoutId;
+let currentMenuIsMouseOverMenu = false;
+let currentMenuId;
+
+function hideAllMenus() {
+  clearTimeout(currentMenuTimeoutId);
+  document
+    .querySelectorAll("#responsive_store_nav_desktop .popup_block_new")
+    .forEach(function (flyout) {
+      if (flyout.id !== currentMenuId) {
+        changeOpacity(flyout, 150, 1, 0);
+        setTimeout(function () {
+          flyout.style.display = "none";
+          flyout.classList.remove("open");
+        }, 150);
+      }
+    });
+  document.querySelectorAll(".tab").forEach(function (tab) {
+    if (tab.id !== currentMenuId) {
+      toggleTabFocusClass(tab, false);
+    }
+  });
+}
+
+function showMenuWithOpacity(tabId, flyoutId) {
+  const tab = document.getElementById(tabId);
+  const flyout = document.getElementById(flyoutId);
+  if (flyout.style.display === "none" && !flyout.classList.contains("open")) {
+    flyout.style.display = "block";
+    requestAnimationFrame(() => {
+      changeOpacity(flyout, 150, 0, 1);
+      flyout.classList.add("open");
+    });
+    toggleTabFocusClass(tab, true);
+    currentMenuIsMouseOverMenu = true;
+  }
+}
+
+function hideMenuWithOpacity(tabId, flyoutId) {
+  const tab = document.getElementById(tabId);
+  const flyout = document.getElementById(flyoutId);
+  clearTimeout(currentMenuTimeoutId);
+  if (!currentMenuIsMouseOverMenu) {
+    changeOpacity(flyout, 150, 1, 0);
+    setTimeout(function () {
+      flyout.style.display = "none";
+      flyout.classList.remove("open");
+    }, 150);
+    if (tab) {
+      toggleTabFocusClass(tab, false);
+    }
+  }
+}
+
+function toggleTabFocusClass(tab, isFocused) {
+  if (isFocused) {
+    if (!tab.classList.contains("focus")) {
+      tab.classList.add("focus");
+    }
+  } else {
+    tab.classList.remove("focus");
+  }
+}
+
+function ShowMenu(menuId, alignment) {
+  const menu = document.getElementById(menuId);
+  menu.style[alignment] = "0";
+  if (menu.style.display === "none" || menu.style.display === "") {
+    menu.style.display = "block";
+    requestAnimationFrame(() => {
+      changeOpacity(menu, 150, 0, 1);
+    });
+  } else {
+    menu.style.display = "none";
+    menu.style.opacity = "0";
+  }
+}
+
+function ChangeLanguage(language) {
+  window.location.href = `?l=${language}`;
+}
+
+function getCookie(name) {
+  let cookieArr = document.cookie.split(";");
+  for (let i = 0; i < cookieArr.length; i++) {
+    let cookiePair = cookieArr[i].split("=");
+    if (name === cookiePair[0].trim()) {
+      return decodeURIComponent(cookiePair[1]);
+    }
+  }
+  return null;
+}
+
+function parseJwt(token) {
+  const base64Url = token.split(".")[1];
+  const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+  const jsonPayload = decodeURIComponent(
+    atob(base64)
+      .split("")
+      .map(function (c) {
+        return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+      })
+      .join("")
+  );
+
+  return JSON.parse(jsonPayload);
+}

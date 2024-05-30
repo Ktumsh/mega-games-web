@@ -2435,7 +2435,7 @@ div#store_header .content {
 @media (max-width: 910px) {
   div#store_header,
   div#store_header .content {
-    z-index: 0;
+    z-index: 10;
   }
 }
 
@@ -2555,8 +2555,8 @@ a.pulldown_mobile {
 
 .popup_block_new .popup_body {
   position: relative;
-  border: 1px solid #131019;
-  background-color: #131019;
+  border: 1px solid #322e38;
+  background-color: #322e38;
 }
 
 .popup_menu_browse {
@@ -4011,12 +4011,12 @@ a.pulldown_mobile {
   padding: 3px 0px;
   font-size: 13px;
   font-weight: 300;
-  color: #dcd8e6;
+  color: #dcd8e6 !important;
   transition: color 150ms ease-in-out 0s;
 }
 
 .footer_content .footer_nav_link:hover {
-  color: #f8e559;
+  color: #f8e559 !important;
 }
 
 .footer_btn {
@@ -4121,7 +4121,7 @@ a.pulldown_mobile {
 }
 
 .footer_form p a {
-  color: #b3aac9;
+  color: #b3aac9 !important;
   text-decoration: underline !important;
 }
 
@@ -4138,12 +4138,12 @@ a.pulldown_mobile {
   transition: color 150ms ease-in-out;
   background: none;
   font-size: 13px;
-  color: #dcd8e6;
+  color: #dcd8e6 !important;
   padding: 3px 0;
 }
 
 .footer_bottom a:hover {
-  color: #f8e559;
+  color: #f8e559 !important;
 }
 
 .social_footer_links {
@@ -4153,12 +4153,12 @@ a.pulldown_mobile {
 }
 
 .footer_link {
-  color: #b3aac9;
+  color: #b3aac9 !important;
   transition: 150ms ease-in-out;
 }
 
 .footer_link:hover {
-  color: #f8e559;
+  color: #f8e559 !important;
   opacity: 1;
 }
 
@@ -5030,6 +5030,12 @@ a.pulldown_mobile {
 }
 
 @media (max-width: 910px) {
+  .content_hub_title_ctn .page_title {
+    padding-left: 15px;
+    font-size: 32px;
+    line-height: normal;
+  }
+
   .date_and_platform {
     display: flex;
     flex-direction: row;
@@ -5210,4 +5216,138 @@ a.pulldown_mobile {
     font-size: 17px;
     line-height: 19px;
   }
+}
+
+@media screen and (max-width: 500px) {
+  .content_hub_title .content_hub_title_ctn {
+    margin-bottom: 8px;
+  }
+
+  .content_hub_title_ctn .page_title {
+    font-size: 28px;
+    padding-left: 0px;
+    line-height: normal;
+  }
+}
+
+#header_notification_area {
+  display: inline-block;
+}
+
+#account_pulldown {
+  display: inline-block;
+  padding-left: 4px;
+  line-height: 25px;
+}
+
+.notification_ctn {
+  background-color: rgba(103, 112, 123, 0.2);
+  width: 46px;
+  height: 24px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 402;
+}
+
+.notification_ctn:hover {
+  background-color: #322e38;
+  transition-property: background;
+  transition-duration: 250ms;
+}
+
+.notification_svg {
+  width: 14px;
+}
+
+.header_notification_btn.header_notification_bell {
+  display: block;
+  width: 46px;
+  height: 24px;
+  padding: 0px;
+  margin: 0px;
+  background: url("/assets/public/icons/notification_bell.png") no-repeat
+    #3d4450;
+  background-position: center;
+  background-size: 14px;
+}
+
+#account_dropdown > .popup_body.popup_menu .popup_menu_item .account_name {
+  color: #be9dfb;
+}
+
+#account_dropdown > .popup_body.popup_menu .popup_menu_item {
+  padding: 8px 18px;
+  font-size: 13px;
+}
+
+.menu_user_area {
+  padding: 24px 20px 12px 20px;
+  background: -webkit-linear-gradient(343deg, #5809ec 0%, #1c1825 70%);
+  background: linear-gradient(107deg, #5809ec 0%, #1c1825 70%);
+  background-position: 75%;
+  background-size: 200%;
+}
+
+.menu_user_person {
+  line-height: 36px;
+  padding-bottom: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.menu_user_person .playerAvatar {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.playerAvatar.online {
+  background-color: #57cbde;
+  background: -webkit-linear-gradient(
+    top,
+    rgba(83, 164, 196, 1) 5%,
+    rgba(69, 128, 151, 1) 95%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(83, 164, 196, 1) 5%,
+    rgba(69, 128, 151, 1) 95%
+  );
+  filter: none;
+}
+
+#user_name {
+  text-transform: capitalize;
+  color: #e5d8fe !important;
+}
+
+.login_client_waitforauth {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 180px 20%;
+  text-align: center;
+  z-index: 1000;
+}
+
+.login_client_waitforauth_title {
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.login_client_waitforauth_desc {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.6);
 }
