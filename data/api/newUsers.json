@@ -1,0 +1,11 @@
+[
+  {
+    "email": "example@example.com",
+    "username": "exampleUser",
+    "password": "$2a$10$E6N6kjL5P6TkVgI2F5e9fe1Y7Oa2O2vv0C2DqwQ5HR0cTT6aU1y8W",
+    "role": "user",
+    "createdAt": "2024-05-30T12:34:56.789Z",
+    "isActive": true,
+    "lastLogin": null
+  }
+]
