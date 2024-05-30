@@ -51,6 +51,7 @@ app.get("/api/store/:id", (req, res) => {
 });
 
 app.get("/api/users", (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
   res.json(users);
 });
 
