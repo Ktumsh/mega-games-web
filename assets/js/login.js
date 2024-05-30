@@ -1,5 +1,5 @@
 const errorMsg = document.getElementById("error_msg");
-const apiUrl = "https://store-megagames.vercel.app";
+const apiUrl = "https://store-megagames.onrender.com";
 
 document.getElementById("login").addEventListener("submit", async (e) => {
   e.preventDefault();
