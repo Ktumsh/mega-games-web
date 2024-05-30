@@ -33,12 +33,7 @@
   font-style: normal;
   font-weight: normal;
   font-display: swap;
-  src: url("https://store-megagames.onrender.com/assets/public/fonts/motiva-sans/MotivaSansRegular.woff2")
-      format("woff2"),
-    url("https://store-megagames.onrender.com/assets/public/fonts/motiva-sans/MotivaSansRegular.woff")
-      format("woff"),
-    url("https://store-megagames.onrender.com/assets/public/fonts/motiva-sans/MotivaSansRegular.ttf")
-      format("truetype");
+  src: url("/assets/public/fonts/motiva-sans/MotivaSansRegular.woff.ttf");
 }
 
 @font-face {
@@ -46,12 +41,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("https://store-megagames.onrender.com/assets/public/fonts/motiva-sans/MotivaSansMedium.woff2")
-      format("woff2"),
-    url("https://store-megagames.onrender.com/assets/public/fonts/motiva-sans/MotivaSansMedium.woff")
-      format("woff"),
-    url("https://store-megagames.onrender.com/assets/public/fonts/motiva-sans/MotivaSansMedium.ttf")
-      format("truetype");
+  src: url("/assets/public/fonts/motiva-sans/MotivaSansMedium.woff.ttf");
 }
 
 @font-face {
@@ -59,12 +49,7 @@
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src: url("https://store-megagames.onrender.com/assets/public/fonts/motiva-sans/MotivaSansBold.woff2")
-      format("woff2"),
-    url("https://store-megagames.onrender.com/assets/public/fonts/motiva-sans/MotivaSansBold.woff")
-      format("woff"),
-    url("https://store-megagames.onrender.com/assets/public/fonts/motiva-sans/MotivaSansBold.woff.ttf")
-      format("truetype");
+  src: url("/assets/public/fonts/motiva-sans/MotivaSansBold.woff.ttf");
 }
 
 @font-face {
@@ -72,19 +57,14 @@
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url("https://store-megagames.onrender.com/assets/public/fonts/motiva-sans/MotivaExtraBold.woff2")
-      format("woff2"),
-    url("https://store-megagames.onrender.com/assets/public/fonts/motiva-sans/MotivaSansExtraBold.woff")
-      format("woff"),
-    url("https://store-megagames.onrender.com/assets/public/fonts/motiva-sans/MotivaSansExtraBold.ttf")
-      format("truetype");
+  src: url("/assets/public/fonts/motiva-sans/MotivaSansExtraBold.ttf");
 }
 
 @font-face {
   font-family: "metropolis";
   font-weight: 400;
   font-display: swap;
-  src: url(https://static.eneba.games/fonts/Metropolis-Regular.woff2)
+  src: url("https://static.eneba.games/fonts/Metropolis-Regular.woff2")
     format("woff2");
 }
 
@@ -92,7 +72,7 @@
   font-family: "metropolis";
   font-weight: 600;
   font-display: swap;
-  src: url(https://static.eneba.games/fonts/Metropolis-Medium.woff2)
+  src: url("https://static.eneba.games/fonts/Metropolis-Medium.woff2")
     format("woff2");
 }
 
@@ -100,7 +80,7 @@
   font-family: "metropolis";
   font-weight: 800;
   font-display: swap;
-  src: url(https://static.eneba.games/fonts/Metropolis-Bold.woff2)
+  src: url("https://static.eneba.games/fonts/Metropolis-Bold.woff2")
     format("woff2");
 }
 
@@ -108,7 +88,7 @@
   font-family: "metropolis-monospace";
   font-weight: 400;
   font-display: swap;
-  src: url(https://static.eneba.games/fonts/Monospace-Metropolis-Regular.woff2)
+  src: url("https://static.eneba.games/fonts/Monospace-Metropolis-Regular.woff2")
     format("woff2");
 }
 
@@ -116,7 +96,7 @@
   font-family: "metropolis-monospace";
   font-weight: 600;
   font-display: swap;
-  src: url(https://static.eneba.games/fonts/Monospace-Metropolis-Medium.woff2)
+  src: url("https://static.eneba.games/fonts/Monospace-Metropolis-Medium.woff2")
     format("woff2");
 }
 
@@ -124,7 +104,7 @@
   font-family: "metropolis-monospace";
   font-weight: 800;
   font-display: swap;
-  src: url(https://static.eneba.games/fonts/Monospace-Metropolis-Bold.woff2)
+  src: url("https://static.eneba.games/fonts/Monospace-Metropolis-Bold.woff2")
     format("woff2");
 }
 

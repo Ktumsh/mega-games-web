@@ -28,6 +28,9 @@ app.use(
         "https://store-megagames.vercel.app",
         "http://localhost:4000",
         "https://store-megagames.onrender.com",
+        "https://store-megagames.onrender.com/api/login",
+        "https://store-megagames.onrender.com/api/store",
+        "https://store-megagames.onrender.com/api/users",
       ];
       if (ALLOWED_ORIGIN.includes(origin)) {
         return callback(null, true);
