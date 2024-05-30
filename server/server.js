@@ -2,7 +2,6 @@ import { methods as authorization } from "../middlewares/authorization.js";
 import { methods as authentication } from "../controllers/authentication.controller.js";
 import logoutRouter from "../middlewares/authorization.js";
 import express from "express";
-import cookieParser from "cookie-parser";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import apiStore from "../data/api/apiStore.json" assert { type: "json" };
@@ -33,7 +32,7 @@ app.use(
 app.use("/assets", express.static(join(__dirname, "../assets")));
 app.use("/data", express.static(join(__dirname, "../data")));
 app.use(express.json());
-app.use(cookieParser());
+
 app.get("/manifest.json", (req, res) => {
   res.sendFile(join(__dirname, "../manifest.json"));
 });
@@ -64,7 +63,7 @@ app.get("/api/store/:id", (req, res) => {
   res.status(404).json({ error: "Juego no encontrado" });
 });
 
-//GESTION DE RUTAS
+// GESTION DE RUTAS
 app.get("/login.html", authorization.onlyGuest, (req, res) => {
   res.sendFile(join(__dirname, "../login.html"));
 });
@@ -146,7 +145,7 @@ app.get("/about/help", authorization.isAuthenticated, (req, res) => {
   res.sendFile(join(__dirname, "../about/help.html"));
 });
 
-//USAR TODAS LAS PAGINAS SI ESTA AUTENTICADO
+// USAR TODAS LAS PAGINAS SI ESTA AUTENTICADO
 app.use(
   "/store",
   authorization.isAuthenticated,

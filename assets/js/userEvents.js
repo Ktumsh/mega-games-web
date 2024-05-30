@@ -1,14 +1,3 @@
-function getCookie(name) {
-  let cookieArr = document.cookie.split(";");
-  for (let i = 0; i < cookieArr.length; i++) {
-    let cookiePair = cookieArr[i].split("=");
-    if (name === cookiePair[0].trim()) {
-      return decodeURIComponent(cookiePair[1]);
-    }
-  }
-  return null;
-}
-
 function parseJwt(token) {
   const base64Url = token.split(".")[1];
   const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
@@ -24,12 +13,6 @@ function parseJwt(token) {
   return JSON.parse(jsonPayload);
 }
 
-function toggleMenu() {
-  const dropdown = document.getElementById("account_dropdown");
-  dropdown.style.display =
-    dropdown.style.display === "block" ? "none" : "block";
-}
-
 document.addEventListener("DOMContentLoaded", function () {
   const headerNotification = document.getElementById(
     "header_notification_area"
@@ -38,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const sessionLink = document.getElementById("session_link");
   const accountPulldown = document.getElementById("account_pulldown");
   const logoutLink = document.getElementById("logout_link");
-  const jwtToken = getCookie("jwt");
+  const jwtToken = localStorage.getItem("jwt");
 
   if (jwtToken) {
     const payload = parseJwt(jwtToken);
@@ -50,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     logoutLink.addEventListener("click", function (event) {
       event.preventDefault();
-      document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      localStorage.removeItem("jwt");
       window.location.href = "/logout";
     });
   } else {

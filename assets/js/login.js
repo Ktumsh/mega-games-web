@@ -10,7 +10,6 @@ document.getElementById("login").addEventListener("submit", async (e) => {
     headers: {
       "Content-Type": "application/json",
     },
-    credentials: "include",
     body: JSON.stringify({
       identifier: identifier.value,
       password: password.value,
@@ -24,7 +23,8 @@ document.getElementById("login").addEventListener("submit", async (e) => {
   }
 
   const resJson = await res.json();
-  if (resJson.redirect) {
-    window.location.href = resJson.redirect;
+  if (resJson.token) {
+    localStorage.setItem("jwt", resJson.token);
+    window.location.href = "/store";
   }
 });

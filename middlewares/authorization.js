@@ -19,42 +19,42 @@ function readUsersFromFile() {
 }
 
 function onlyAdmin(req, res, next) {
-  const logged = reviewCookie(req);
+  const logged = reviewToken(req);
   if (logged) return next();
   return res.redirect("/login.html");
 }
 
 function onlyGuest(req, res, next) {
-  const logged = reviewCookie(req);
+  const logged = reviewToken(req);
   if (!logged) return next();
   return res.redirect("/store");
 }
 
 function isAuthenticated(req, res, next) {
-  const logged = reviewCookie(req);
+  const logged = reviewToken(req);
   if (logged) return next();
   return res.redirect("/login.html");
 }
 
-function reviewCookie(req) {
+function reviewToken(req) {
   try {
-    const cookieJWT = req.headers.cookie
-      .split("; ")
-      .find((cookie) => cookie.startsWith("jwt="))
-      .slice(4);
-    const decoded = jsonwebtoken.verify(cookieJWT, process.env.JWT_SECRET);
+    const authHeader = req.headers.authorization;
+    if (!authHeader) {
+      return false;
+    }
+    const token = authHeader.split(" ")[1];
+    const decoded = jsonwebtoken.verify(token, process.env.JWT_SECRET);
     const users = readUsersFromFile();
     const userToReview = users.find(
       (user) => user.username === decoded.username
     );
-    console.log(decoded, userToReview);
     if (!userToReview) {
       return false;
     }
-    console.log("cookie validada");
+    console.log("Token validado");
     return true;
-  } catch {
-    console.log("cookie invalidada");
+  } catch (err) {
+    console.log("Token invalidado", err);
     return false;
   }
 }
@@ -66,7 +66,6 @@ export const methods = {
 };
 
 router.post("/logout", (req, res) => {
-  res.clearCookie("jwt");
   res.redirect("/logout.html");
 });
 

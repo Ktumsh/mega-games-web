@@ -49,19 +49,8 @@ async function login(req, res) {
     { expiresIn: process.env.JWT_LIFE }
   );
 
-  const cookieOptions = {
-    expires: new Date(
-      Date.now() + process.env.JWT_COOKIE_EXPIRES * 24 * 60 * 60 * 1000
-    ),
-    path: "/",
-    secure: true,
-    sameSite: "none",
-  };
-
-  console.log("Setting cookie with options:", cookieOptions);
-  res.cookie("jwt", token, cookieOptions);
-  console.log("Login successful, redirecting to /store");
-  res.send({ status: "ok", message: "Usuario logeado", redirect: "/store" });
+  console.log("Login successful, returning token");
+  res.send({ status: "ok", message: "Usuario logeado", token });
 }
 
 async function register(req, res) {
