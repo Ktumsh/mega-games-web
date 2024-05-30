@@ -2,12 +2,13 @@ const errorMsg = document.getElementById("error_display");
 const email = document.getElementById("email");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
+const apiUrl = "https://store-megagames.vercel.app";
 
 document
   .getElementById("create_account")
   .addEventListener("submit", async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:4000/api/register", {
+    const res = await fetch(`${apiUrl}/api/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
