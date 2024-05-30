@@ -1,5 +1,4 @@
 import bcryptjs from "bcryptjs";
-import jsonwebtoken from "jsonwebtoken";
 import dotenv from "dotenv";
 import fs from "fs";
 import { join, dirname } from "path";
@@ -43,14 +42,12 @@ async function login(req, res) {
       .status(400)
       .send({ status: "Error", message: "Error al ingresar." });
   }
-  const token = jsonwebtoken.sign(
-    { username: userToReview.username },
-    process.env.JWT_SECRET,
-    { expiresIn: process.env.JWT_LIFE }
-  );
-
-  console.log("Login successful, returning token");
-  res.send({ status: "ok", message: "Usuario logeado", token });
+  console.log("Login successful, user authenticated");
+  res.send({
+    status: "ok",
+    message: "Usuario logeado",
+    username: userToReview.username,
+  });
 }
 
 async function register(req, res) {
