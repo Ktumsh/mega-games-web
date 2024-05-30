@@ -1,4 +1,3 @@
-import { methods as authentication } from "../controllers/authentication.controller.js";
 import { methods as authorization } from "../middlewares/authorization.js";
 import logoutRouter from "../middlewares/authorization.js";
 import express from "express";
@@ -107,9 +106,5 @@ app.use(
   authorization.isAuthenticated,
   express.static(join(__dirname, "../about"))
 );
-
-// API
-app.post("/api/register", authentication.register);
-app.post("/api/login", authentication.login);
 
 app.use("/", logoutRouter);
