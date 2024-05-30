@@ -328,7 +328,7 @@ body.login .divider {
 }
 
 @media screen and (max-width: 910px) {
-  .page_content {
+  body .page_content {
     max-width: 960px;
     padding: 0px;
     width: 100%;
