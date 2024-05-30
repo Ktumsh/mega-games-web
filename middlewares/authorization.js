@@ -26,7 +26,7 @@ function onlyAdmin(req, res, next) {
 
 function onlyGuest(req, res, next) {
   const logged = reviewToken(req);
-  if (!logged) return next();
+  if (logged) return next();
   return res.redirect("/store");
 }
 
