@@ -65,10 +65,9 @@ export const methods = {
   isAuthenticated,
 };
 
-/*router.post("/logout", (req, res) => {
-  console.log("cookie eliminada");
+router.post("/logout", (req, res) => {
   res.clearCookie("jwt");
   res.redirect("/logout.html");
-});*/
+});
 
 export default router;
