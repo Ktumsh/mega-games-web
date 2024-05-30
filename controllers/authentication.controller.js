@@ -56,7 +56,7 @@ async function login(req, res) {
     path: "/",
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
+    sameSite: "none",
   };
 
   res.cookie("jwt", token, cookieOptions);
