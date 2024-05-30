@@ -16,5 +16,23 @@
     "createdAt": "2024-05-30T07:05:36.406Z",
     "isActive": true,
     "lastLogin": null
+  },
+  {
+    "email": "nuklet.skyler@gmail.com",
+    "username": "boyito",
+    "password": "$2a$05$EhTZJR2i9PKO.YH4sZxwq.SwPlN8/IoI1HwH9Ow6ZrVpFTGINgfie",
+    "role": "user",
+    "createdAt": "2024-05-30T22:23:23.207Z",
+    "isActive": true,
+    "lastLogin": null
+  },
+  {
+    "email": "january.ktumsh@outlook.com",
+    "username": "kviseki",
+    "password": "$2a$05$bybV9zxOewzdpscOhWGXB.glsBIZkWUC3RRaQzEMP3dZxI4G.AK7S",
+    "role": "user",
+    "createdAt": "2024-05-30T22:24:31.625Z",
+    "isActive": true,
+    "lastLogin": null
   }
 ]

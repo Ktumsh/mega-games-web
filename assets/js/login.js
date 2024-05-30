@@ -4,7 +4,7 @@ document.getElementById("login").addEventListener("submit", async (e) => {
   e.preventDefault();
   const identifier = document.getElementById("username");
   const password = document.getElementById("password");
-  const res = await fetch("http://localhost:4000/api/login", {
+  const res = await fetch("https://store-megagames.onrender.com/api/login", {
     method: "POST",
     mode: "cors",
     headers: {
