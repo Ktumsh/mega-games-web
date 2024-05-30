@@ -27,7 +27,7 @@ app.use(
       const ALLOWED_ORIGIN = [
         "https://store-megagames.vercel.app",
         "http://localhost:4000",
-        "https://store-megagames-ft62kwqj5-josue-barras-projects.vercel.app",
+        "https://store-megagames.onrender.com",
       ];
       if (ALLOWED_ORIGIN.includes(origin)) {
         return callback(null, true);

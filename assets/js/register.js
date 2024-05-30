@@ -2,13 +2,12 @@ const errorMsg = document.getElementById("error_display");
 const email = document.getElementById("email");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
-const apiUrl = "https://store-megagames.onrender.com";
 
 document
   .getElementById("create_account")
   .addEventListener("submit", async (e) => {
     e.preventDefault();
-    const res = await fetch(`${apiUrl}/api/users`, {
+    const res = await fetch("https://store-megagames.onrender.com/api/users", {
       method: "POST",
       mode: "cors",
       headers: {
