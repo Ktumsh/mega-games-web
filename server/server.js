@@ -7,8 +7,8 @@ import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import apiStore from "../data/api/apiStore.json" assert { type: "json" };
 import users from "../data/api/users.json" assert { type: "json" };
+import cors from "cors";
 
-const cors = require("cors");
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const PORT = process.env.PORT ?? 4000;
@@ -23,6 +23,7 @@ app.listen(PORT, () => {
 app.use(
   cors({
     origin: "https://store-megagames.vercel.app/",
+    optionsSuccessStatus: 200,
   })
 );
 
