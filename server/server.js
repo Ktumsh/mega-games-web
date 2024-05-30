@@ -83,49 +83,61 @@ app.get("/", (req, res) => {
 });
 app.get(
   "/store/ActivisionPublisherSale2024",
-  authorization.onlyAdmin,
+  authorization.isAuthenticated,
   (req, res) => {
     res.sendFile(join(__dirname, "../store/ActivisionPublisherSale2024.html"));
   }
 );
-app.get("/store/juegos-populares", authorization.onlyAdmin, (req, res) => {
-  res.sendFile(join(__dirname, "../store/juegos-populares.html"));
-});
-app.get("/store/juegos-y-tarjetas", authorization.onlyAdmin, (req, res) => {
-  res.sendFile(join(__dirname, "../store/juegos-y-tarjetas.html"));
-});
-app.get("/store/ofertas-especiales", authorization.onlyAdmin, (req, res) => {
-  res.sendFile(join(__dirname, "../store/ofertas-especiales.html"));
-});
-app.get("/store/offer-details", authorization.onlyAdmin, (req, res) => {
+app.get(
+  "/store/juegos-populares",
+  authorization.isAuthenticated,
+  (req, res) => {
+    res.sendFile(join(__dirname, "../store/juegos-populares.html"));
+  }
+);
+app.get(
+  "/store/juegos-y-tarjetas",
+  authorization.isAuthenticated,
+  (req, res) => {
+    res.sendFile(join(__dirname, "../store/juegos-y-tarjetas.html"));
+  }
+);
+app.get(
+  "/store/ofertas-especiales",
+  authorization.isAuthenticated,
+  (req, res) => {
+    res.sendFile(join(__dirname, "../store/ofertas-especiales.html"));
+  }
+);
+app.get("/store/offer-details", authorization.isAuthenticated, (req, res) => {
   res.sendFile(join(__dirname, "../store/offer-details.html"));
 });
-app.get("/store/games-details", authorization.onlyAdmin, (req, res) => {
+app.get("/store/games-details", authorization.isAuthenticated, (req, res) => {
   res.sendFile(join(__dirname, "../store/games-details.html"));
 });
-app.get("/store/gift-details", authorization.onlyAdmin, (req, res) => {
+app.get("/store/gift-details", authorization.isAuthenticated, (req, res) => {
   res.sendFile(join(__dirname, "../store/gift-details.html"));
 });
 app.get(
   "/store/publisher-sale-details",
-  authorization.onlyAdmin,
+  authorization.isAuthenticated,
   (req, res) => {
     res.sendFile(join(__dirname, "../store/publisher-sale-details.html"));
   }
 );
-app.get("/store/notifications", authorization.onlyAdmin, (req, res) => {
+app.get("/store/notifications", authorization.isAuthenticated, (req, res) => {
   res.sendFile(join(__dirname, "../store/notifications.html"));
 });
-app.get("/store/cart", authorization.onlyAdmin, (req, res) => {
+app.get("/store/cart", authorization.isAuthenticated, (req, res) => {
   res.sendFile(join(__dirname, "../store/cart.html"));
 });
-app.get("/about/community", authorization.onlyAdmin, (req, res) => {
+app.get("/about/community", authorization.isAuthenticated, (req, res) => {
   res.sendFile(join(__dirname, "../about/community.html"));
 });
-app.get("/about/about", authorization.onlyAdmin, (req, res) => {
+app.get("/about/about", authorization.isAuthenticated, (req, res) => {
   res.sendFile(join(__dirname, "../about/about.html"));
 });
-app.get("/about/help", authorization.onlyAdmin, (req, res) => {
+app.get("/about/help", authorization.isAuthenticated, (req, res) => {
   res.sendFile(join(__dirname, "../about/help.html"));
 });
 
