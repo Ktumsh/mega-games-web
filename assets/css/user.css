@@ -512,3 +512,9 @@ body.join {
 #error_msg.hidden {
   display: none;
 }
+
+@media screen and (max-width: 910px) {
+  .join_content_container {
+    padding: 20px;
+  }
+}

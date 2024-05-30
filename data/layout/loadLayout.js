@@ -214,26 +214,20 @@ document.addEventListener("DOMContentLoaded", () => {
       "hamburger_session_link"
     );
     const hamburgerLogoutLink = document.getElementById("logout");
-    const jwtToken = getCookie("jwt");
-    if (jwtToken) {
-      if (jwtToken) {
-        const payload = parseJwt(jwtToken);
-        hamburgerSessionLink.style.display = "none";
-        userName.textContent = payload.username;
-        menuUserArea.style.display = "block";
-        hamburgerLogoutLink.style.display = "flex";
 
-        hamburgerLogoutLink.addEventListener("click", function (event) {
-          event.preventDefault();
-          document.cookie =
-            "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-          window.location.href = "/";
-        });
-      } else {
-        menuUserArea.style.display = "none";
-        hamburgerSessionLink.style.display = "flex";
-        hamburgerLogoutLink.style.display = "none";
-      }
+    function checkAuthentication() {
+      return localStorage.getItem("isAuthenticated") === "true";
+    }
+    if (checkAuthentication()) {
+      const username = localStorage.getItem("username");
+      hamburgerSessionLink.style.display = "none";
+      userName.textContent = username;
+      menuUserArea.style.display = "block";
+      hamburgerLogoutLink.style.display = "flex";
+    } else {
+      menuUserArea.style.display = "none";
+      hamburgerSessionLink.style.display = "flex";
+      hamburgerLogoutLink.style.display = "none";
     }
   }
 
@@ -1106,19 +1100,4 @@ function getCookie(name) {
     }
   }
   return null;
-}
-
-function parseJwt(token) {
-  const base64Url = token.split(".")[1];
-  const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
-  const jsonPayload = decodeURIComponent(
-    atob(base64)
-      .split("")
-      .map(function (c) {
-        return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
-      })
-      .join("")
-  );
-
-  return JSON.parse(jsonPayload);
 }
