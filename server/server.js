@@ -50,6 +50,10 @@ app.get("/api/store/:id", (req, res) => {
   res.status(404).json({ error: "Juego no encontrado" });
 });
 
+app.get("/api/users", (req, res) => {
+  res.json(users);
+});
+
 //GESTION DE RUTAS
 app.get("/login.html", authorization.onlyGuest, (req, res) => {
   res.sendFile(join(__dirname, "../login.html"));
@@ -133,7 +137,7 @@ app.use(
 );
 
 // API
-app.post("/api/register", authentication.register);
-app.post("/api/login", authentication.login);
+app.post("/api/users", authentication.register);
+app.post("/api/users", authentication.login);
 
 app.use("/", logoutRouter);
