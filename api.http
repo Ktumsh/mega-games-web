@@ -12,3 +12,9 @@ GET http://localhost:4000/api/user
 
 ###
 GET http://localhost:4000/api/users
+
+###
+GET https://store-megagames.onrender.com/api/users
+
+###
+POST https://store-megagames.onrender.com/api/users
