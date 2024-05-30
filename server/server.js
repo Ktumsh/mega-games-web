@@ -1,13 +1,16 @@
 import { methods as authorization } from "../middlewares/authorization.js";
+import { methods as authentication } from "../controllers/authentication.controller.js";
 import logoutRouter from "../middlewares/authorization.js";
 import express from "express";
 import cookieParser from "cookie-parser";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
+import apiStore from "../data/api/apiStore.json" assert { type: "json" };
+import users from "../data/api/users.json" assert { type: "json" };
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const PORT = 4000;
+const PORT = process.env.PORT ?? 4000;
 const app = express();
 
 // SERVER
@@ -23,6 +26,28 @@ app.use(express.json());
 app.use(cookieParser());
 app.get("/manifest.json", (req, res) => {
   res.sendFile(join(__dirname, "../manifest.json"));
+});
+
+app.get("/api/user", (req, res) => {
+  res.json(users);
+});
+
+app.get("/api/store", (req, res) => {
+  const { genre } = req.query;
+  if (genre) {
+    const filteredGames = apiStore["offerCards"].filter((game) =>
+      game.generos.some((g) => g.toLowerCase() === genre.toLowerCase())
+    );
+    return res.json(filteredGames);
+  }
+  res.json(apiStore);
+});
+
+app.get("/api/store/:id", (req, res) => {
+  const { id } = req.params;
+  const game = apiStore["offerCards"].find((game) => game.id === parseInt(id));
+  if (game) return res.json(game);
+  res.status(404).json({ error: "Juego no encontrado" });
 });
 
 //GESTION DE RUTAS
@@ -106,5 +131,9 @@ app.use(
   authorization.isAuthenticated,
   express.static(join(__dirname, "../about"))
 );
+
+// API
+app.post("/api/register", authentication.register);
+app.post("/api/login", authentication.login);
 
 app.use("/", logoutRouter);

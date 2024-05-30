@@ -1,0 +1,14 @@
+### Recuperar todos los juegos
+GET http://localhost:4000/api/store
+
+### Recuperar la id de los juegos
+GET http://localhost:4000/api/store/8
+
+### Recuperar la id de los juegos
+GET http://localhost:4000/api/store?genre=multijugador
+
+###
+GET http://localhost:4000/api/user
+
+###
+POST http://localhost:4000/api/register
