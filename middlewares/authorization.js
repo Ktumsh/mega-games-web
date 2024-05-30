@@ -51,8 +51,10 @@ function reviewCookie(req) {
     if (!userToReview) {
       return false;
     }
+    console.log("cookie validada");
     return true;
   } catch {
+    console.log("cookie invalidada");
     return false;
   }
 }
@@ -64,6 +66,7 @@ export const methods = {
 };
 
 router.post("/logout", (req, res) => {
+  console.log("cookie eliminada");
   res.clearCookie("jwt");
   res.redirect("/logout.html");
 });
