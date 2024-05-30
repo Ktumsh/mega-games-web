@@ -11,6 +11,7 @@ document.getElementById("login").addEventListener("submit", async (e) => {
     headers: {
       "Content-Type": "application/json",
     },
+    credentials: "include",
     body: JSON.stringify({
       identifier: identifier.value,
       password: password.value,
