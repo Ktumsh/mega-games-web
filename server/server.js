@@ -22,7 +22,7 @@ app.listen(PORT, () => {
 
 app.use(
   cors({
-    origin: "https://store-megagames.vercel.app/",
+    origin: "https://store-megagames.vercel.app",
     optionsSuccessStatus: 200,
   })
 );
@@ -56,11 +56,6 @@ app.get("/api/store/:id", (req, res) => {
   const game = apiStore["offerCards"].find((game) => game.id === parseInt(id));
   if (game) return res.json(game);
   res.status(404).json({ error: "Juego no encontrado" });
-});
-
-app.get("/api/users", (req, res) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.json(users);
 });
 
 //GESTION DE RUTAS
@@ -147,6 +142,6 @@ app.use(
 
 // API
 app.post("/api/users", authentication.register);
-app.post("/api/users", authentication.login);
+app.post("/api/newUsers", authentication.login);
 
 app.use("/", logoutRouter);

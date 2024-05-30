@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "email": "john_doe@example.com",
     "username": "john_doe",
     "password": "$2b$10$KbQi1JHJ3/5zkJZ5BvvzCuy1QlHz5gZ0Gm2h5jOqppQOmKJXjSOXS",
@@ -10,12 +9,11 @@
     "isActive": true
   },
   {
-    "id": 2,
     "email": "jbz.january@gmail.com",
     "username": "ktumsh",
-    "password": "$2a$05$aVrPAxyRoPhv34seoxO4/uLHH9JwU1Tc.WHccDf3ZcFhQWS7u5EEO",
+    "password": "$2a$05$fs81vzVc6ZARwGoBVNpTXu6lAn2zoMeQMaxQOBHjfDGqXarZuaMiu",
     "role": "user",
-    "createdAt": "2024-05-29T23:41:26.791Z",
+    "createdAt": "2024-05-30T07:05:36.406Z",
     "isActive": true,
     "lastLogin": null
   }
