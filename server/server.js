@@ -29,6 +29,7 @@ app.use(
 // CONFIGURACION ESTATICOS
 app.use("/assets", express.static(join(__dirname, "../assets")));
 app.use("/data", express.static(join(__dirname, "../data")));
+app.use("/middlewares", express.static(join(__dirname, "../middlewares")));
 app.use(express.json());
 
 app.get("/manifest.json", (req, res) => {
