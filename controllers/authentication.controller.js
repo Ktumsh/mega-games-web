@@ -54,6 +54,9 @@ async function login(req, res) {
       Date.now() + process.env.JWT_COOKIE_EXPIRES * 24 * 60 * 60 * 1000
     ),
     path: "/",
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "strict",
   };
 
   res.cookie("jwt", token, cookieOptions);
