@@ -7,6 +7,7 @@ import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import apiStore from "../data/api/apiStore.json" assert { type: "json" };
 import users from "../data/api/users.json" assert { type: "json" };
+import login from "../data/api/login.json" assert { type: "json" };
 import cors from "cors";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -26,6 +27,7 @@ app.use(
       const ALLOWED_ORIGIN = [
         "https://store-megagames.vercel.app",
         "http://localhost:4000",
+        "https://store-megagames-ft62kwqj5-josue-barras-projects.vercel.app",
       ];
       if (ALLOWED_ORIGIN.includes(origin)) {
         return callback(null, true);
@@ -52,7 +54,7 @@ app.get("/api/users", (req, res) => {
 });
 
 app.get("/api/login", (req, res) => {
-  res.json(users);
+  res.json(login);
 });
 
 app.get("/api/store", (req, res) => {
