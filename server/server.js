@@ -140,5 +140,9 @@ app.use(
 // API
 app.post("/api/users", authentication.register);
 app.post("/api/users", authentication.login);
+app.post("/api/users", (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.sendStatus(200);
+});
 
 app.use("/", logoutRouter);
