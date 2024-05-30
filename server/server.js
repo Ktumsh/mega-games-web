@@ -20,7 +20,7 @@ app.listen(PORT, () => {
 
 app.use(
   cors({
-    origin: "https://store-megagames.vercel.app",
+    origin: "*",
     credentials: true,
     optionsSuccessStatus: 200,
   })
