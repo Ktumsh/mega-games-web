@@ -1,6 +1,4 @@
-import { methods as authorization } from "../middlewares/authorization.js";
 import { methods as authentication } from "../controllers/authentication.controller.js";
-import logoutRouter from "../middlewares/authorization.js";
 import express from "express";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
@@ -64,101 +62,67 @@ app.get("/api/store/:id", (req, res) => {
 });
 
 // GESTION DE RUTAS
-app.get("/login.html", authorization.onlyGuest, (req, res) => {
+app.get("/login.html", (req, res) => {
   res.sendFile(join(__dirname, "../login.html"));
 });
-app.get("/login", authorization.onlyGuest, (req, res) => {
+app.get("/login", (req, res) => {
   res.sendFile(join(__dirname, "../login.html"));
 });
-app.get("/join.html", authorization.onlyGuest, (req, res) => {
+app.get("/join.html", (req, res) => {
   res.sendFile(join(__dirname, "../join.html"));
 });
-app.get("/join", authorization.onlyGuest, (req, res) => {
+app.get("/join", (req, res) => {
   res.sendFile(join(__dirname, "../join.html"));
 });
-app.get("/logout", authorization.onlyGuest, (req, res) => {
+app.get("/logout", (req, res) => {
   res.sendFile(join(__dirname, "../logout.html"));
 });
-app.get("/store", authorization.onlyAdmin, (req, res) => {
+app.get("/store", (req, res) => {
   res.sendFile(join(__dirname, "../store/index.html"));
 });
 app.get("/", (req, res) => {
   res.redirect("/store");
 });
-app.get(
-  "/store/ActivisionPublisherSale2024",
-  authorization.isAuthenticated,
-  (req, res) => {
-    res.sendFile(join(__dirname, "../store/ActivisionPublisherSale2024.html"));
-  }
-);
-app.get(
-  "/store/juegos-populares",
-  authorization.isAuthenticated,
-  (req, res) => {
-    res.sendFile(join(__dirname, "../store/juegos-populares.html"));
-  }
-);
-app.get(
-  "/store/juegos-y-tarjetas",
-  authorization.isAuthenticated,
-  (req, res) => {
-    res.sendFile(join(__dirname, "../store/juegos-y-tarjetas.html"));
-  }
-);
-app.get(
-  "/store/ofertas-especiales",
-  authorization.isAuthenticated,
-  (req, res) => {
-    res.sendFile(join(__dirname, "../store/ofertas-especiales.html"));
-  }
-);
-app.get("/store/offer-details", authorization.isAuthenticated, (req, res) => {
+app.get("/store/ActivisionPublisherSale2024", (req, res) => {
+  res.sendFile(join(__dirname, "../store/ActivisionPublisherSale2024.html"));
+});
+app.get("/store/juegos-populares", (req, res) => {
+  res.sendFile(join(__dirname, "../store/juegos-populares.html"));
+});
+app.get("/store/juegos-y-tarjetas", (req, res) => {
+  res.sendFile(join(__dirname, "../store/juegos-y-tarjetas.html"));
+});
+app.get("/store/ofertas-especiales", (req, res) => {
+  res.sendFile(join(__dirname, "../store/ofertas-especiales.html"));
+});
+app.get("/store/offer-details", (req, res) => {
   res.sendFile(join(__dirname, "../store/offer-details.html"));
 });
-app.get("/store/games-details", authorization.isAuthenticated, (req, res) => {
+app.get("/store/games-details", (req, res) => {
   res.sendFile(join(__dirname, "../store/games-details.html"));
 });
-app.get("/store/gift-details", authorization.isAuthenticated, (req, res) => {
+app.get("/store/gift-details", (req, res) => {
   res.sendFile(join(__dirname, "../store/gift-details.html"));
 });
-app.get(
-  "/store/publisher-sale-details",
-  authorization.isAuthenticated,
-  (req, res) => {
-    res.sendFile(join(__dirname, "../store/publisher-sale-details.html"));
-  }
-);
-app.get("/store/notifications", authorization.isAuthenticated, (req, res) => {
+app.get("/store/publisher-sale-details", (req, res) => {
+  res.sendFile(join(__dirname, "../store/publisher-sale-details.html"));
+});
+app.get("/store/notifications", (req, res) => {
   res.sendFile(join(__dirname, "../store/notifications.html"));
 });
-app.get("/store/cart", authorization.isAuthenticated, (req, res) => {
+app.get("/store/cart", (req, res) => {
   res.sendFile(join(__dirname, "../store/cart.html"));
 });
-app.get("/about/community", authorization.isAuthenticated, (req, res) => {
+app.get("/about/community", (req, res) => {
   res.sendFile(join(__dirname, "../about/community.html"));
 });
-app.get("/about/about", authorization.isAuthenticated, (req, res) => {
+app.get("/about/about", (req, res) => {
   res.sendFile(join(__dirname, "../about/about.html"));
 });
-app.get("/about/help", authorization.isAuthenticated, (req, res) => {
+app.get("/about/help", (req, res) => {
   res.sendFile(join(__dirname, "../about/help.html"));
 });
-
-// USAR TODAS LAS PAGINAS SI ESTA AUTENTICADO
-app.use(
-  "/store",
-  authorization.isAuthenticated,
-  express.static(join(__dirname, "../store"))
-);
-app.use(
-  "/about",
-  authorization.isAuthenticated,
-  express.static(join(__dirname, "../about"))
-);
 
 // API
 app.post("/api/users", authentication.register);
 app.post("/api/login", authentication.login);
-
-app.use("/", logoutRouter);
