@@ -7,7 +7,7 @@ document
   .getElementById("create_account")
   .addEventListener("submit", async (e) => {
     e.preventDefault();
-    const res = await fetch("https://store-megagames.onrender.com/api/users", {
+    const res = await fetch("http://localhost:4000/api/users", {
       method: "POST",
       mode: "cors",
       headers: {

@@ -16,5 +16,14 @@
     "createdAt": "2024-05-30T07:05:36.406Z",
     "isActive": true,
     "lastLogin": null
+  },
+  {
+    "email": "nuklet.skyler@gmail.com",
+    "username": "boyito",
+    "password": "$2a$05$YY2gufUdjYX7JaZ.i8E2venA2eskK45bwCDNulcSrnPV.XyjiYeb.",
+    "role": "user",
+    "createdAt": "2024-05-30T22:19:28.776Z",
+    "isActive": true,
+    "lastLogin": null
   }
 ]
