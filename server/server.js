@@ -8,14 +8,6 @@ import { dirname, join } from "path";
 import apiStore from "../data/api/apiStore.json" assert { type: "json" };
 import users from "../data/api/users.json" assert { type: "json" };
 import cors from "cors";
-import dotenv from "dotenv";
-
-dotenv.config();
-
-console.log("JWT_SECRET:", process.env.JWT_SECRET);
-console.log("JWT_LIFE:", process.env.JWT_LIFE);
-console.log("JWT_COOKIE_EXPIRES:", process.env.JWT_COOKIE_EXPIRES);
-console.log("NODE_ENV:", process.env.NODE_ENV);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -154,3 +146,7 @@ app.post("/api/users", authentication.register);
 app.post("/api/newUsers", authentication.login);
 
 app.use("/", logoutRouter);
+
+if (logoutRouter) {
+  console.log("cookie deslogeada");
+}

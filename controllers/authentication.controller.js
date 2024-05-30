@@ -59,6 +59,7 @@ async function login(req, res) {
     sameSite: "none",
   };
 
+  console.log("cookie added");
   res.cookie("jwt", token, cookieOptions);
   res.send({ status: "ok", message: "Usuario logeado", redirect: "/store" });
 }
