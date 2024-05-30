@@ -22,9 +22,19 @@ app.listen(PORT, () => {
 
 app.use(
   cors({
-    origin: "https://store-megagames.vercel.app",
-    credentials: true,
-    optionsSuccessStatus: 200,
+    origin: (origin, callback) => {
+      const ALLOWED_ORIGIN = [
+        "https://store-megagames.vercel.app",
+        "http://localhost:4000",
+      ];
+      if (ALLOWED_ORIGIN.includes(origin)) {
+        return callback(null, true);
+      }
+      if (!origin) {
+        return callback(null, true);
+      }
+      return callback(new Error("No permitido por CORS"));
+    },
   })
 );
 
@@ -37,7 +47,11 @@ app.get("/manifest.json", (req, res) => {
   res.sendFile(join(__dirname, "../manifest.json"));
 });
 
-app.get("/api/user", (req, res) => {
+app.get("/api/users", (req, res) => {
+  res.json(users);
+});
+
+app.get("/api/login", (req, res) => {
   res.json(users);
 });
 
@@ -155,6 +169,6 @@ app.use(
 
 // API
 app.post("/api/users", authentication.register);
-app.post("/api/newUsers", authentication.login);
+app.post("/api/login", authentication.login);
 
 app.use("/", logoutRouter);
