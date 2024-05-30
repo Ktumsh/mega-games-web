@@ -7,6 +7,7 @@ import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import apiStore from "../data/api/apiStore.json" assert { type: "json" };
 import users from "../data/api/users.json" assert { type: "json" };
+import cors from "cors";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -18,6 +19,13 @@ app.set("port", PORT);
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
+
+app.use(
+  cors({
+    origin: "https://store-megagames.vercel.app/",
+    optionsSuccessStatus: 200,
+  })
+);
 
 // CONFIGURACION ESTATICOS
 app.use("/assets", express.static(join(__dirname, "../assets")));
@@ -140,9 +148,5 @@ app.use(
 // API
 app.post("/api/users", authentication.register);
 app.post("/api/users", authentication.login);
-app.post("/api/users", (req, res) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.sendStatus(200);
-});
 
 app.use("/", logoutRouter);
