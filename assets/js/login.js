@@ -1,10 +1,11 @@
 const errorMsg = document.getElementById("error_msg");
+const apiUrl = "https://store-megagames.vercel.app";
 
 document.getElementById("login").addEventListener("submit", async (e) => {
   e.preventDefault();
   const identifier = document.getElementById("username");
   const password = document.getElementById("password");
-  const res = await fetch("http://localhost:4000/api/login", {
+  const res = await fetch(`${apiUrl}/api/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

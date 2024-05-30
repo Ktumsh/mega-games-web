@@ -22,6 +22,9 @@ app.use("/assets", express.static(join(__dirname, "../assets")));
 app.use("/data", express.static(join(__dirname, "../data")));
 app.use(express.json());
 app.use(cookieParser());
+app.get("/manifest.json", (req, res) => {
+  res.sendFile(join(__dirname, "../manifest.json"));
+});
 
 //GESTION DE RUTAS
 app.get("/login.html", authorization.onlyGuest, (req, res) => {
