@@ -5,7 +5,7 @@ document.getElementById("login").addEventListener("submit", async (e) => {
   e.preventDefault();
   const identifier = document.getElementById("username");
   const password = document.getElementById("password");
-  const res = await fetch(`${apiUrl}/api/users/login`, {
+  const res = await fetch(`${apiUrl}/api/login`, {
     method: "POST",
     mode: "cors",
     headers: {
