@@ -2,7 +2,7 @@ const errorMsg = document.getElementById("error_display");
 const email = document.getElementById("email");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
-const apiUrl = "https://store-megagames.vercel.app";
+const apiUrl = "https://store-megagames.onrender.com";
 
 document
   .getElementById("create_account")
