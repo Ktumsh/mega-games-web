@@ -1,4 +1,5 @@
 import { methods as authentication } from "../controllers/authentication.controller.js";
+import { reduceStock, returnStock } from "../controllers/stock.js";
 import express from "express";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
@@ -55,15 +56,16 @@ app.get("/api/store", (req, res) => {
   res.json(apiStore);
 });
 
-app.get("/api/store/:collection/:id", (req, res) => {
-  const { collection, id } = req.params;
+//OBTENER LA ID DE LOS JUEGOS
+app.get("/api/store/:group/:id", (req, res) => {
+  const { group, id } = req.params;
   const gameId = parseInt(id);
 
-  if (!apiStore[collection]) {
-    return res.status(404).json({ error: "Colección no encontrada" });
+  if (!apiStore[group]) {
+    return res.status(404).json({ error: "Grupo no encontrado" });
   }
 
-  const game = apiStore[collection].find((game) => game.id === gameId);
+  const game = apiStore[group].find((game) => game.id === gameId);
 
   if (game) {
     return res.json(game);
@@ -71,6 +73,10 @@ app.get("/api/store/:collection/:id", (req, res) => {
     return res.status(404).json({ error: "Juego no encontrado" });
   }
 });
+
+// MANEJAR STOCK
+app.post("/api/store/reduceStock/:id", reduceStock);
+app.post("/api/store/returnStock/:id", returnStock);
 
 // GESTION DE RUTAS
 app.get("/login.html", (req, res) => {
