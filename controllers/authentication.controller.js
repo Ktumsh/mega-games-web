@@ -21,7 +21,7 @@ function writeUsersToFile(users) {
 }
 
 async function login(req, res) {
-  console.log(req.body);
+  console.log(req.body.identifier);
   const identifier = req.body.identifier;
   const password = req.body.password;
   if (!identifier || !password) {
@@ -68,6 +68,7 @@ async function register(req, res) {
   const salt = await bcryptjs.genSalt(5);
   const hashedPassword = await bcryptjs.hash(password, salt);
   const newUser = {
+    id: users.length + 1,
     email,
     username,
     password: hashedPassword,
