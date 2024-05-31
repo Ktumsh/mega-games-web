@@ -95,12 +95,63 @@ document.addEventListener("DOMContentLoaded", function () {
           galeryItem.classList.add("galery_item");
           galeryItem.innerHTML = `
               <div class="galery_image">
-                <button type="button">
-                  <img class="gameGaleryImage" src="${imagen}" alt="${gameFound.nombre}" />
-                </button>
+                  <a href="${imagen}" data-size="1200x675">
+                      <img class="gameGaleryImage" src="${imagen}" alt="${gameFound.nombreMaincap}" />
+                  </a>
               </div>
-            `;
+          `;
           galery.appendChild(galeryItem);
+        });
+
+        const galleryElements = document.querySelectorAll("#galery a");
+
+        const parseThumbnailElements = function (galleryElements) {
+          const items = [];
+          galleryElements.forEach(function (el) {
+            const size = el.getAttribute("data-size").split("x");
+            const item = {
+              src: el.getAttribute("href"),
+              w: parseInt(size[0], 10),
+              h: parseInt(size[1], 10),
+              el: el,
+              msrc: el.querySelector("img").getAttribute("src"),
+              title: el.querySelector("img").getAttribute("alt"),
+            };
+            items.push(item);
+          });
+          return items;
+        };
+
+        const openPhotoSwipe = function (index, galleryElement) {
+          const pswpElement = document.querySelectorAll(".pswp")[0];
+          const items = parseThumbnailElements(galleryElement);
+          const options = {
+            index: index,
+            bgOpacity: 0.8,
+            showHideOpacity: true,
+            shareEl: false,
+            getThumbBoundsFn: function (index) {
+              const thumbnail = items[index].el.querySelector("img");
+              const pageYScroll =
+                window.pageYOffset || document.documentElement.scrollTop;
+              const rect = thumbnail.getBoundingClientRect();
+              return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
+            },
+          };
+          const gallery = new PhotoSwipe(
+            pswpElement,
+            PhotoSwipeUI_Default,
+            items,
+            options
+          );
+          gallery.init();
+        };
+
+        galleryElements.forEach(function (el, i) {
+          el.addEventListener("click", function (event) {
+            event.preventDefault();
+            openPhotoSwipe(i, galleryElements);
+          });
         });
 
         gameLikes.textContent = gameFound.likes;

@@ -55,11 +55,21 @@ app.get("/api/store", (req, res) => {
   res.json(apiStore);
 });
 
-app.get("/api/store/:id", (req, res) => {
-  const { id } = req.params;
-  const game = apiStore["offerCards"].find((game) => game.id === parseInt(id));
-  if (game) return res.json(game);
-  res.status(404).json({ error: "Juego no encontrado" });
+app.get("/api/store/:collection/:id", (req, res) => {
+  const { collection, id } = req.params;
+  const gameId = parseInt(id);
+
+  if (!apiStore[collection]) {
+    return res.status(404).json({ error: "Colección no encontrada" });
+  }
+
+  const game = apiStore[collection].find((game) => game.id === gameId);
+
+  if (game) {
+    return res.json(game);
+  } else {
+    return res.status(404).json({ error: "Juego no encontrado" });
+  }
 });
 
 // GESTION DE RUTAS

@@ -215,9 +215,6 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     const hamburgerLogoutLink = document.getElementById("logout");
 
-    function checkAuthentication() {
-      return localStorage.getItem("isAuthenticated") === "true";
-    }
     if (checkAuthentication()) {
       const username = localStorage.getItem("username");
       hamburgerSessionLink.style.display = "none";
@@ -278,45 +275,18 @@ document.addEventListener("DOMContentLoaded", () => {
                   <div class="popup_body popup_menu">
                     <a class="popup_menu_item" href="#">Ver mi perfil</a>
                     <a class="popup_menu_item" href="#">Detalles de la cuenta: <span id="account_name" class="account_name"></span></a>
+                    <span class="popup_menu_item" id="language_pulldown_account" onclick="ShowMenu('language_dropdown_account');">Cambiar idioma</span>
+                    <div class="popup_block_new language" id="language_dropdown_account" style="display: none; opacity: 0; left: -274px; top: 62px;"></div>
                     <a id="logout_link" class="popup_menu_item" href="/login.html">Cerrar sesión...</a>
                   </div>
                 </div>
                 &nbsp;|&nbsp;
                 <span class="pulldown global_action_link" id="language_pulldown" onclick="ShowMenu('language_dropdown', 'right');">idioma</span>
-                <div id="language_dropdown" class="popup_block_new" style="display: none;">
-                  <div class="popup_body popup_menu">
-                    <a class="popup_menu_item tight" href="?l=schinese" onclick="ChangeLanguage( 'schinese' ); return false;">简体中文 (chino simplificado)</a>
-                    <a class="popup_menu_item tight" href="?l=tchinese" onclick="ChangeLanguage( 'tchinese' ); return false;">繁體中文 (chino tradicional)</a>
-                    <a class="popup_menu_item tight" href="?l=japanese" onclick="ChangeLanguage( 'japanese' ); return false;">日本語 (japonés)</a>
-                    <a class="popup_menu_item tight" href="?l=koreana" onclick="ChangeLanguage( 'koreana' ); return false;">한국어 (coreano)</a>
-                    <a class="popup_menu_item tight" href="?l=thai" onclick="ChangeLanguage( 'thai' ); return false;">ไทย (tailandés)</a>
-                    <a class="popup_menu_item tight" href="?l=bulgarian" onclick="ChangeLanguage( 'bulgarian' ); return false;">Български (búlgaro)</a>
-                    <a class="popup_menu_item tight" href="?l=czech" onclick="ChangeLanguage( 'czech' ); return false;">Čeština (checo)</a>
-                    <a class="popup_menu_item tight" href="?l=danish" onclick="ChangeLanguage( 'danish' ); return false;">Dansk (danés)</a>
-                    <a class="popup_menu_item tight" href="?l=german" onclick="ChangeLanguage( 'german' ); return false;">Deutsch (alemán)</a>
-                    <a class="popup_menu_item tight" href="?l=english" onclick="ChangeLanguage( 'english' ); return false;">English (inglés)</a>
-                                        <a class="popup_menu_item tight" href="?l=latam" onclick="ChangeLanguage( 'latam' ); return false;">Español de Hispanoamérica</a>
-                    <a class="popup_menu_item tight" href="?l=greek" onclick="ChangeLanguage( 'greek' ); return false;">Ελληνικά (griego)</a>
-                    <a class="popup_menu_item tight" href="?l=french" onclick="ChangeLanguage( 'french' ); return false;">Français (francés)</a>
-                    <a class="popup_menu_item tight" href="?l=italian" onclick="ChangeLanguage( 'italian' ); return false;">Italiano</a>
-                    <a class="popup_menu_item tight" href="?l=indonesian" onclick="ChangeLanguage( 'indonesian' ); return false;">Bahasa Indonesia (indonesio)</a>
-                    <a class="popup_menu_item tight" href="?l=hungarian" onclick="ChangeLanguage( 'hungarian' ); return false;">Magyar (húngaro)</a>
-                    <a class="popup_menu_item tight" href="?l=dutch" onclick="ChangeLanguage( 'dutch' ); return false;">Nederlands (holandés)</a>
-                    <a class="popup_menu_item tight" href="?l=norwegian" onclick="ChangeLanguage( 'norwegian' ); return false;">Norsk (noruego)</a>
-                    <a class="popup_menu_item tight" href="?l=polish" onclick="ChangeLanguage( 'polish' ); return false;">Polski (polaco)</a>
-                    <a class="popup_menu_item tight" href="?l=portuguese" onclick="ChangeLanguage( 'portuguese' ); return false;">Português (Portugués de Portugal)</a>
-                    <a class="popup_menu_item tight" href="?l=brazilian" onclick="ChangeLanguage( 'brazilian' ); return false;">Português-Brasil (portugués de Brasil)</a>
-                    <a class="popup_menu_item tight" href="?l=romanian" onclick="ChangeLanguage( 'romanian' ); return false;">Română (rumano)</a>
-                    <a class="popup_menu_item tight" href="?l=russian" onclick="ChangeLanguage( 'russian' ); return false;">Русский (ruso)</a>
-                    <a class="popup_menu_item tight" href="?l=finnish" onclick="ChangeLanguage( 'finnish' ); return false;">Suomi (finés)</a>
-                    <a class="popup_menu_item tight" href="?l=swedish" onclick="ChangeLanguage( 'swedish' ); return false;">Svenska (sueco)</a>
-                    <a class="popup_menu_item tight" href="?l=turkish" onclick="ChangeLanguage( 'turkish' ); return false;">Türkçe (turco)</a>
-                    <a class="popup_menu_item tight" href="?l=vietnamese" onclick="ChangeLanguage( 'vietnamese' ); return false;">Tiếng Việt (vietnamita)</a>
-                    <a class="popup_menu_item tight" href="?l=ukrainian" onclick="ChangeLanguage( 'ukrainian' ); return false;">Українська (ucraniano)</a>
-                    <a class="popup_menu_item tight" href="https://www.valvesoftware.com/en/contact?contact-person=Translation%20Team%20Feedback" target="_blank">Comunicar un error de traducción</a>
-                  </div> 
-                </div>
+                <div id="language_dropdown" class="popup_block_new" style="display: none;"></div>
             </div>
+            <a class="user_avatar playerAvatar online" aria-label="Ver tu perfil" href="#">
+              <img src="/assets/public/icons/user-avatar.jpg" alt="" loading="lazy">
+            </a>
         </div>
     </nav>
 `;
@@ -336,6 +306,56 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!isActive) {
       navItems[0].classList.add("supernav_active");
+    }
+
+    const globalActionMenu = document.getElementById("global_action_menu");
+    const languagePulldown = document.getElementById("language_pulldown");
+    const lenguageDropdown = document.getElementById("language_dropdown");
+    const languageDropdownAccount = document.getElementById(
+      "language_dropdown_account"
+    );
+    const lenguageHTML = `
+    <div class="popup_body popup_menu">
+        <a class="popup_menu_item tight" href="?l=schinese" onclick="ChangeLanguage( 'schinese' ); return false;">简体中文 (chino simplificado)</a>
+        <a class="popup_menu_item tight" href="?l=tchinese" onclick="ChangeLanguage( 'tchinese' ); return false;">繁體中文 (chino tradicional)</a>
+        <a class="popup_menu_item tight" href="?l=japanese" onclick="ChangeLanguage( 'japanese' ); return false;">日本語 (japonés)</a>
+        <a class="popup_menu_item tight" href="?l=koreana" onclick="ChangeLanguage( 'koreana' ); return false;">한국어 (coreano)</a>
+        <a class="popup_menu_item tight" href="?l=thai" onclick="ChangeLanguage( 'thai' ); return false;">ไทย (tailandés)</a>
+        <a class="popup_menu_item tight" href="?l=bulgarian" onclick="ChangeLanguage( 'bulgarian' ); return false;">Български (búlgaro)</a>
+        <a class="popup_menu_item tight" href="?l=czech" onclick="ChangeLanguage( 'czech' ); return false;">Čeština (checo)</a>
+        <a class="popup_menu_item tight" href="?l=danish" onclick="ChangeLanguage( 'danish' ); return false;">Dansk (danés)</a>
+        <a class="popup_menu_item tight" href="?l=german" onclick="ChangeLanguage( 'german' ); return false;">Deutsch (alemán)</a>
+        <a class="popup_menu_item tight" href="?l=english" onclick="ChangeLanguage( 'english' ); return false;">English (inglés)</a>
+        <a class="popup_menu_item tight" href="?l=latam" onclick="ChangeLanguage( 'latam' ); return false;">Español de Hispanoamérica</a>
+        <a class="popup_menu_item tight" href="?l=greek" onclick="ChangeLanguage( 'greek' ); return false;">Ελληνικά (griego)</a>
+        <a class="popup_menu_item tight" href="?l=french" onclick="ChangeLanguage( 'french' ); return false;">Français (francés)</a>
+        <a class="popup_menu_item tight" href="?l=italian" onclick="ChangeLanguage( 'italian' ); return false;">Italiano</a>
+        <a class="popup_menu_item tight" href="?l=indonesian" onclick="ChangeLanguage( 'indonesian' ); return false;">Bahasa Indonesia (indonesio)</a>
+        <a class="popup_menu_item tight" href="?l=hungarian" onclick="ChangeLanguage( 'hungarian' ); return false;">Magyar (húngaro)</a>
+        <a class="popup_menu_item tight" href="?l=dutch" onclick="ChangeLanguage( 'dutch' ); return false;">Nederlands (holandés)</a>
+        <a class="popup_menu_item tight" href="?l=norwegian" onclick="ChangeLanguage( 'norwegian' ); return false;">Norsk (noruego)</a>
+        <a class="popup_menu_item tight" href="?l=polish" onclick="ChangeLanguage( 'polish' ); return false;">Polski (polaco)</a>
+        <a class="popup_menu_item tight" href="?l=portuguese" onclick="ChangeLanguage( 'portuguese' ); return false;">Português (Portugués de Portugal)</a>
+        <a class="popup_menu_item tight" href="?l=brazilian" onclick="ChangeLanguage( 'brazilian' ); return false;">Português-Brasil (portugués de Brasil)</a>
+        <a class="popup_menu_item tight" href="?l=romanian" onclick="ChangeLanguage( 'romanian' ); return false;">Română (rumano)</a>
+        <a class="popup_menu_item tight" href="?l=russian" onclick="ChangeLanguage( 'russian' ); return false;">Русский (ruso)</a>
+        <a class="popup_menu_item tight" href="?l=finnish" onclick="ChangeLanguage( 'finnish' ); return false;">Suomi (finés)</a>
+        <a class="popup_menu_item tight" href="?l=swedish" onclick="ChangeLanguage( 'swedish' ); return false;">Svenska (sueco)</a>
+        <a class="popup_menu_item tight" href="?l=turkish" onclick="ChangeLanguage( 'turkish' ); return false;">Türkçe (turco)</a>
+        <a class="popup_menu_item tight" href="?l=vietnamese" onclick="ChangeLanguage( 'vietnamese' ); return false;">Tiếng Việt (vietnamita)</a>
+        <a class="popup_menu_item tight" href="?l=ukrainian" onclick="ChangeLanguage( 'ukrainian' ); return false;">Українська (ucraniano)</a>
+        <a class="popup_menu_item tight" href="https://www.valvesoftware.com/en/contact?contact-person=Translation%20Team%20Feedback" target="_blank">Comunicar un error de traducción</a>
+      </div>
+    `;
+
+    if (!checkAuthentication()) {
+      lenguageDropdown.innerHTML = lenguageHTML;
+    } else {
+      languagePulldown.style.display = "none";
+      languageDropdownAccount.innerHTML = lenguageHTML;
+      const currentText = globalActionMenu.innerHTML;
+      const newText = currentText.replace(/&nbsp;\|\&nbsp;/g, "");
+      globalActionMenu.innerHTML = newText;
     }
   }
 
@@ -1091,13 +1111,6 @@ function ChangeLanguage(language) {
   window.location.href = `?l=${language}`;
 }
 
-function getCookie(name) {
-  let cookieArr = document.cookie.split(";");
-  for (let i = 0; i < cookieArr.length; i++) {
-    let cookiePair = cookieArr[i].split("=");
-    if (name === cookiePair[0].trim()) {
-      return decodeURIComponent(cookiePair[1]);
-    }
-  }
-  return null;
+function checkAuthentication() {
+  return localStorage.getItem("isAuthenticated") === "true";
 }

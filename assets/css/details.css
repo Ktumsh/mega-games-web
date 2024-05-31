@@ -839,7 +839,7 @@ body {
   background: #000;
 }
 
-.galery_item button {
+.galery_item a {
   position: absolute;
   top: 0;
   left: 0;
@@ -851,11 +851,11 @@ body {
   transition: opacity 150ms ease-in-out;
 }
 
-.galery_item button:hover {
+.galery_item a:hover {
   opacity: 0.6;
 }
 
-.galery_item button img {
+.galery_item a img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -1674,4 +1674,16 @@ body {
   #page_root .route > li {
     font-size: 12px;
   }
+}
+
+.pswp__caption__center {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+}
+
+.pswp__ui--fit .pswp__caption,
+.pswp__ui--fit .pswp__top-bar {
+  background-color: rgba(0, 0, 0, 0) !important;
 }

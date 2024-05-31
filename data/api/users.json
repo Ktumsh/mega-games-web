@@ -1,37 +1,21 @@
 [
   {
-    "email": "john_doe@example.com",
-    "username": "john_doe",
-    "password": "$2b$10$KbQi1JHJ3/5zkJZ5BvvzCuy1QlHz5gZ0Gm2h5jOqppQOmKJXjSOXS",
+    "id": 1,
+    "email": "example.user@example.com",
+    "username": "example_user",
+    "password": "$2b$10$examplehashedpassword1234567890abcdef",
     "role": "user",
-    "createdAt": "2024-01-15T08:00:00Z",
-    "lastLogin": "2024-05-29T10:20:30Z",
+    "createdAt": "2024-05-30T12:00:00Z",
+    "lastLogin": "2024-05-30T12:00:00Z",
     "isActive": true
   },
   {
+    "id": 2,
     "email": "jbz.january@gmail.com",
     "username": "ktumsh",
     "password": "$2a$05$fs81vzVc6ZARwGoBVNpTXu6lAn2zoMeQMaxQOBHjfDGqXarZuaMiu",
     "role": "user",
     "createdAt": "2024-05-30T07:05:36.406Z",
-    "isActive": true,
-    "lastLogin": null
-  },
-  {
-    "email": "nuklet.skyler@gmail.com",
-    "username": "boyito",
-    "password": "$2a$05$EhTZJR2i9PKO.YH4sZxwq.SwPlN8/IoI1HwH9Ow6ZrVpFTGINgfie",
-    "role": "user",
-    "createdAt": "2024-05-30T22:23:23.207Z",
-    "isActive": true,
-    "lastLogin": null
-  },
-  {
-    "email": "january.ktumsh@outlook.com",
-    "username": "kviseki",
-    "password": "$2a$05$bybV9zxOewzdpscOhWGXB.glsBIZkWUC3RRaQzEMP3dZxI4G.AK7S",
-    "role": "user",
-    "createdAt": "2024-05-30T22:24:31.625Z",
     "isActive": true,
     "lastLogin": null
   }

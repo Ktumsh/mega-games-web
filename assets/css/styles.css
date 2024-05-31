@@ -780,7 +780,8 @@ div#store_controls {
   vertical-align: sub;
 }
 
-.popup_menu a.popup_menu_item {
+.popup_menu a.popup_menu_item,
+.popup_menu span.popup_menu_item {
   display: block;
 }
 
@@ -5237,7 +5238,7 @@ a.pulldown_mobile {
 #account_pulldown {
   display: inline-block;
   padding-left: 4px;
-  line-height: 25px;
+  line-height: 24px;
 }
 
 .notification_ctn {
@@ -5350,4 +5351,27 @@ a.pulldown_mobile {
 .login_client_waitforauth_desc {
   font-size: 24px;
   color: rgba(255, 255, 255, 0.6);
+}
+
+div#global_actions .user_avatar {
+  display: inline-block;
+  margin-left: 3px;
+}
+
+.playerAvatar {
+  width: 34px;
+  height: 34px;
+  position: relative;
+  border-radius: 0;
+  padding: 1px;
+  box-sizing: content-box;
+}
+
+.playerAvatar img {
+  width: 32px;
+  height: 32px;
+  padding: 1px;
+  border-radius: 0;
+  border: none;
+  box-sizing: content-box;
 }
