@@ -51,6 +51,7 @@
     />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/details.css" />
+    <link rel="stylesheet" href="/assets/css/dialog-modal.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css"
@@ -80,7 +81,7 @@
     </style>
     <script src="/middlewares/authorization.js" type="module"></script>
   </head>
-  <body class="position-relative">
+  <body id="detailsPage" class="position-relative v6">
     <!-- HEADER 🔴 -->
     <div class="HamburgerMenuSlot"></div>
     <div class="HeaderSlotMobile"></div>
@@ -358,8 +359,7 @@
                     <h2 id="descCharacteristicsGameName"></h2>
                     <p id="introCharacteristics"></p>
                     <ul id="characteristicsList"></ul>
-                    <h2 id="additionalDesc"></h2>
-                    <p id="additionalDescText"></p>
+                    <ul id="additionalDesc"></ul>
                   </div>
                   <button id="readMore" class="link read_more" type="button">
                     Leer más
@@ -368,36 +368,7 @@
                 <h3 class="description_title sub">Requisitos del sistema</h3>
                 <div class="system_requirements">
                   <h4>Requisitos mínimos</h4>
-                  <ul id="requirements" class="detail_list">
-                    <li>
-                      <div class="detail_tlt">Soporte de 64 bits</div>
-                      <div class="detail_desc"></div>
-                    </li>
-                    <li>
-                      <div class="detail_tlt">Requisitos del sistema</div>
-                      <div class="detail_desc"></div>
-                    </li>
-                    <li>
-                      <div class="detail_tlt">Procesador</div>
-                      <div class="detail_desc"></div>
-                    </li>
-                    <li>
-                      <div class="detail_tlt">Memoria</div>
-                      <div class="detail_desc"></div>
-                    </li>
-                    <li>
-                      <div class="detail_tlt">Gráficos</div>
-                      <div class="detail_desc"></div>
-                    </li>
-                    <li>
-                      <div class="detail_tlt">Red</div>
-                      <div class="detail_desc"></div>
-                    </li>
-                    <li>
-                      <div class="detail_tlt">Notas adicionales</div>
-                      <div class="detail_desc"></div>
-                    </li>
-                  </ul>
+                  <ul id="requirements" class="detail_list"></ul>
                 </div>
                 <h3 class="description_title sub">Detalles del pedido</h3>
                 <div class="order_details">
@@ -509,9 +480,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script type="module" src="/data/data_details/product-details.js"></script>
     <script defer src="/data/layout/loadLayout.js"></script>
+    <script defer src="/assets/js/compra/product.js"></script>
     <script defer src="/assets/js/userEvents.js"></script>
-    <script defer src="/data/data_details/gamesDetails.js"></script>
+    <script defer src="/assets/js/compra/cart-dialog.js"></script>
     <script defer src="/assets/js/search.js"></script>
   </body>
 </html>

@@ -1010,6 +1010,18 @@ document.addEventListener("DOMContentLoaded", () => {
     footerContainer.classList.add("void_div");
     footerSlot.appendChild(footerContainer);
   }
+
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const totalCount = cart.reduce((sum, product) => sum + product.quantity, 0);
+    const cartLink = document.querySelector(".cart_link");
+    if (cartLink) {
+      cartLink.textContent = `Carro (${totalCount})`;
+    }
+  }
+
+  // Llamar a updateCartCount al cargar la página
+  updateCartCount();
 });
 
 function changeOpacity(target, duration, fromOpacity, toOpacity) {

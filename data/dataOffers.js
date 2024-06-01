@@ -152,13 +152,16 @@ function renderDesktopCarouselItems() {
     carouselItem.style.paddingBottom = "unset";
     carouselItem.style.height = "unset";
 
-    const gameName = card.nombre;
-    const pageName = gameName;
+    const pageName = card.nombre;
+    const pageGroup = card.origen;
+
     const lanzamiento =
       card.detalles && card.detalles.length > 0
         ? formatDate(card.detalles[0].lanzamiento)
         : "Fecha no disponible";
+
     const dlcSpan = card.dlc ? `<span class="dlc_span">DLC</span>` : "";
+
     carouselItem.innerHTML = `
       <div class="slider_inner" style="position: unset">
         <div>
@@ -166,7 +169,9 @@ function renderDesktopCarouselItems() {
             <div class="ImpressionTrackedElement">
               <div class="capsule">
                 <div class="capsule_ctn">
-                  <a href="offer-details?game=${pageName}&item=${card.id}"
+                  <a href="offer-details?game=${pageName}&group=${pageGroup}&item=${
+      card.id
+    }"
                     class="capsule_img_ctn">
                     <div class="capsule_decorators"></div>
                     <div class="capsule_img">
@@ -202,7 +207,9 @@ function renderDesktopCarouselItems() {
                   <div class="capsule_body_ctn">
                     <div class="capsule_top">
                       <div class="capsule_top_ctn">
-                        <a href="offer-details?game=${pageName}&item=${card.id}"
+                        <a href="offer-details?game=${pageName}&group=${pageGroup}&item=${
+      card.id
+    }"
                           class="capsule_title">
                           ${dlcSpan}${card.nombreMaincap}
                         </a>
@@ -310,6 +317,7 @@ function renderMobileCarouselItems() {
     carouselItem.classList.add("carousel_item");
     const gameName = card.nombre;
     const pageName = gameName;
+    const pageGroup = card.origen;
     const plataformas =
       card.disponibleEn && card.disponibleEn.length > 0
         ? card.disponibleEn
@@ -320,7 +328,9 @@ function renderMobileCarouselItems() {
   <div>
     <div class="capsule">
       <div class="capsule_ctn">
-        <a href="offer-details?game=${pageName}&item=${card.id}"
+        <a href="offer-details?game=${pageName}&group=${pageGroup}&item=${
+      card.id
+    }"
           class="capsule_img_ctn">
           <div class="capsule_decorators"></div>
           <div class="capsule_img">
@@ -330,7 +340,9 @@ function renderMobileCarouselItems() {
         <div class="capsule_body_ctn">
           <div class="capsule_top">
             <div class="capsule_top_ctn">
-              <a href="offer-details?game=${pageName}&item=${card.id}"
+              <a href="offer-details?game=${pageName}&group=${pageGroup}&item=${
+      card.id
+    }"
                 class="capsule_title">
                 ${dlcSpan}${card.nombreMaincap}
               </a>
@@ -602,8 +614,9 @@ function renderCards(cardsForLoad, cardsContainer) {
   cardsForLoad.forEach((tarjeta) => {
     const cardElement = document.createElement("div");
     cardElement.classList.add("card_");
-    const gameName = tarjeta.nombre;
-    const pageName = gameName;
+
+    const pageName = tarjeta.nombre;
+    const pageGroup = tarjeta.origen;
 
     const dlcSpan = tarjeta.dlc ? `<span class="dlc_span">DLC</span>` : "";
     const cardContent = `
@@ -622,7 +635,7 @@ function renderCards(cardsForLoad, cardsContainer) {
             </div>
           </div>
           <div class="card_bottom_body">
-            <a class="card_link" href="offer-details?game=${pageName}&item=${tarjeta.id}">
+            <a class="card_link" href="offer-details?game=${pageName}&group=${pageGroup}&item=${tarjeta.id}">
               <div class="fs-sm d-flex flex-row flex-lg-column gap-sm-2">
                 <div class="d-flex align-items-center h-100">
                   <span class="descuento_label p-1">${tarjeta.descuento}</span>
