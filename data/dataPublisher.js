@@ -41,8 +41,7 @@ async function loadPublisherData() {
     });
 
     function createCard(tarjeta, type, removePlatform = false) {
-      const gameName = tarjeta.nombre;
-      const pageName = gameName;
+      const pageName = tarjeta.nombre;
       let cardTemplate;
 
       switch (type) {
@@ -64,10 +63,11 @@ async function loadPublisherData() {
     }
 
     function regularCardTemplate(tarjeta, pageName) {
+      const pageGroup = tarjeta.origen;
       return `
         <div class="sale_section_card">
           <div class="sale_section_card_ctn">
-            <a href="publisher-sale-details?game=${pageName}&item=${tarjeta.id}" style="display: block; cursor: pointer">
+            <a href="publisher-sale-details?game=${pageName}&group=${pageGroup}&item=${tarjeta.id}" style="display: block; cursor: pointer">
               <div class="capsule_decorators"></div>
               <div class="hero_capsule_image_ctn">
                 <img class="hero_image" src="${tarjeta.imagen}" alt="${tarjeta.nombre}">
@@ -93,10 +93,11 @@ async function loadPublisherData() {
     }
 
     function regularCard2Template(tarjeta, pageName) {
+      const pageGroup = tarjeta.origen;
       return `
         <div class="sale_section_card">
           <div class="sale_section_card_ctn">
-            <a href="publisher-sale-details?game=${pageName}&item=${tarjeta.id}" style="display: block; cursor: pointer">
+            <a href="publisher-sale-details?game=${pageName}&group=${pageGroup}&item=${tarjeta.id}" style="display: block; cursor: pointer">
               <div class="capsule_decorators"></div>
               <div class="capsule_image_ctn">
                 <img src="${tarjeta.imagenAlternativa}" alt="${tarjeta.nombre}" />
@@ -123,10 +124,11 @@ async function loadPublisherData() {
     }
 
     function specialCardTemplate(tarjeta, pageName) {
+      const pageGroup = tarjeta.origen;
       return `
         <div class="sale_section_card">
           <div class="sale_section_card_ctn">
-            <a href="publisher-sale-details?game=${pageName}&item=${tarjeta.id}" style="display: block; cursor: pointer">
+            <a href="publisher-sale-details?game=${pageName}&group=${pageGroup}&item=${tarjeta.id}" style="display: block; cursor: pointer">
               <div class="capsule_decorators"></div>
               <div class="hero_capsule_image_ctn">
                 <div class="hero_capsule_image" style="background-image: url('${tarjeta.imagen}');"></div>

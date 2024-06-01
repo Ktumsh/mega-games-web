@@ -83,8 +83,8 @@ function renderCards(cardsForLoad, cardsContainer) {
   cardsForLoad.forEach((tarjeta) => {
     const cardElement = document.createElement("div");
     cardElement.classList.add("card_");
-    const gameName = tarjeta.nombre;
-    const pageName = gameName;
+    const pageName = tarjeta.nombre;
+    const pageGroup = tarjeta.origen;
 
     const dlcSpan = tarjeta.dlc ? `<span class="dlc_span">DLC</span>` : "";
     const cardContent = `
@@ -103,7 +103,7 @@ function renderCards(cardsForLoad, cardsContainer) {
             </div>
           </div>
           <div class="card_bottom_body">
-            <a class="card_link" href="/store/games-details?game=${pageName}&item=${tarjeta.id}">
+            <a class="card_link" href="/store/games-details?game=${pageName}&group=${pageGroup}&item=${tarjeta.id}">
               <div class="card_price">
                 <span class="card_text">Desde</span>
                 <span class="price">CLP$ ${tarjeta.precioOriginal}</span>

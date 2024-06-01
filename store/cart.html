@@ -60,20 +60,6 @@
       crossorigin="anonymous"
     />
     <link
-      rel="preload"
-      fetchpriority="high"
-      as="image"
-      href="/assets/public/presentacion3.webp"
-      type="image/webp"
-    />
-    <link
-      rel="preload"
-      fetchpriority="high"
-      as="image"
-      href="/assets/public/presentacion3-mobile.webp"
-      type="image/webp"
-    />
-    <link
       rel="preconnect"
       href="https://kit.fontawesome.com/c1a667f1b4.js"
       crossorigin
@@ -100,13 +86,7 @@
       <div class="divider_header"></div>
       <div data-featuretarget="react-root">
         <div>
-          <div
-            id="pageGameBg"
-            class="page_game_bg"
-            style="
-              background-image: url('/assets/public/cards-ofertas/backgrounds/08.webp');
-            "
-          ></div>
+          <div id="pageGameBg" class="page_game_bg"></div>
           <div class="cart_page_container">
             <div class="route_container">
               <ul class="route">
@@ -120,41 +100,20 @@
             </div>
             <div class="cart_page_title">Tu carro de la compra</div>
             <div class="cart_details_container">
-              <div class="cart_details_area">
-                <div class="cart_topay_area mobile">
-                  <div class="topay_area_ctn">
-                    <div class="topay_top">
-                      <div>Total estimado</div>
-                      <div id="totalToPay"></div>
-                    </div>
-                    <div class="topay_middle">
-                      Los impuestos de venta se calcularán durante el pago (si
-                      es aplicable)
-                    </div>
-                    <button class="cart_page_btn topay_bottom">Comprar</button>
-                  </div>
-                </div>
-                <div class="cart_bottom_area">
-                  <div>
-                    <button class="cart_page_btn" type="button">
-                      Seguir comprando
-                    </button>
-                  </div>
-                  <div class="delete_article">Eliminar todos los artículos</div>
-                </div>
-                <div class="divider"></div>
-              </div>
+              <div class="cart_details_area"></div>
               <div class="cart_topay_area">
                 <div class="topay_area_ctn">
                   <div class="topay_top">
                     <div>Total estimado</div>
-                    <div class="totalToPay"></div>
+                    <div class="totalToPay">CLP$0</div>
                   </div>
                   <div class="topay_middle">
                     Los impuestos de venta se calcularán durante el pago (si es
                     aplicable)
                   </div>
-                  <button class="cart_page_btn topay_bottom">Comprar</button>
+                  <button class="cart_page_btn topay_bottom">
+                    Continuar con el pago
+                  </button>
                 </div>
               </div>
             </div>

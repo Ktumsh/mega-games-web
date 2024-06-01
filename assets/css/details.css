@@ -1010,11 +1010,11 @@ body {
   list-style: none;
 }
 
-#additionalDescription {
+#additionalDesc {
   padding-left: 0;
 }
 
-#additionalDescription > li {
+#additionalDesc > li {
   margin-bottom: 5px;
   list-style: none;
 }
@@ -1373,6 +1373,12 @@ body {
   height: 94px;
 }
 
+.cart_details_container .game_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .cart_details_container .game_info_ctn {
   flex-grow: 1;
 }
@@ -1445,10 +1451,11 @@ body {
 
 .add_delete .add,
 .add_delete .delete {
-  color: #aa9bc0;
+  color: #beb4d0;
   text-decoration: underline;
   cursor: pointer;
   font-size: 12px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
 .add_delete .add:hover,
@@ -1532,11 +1539,12 @@ body {
 }
 
 .delete_article {
-  color: #aa9bc0;
+  color: #beb4d0;
   text-decoration: underline;
   cursor: pointer;
   font-size: 12px;
   margin-left: 6px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
 .delete_article:hover {
@@ -1620,6 +1628,14 @@ body {
   transition-duration: 0.04s;
 }
 
+.topay_bottom.cart_page_btn.disabled,
+.topay_bottom.cart_page_btn.disabled:hover,
+.topay_bottom.cart_page_btn.disabled:active {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
 .cart_topay_area.mobile {
   display: none;
 }
@@ -1686,4 +1702,49 @@ body {
 .pswp__ui--fit .pswp__caption,
 .pswp__ui--fit .pswp__top-bar {
   background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.empty_cart {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cart_details_area .price {
+  margin-top: 0px;
+}
+
+.cart_details_area .discount {
+  font-size: 16px;
+  padding: 3px 5px;
+  margin-right: 3px;
+  line-height: 24px;
+}
+
+.cart_details_area .price_label {
+  flex-direction: column;
+  align-items: flex-end !important;
+  font-weight: 200;
+  gap: 0px;
+  padding: 0px !important;
+}
+
+.cart_details_area .final_price {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+  color: #fff;
+  padding: 0px !important;
+}
+
+.cart_details_area .price_label .original_price {
+  font-size: 11px !important;
+  line-height: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0px !important;
+  text-decoration: line-through;
+}
+
+.cart_details_area .price_label .original_price::before {
+  content: none;
 }

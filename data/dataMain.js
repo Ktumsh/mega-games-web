@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const dlcSpan = tarjeta.dlc ? `<span class="dlc_span">DLC</span>` : "";
 
         const pageName = tarjeta.nombre;
+        const pageGroup = tarjeta.origen;
         let cardContent;
 
         switch (carouselId) {
@@ -50,7 +51,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </div>
                   </div>
                   <div class="card_bottom_body">
-                    <a class="card_link" href="/store/offer-details?game=${pageName}&item=${tarjeta.id}">
+                    <a class="card_link" href="/store/offer-details?game=${pageName}&group=${pageGroup}&item=${tarjeta.id}">
                       <div class="fs-sm d-flex flex-row flex-lg-column gap-sm-2">
                         <div class="d-flex align-items-center h-100">
                           <span class="descuento_label p-1">${tarjeta.descuento}</span>
@@ -93,7 +94,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </div>
                   </div>
                   <div class="card_bottom_body">
-                    <a class="card_link" href="/store/games-details?game=${pageName}&item=${tarjeta.id}">
+                    <a class="card_link" href="/store/games-details?game=${pageName}&group=${pageGroup}&item=${tarjeta.id}">
                       <div class="card_price">
                         <span class="card_text">Desde</span>
                         <span class="price">CLP$ ${tarjeta.precioOriginal}</span>
@@ -129,7 +130,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </div>
                   </div>
                   <div class="card_bottom_body">
-                    <a class="card_link" href="/store/gift-details?game=${pageName}&item=${tarjeta.id}">
+                    <a class="card_link" href="/store/gift-details?game=${pageName}&group=${pageGroup}&item=${tarjeta.id}">
                       <div class="card_price">
                         <span class="card_text">Desde</span>
                         <span class="price">CLP$ ${tarjeta.precioOriginal}</span>
