@@ -81,14 +81,8 @@ app.post("/api/store/reduceStock/:id", reduceStock);
 app.post("/api/store/returnStock/:id", returnStock);
 
 // GESTION DE RUTAS
-app.get("/login.html", (req, res) => {
-  res.sendFile(join(__dirname, "../login.html"));
-});
 app.get("/login", (req, res) => {
   res.sendFile(join(__dirname, "../login.html"));
-});
-app.get("/join.html", (req, res) => {
-  res.sendFile(join(__dirname, "../join.html"));
 });
 app.get("/join", (req, res) => {
   res.sendFile(join(__dirname, "../join.html"));

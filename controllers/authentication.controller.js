@@ -83,7 +83,7 @@ async function register(req, res) {
   res.status(201).send({
     status: "ok",
     message: `Usuario ${newUser.username} registrado`,
-    redirect: "/login.html",
+    redirect: "/login",
   });
 }
 
