@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <a class="header_login_btn" href="#">
                     <div class="main_btn">Instalar Mega Games</div>
                 </a>
-                <a id="session_link" class="global_action_link" href="/login.html">Iniciar sesión</a>
+                <a id="session_link" class="global_action_link" href="/login">Iniciar sesión</a>
                 <div id="header_notification_area" style="display: none; position: relative">
                 <div>
                   <div>
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a class="popup_menu_item" href="#">Detalles de la cuenta: <span id="account_name" class="account_name"></span></a>
                     <span class="popup_menu_item" id="language_pulldown_account" onclick="ShowMenu('language_dropdown_account');">Cambiar idioma</span>
                     <div class="popup_block_new language" id="language_dropdown_account" style="display: none; opacity: 0; left: -274px; top: 62px;"></div>
-                    <a id="logout_link" class="popup_menu_item" href="/login.html">Cerrar sesión...</a>
+                    <a id="logout_link" class="popup_menu_item" href="/login">Cerrar sesión...</a>
                   </div>
                 </div>
                 &nbsp;|&nbsp;
