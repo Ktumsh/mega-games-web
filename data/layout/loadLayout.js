@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <span class="pulldown global_action_link" id="language_pulldown" onclick="ShowMenu('language_dropdown', 'right');">idioma</span>
                 <div id="language_dropdown" class="popup_block_new" style="display: none;"></div>
             </div>
-            <a class="user_avatar playerAvatar online" aria-label="Ver tu perfil" href="#">
+            <a id="user_img" class="user_avatar playerAvatar online" aria-label="Ver tu perfil" href="#">
               <img src="/assets/public/profile/user-avatar.jpg" alt="" loading="lazy">
             </a>
         </div>
@@ -198,6 +198,10 @@ document.addEventListener("DOMContentLoaded", () => {
         "playerAvatar"
       )[0].href = `/profile/${username}`;
       document.getElementById("accountLink").href = `/profile/${username}`;
+    }
+
+    if (!checkAuthentication()) {
+      document.getElementById("user_img").style.display = "none";
     }
 
     const globalActionMenu = document.getElementById("global_action_menu");
