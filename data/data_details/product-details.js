@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const {
       imagen,
       nombre,
+      nombreMaincap,
       likes,
       descuento,
       precioOriginal,
@@ -63,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
       restriccion,
     } = product;
 
+    document.title = nombreMaincap;
     document.getElementById("gameImage").src = imagen;
     document.getElementById("gameName").textContent = nombre;
     document.getElementById("gameLikes").textContent = likes;

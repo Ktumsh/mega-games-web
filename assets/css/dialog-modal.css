@@ -594,6 +594,11 @@ button.dialog_button {
   margin-bottom: 2px;
 }
 
+.dialog_body .cart_page_btn {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 @media screen and (max-width: 640px) {
   .full_modal_overlay .modal_position_content {
     max-height: 95vh;
@@ -612,5 +617,11 @@ button.dialog_button {
     align-self: center;
     width: auto;
     height: auto;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  #detailsPage .dialog_footer {
+    flex-direction: column;
   }
 }

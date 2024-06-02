@@ -25,7 +25,7 @@ document.getElementById("login").addEventListener("submit", async (e) => {
   const resJson = await res.json();
   if (resJson.status === "ok") {
     localStorage.setItem("isAuthenticated", "true");
-    localStorage.setItem("username", identifier.value);
-    window.location.href = "/store";
+    localStorage.setItem("username", resJson.username);
+    window.location.href = "/";
   }
 });

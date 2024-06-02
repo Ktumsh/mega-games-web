@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <div class="cart_bottom_area">
             <div>
-                <button class="cart_page_btn" type="button">Seguir comprando</button>
+                <a class="cart_page_btn" href="/">Seguir comprando</a>
             </div>
             <div class="delete_article">Eliminar todos los artículos</div>
         </div>
@@ -80,7 +80,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="top_area">
                         <div class="game_image">
                             <a href="">
-                                <img src="${product.img}" alt="${product.name}" />
+                                <img src="${product.img}" alt="${
+          product.name
+        }" />
                             </a>
                         </div>
                         <div class="game_info_ctn">
@@ -88,11 +90,14 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <div class="title">${product.name}</div>
                             </div>
                             <div class="game_info game_platform">
-                                <div id="platform" class="platform_label">
-                                    <span title="Disponible en win" class="platform_img win"></span>
-                                    <span title="Disponible en xbox" class="platform_img xbox"></span>
-                                    <span title="Disponible en playstation" class="platform_img playstation"></span>
-                                </div>
+                            <span id=platform class="platform_label">
+                            ${product.platform
+                              .map(
+                                (platform) =>
+                                  `<span title="Disponible en ${platform}" class="platform_img ${platform}"></span>`
+                              )
+                              .join("")}
+                          </span>
                             </div>
                             <div class="game_price">
                                 <span class="price">
@@ -102,11 +107,19 @@ document.addEventListener("DOMContentLoaded", () => {
                             </div>
                             <div class="game_info game_additional">
                                 <div class="add_delete">
-                                    <div class="add" data-id="${product.id}" data-group="${product.group}" data-index="${index}" title="Añadir otra copia de este artículo a tu carro">
+                                    <div class="add" data-id="${
+                                      product.id
+                                    }" data-group="${
+          product.group
+        }" data-index="${index}" title="Añadir otra copia de este artículo a tu carro">
                                         Añadir
                                     </div>
                                     |
-                                    <div class="delete" data-id="${product.id}" data-group="${product.group}" data-index="${index}-${i}">Eliminar</div>
+                                    <div class="delete" data-id="${
+                                      product.id
+                                    }" data-group="${
+          product.group
+        }" data-index="${index}-${i}">Eliminar</div>
                                 </div>
                             </div>
                         </div>

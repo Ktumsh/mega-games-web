@@ -15,11 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
             <div id="menu_user_area" class="menu_user_area">
               <div class="menu_user_person person online">
                 <div class="playerAvatar online">
-                  <a href="#" aria-label="Ver tu perfil">
-                    <img id="user_avatar" src="/assets/public/icons/user-avatar.jpg" alt="">
+                  <a id="profileLink" href="#" aria-label="Ver tu perfil">
+                    <img id="user_avatar" src="/assets/public/profile/user-avatar.jpg" alt="">
                   </a>
                 </div>
-                <a id="user_name" href="#">Username</a>
+                <a id="user_name" href="">Username</a>
               </div>
             </div>
             <a id="hamburger_session_link" class="menuitem" href="/login">
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </a>
             <div class="menuitem_submenu_wrapper" style="height: 0px">
             <div class="submenu_Store">
-              <a class="submenuitem" href="/store"> Página principal </a>
+              <a class="submenuitem" href="/"> Página principal </a>
               <a class="submenuitem" href="/store/ofertas-especiales"> Ofertas especiales </a>
               <a class="submenuitem" href="/store/ActivisionPublisherSale2024"> Eventos de rebajas </a>
               <a class="submenuitem" href="/store/juegos-populares"> Juegos populares </a>
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <a class="submenuitem" href="javascript:void(0)"> Géneros </a>
             </div>
           </div>
-            <a class="menuitem supernav" href="/store/notifications">
+            <a class="menuitem supernav" href="/profiles/notifications">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M5 19q-.425 0-.712-.288T4 18t.288-.712T5 17h1v-7q0-2.075 1.25-3.687T10.5 4.2v-.7q0-.625.438-1.062T12 2t1.063.438T13.5 3.5v.7q2 .5 3.25 2.113T18 10v7h1q.425 0 .713.288T20 18t-.288.713T19 19zm7 3q-.825 0-1.412-.587T10 20h4q0 .825-.587 1.413T12 22"/>
               </svg>
@@ -63,19 +63,19 @@ document.addEventListener("DOMContentLoaded", () => {
               Carro de compras
             </a>
             <div class="minor_menu_items">
-              <a class="menuitem" href="/about/about">
+              <a class="menuitem" href="/about">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                   <path fill="currentColor" d="M12 17q.425 0 .713-.288T13 16v-4q0-.425-.288-.712T12 11t-.712.288T11 12v4q0 .425.288.713T12 17m0-8q.425 0 .713-.288T13 8t-.288-.712T12 7t-.712.288T11 8t.288.713T12 9m0 13q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/>
                 </svg>
                 Acerca de
               </a>
-              <a class="menuitem" href="/about/help">
+              <a class="menuitem" href="/help">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                   <path fill="currentColor" d="M11.95 18q.525 0 .888-.363t.362-.887t-.362-.888t-.888-.362t-.887.363t-.363.887t.363.888t.887.362m-.9-3.85h1.85q0-.825.188-1.3t1.062-1.3q.65-.65 1.025-1.238T15.55 8.9q0-1.4-1.025-2.15T12.1 6q-1.425 0-2.312.75T8.55 8.55l1.65.65q.125-.45.563-.975T12.1 7.7q.8 0 1.2.438t.4.962q0 .5-.3.938t-.75.812q-1.1.975-1.35 1.475t-.25 1.825M12 22q-2.075 0-3.9-.787t-3.175-2.138T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/>
                 </svg>
                 Soporte
               </a>
-              <a id="logout" class="menuitem" href="/login">
+              <a id="logout" class="menuitem" href="/logout">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                   <path fill="currentColor" d="M5 2h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1m4 9V8l-5 4l5 4v-3h6v-2z"/>
                 </svg>
@@ -105,126 +105,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     hamburgerMenuSlot.appendChild(hamburgerMenuContainer);
 
-    const hamburgerMenuOpenBtn = document.getElementById(
-      "responsive_menu_logo"
-    );
-    const overlayBg = document.querySelector(".overlay_menu_bg");
-    const body = document.querySelector("body");
-    const headerTitle = document.getElementById("responsive_header_title");
-    let touchStartX = 0;
-    let touchEndX = 0;
-    const swipeAreaWidth = 20;
-
-    overlayBg.addEventListener("click", closeMenu);
-    hamburgerMenuOpenBtn.addEventListener("click", toggleMenu);
-
-    const superNavActive = document.querySelector(".supernav_active");
-    const subMenu = document.querySelector(".menuitem_submenu_wrapper");
-
-    superNavActive.addEventListener("click", () => {
-      superNavActive.classList.toggle("submenu_active");
-      subMenu.classList.toggle("active");
-      if (superNavActive.classList.contains("submenu_active")) {
-        subMenu.style.height = subMenu.scrollHeight + "px";
-      } else {
-        subMenu.style.height = "0px";
-      }
-    });
-
-    document.addEventListener("touchstart", (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-    });
-
-    document.addEventListener("touchend", (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    });
-
-    function handleSwipe() {
-      if (touchEndX < touchStartX - 20) {
-        closeMenu();
-      } else if (
-        touchEndX > touchStartX + 20 &&
-        touchStartX <= swipeAreaWidth
-      ) {
-        openMenu();
-      }
-    }
-
-    function openMenu() {
-      if (!hamburgerMenuSlot.classList.contains("mainmenu_active")) {
-        toggleMenu();
-      }
-    }
-
-    function closeMenu() {
-      if (hamburgerMenuSlot.classList.contains("mainmenu_active")) {
-        hamburgerMenuOpenBtn.classList.remove("chevron");
-        if (hamburgerMenuOpenBtn.classList.contains("chevron")) {
-          hamburgerMenuOpenBtn.innerHTML = "";
-        } else {
-          hamburgerMenuOpenBtn.innerHTML = `<img src="/assets/public/icons/header_menu_hamburger.webp" height="100%" />`;
-        }
-        hamburgerMenuSlot.classList.remove("mainmenu_active");
-        headerTitle.innerHTML = `
-      <div class="responsive_header_logo">
-        <a href="/store">
-          <div id="responsive_header_logo">
-            <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
-            <span class="grotesk ps-2 fs-6 text-white">Mega Games</span>
-          </div>
-        </a>
-      </div>
-    `;
-        overlayBg.classList.remove("open");
-        body.classList.remove("hidden_body");
-      }
-    }
-
-    function toggleMenu() {
-      hamburgerMenuOpenBtn.classList.toggle("chevron");
-      if (hamburgerMenuOpenBtn.classList.contains("chevron")) {
-        hamburgerMenuOpenBtn.innerHTML = "";
-      } else {
-        hamburgerMenuOpenBtn.innerHTML = `<img src="/assets/public/icons/header_menu_hamburger.webp" height="100%" />`;
-      }
-      hamburgerMenuSlot.classList.toggle("mainmenu_active");
-      if (hamburgerMenuSlot.classList.contains("mainmenu_active")) {
-        headerTitle.innerHTML = `<div class="responsive_menu_title">Menú</div>`;
-        overlayBg.classList.add("open");
-      } else {
-        headerTitle.innerHTML = `
-        <div class="responsive_header_logo">
-          <a href="/store">
-            <div id="responsive_header_logo">
-              <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
-              <span class="grotesk ps-2 fs-6 text-white">Mega Games</span>
-            </div>
-          </a>
-        </div>
-      `;
-        overlayBg.classList.remove("open");
-      }
-      body.classList.toggle("hidden_body");
-    }
-
-    const menuUserArea = document.getElementById("menu_user_area");
-    const userName = document.getElementById("user_name");
-    const hamburgerSessionLink = document.getElementById(
-      "hamburger_session_link"
-    );
-    const hamburgerLogoutLink = document.getElementById("logout");
-
-    if (checkAuthentication()) {
-      const username = localStorage.getItem("username");
-      hamburgerSessionLink.style.display = "none";
-      userName.textContent = username;
-      menuUserArea.style.display = "block";
-      hamburgerLogoutLink.style.display = "flex";
-    } else {
-      menuUserArea.style.display = "none";
-      hamburgerSessionLink.style.display = "flex";
-      hamburgerLogoutLink.style.display = "none";
+    const username = localStorage.getItem("username");
+    if (username) {
+      document.getElementById("profileLink").href = `/profile/${username}`;
+      document.getElementById("user_name").href = `/profile/${username}`;
     }
   }
 
@@ -237,17 +121,17 @@ document.addEventListener("DOMContentLoaded", () => {
     <nav class="content">
         <div class="logo">
             <span id="logo_holder">
-                <a href="/store" aria-label="Enlace a la página de inicio de Mega Games">
+                <a href="/" aria-label="Enlace a la página de inicio de Mega Games">
                     <img src="../assets/public/mega-games-logo.svg" width="36" height="36" alt="Enlace a la página de inicio de Mega Games">
                 </a>
-                <a href="/store">Mega Games</a>
+                <a href="/">Mega Games</a>
             </span>
         </div>
         <div role="navigation" class="supernav_container" aria-label="Menú global">
-            <a class="menuitem supernav" href="/store">Tienda</a>
-            <a class="menuitem supernav" href="/about/community">Comunidad</a>
-            <a class="menuitem supernav" href="/about/about">Acerca de</a>
-            <a class="menuitem supernav" href="/about/help">Soporte</a>
+            <a class="menuitem supernav" href="/">Tienda</a>
+            <a class="menuitem supernav" href="/community">Comunidad</a>
+            <a class="menuitem supernav" href="/about">Acerca de</a>
+            <a class="menuitem supernav" href="/help">Soporte</a>
         </div>
         <div id="global_actions">
             <div id="global_action_menu" role="navigation" aria-label="Menú de la cuenta">
@@ -273,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <span class="pulldown global_action_link persona_name_text_content" id="account_pulldown" onclick="ShowMenu('account_dropdown')" style="display: none;">User</span>
                 <div id="account_dropdown" class="popup_block_new" style="visibility: visible; top: 25px; left: 24.7344px; right: 65px; display: none; opacity: 1;">
                   <div class="popup_body popup_menu">
-                    <a class="popup_menu_item" href="#">Ver mi perfil</a>
+                    <a id="accountLink" class="popup_menu_item" href="#">Ver mi perfil</a>
                     <a class="popup_menu_item" href="#">Detalles de la cuenta: <span id="account_name" class="account_name"></span></a>
                     <span class="popup_menu_item" id="language_pulldown_account" onclick="ShowMenu('language_dropdown_account');">Cambiar idioma</span>
                     <div class="popup_block_new language" id="language_dropdown_account" style="display: none; opacity: 0; left: -274px; top: 62px;"></div>
@@ -285,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div id="language_dropdown" class="popup_block_new" style="display: none;"></div>
             </div>
             <a class="user_avatar playerAvatar online" aria-label="Ver tu perfil" href="#">
-              <img src="/assets/public/icons/user-avatar.jpg" alt="" loading="lazy">
+              <img src="/assets/public/profile/user-avatar.jpg" alt="" loading="lazy">
             </a>
         </div>
     </nav>
@@ -306,6 +190,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!isActive) {
       navItems[0].classList.add("supernav_active");
+    }
+
+    const username = localStorage.getItem("username");
+    if (username) {
+      document.getElementsByClassName(
+        "playerAvatar"
+      )[0].href = `/profile/${username}`;
+      document.getElementById("accountLink").href = `/profile/${username}`;
     }
 
     const globalActionMenu = document.getElementById("global_action_menu");
@@ -372,13 +264,13 @@ document.addEventListener("DOMContentLoaded", () => {
     headerContainerMobile.innerHTML = `
     <div class="responsive_header_content">
       ${
-        currentPath === "/login.html" || currentPath === "/join.html"
+        currentPath === "/login" || currentPath === "/join"
           ? ""
           : `<div id="responsive_menu_logo"><img src="/assets/public/icons/header_menu_hamburger.webp" height="100%" /></div>`
       }
       <div id="responsive_header_title">
         <div class="responsive_header_logo">
-          <a href="/store">
+          <a href="/">
             <div id="responsive_header_logo">
               <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
               <span class="grotesk ps-2 fs-6 text-white">Mega Games</span>
@@ -425,13 +317,13 @@ document.addEventListener("DOMContentLoaded", () => {
                   <div class="store_nav">
                     <div id="foryou_tab" data-flyout="foryou_flyout" class="tab">
                       <span class="pulldown">
-                        <a class="pulldown_desktop" href="/store">Tu tienda</a>
-                        <a class="pulldown_mobile" href="/store">Tu tienda</a>
+                        <a class="pulldown_desktop" href="/">Tu tienda</a>
+                        <a class="pulldown_mobile" href="/">Tu tienda</a>
                       </span>
                     </div>
                     <div id="foryou_flyout" class="popup_block_new responsive_slidedown" style="visibility: visible; top: 42px; left: 0px; display: none; opacity: 0">
                       <div class="popup_body popup_menu popup_menu_browse">
-                        <a href="/store" class="popup_menu_item">Inicio</a>
+                        <a href="/" class="popup_menu_item">Inicio</a>
                         <a href="#" class="popup_menu_item">Recomendaciones</a>
                         <a href="#" class="popup_menu_item">Vistos recientemente</a>
                       </div>
@@ -569,7 +461,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <div id="foryou_flyout" class="popup_block_new responsive_slidedown sub_menu" data-tab="foryou_tab" style="height: 0px">
                   <div class="popup_body popup_menu popup_menu_browse">
-                    <a href="/store" class="popup_menu_item">Inicio</a>
+                    <a href="/" class="popup_menu_item">Inicio</a>
                     <a href="#" class="popup_menu_item">Recomendaciones</a>
                     <a href="#" class="popup_menu_item">Vistos recientemente</a>
                   </div>
@@ -696,7 +588,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const navbarContent = `
           <div class="bottom_navbar_pwa">
               <nav class="bottom_nav">
-                  <a href="/store" class="pwa_nav_item">
+                  <a href="/" class="pwa_nav_item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                       <path fill="currentColor" d="M22.83 12.99L11.83 2H2v9.83l10.99 10.99zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4S7 4.67 7 5.5S6.33 7 5.5 7"/>
                     </svg>
@@ -711,7 +603,7 @@ document.addEventListener("DOMContentLoaded", () => {
                       <path fill="currentColor" d="M12 16q1.2 0 2.138-.712T15.5 13.45h-7q.425 1.125 1.363 1.838T12 16m-2.5-4q.625 0 1.063-.437T11 10.5t-.437-1.062T9.5 9t-1.062.438T8 10.5t.438 1.063T9.5 12m5 0q.625 0 1.063-.437T16 10.5t-.437-1.062T14.5 9t-1.062.438T13 10.5t.438 1.063T14.5 12M7.625 6.4L12 .725L16.375 6.4l6.85 2.3l-4.325 6.125l.175 6.825L12 19.675L4.925 21.65L5.1 14.8L.8 8.7z"/>
                     </svg>
                   </a>
-                  <a href="/store/notifications" class="pwa_nav_item">
+                  <a href="/profiles/notifications" class="pwa_nav_item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                       <path fill="currentColor" d="M5 19q-.425 0-.712-.288T4 18t.288-.712T5 17h1v-7q0-2.075 1.25-3.687T10.5 4.2v-.7q0-.625.438-1.062T12 2t1.063.438T13.5 3.5v.7q2 .5 3.25 2.113T18 10v7h1q.425 0 .713.288T20 18t-.288.713T19 19zm7 3q-.825 0-1.412-.587T10 20h4q0 .825-.587 1.413T12 22"/>
                     </svg>
@@ -969,30 +861,187 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function screenSizeChange(mq) {
-    if (currentPath !== "/login.html" && currentPath !== "/join.html") {
-      if (mq.matches) {
-        addHamburgerMenu();
-        addMobileNavbar();
-        removeDesktopNavbar();
-        addPWANavbar();
+  function addMenuEventListeners() {
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const hamburgerMenuSlot = document.querySelector(".HamburgerMenuSlot");
+    const hamburgerMenuOpenBtn = document.getElementById(
+      "responsive_menu_logo"
+    );
+    const overlayBg = document.querySelector(".overlay_menu_bg");
+    const body = document.querySelector("body");
+    const headerTitle = document.getElementById("responsive_header_title");
+    const swipeAreaWidth = 20;
+    const superNavActive = document.querySelector(".supernav_active");
+    const subMenu = document.querySelector(".menuitem_submenu_wrapper");
+
+    overlayBg.addEventListener("click", closeMenu);
+    if (hamburgerMenuOpenBtn) {
+      hamburgerMenuOpenBtn.addEventListener("click", toggleMenu);
+    }
+
+    superNavActive.addEventListener("click", () => {
+      superNavActive.classList.toggle("submenu_active");
+      subMenu.classList.toggle("active");
+      if (superNavActive.classList.contains("submenu_active")) {
+        subMenu.style.height = subMenu.scrollHeight + "px";
       } else {
-        removeHamburgerMenu();
-        addDesktopNavbar();
-        removeMobileNavbar();
+        subMenu.style.height = "0px";
       }
+    });
+
+    document.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    document.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    });
+
+    function handleSwipe() {
+      if (touchEndX < touchStartX - 20) {
+        closeMenu();
+      } else if (
+        touchEndX > touchStartX + 20 &&
+        touchStartX <= swipeAreaWidth
+      ) {
+        openMenu();
+      }
+    }
+
+    function openMenu() {
+      if (!hamburgerMenuSlot.classList.contains("mainmenu_active")) {
+        toggleMenu();
+      }
+    }
+
+    function closeMenu() {
+      if (hamburgerMenuSlot.classList.contains("mainmenu_active")) {
+        hamburgerMenuOpenBtn.classList.remove("chevron");
+        if (hamburgerMenuOpenBtn.classList.contains("chevron")) {
+          hamburgerMenuOpenBtn.innerHTML = "";
+        } else {
+          hamburgerMenuOpenBtn.innerHTML = `<img src="/assets/public/icons/header_menu_hamburger.webp" height="100%" />`;
+        }
+        hamburgerMenuSlot.classList.remove("mainmenu_active");
+        headerTitle.innerHTML = `
+      <div class="responsive_header_logo">
+        <a href="/">
+          <div id="responsive_header_logo">
+            <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
+            <span class="grotesk ps-2 fs-6 text-white">Mega Games</span>
+          </div>
+        </a>
+      </div>
+    `;
+        overlayBg.classList.remove("open");
+        body.classList.remove("hidden_body");
+      }
+    }
+
+    function toggleMenu() {
+      hamburgerMenuOpenBtn.classList.toggle("chevron");
+      if (hamburgerMenuOpenBtn.classList.contains("chevron")) {
+        hamburgerMenuOpenBtn.innerHTML = "";
+      } else {
+        hamburgerMenuOpenBtn.innerHTML = `<img src="/assets/public/icons/header_menu_hamburger.webp" height="100%" />`;
+      }
+      hamburgerMenuSlot.classList.toggle("mainmenu_active");
+      if (hamburgerMenuSlot.classList.contains("mainmenu_active")) {
+        headerTitle.innerHTML = `<div class="responsive_menu_title">Menú</div>`;
+        overlayBg.classList.add("open");
+      } else {
+        headerTitle.innerHTML = `
+        <div class="responsive_header_logo">
+          <a href="/">
+            <div id="responsive_header_logo">
+              <img src="/assets/public/mega-games-logo.svg" height="36" alt="Mega Games" />
+              <span class="grotesk ps-2 fs-6 text-white">Mega Games</span>
+            </div>
+          </a>
+        </div>
+      `;
+        overlayBg.classList.remove("open");
+      }
+      body.classList.toggle("hidden_body");
+    }
+
+    const menuUserArea = document.getElementById("menu_user_area");
+    const userName = document.getElementById("user_name");
+    const hamburgerSessionLink = document.getElementById(
+      "hamburger_session_link"
+    );
+    const hamburgerLogoutLink = document.getElementById("logout");
+    const supernavMenu = document.querySelectorAll(".supernav");
+
+    if (checkAuthentication()) {
+      const username = localStorage.getItem("username");
+      hamburgerSessionLink.style.display = "none";
+      userName.textContent = username;
+      menuUserArea.style.display = "block";
+      hamburgerLogoutLink.style.display = "flex";
     } else {
-      removeHamburgerMenu();
+      menuUserArea.style.display = "none";
+      hamburgerSessionLink.style.display = "flex";
+      hamburgerLogoutLink.style.display = "none";
+      supernavMenu.forEach((menu) => {
+        menu.style.display = "none";
+      });
+    }
+  }
+
+  const username = localStorage.getItem("username");
+  const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
+
+  function screenSizeChange(mq) {
+    // Rutas que requieren la eliminación de la barra de navegación
+    const pathsToRemoveNavbar = [
+      "/login",
+      "/join",
+      "/community",
+      "/about",
+      "/help",
+      "/profiles/notifications",
+      `/profile/${username}`,
+    ];
+
+    if (pathsToRemoveNavbar.includes(currentPath)) {
       removeDesktopNavbar();
       removeMobileNavbar();
+
+      if (isAuthenticated) {
+        if (mq.matches) {
+          addHamburgerMenu();
+          addPWANavbar();
+          addMenuEventListeners();
+        } else {
+          removeHamburgerMenu();
+        }
+      } else {
+        addHamburgerMenu();
+        addMenuEventListeners();
+      }
+    } else {
+      if (mq.matches) {
+        removeDesktopNavbar();
+        addHamburgerMenu();
+        addMobileNavbar();
+        addPWANavbar();
+        addMenuEventListeners();
+        addMobileNavbarEventListeners();
+        updateCartCount();
+      } else {
+        removeHamburgerMenu();
+        removeMobileNavbar();
+        addDesktopNavbar();
+        addDesktopNavbarEventListeners();
+        updateCartCount();
+      }
     }
+
     removeFooter();
     addFooter();
-    if (mq.matches) {
-      addMobileNavbarEventListeners();
-    } else {
-      addDesktopNavbarEventListeners();
-    }
   }
 
   addDesktopHeader();
@@ -1001,7 +1050,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMediaQuery = window.matchMedia("(max-width: 910px)");
 
   screenSizeChange(mobileMediaQuery);
-  mobileMediaQuery.addEventListener("change", screenSizeChange);
+  mobileMediaQuery.addEventListener("change", () =>
+    screenSizeChange(mobileMediaQuery)
+  );
 
   const footerSlot = document.querySelector(".FooterSlot");
   const footerContainer = document.createElement("div");
@@ -1019,9 +1070,6 @@ document.addEventListener("DOMContentLoaded", () => {
       cartLink.textContent = `Carro (${totalCount})`;
     }
   }
-
-  // Llamar a updateCartCount al cargar la página
-  updateCartCount();
 });
 
 function changeOpacity(target, duration, fromOpacity, toOpacity) {
