@@ -1,5 +1,2 @@
-.env
 .vercel
 node_modules
-api.http
-convert_to_webp_recursive.js
