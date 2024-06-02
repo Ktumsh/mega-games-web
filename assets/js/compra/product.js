@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         price: product.precioDescuento || product.precioOriginal,
         img: product.imagenAlternativa || product.imagen,
         background: product.background,
+        platform: product.disponibleEn,
         quantity: 1,
       };
 
@@ -60,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ? existingProduct.quantity
         : 0;
 
-      // Verificar el stock actual antes de agregar al carrito
       fetch(
         `https://store-megagames.onrender.com/api/store/${group}/${product.id}`
       )
@@ -80,7 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
           localStorage.setItem("cart", JSON.stringify(cart));
           updateCartCount();
 
-          // Reducir el stock en el servidor
           reduceStock(cartItem.id, cartItem.group, 1);
         })
         .catch((error) =>

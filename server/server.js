@@ -94,11 +94,11 @@ app.get("/join", (req, res) => {
 app.get("/logout", (req, res) => {
   res.sendFile(join(__dirname, "../logout.html"));
 });
-app.get("/store", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(join(__dirname, "../store/index.html"));
 });
-app.get("/", (req, res) => {
-  res.redirect("/store");
+app.get("/store", (req, res) => {
+  res.redirect("/");
 });
 app.get("/store/ActivisionPublisherSale2024", (req, res) => {
   res.sendFile(join(__dirname, "../store/ActivisionPublisherSale2024.html"));
@@ -124,20 +124,23 @@ app.get("/store/gift-details", (req, res) => {
 app.get("/store/publisher-sale-details", (req, res) => {
   res.sendFile(join(__dirname, "../store/publisher-sale-details.html"));
 });
-app.get("/store/notifications", (req, res) => {
-  res.sendFile(join(__dirname, "../store/notifications.html"));
+app.get("/profiles/notifications", (req, res) => {
+  res.sendFile(join(__dirname, "../profiles/notifications.html"));
 });
 app.get("/store/cart", (req, res) => {
   res.sendFile(join(__dirname, "../store/cart.html"));
 });
-app.get("/about/community", (req, res) => {
+app.get("/community", (req, res) => {
   res.sendFile(join(__dirname, "../about/community.html"));
 });
-app.get("/about/about", (req, res) => {
+app.get("/about", (req, res) => {
   res.sendFile(join(__dirname, "../about/about.html"));
 });
-app.get("/about/help", (req, res) => {
+app.get("/help", (req, res) => {
   res.sendFile(join(__dirname, "../about/help.html"));
+});
+app.get("/profile/:username", (req, res) => {
+  res.sendFile(join(__dirname, "../profiles/profile.html"));
 });
 
 // API

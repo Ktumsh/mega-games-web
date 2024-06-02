@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const sessionLink = document.getElementById("session_link");
   const accountPulldown = document.getElementById("account_pulldown");
   const logoutLink = document.getElementById("logout_link");
+  const logoutMenuLink = document.getElementById("logout");
 
   const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
   const username = localStorage.getItem("username");
@@ -17,12 +18,23 @@ document.addEventListener("DOMContentLoaded", function () {
     accountPulldown.style.display = "inline-block";
     accountName.textContent = username;
 
-    logoutLink.addEventListener("click", function (event) {
-      event.preventDefault();
-      localStorage.removeItem("isAuthenticated");
-      localStorage.removeItem("username");
-      window.location.href = "/logout";
-    });
+    if (logoutLink) {
+      logoutLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        localStorage.removeItem("isAuthenticated");
+        localStorage.removeItem("username");
+        window.location.href = "/logout";
+      });
+    }
+
+    if (logoutMenuLink) {
+      logoutMenuLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        localStorage.removeItem("isAuthenticated");
+        localStorage.removeItem("username");
+        window.location.href = "/logout";
+      });
+    }
   } else {
     sessionLink.style.display = "inline-block";
     headerNotification.style.display = "none";
