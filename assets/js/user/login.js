@@ -29,3 +29,11 @@ document.getElementById("login").addEventListener("submit", async (e) => {
     window.location.href = "/";
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
+  if (isAuthenticated) {
+    window.location.href = "/";
+    console.error("Error al iniciar sesión");
+  }
+});

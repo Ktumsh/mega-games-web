@@ -31,3 +31,11 @@ document
       window.location.href = resJson.redirect;
     }
   });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
+  if (isAuthenticated) {
+    window.location.href = "/";
+    console.error("Error al iniciar sesión");
+  }
+});
