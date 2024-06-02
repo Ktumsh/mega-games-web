@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página no encontrada</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/public/mega-games-logo.svg"
+    />
+    <style>
+      @font-face {
+        font-family: "Motiva Sans";
+        font-style: normal;
+        font-weight: normal;
+        font-display: swap;
+        src: url(/assets/public/fonts/motiva-sans/MotivaSansRegular.woff.ttf);
+      }
+
+      @font-face {
+        font-family: "Motiva Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(/assets/public/fonts/motiva-sans/MotivaSansMedium.woff.ttf);
+      }
+      body {
+        background-color: #131019;
+        color: #fff;
+        font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        text-align: center;
+        padding: 50px;
+      }
+      h1 {
+        font-size: 50px;
+      }
+      p {
+        font-size: 20px;
+      }
+      a {
+        color: #be9dfb;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>404</h1>
+    <p>
+      Algo salió mal, la página <strong><%= url %></strong> no fue encontrada.
+    </p>
+    <p><a href="/">Regresar a la página principal</a></p>
+  </body>
+</html>
