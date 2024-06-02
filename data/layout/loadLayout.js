@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="menu_user_person person online">
                 <div class="playerAvatar online">
                   <a id="profileLink" href="#" aria-label="Ver tu perfil">
-                    <img id="user_avatar" src="/assets/public/icons/user-avatar.jpg" alt="">
+                    <img id="user_avatar" src="/assets/public/profile/user-avatar.jpg" alt="">
                   </a>
                 </div>
                 <a id="user_name" href="">Username</a>
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <span class="pulldown global_action_link persona_name_text_content" id="account_pulldown" onclick="ShowMenu('account_dropdown')" style="display: none;">User</span>
                 <div id="account_dropdown" class="popup_block_new" style="visibility: visible; top: 25px; left: 24.7344px; right: 65px; display: none; opacity: 1;">
                   <div class="popup_body popup_menu">
-                    <a class="popup_menu_item" href="#">Ver mi perfil</a>
+                    <a id="accountLink" class="popup_menu_item" href="#">Ver mi perfil</a>
                     <a class="popup_menu_item" href="#">Detalles de la cuenta: <span id="account_name" class="account_name"></span></a>
                     <span class="popup_menu_item" id="language_pulldown_account" onclick="ShowMenu('language_dropdown_account');">Cambiar idioma</span>
                     <div class="popup_block_new language" id="language_dropdown_account" style="display: none; opacity: 0; left: -274px; top: 62px;"></div>
@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div id="language_dropdown" class="popup_block_new" style="display: none;"></div>
             </div>
             <a class="user_avatar playerAvatar online" aria-label="Ver tu perfil" href="#">
-              <img src="/assets/public/icons/user-avatar.jpg" alt="" loading="lazy">
+              <img src="/assets/public/profile/user-avatar.jpg" alt="" loading="lazy">
             </a>
         </div>
     </nav>
@@ -192,14 +192,13 @@ document.addEventListener("DOMContentLoaded", () => {
       navItems[0].classList.add("supernav_active");
     }
 
-    document
-      .getElementsByClassName("playerAvatar")[0]
-      .addEventListener("click", () => {
-        const username = localStorage.getItem("username");
-        if (username) {
-          window.location.href = `/profile/${username}`;
-        }
-      });
+    const username = localStorage.getItem("username");
+    if (username) {
+      document.getElementsByClassName(
+        "playerAvatar"
+      )[0].href = `/profile/${username}`;
+      document.getElementById("accountLink").href = `/profile/${username}`;
+    }
 
     const globalActionMenu = document.getElementById("global_action_menu");
     const languagePulldown = document.getElementById("language_pulldown");
@@ -877,7 +876,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const subMenu = document.querySelector(".menuitem_submenu_wrapper");
 
     overlayBg.addEventListener("click", closeMenu);
-    hamburgerMenuOpenBtn.addEventListener("click", toggleMenu);
+    if (hamburgerMenuOpenBtn) {
+      hamburgerMenuOpenBtn.addEventListener("click", toggleMenu);
+    }
 
     superNavActive.addEventListener("click", () => {
       superNavActive.classList.toggle("submenu_active");
