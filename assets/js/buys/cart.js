@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let total = 0;
 
-    // Intentar establecer el fondo desde el primer producto con fondo válido
     setFirstValidBackground(cart);
 
     cart.forEach((product, index) => {
@@ -206,7 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     localStorage.setItem("cart", JSON.stringify(cart));
-    // Devolver el stock en el servidor
+
     returnStock(product.id, product.group, 1);
     renderCart();
   }
@@ -235,7 +234,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function addToCart(productId, productGroup) {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    // Obtener datos del producto de la API para verificar el stock
     fetch(
       `https://store-megagames.onrender.com/api/store/${productGroup}/${productId}`
     )

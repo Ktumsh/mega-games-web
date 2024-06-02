@@ -286,7 +286,7 @@ function initializeGiftCarousel() {
   }
 }
 
-function initializeGenreCarousel() {
+function loadGenres() {
   const loadBtn = document.getElementById("load-more-generos");
   const generosContainer = document.getElementById("genCardContainer");
   const loader = document.getElementById("loader");

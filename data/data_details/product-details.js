@@ -1,7 +1,8 @@
-import { setupLikeButton } from "../../assets/js/managment/likeManager.js";
-import { setupGallery } from "../../assets/js/managment/galleryManager.js";
+import { setupLikeButton } from "../../assets/js/managment/like-manager.js";
+import { setupGallery } from "../../assets/js/managment/gallery-manager.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+  //OBTENER PRODUCTO SEGÚN EL PARÁMETRO URL
   const { item, group } = getProductParamsFromURL();
   if (group && item) {
     fetchProductDetails(group, item);
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 
+  //AGREGAR INFORMACIÓN
   async function fetchProductDetails(group, item) {
     try {
       const response = await fetch(
@@ -41,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  //DECLARACIÓN CONSTANTES PRODUCTO
   function populateProductDetails(product) {
     const {
       imagen,
@@ -65,6 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
     } = product;
 
     document.title = nombreMaincap;
+
+    //INFORMACIÓN PRINCIPAL
     document.getElementById("gameImage").src = imagen;
     document.getElementById("gameName").textContent = nombre;
     document.getElementById("gameLikes").textContent = likes;
@@ -95,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
       )
       .join("");
 
-    // Agregar descripción del juego
+    //DESCRIPCIÓN
     if (descripcion) {
       document.getElementById("descGameName").textContent = nombre;
       document.getElementById("descGameDescription").textContent = descripcion;
@@ -104,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("descGameDescription").textContent = "";
     }
 
-    // Agregar características del juego
+    //CARACTERISTICAS
     document.getElementById("introCharacteristics").textContent =
       introduccionCaracteristicas || "";
     if (caracteristicas && caracteristicas.length > 0) {
@@ -120,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("characteristicsList").innerHTML = "";
     }
 
-    // Agregar descripción adicional del juego
+    //DESCRIPCION ADICIONAL
     if (descripcionAdicional && descripcionAdicional.length > 0) {
       document.getElementById("additionalDesc").innerHTML = descripcionAdicional
         .map(
@@ -134,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("additionalDesc").innerHTML = "";
     }
 
-    // Agregar fecha de lanzamiento, editor y desarrolladores
+    //DETALLES
     if (detalles && detalles.length > 0) {
       const [detail] = detalles;
       if (detail.idiomas.length > 0) {
@@ -155,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
         detail.desarrolladores || "";
     }
 
-    // Agregar requisitos del sistema
+    //REQUISITOS
     if (requisitos && requisitos.length >= 6) {
       document.getElementById("requirements").innerHTML = `
           <li><div class="detail_tlt">Soporte de 64 bits</div><div class="detail_desc">${requisitos[0]}</div></li>
@@ -166,12 +171,14 @@ document.addEventListener("DOMContentLoaded", () => {
           <li><div class="detail_tlt">Almacenamiento</div><div class="detail_desc">${requisitos[5]}</div></li>`;
     }
 
+    //RESTRICCION
     const pegiElement = document.getElementById("pegi");
     pegiElement.src = restriccionImg;
     pegiElement.alt = restriccion;
     pegiElement.title = `Restricción: ${restriccion}`;
   }
 
+  //LEER MÁS
   function setupReadMoreButton() {
     const readMore = document.getElementById("readMore");
     const gameDescArea = document.querySelector(".game_description_area");
@@ -182,6 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  //COMPARTIR
   function setupShareLink() {
     const shareButton = document.querySelector(".share_btn button");
 
@@ -213,6 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  //ACTUALIZAR FONDO
   function updateBackground(backgroundUrl) {
     const pageGameBg = document.getElementById("pageGameBg");
     if (backgroundUrl) {
@@ -220,6 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  //AGREGAR AL CARRITO
   function setupAddToCartButton(product) {
     const addToCartButton = document.querySelector(".add_to_cart button");
     addToCartButton.dataset.game = JSON.stringify({

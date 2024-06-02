@@ -198,5 +198,5 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   await cargarTarjetasGeneros();
-  initializeGenreCarousel();
+  loadGenres();
 });
