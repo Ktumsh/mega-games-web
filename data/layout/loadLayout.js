@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 Iniciar sesión
               </span>
             </a>
-            <a class="menuitem supernav supernav_active" href="javascript:void(0)">
+            <a class="menuitem supernav supernav_active isLogged" href="javascript:void(0)">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M22.83 12.99L11.83 2H2v9.83l10.99 10.99zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4S7 4.67 7 5.5S6.33 7 5.5 7"/>
               </svg>
@@ -45,13 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
               <a class="submenuitem" href="javascript:void(0)"> Géneros </a>
             </div>
           </div>
-            <a class="menuitem supernav" href="/profiles/notifications">
+            <a class="menuitem supernav isLogged" href="/profiles/notifications">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M5 19q-.425 0-.712-.288T4 18t.288-.712T5 17h1v-7q0-2.075 1.25-3.687T10.5 4.2v-.7q0-.625.438-1.062T12 2t1.063.438T13.5 3.5v.7q2 .5 3.25 2.113T18 10v7h1q.425 0 .713.288T20 18t-.288.713T19 19zm7 3q-.825 0-1.412-.587T10 20h4q0 .825-.587 1.413T12 22"/>
               </svg>
               Notificaciones
             </a>
-            <a class="menuitem supernav" href="/store/cart">
+            <a class="menuitem supernav isLogged" href="/store/cart">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                 <g fill="none">
                   <path fill="currentColor" d="M18 15H7L5.5 6H21z"/>
@@ -977,7 +977,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "hamburger_session_link"
     );
     const hamburgerLogoutLink = document.getElementById("logout");
-    const supernavMenu = document.querySelectorAll(".supernav");
+    const supernavMenu = document.querySelectorAll(".isLogged");
 
     if (checkAuthentication()) {
       const username = localStorage.getItem("username");
