@@ -999,7 +999,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
 
   function screenSizeChange(mq) {
-    // Rutas que requieren la eliminación de la barra de navegación
     const pathsToRemoveNavbar = [
       "/login",
       "/join",

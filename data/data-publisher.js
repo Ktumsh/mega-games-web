@@ -1,4 +1,4 @@
-import { loadPulisherCards } from "/assets/js/salePublisher.js";
+import { loadPulisherCards } from "/assets/js/publisher-events.js";
 async function loadPublisherData() {
   try {
     const response = await fetch("/data/api/apiStore.json");
