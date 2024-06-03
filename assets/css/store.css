@@ -489,7 +489,7 @@ a#store_search_link i {
   background: linear-gradient(
     0deg,
     rgba(37, 4, 98, 1) 0%,
-    rgba(19, 16, 25, 1) 100%
+    rgba(37, 4, 98, 0) 80%
   );
 }
 

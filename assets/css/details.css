@@ -122,8 +122,14 @@ body {
   grid-column-gap: 15px;
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(20px);
   border-radius: 2px;
+}
+
+@media (max-width: 910px) {
+  .details_grid_container {
+    backdrop-filter: blur(8px);
+  }
 }
 
 @media (min-width: 910px) {
@@ -1182,7 +1188,7 @@ body {
 
 @media (min-width: 910px) {
   .details_section_ctn {
-    padding-top: 3rem;
+    padding-top: 25px;
   }
 
   .add_to_cart button span:first-child {
@@ -1271,12 +1277,16 @@ body {
   -webkit-mask-composite: source-in;
   mask-composite: source-in;
   transition: background-image 0.1s ease-out;
-  animation: bg_anim 1s;
+  animation-name: bg_anim;
+  animation-duration: 1.5s;
   z-index: -1;
 }
 
 @keyframes bg_anim {
   0% {
+    opacity: 0;
+  }
+  30% {
     opacity: 0;
   }
   100% {

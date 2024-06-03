@@ -70,7 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.title = nombreMaincap;
 
     //INFORMACIÓN PRINCIPAL
-    document.getElementById("gameImage").src = imagen;
+    preloadImage(imagen).then(() => {
+      document.getElementById("gameImage").src = imagen;
+    });
     document.getElementById("gameName").textContent = nombre;
     document.getElementById("gameLikes").textContent = likes;
 
@@ -225,8 +227,19 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateBackground(backgroundUrl) {
     const pageGameBg = document.getElementById("pageGameBg");
     if (backgroundUrl) {
-      pageGameBg.style.backgroundImage = `url(${backgroundUrl})`;
+      preloadImage(backgroundUrl).then(() => {
+        pageGameBg.style.backgroundImage = `url(${backgroundUrl})`;
+      });
     }
+  }
+
+  function preloadImage(url) {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.src = url;
+      img.onload = resolve;
+      img.onerror = reject;
+    });
   }
 
   //AGREGAR AL CARRITO
