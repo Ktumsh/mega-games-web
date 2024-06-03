@@ -182,6 +182,8 @@ function addSearchEvents() {
           return (
             "/store/offer-details?game=" +
             encodeURIComponent(game.nombre) +
+            "&group=" +
+            game.origen +
             "&item=" +
             game.id
           );
@@ -189,6 +191,8 @@ function addSearchEvents() {
           return (
             "/store/publisher-sale-details?game=" +
             encodeURIComponent(game.nombre) +
+            "&group=" +
+            game.origen +
             "&item=" +
             game.id
           );
@@ -196,6 +200,8 @@ function addSearchEvents() {
           return (
             "/store/games-details?game=" +
             encodeURIComponent(game.nombre) +
+            "&group=" +
+            game.origen +
             "&item=" +
             game.id
           );
@@ -203,12 +209,16 @@ function addSearchEvents() {
           return (
             "/store/gift-details?game=" +
             encodeURIComponent(game.nombre) +
+            "&group=" +
+            game.origen +
             "&item=" +
             game.id
           );
         default:
           return (
             "/default-details?game=" +
+            "&group=" +
+            game.origen +
             encodeURIComponent(game.nombre) +
             "&item=" +
             game.id
