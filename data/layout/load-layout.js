@@ -253,6 +253,34 @@ document.addEventListener("DOMContentLoaded", () => {
       const newText = currentText.replace(/&nbsp;\|\&nbsp;/g, "");
       globalActionMenu.innerHTML = newText;
     }
+
+    const notificationsBtn = document.getElementById(
+      "green_envelope_menu_root"
+    );
+
+    notificationsBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleNotificationsMenu();
+    });
+
+    function toggleNotificationsMenu() {
+      const notificationsMenu = document.getElementById("notifications_menu");
+      if (notificationsMenu) {
+        document.body.removeChild(notificationsMenu);
+      } else {
+        addNotificationsMenu();
+      }
+    }
+
+    function closeNotificationsMenu() {
+      const notificationsMenu = document.getElementById("notifications_menu");
+      if (notificationsMenu) {
+        document.body.removeChild(notificationsMenu);
+      }
+    }
+
+    document.addEventListener("click", closeNotificationsMenu);
+    document.addEventListener("scroll", closeNotificationsMenu);
   }
 
   function addMobileHeader() {
@@ -441,7 +469,6 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
     navbarSlot.appendChild(navbarContainer);
-
     addStoreNavSearchEvents();
     addSearchEvents();
   }
@@ -1072,6 +1099,38 @@ document.addEventListener("DOMContentLoaded", () => {
     if (cartLink) {
       cartLink.textContent = `Carro (${totalCount})`;
     }
+  }
+
+  function addNotificationsMenu() {
+    const notificationsMenu = document.createElement("div");
+    notificationsMenu.id = "notifications_menu";
+    notificationsMenu.classList.add("notifications_menu");
+    notificationsMenu.style.top = "30px";
+    notificationsMenu.style.right = "581px";
+
+    notificationsMenu.innerHTML = `
+      <div class="notifications_menu_ctn">
+        <div class="notifications_menu_top_area">
+          <div class="title_area">Notificaciones</div>
+          <a href="/profiles/notifications">
+            <div class="view_all">Ver todas</div>
+          </a>
+        </div>
+        <div class="notifications_menu_body_area">
+          <div class="notifications_menu_body_ctn">
+            <div class="no_notifications">
+              En este momento no tienes notificaciones nuevas.
+            </div>
+            <div class="notifications_area">
+              Aquí es donde puedes ver las notificaciones de Mega Games sobre la
+              lista de deseados, tus recomendaciones, el inventario, etc.
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(notificationsMenu);
   }
 });
 

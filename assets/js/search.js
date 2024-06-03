@@ -252,7 +252,9 @@ function addSearchEvents() {
             .attr("href", generateGameHref(game)).html(`
                   <div class="match_name">${game.nombre}</div>
                   <div class="match_img">
-                      <img src="${game.imagen}" alt="${game.nombre}">
+                      <img src="${
+                        game.imagenAlternativa || game.imagen
+                      }" alt="${game.nombre}">
                   </div>
                   <div class="match_subtitle">CLP$ ${
                     game.precioDescuento || game.precioOriginal

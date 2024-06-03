@@ -5375,3 +5375,93 @@ div#global_actions .user_avatar {
   border: none;
   box-sizing: content-box;
 }
+
+.notifications_menu {
+  position: absolute;
+  opacity: 1;
+  background: radial-gradient(
+    ellipse farthest-corner at 50% 0%,
+    #3c4047 0%,
+    #3c4047 50%,
+    #33363d 100%
+  );
+  transition: opacity 200ms;
+  box-shadow: inset rgba(61, 68, 80, 0.75) 1px 1px 1px 0px,
+    inset rgba(61, 68, 80, 0.25) -1px -1px 1px 0px;
+  border: 1px solid #000;
+  padding: 1px;
+  z-index: 1600;
+  user-select: none;
+}
+
+.notifications_menu_ctn {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background: radial-gradient(
+      circle at top left,
+      rgba(65, 57, 147, 0.4) 0%,
+      rgba(75, 81, 92, 0) 60%
+    ),
+    #271f32;
+}
+
+.notifications_menu_top_area {
+  padding: 5px 15px 10px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 160px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.notifications_menu_top_area .title_area {
+  font-size: 16px;
+  align-self: center;
+}
+
+.notifications_menu_top_area .view_all {
+  background-color: #413993;
+  color: #fff;
+  border-style: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 250ms;
+}
+
+.notifications_menu_top_area .view_all:hover {
+  background-color: #584fba;
+}
+
+.notifications_menu_body_area {
+  overflow-y: auto;
+  max-height: 350px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-bottom: 4px;
+}
+
+.notifications_menu_body_ctn {
+  display: none;
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.notifications_menu_body_ctn:first-child {
+  display: block;
+}
+
+.no_notifications {
+  font-weight: 400;
+}
+
+.notifications_menu_body_ctn .notifications_area {
+  padding-top: 15px;
+  color: #b8bcbf;
+}

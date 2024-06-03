@@ -2,11 +2,11 @@ let lastCard = 10;
 let isLoading = false;
 let cardData = [];
 let currentSlideIndex = 0;
-const maxImages = 10;
-const transitionTime = 8000;
 let intervalId;
 let currentBackgroundIndex = 0;
 let backgroundIntervalId;
+const maxImages = 10;
+const transitionTime = 8000;
 
 function getMaxCards() {
   const isTablet = window.innerWidth <= 1024 && window.innerWidth >= 768;
