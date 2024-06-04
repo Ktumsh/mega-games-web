@@ -2,6 +2,7 @@
 Cosas que debes tener en cuenta a la hora de revisar el código:
 - 🚀 Las páginas principales las encontrarás en la carpeta /store
 - 🪐 La carga de contenido de las páginas con Java Script las encontrarás en la carpeta /data
+- 👽 Algunos scripts se manejan con JQuery, pero en su mayoría no
 - 🌖 Las api las encontrarás en la ruta /data/api
 - 🌎 Los scripts generales los encontrarás en la ruta /assets/js además del manejo de la parte de usuario, compras y algunos adicionales
 - ✨ El manejo del servidor con express lo encontrarás en la carpeta /server
