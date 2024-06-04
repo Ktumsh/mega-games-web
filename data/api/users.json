@@ -1,16 +1,6 @@
 [
   {
     "id": 1,
-    "email": "example.user@gmail.com",
-    "username": "ExampleUser",
-    "password": "1234",
-    "role": "user",
-    "createdAt": "2024-05-30T12:00:00Z",
-    "lastLogin": "2024-05-30T12:00:00Z",
-    "isActive": true
-  },
-  {
-    "id": 2,
     "email": "jbz.january@gmail.com",
     "username": "Ktumsh",
     "password": "$2a$05$fs81vzVc6ZARwGoBVNpTXu6lAn2zoMeQMaxQOBHjfDGqXarZuaMiu",
@@ -20,12 +10,22 @@
     "lastLogin": null
   },
   {
+    "id": 2,
+    "email": "example.user@gmail.com",
+    "username": "ExampleUser",
+    "password": "$2a$05$CruPnoG3NKBtKVELBpdwJOjrqlDf3d2VrHE/YzBShdu/jKfsbNtlS",
+    "role": "user",
+    "createdAt": "2024-06-04T02:24:56.071Z",
+    "isActive": true,
+    "lastLogin": null
+  },
+  {
     "id": 3,
     "email": "renax6312@gmail.com",
     "username": "Renatoide",
-    "password": "renatoide123",
+    "password": "$2a$05$1861nJ2wKLucLa8WNBqWGeCsmgFYc8avcVX.7rBqrD514/4I12i8O",
     "role": "user",
-    "createdAt": "2024-05-30T07:05:36.406Z",
+    "createdAt": "2024-06-04T02:26:11.374Z",
     "isActive": true,
     "lastLogin": null
   }
