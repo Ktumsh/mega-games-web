@@ -1,19 +1,19 @@
 document.addEventListener("DOMContentLoaded", async () => {
   async function cargarYAgregarTarjetas(carouselId) {
     try {
-      const response = await fetch("/data/api/apiStore.json");
-      const apiStore = await response.json();
+      const response = await fetch("/data/api/api_store.json");
+      const api_store = await response.json();
 
       let tarjetas;
       switch (carouselId) {
         case 1:
-          tarjetas = apiStore.offerCards;
+          tarjetas = api_store.offerCards;
           break;
         case 2:
-          tarjetas = apiStore.gamesCards;
+          tarjetas = api_store.gamesCards;
           break;
         case 3:
-          tarjetas = apiStore.giftCards;
+          tarjetas = api_store.giftCards;
           break;
         default:
           throw new Error("Invalid carouselId");
@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   async function cargarTarjetasGeneros() {
     try {
-      const response = await fetch("/data/api/genCards.json");
+      const response = await fetch("/data/api/gen_cards.json");
       const tarjetas = await response.json();
       const genContainer = document.getElementById("genCardContainer");
 

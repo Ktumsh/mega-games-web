@@ -4,7 +4,7 @@ body {
 
 .route_container {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 #popularGames .route_container,

@@ -13,9 +13,9 @@ function getMaxCards() {
 
 async function loadInitialCards() {
   try {
-    const response = await fetch("/data/api/apiStore.json");
-    const apiStore = await response.json();
-    const tarjetas = apiStore.giftCards;
+    const response = await fetch("/data/api/api_store.json");
+    const api_store = await response.json();
+    const tarjetas = api_store.giftCards;
     const cardsContainer = document.getElementById("gamesAndCardsContainer");
 
     updateCounter(tarjetas.length);
@@ -49,9 +49,9 @@ async function loadCardsOnScroll() {
   isLoading = true;
 
   try {
-    const response = await fetch("/data/api/apiStore.json");
-    const apiStore = await response.json();
-    const tarjetas = apiStore.giftCards;
+    const response = await fetch("/data/api/api_store.json");
+    const api_store = await response.json();
+    const tarjetas = api_store.giftCards;
     const cardsContainer = document.getElementById("gamesAndCardsContainer");
     const loader = document.getElementById("loader");
 
