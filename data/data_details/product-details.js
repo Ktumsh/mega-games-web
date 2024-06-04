@@ -57,8 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
       keyImg,
       keyLink,
       disponibleEn,
+      generos,
       descripcion,
-      introduccionCaracteristicas,
+      introCaracteristicas,
       caracteristicas,
       descripcionAdicional,
       requisitos,
@@ -102,6 +103,17 @@ document.addEventListener("DOMContentLoaded", () => {
       )
       .join("");
 
+    //GÉNEROS
+    if (generos && generos.length > 0) {
+      const genderList = document.getElementById("genderList");
+      genderList.innerHTML = generos
+        .map(
+          (genero) =>
+            `<li class="gender"><a class="gameType" href="#">${genero}</a></li>`
+        )
+        .join("");
+    }
+
     //DESCRIPCIÓN
     if (descripcion) {
       document.getElementById("descGameName").textContent = nombre;
@@ -113,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //CARACTERISTICAS
     document.getElementById("introCharacteristics").textContent =
-      introduccionCaracteristicas || "";
+      introCaracteristicas || "";
     if (caracteristicas && caracteristicas.length > 0) {
       document.getElementById("characteristicsList").innerHTML = caracteristicas
         .map(

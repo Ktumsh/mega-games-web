@@ -98,7 +98,7 @@ function addSearchEvents() {
     async function loadAllGames() {
       const $resultsContainer = $("#search_suggestion_contents");
       try {
-        const response = await fetch("/data/api/apiStore.json");
+        const response = await fetch("/data/api/api_store.json");
         const data = await response.json();
         allGames = Object.values(data).flat();
         $resultsContainer.empty();

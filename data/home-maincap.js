@@ -1,7 +1,7 @@
 async function loadGames() {
   try {
-    const response = await fetch("/data/api/apiStore.json");
-    const apiStore = await response.json();
+    const response = await fetch("/data/api/api_store.json");
+    const api_store = await response.json();
     const carruselContainer = document.getElementById("carouselMaincapItems");
 
     const selectedGames = [
@@ -21,7 +21,7 @@ async function loadGames() {
 
     selectedGames.forEach((selection) => {
       const { id, origen } = selection;
-      const juego = apiStore[origen].find((j) => j.id === id);
+      const juego = api_store[origen].find((j) => j.id === id);
 
       if (juego) {
         carruselContainer.innerHTML += generateGameHTML(juego);

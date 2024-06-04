@@ -1,9 +1,9 @@
 import { loadPulisherCards } from "/assets/js/publisher-events.js";
 async function loadPublisherData() {
   try {
-    const response = await fetch("/data/api/apiStore.json");
-    const apiStore = await response.json();
-    const tarjetas = apiStore.editorSalePage;
+    const response = await fetch("/data/api/api_store.json");
+    const api_store = await response.json();
+    const tarjetas = api_store.editorSalePage;
     const cardsPanels = Array.from({ length: 5 }, (_, i) =>
       document.getElementById(`panel_${i + 1}`)
     );

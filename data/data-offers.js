@@ -15,9 +15,9 @@ function getMaxCards() {
 
 async function fetchDesktopCardData() {
   try {
-    const response = await fetch("/data/api/apiStore.json");
-    const apiStore = await response.json();
-    cardData = apiStore.offerCards.slice(0, maxImages);
+    const response = await fetch("/data/api/api_store.json");
+    const api_store = await response.json();
+    cardData = api_store.offerCards.slice(0, maxImages);
     removeMobileCarousel();
     renderDesktopCarouselItems();
     updateScrollBar();
@@ -31,9 +31,9 @@ async function fetchDesktopCardData() {
 
 async function fetchMobileCardData() {
   try {
-    const response = await fetch("/data/api/apiStore.json");
-    const apiStore = await response.json();
-    cardData = apiStore.offerCards.slice(0, maxImages);
+    const response = await fetch("/data/api/api_store.json");
+    const api_store = await response.json();
+    cardData = api_store.offerCards.slice(0, maxImages);
     removeDesktopCarousel();
     renderMobileCarouselItems();
     updateBackground();
@@ -533,9 +533,9 @@ let cardImages = [];
 
 async function loadInitialCards() {
   try {
-    const response = await fetch("/data/api/apiStore.json");
-    const apiStore = await response.json();
-    const tarjetas = apiStore.offerCards;
+    const response = await fetch("/data/api/api_store.json");
+    const api_store = await response.json();
+    const tarjetas = api_store.offerCards;
     const cardsContainer = document.getElementById("gameOfferCardsContainer");
 
     const maxCards = getMaxCards();
@@ -584,9 +584,9 @@ async function loadCardsOnScroll() {
   isLoading = true;
 
   try {
-    const response = await fetch("/data/api/apiStore.json");
-    const apiStore = await response.json();
-    const tarjetas = apiStore.offerCards;
+    const response = await fetch("/data/api/api_store.json");
+    const api_store = await response.json();
+    const tarjetas = api_store.offerCards;
     const cardsContainer = document.getElementById("gameOfferCardsContainer");
     const loader = document.getElementById("loader");
 

@@ -3,7 +3,7 @@ import { reduceStock, returnStock } from "../controllers/stock.js";
 import express from "express";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
-import apiStore from "../data/api/apiStore.json" assert { type: "json" };
+import api_store from "../data/api/api_store.json" assert { type: "json" };
 import users from "../data/api/users.json" assert { type: "json" };
 import login from "../data/api/login.json" assert { type: "json" };
 import cors from "cors";
@@ -50,12 +50,12 @@ app.get("/api/login", (req, res) => {
 app.get("/api/store", (req, res) => {
   const { genre } = req.query;
   if (genre) {
-    const filteredGames = apiStore["offerCards"].filter((game) =>
+    const filteredGames = api_store["offerCards"].filter((game) =>
       game.generos.some((g) => g.toLowerCase() === genre.toLowerCase())
     );
     return res.json(filteredGames);
   }
-  res.json(apiStore);
+  res.json(api_store);
 });
 
 //OBTENER LA ID DE LOS JUEGOS
@@ -63,11 +63,11 @@ app.get("/api/store/:group/:id", (req, res) => {
   const { group, id } = req.params;
   const gameId = parseInt(id);
 
-  if (!apiStore[group]) {
+  if (!api_store[group]) {
     return res.status(404).json({ error: "Grupo no encontrado" });
   }
 
-  const game = apiStore[group].find((game) => game.id === gameId);
+  const game = api_store[group].find((game) => game.id === gameId);
 
   if (game) {
     return res.json(game);

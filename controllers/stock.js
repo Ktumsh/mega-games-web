@@ -1,9 +1,9 @@
-import apiStore from "../data/api/apiStore.json" assert { type: "json" };
+import api_store from "../data/api/api_store.json" assert { type: "json" };
 
 function findGameById(group, id) {
   const gameId = parseInt(id);
-  if (apiStore[group]) {
-    const game = apiStore[group].find((game) => game.id === gameId);
+  if (api_store[group]) {
+    const game = api_store[group].find((game) => game.id === gameId);
     if (game) {
       return game;
     }
