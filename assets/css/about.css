@@ -484,13 +484,13 @@
 #about_games_cta_area img {
   animation: reveal linear both;
   animation-timeline: view();
-  animation-range: entry 20% cover 80%;
+  animation-range: entry 20% cover 100%;
 }
 
 @keyframes reveal {
   0% {
     translate: 0 200px;
-    scale: 0.7;
+    scale: 0.9;
   }
   100% {
     translate: 0 0;
