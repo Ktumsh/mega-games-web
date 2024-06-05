@@ -326,6 +326,7 @@
   padding-bottom: 5vw;
   margin-bottom: 15vw;
   padding-top: 10vw;
+  overflow: clip;
 }
 
 #about_games_cta_area .about_games_cta_bg {
@@ -822,6 +823,11 @@
   .cta_btn a:hover:after {
     width: 30px;
     padding-left: 10px;
+  }
+
+  .cta_text,
+  .feature_text {
+    font-size: 15px;
   }
 }
 
