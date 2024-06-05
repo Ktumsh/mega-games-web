@@ -60,20 +60,6 @@
       crossorigin="anonymous"
     />
     <link
-      rel="preload"
-      fetchpriority="high"
-      as="image"
-      href="/assets/public/presentacion3.webp"
-      type="image/webp"
-    />
-    <link
-      rel="preload"
-      fetchpriority="high"
-      as="image"
-      href="/assets/public/presentacion3-mobile.webp"
-      type="image/webp"
-    />
-    <link
       rel="preconnect"
       href="https://kit.fontawesome.com/c1a667f1b4.js"
       crossorigin
@@ -246,16 +232,18 @@
       </div>
     </div>
     <script>
-      const email = localStorage.getItem("email");
-      document.getElementById("help_email_support_input").value = email;
+      document.addEventListener("DOMContentLoaded", () => {
+        const email = localStorage.getItem("email");
+        document.getElementById("help_email_support_input").value = email;
 
-      const form = document.getElementById("help_search_support_form");
-      const submitMsg = document.getElementById("submit_message");
+        const form = document.getElementById("help_support_form");
+        const submitMsg = document.getElementById("submit_message");
 
-      form.addEventListener("submit", (e) => {
-        if (form.checkValidity()) {
-          submitMsg.classList.add("show");
-        }
+        form.addEventListener("submit", (e) => {
+          if (form.checkValidity()) {
+            submitMsg.classList.add("show");
+          }
+        });
       });
     </script>
     <!-- FOOTER -->
