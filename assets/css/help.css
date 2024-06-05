@@ -1,6 +1,6 @@
 .page_body_ctn {
   background: radial-gradient(#13101900 0%, #131019 100%) fixed no-repeat,
-    url("/assets/public/blue_body_top.jpg") center top no-repeat, #131019;
+    #250462;
 
   background-size: cover;
 }
@@ -132,50 +132,80 @@ body.v6 .page_content {
   margin: 20px 14px 20px 14px;
 }
 
-#help_search_support_form {
+#help_support_form {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   margin-top: 5px;
   max-width: 712px;
 }
 
-#help_search_support_form button {
-  width: 10%;
-  padding: 0 10px 0 10px;
+.submit_message_ctn {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+#help_support_form button {
+  width: 100px;
+  margin-top: 10px;
+  padding: 6px 10px;
   font-size: 15px;
   border: none;
   background-color: #444179;
 }
 
-#help_search_support_form:hover button {
+#help_support_form button:hover {
   background-color: #4e45b0;
 }
 
 input:focus-visible,
-input:valid {
+input:valid,
+textarea:focus-visible,
+textarea:valid {
   outline: 0;
 }
-#help_search_support_input {
-  height: 54px;
-  width: 90%;
-  font-weight: 300;
-  font-size: 21px;
-  color: #c6d4df;
-  padding: 10px;
-  background-color: #413993;
-  box-sizing: border-box;
-  padding: 0 0 0 15px;
-  border-top: 2px solid #444179;
-  border-left: 2px solid #444179;
-  border-bottom: 2px solid #444179;
-  border-right: none;
-  overflow: hidden;
-  background: #34325d;
+
+#help_support_form :nth-child(3) {
+  height: 34px;
 }
 
-#help_search_support_form:hover #help_search_support_input {
-  border-color: #4e45b0;
+#help_support_form :nth-child(4) {
+  border-bottom: 2px solid #444179;
 }
+
+.help_support_input {
+  height: 144px;
+  width: 100%;
+  font-weight: 300;
+  font-size: 15px;
+  color: #c6d4df;
+  padding: 6px 10px;
+  background-color: #413993;
+  box-sizing: border-box;
+  border: 2px solid #444179;
+  border-bottom: none;
+  background: #34325d;
+  resize: none;
+}
+
+.submit_message {
+  visibility: hidden;
+  opacity: 0;
+  margin-top: 10px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  transition: visibility 0.2s, opacity 0.2s;
+}
+
+.submit_message.show {
+  visibility: visible;
+  opacity: 1;
+}
+
 @media screen and (max-width: 910px) {
   body.v6 .page_content {
     width: auto;
@@ -183,7 +213,7 @@ input:valid {
     max-width: 950px;
   }
 
-  #help_search_support_input {
+  .help_support_input {
     max-width: 712px;
     width: 100%;
   }

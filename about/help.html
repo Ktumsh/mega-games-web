@@ -192,25 +192,72 @@
               <div style="padding-top: 60px"></div>
             </div>
 
-            <form id="help_search_support_form">
+            <form
+              id="help_support_form"
+              action="https://formsubmit.co/jo.barra@duocuc.cl"
+              method="POST"
+            >
+              <div class="help_intro_text">
+                Envía una solicitud a Mega Games indicando tu problema
+              </div>
               <input
-                id="help_search_support_input"
-                type="text"
-                name="searchwords"
-                maxlength="200"
-                placeholder="Envía una solicitud a Mega Games indicando tu problema"
-                autocomplete="off"
-                data-method="Home"
+                id="help_email_support_input"
+                type="email"
+                name="email"
+                hidden
               />
-              <button type="submit">Enviar</button>
+              <input
+                id="help_subject_support_input"
+                class="help_support_input"
+                type="text"
+                name="subject"
+                maxlength="100"
+                placeholder="Asunto"
+                autocomplete="off"
+                required
+              />
+              <textarea
+                id="help_message_support_input"
+                class="help_support_input"
+                name="message"
+                placeholder="Mensaje"
+                autocomplete="off"
+                required
+              ></textarea>
+              <input
+                type="hidden"
+                name="_next"
+                value="https://store-megagames.onrender.com/help"
+              />
+              <input type="hidden" name="_captcha" value="false" />
+              <div class="submit_message_ctn">
+                <button id="help_send_support_button" type="submit">
+                  Enviar
+                </button>
+                <div id="submit_message" class="submit_message">
+                  ¡Solicitud enviada!
+                </div>
+              </div>
             </form>
-
             <div id="faqs_search_results"></div>
           </div>
         </div>
         <div id="wizard_perf_data"></div>
       </div>
     </div>
+    <script>
+      const email = localStorage.getItem("email");
+      document.getElementById("help_email_support_input").value = email;
+
+      const form = document.getElementById("help_search_support_form");
+      const submitMsg = document.getElementById("submit_message");
+
+      form.addEventListener("submit", (e) => {
+        if (form.checkValidity()) {
+          submitMsg.classList.add("show");
+        }
+      });
+    </script>
     <!-- FOOTER -->
     <div class="FooterSlot"></div>
     <script
