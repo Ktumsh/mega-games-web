@@ -1,7 +1,6 @@
 body.login .page_content {
-  background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181a21 100%) fixed
-      no-repeat,
-    url("/assets/public/login_bg.jpg") center top no-repeat, #181a21;
+  background: radial-gradient(#13101900 0%, #131019 90%) fixed no-repeat,
+    url("/assets/public/login_bg.jpg") center top no-repeat, #131019;
 }
 
 div.page_content {
@@ -338,9 +337,8 @@ body.login .divider {
 
 @media screen and (max-width: 700px) {
   body.login .page_content {
-    background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181a21 100%) fixed
-        no-repeat,
-      url("/assets/public/login_mobile_bg.jpg") center top no-repeat, #181a21;
+    background: radial-gradient(#13101900 0%, #131019 85%) fixed no-repeat,
+      url("/assets/public/login_mobile_bg.jpg") center top no-repeat, #131019;
   }
 
   .login_page_content {
