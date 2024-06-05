@@ -47,6 +47,7 @@ async function login(req, res) {
     status: "ok",
     message: "Usuario logeado",
     username: userToReview.username,
+    email: userToReview.email,
   });
 }
 

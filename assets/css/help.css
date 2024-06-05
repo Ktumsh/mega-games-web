@@ -1,0 +1,190 @@
+.page_body_ctn {
+  background: radial-gradient(#13101900 0%, #131019 100%) fixed no-repeat,
+    url("/assets/public/blue_body_top.jpg") center top no-repeat, #131019;
+
+  background-size: cover;
+}
+
+div.page_content {
+  width: 940px;
+  margin: 0px auto;
+}
+
+body.v6 .page_content {
+  width: 950px;
+  margin: 0 auto;
+}
+
+#page_content {
+  position: relative;
+  min-height: 450px;
+}
+
+#wizard_contents,
+#error_contents {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+}
+
+#error_contents {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+}
+
+#error_contents {
+  padding: 40px 0px 20px 0px;
+}
+
+.help_header {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.breadcrumbs {
+  color: #61686d;
+  font-size: 12px;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: normal;
+  padding-top: 10px;
+}
+
+.breadcrumbs a {
+  color: #8f98a0 !important;
+}
+
+#wizard_contents {
+  padding: 20px 0px 110px 0px;
+}
+
+.page_loaded #wizard_contents,
+.page_error #error_contents {
+  opacity: 1;
+  visibility: visible;
+  transition: none;
+  -webkit-animation: fade_in 0.3s linear;
+  animation: fade_in 0.3s linear;
+}
+
+.help_header {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.breadcrumbs {
+  color: #61686d;
+  font-size: 12px;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: normal;
+  padding-top: 10px;
+}
+
+.breadcrumbs a {
+  color: #8f98a0 !important;
+}
+
+.help_intro_text {
+  color: #be9dfb;
+  font-size: 20px;
+  margin: 16px 0px 20px 0px;
+}
+
+.help_wizard_button {
+  display: block;
+  max-width: 712px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  padding-right: 30px;
+  border: solid 1px;
+  border-color: #444179;
+  font-size: 15px;
+  color: white;
+  background-color: #444179;
+}
+
+.help_wizard_button:hover,
+.help_wizard_button.opened {
+  background-color: #4e45b0;
+  border-color: #4e45b0;
+}
+
+.help_wizard_arrow_right {
+  background-image: url("/assets/public/icons/arrow_right.png");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: auto 16px;
+}
+
+.help_wizard_button > span {
+  margin: 10px 14px 10px 14px;
+  display: block;
+  overflow: hidden;
+}
+
+.help_wizard_button_large > span {
+  margin: 20px 14px 20px 14px;
+}
+
+#help_search_support_form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  max-width: 712px;
+}
+
+#help_search_support_form button {
+  width: 10%;
+  padding: 0 10px 0 10px;
+  font-size: 15px;
+  border: none;
+  background-color: #444179;
+}
+
+#help_search_support_form:hover button {
+  background-color: #4e45b0;
+}
+
+input:focus-visible,
+input:valid {
+  outline: 0;
+}
+#help_search_support_input {
+  height: 54px;
+  width: 90%;
+  font-weight: 300;
+  font-size: 21px;
+  color: #c6d4df;
+  padding: 10px;
+  background-color: #413993;
+  box-sizing: border-box;
+  padding: 0 0 0 15px;
+  border-top: 2px solid #444179;
+  border-left: 2px solid #444179;
+  border-bottom: 2px solid #444179;
+  border-right: none;
+  overflow: hidden;
+  background: #34325d;
+}
+
+#help_search_support_form:hover #help_search_support_input {
+  border-color: #4e45b0;
+}
+@media screen and (max-width: 910px) {
+  body.v6 .page_content {
+    width: auto;
+    padding: 0 2%;
+    max-width: 950px;
+  }
+
+  #help_search_support_input {
+    max-width: 712px;
+    width: 100%;
+  }
+}
