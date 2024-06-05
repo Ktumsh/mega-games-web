@@ -326,6 +326,9 @@
   padding-bottom: 5vw;
   margin-bottom: 15vw;
   padding-top: 10vw;
+}
+
+#about_games_cta_area .about_area_inner_wrapper {
   overflow: clip;
 }
 
