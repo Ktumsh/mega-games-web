@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <div id="global_actions">
             <div id="global_action_menu" role="navigation" aria-label="Menú de la cuenta">
-                <a class="header_login_btn" href="#">
+                <a class="header_login_btn" href="/about">
                     <div class="main_btn">Instalar Mega Games</div>
                 </a>
                 <a id="session_link" class="global_action_link" href="/login">Iniciar sesión</a>

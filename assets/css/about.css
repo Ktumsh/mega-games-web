@@ -449,6 +449,7 @@
   align-items: flex-start;
   right: 0;
   left: auto;
+  display: none;
 }
 
 #about_games_cta .cta_content {
@@ -886,5 +887,11 @@
 
   .cta_text {
     font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #about_games_cta_area img {
+    animation-range: entry 20% cover 60%;
   }
 }
