@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         localStorage.removeItem("isAuthenticated");
         localStorage.removeItem("username");
+        localStorage.removeItem("email");
         window.location.href = "/logout";
       });
     }
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         localStorage.removeItem("isAuthenticated");
         localStorage.removeItem("username");
+        localStorage.removeItem("email");
         window.location.href = "/logout";
       });
     }
