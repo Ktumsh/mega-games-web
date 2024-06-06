@@ -1,23 +1,18 @@
 import bcryptjs from "bcryptjs";
 import dotenv from "dotenv";
-import fs from "fs";
-import { join, dirname } from "path";
-import { fileURLToPath } from "url";
+import axios from "axios";
 
 dotenv.config();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const API_URL = "https://store-megagames.onrender.com/api/users";
 
-const usersFilePath = join(__dirname, "../data/api/users.json");
-
-function readUsersFromFile() {
-  const data = fs.readFileSync(usersFilePath, "utf8");
-  return JSON.parse(data);
+async function fetchUsers() {
+  const response = await axios.get(API_URL);
+  return response.data;
 }
 
-function writeUsersToFile(users) {
-  fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
+async function saveUser(user) {
+  await axios.post(API_URL, user);
 }
 
 async function login(req, res) {
@@ -27,7 +22,7 @@ async function login(req, res) {
   if (!identifier || !password) {
     return res.status(400).json({ error: "Todos los campos son obligatorios" });
   }
-  const users = readUsersFromFile();
+  const users = await fetchUsers();
   const userToReview = users.find(
     (user) => user.username === identifier || user.email === identifier
   );
@@ -47,6 +42,7 @@ async function login(req, res) {
     status: "ok",
     message: "Usuario logeado",
     username: userToReview.username,
+    email: userToReview.email,
   });
 }
 
@@ -58,7 +54,7 @@ async function register(req, res) {
   if (!username || !password || !email) {
     return res.status(400).json({ error: "Todos los campos son obligatorios" });
   }
-  const users = readUsersFromFile();
+  const users = await fetchUsers();
   const userToReview = users.find((user) => user.username === username);
   if (userToReview) {
     return res
@@ -78,8 +74,7 @@ async function register(req, res) {
     lastLogin: null,
   };
 
-  users.push(newUser);
-  writeUsersToFile(users);
+  await saveUser(newUser);
   res.status(201).send({
     status: "ok",
     message: `Usuario ${newUser.username} registrado`,
