@@ -82,31 +82,6 @@
     <!-- SOPORTE -->
     <div class="page_body_ctn">
       <div id="page_content" class="page_content page_loaded">
-        <div data-panel="[]" id="error_contents">
-          <a class="help_header" href="/help">Soporte de Mega Games</a>
-          <div class="breadcrumbs"><a href="/">Inicio</a> &gt; Error</div>
-          <div class="error_bg">
-            <div id="error_description">
-              Se ha producido un error al intentar procesar la solicitud. Por
-              favor, espera unos minutos e inténtalo de nuevo.
-            </div>
-            <div class="error_reload">
-              <a
-                data-panel='{"focusable":false}'
-                class="help_site_button"
-                href="javascript:window.location.reload()"
-                >Volver a intentarlo</a
-              >
-              &nbsp;
-              <a
-                data-panel='{"focusable":false}'
-                class="help_site_button"
-                href="/"
-                >Inicio</a
-              >
-            </div>
-          </div>
-        </div>
         <div id="wizard_contents">
           <div class="wizard_content_wrapper">
             <a class="help_header" href="/help">Soporte de Mega Games</a>
@@ -119,7 +94,9 @@
             </div>
 
             <div id="help_home_block">
-              <div class="help_intro_text">¿En qué podemos ayudarte?</div>
+              <div id="help_home_text" class="help_intro_text">
+                ¿En qué podemos ayudarte?
+              </div>
               <a
                 href="#"
                 class="help_wizard_button help_wizard_button_large help_wizard_arrow_right"
@@ -178,11 +155,7 @@
               <div style="padding-top: 60px"></div>
             </div>
 
-            <form
-              id="help_support_form"
-              action="https://formsubmit.co/jo.barra@duocuc.cl"
-              method="POST"
-            >
+            <form id="help_support_form">
               <div class="help_intro_text">
                 Envía una solicitud a Mega Games indicando tu problema
               </div>
@@ -210,12 +183,6 @@
                 autocomplete="off"
                 required
               ></textarea>
-              <input
-                type="hidden"
-                name="_next"
-                value="https://store-megagames.onrender.com/help"
-              />
-              <input type="hidden" name="_captcha" value="false" />
               <div class="submit_message_ctn">
                 <button id="help_send_support_button" type="submit">
                   Enviar
@@ -233,17 +200,32 @@
     </div>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        const username = localStorage.getItem("username");
         const email = localStorage.getItem("email");
-        document.getElementById("help_email_support_input").value = email;
 
         const form = document.getElementById("help_support_form");
         const submitMsg = document.getElementById("submit_message");
 
-        form.addEventListener("submit", (e) => {
-          if (form.checkValidity()) {
-            submitMsg.classList.add("show");
-          }
-        });
+        const isAuthenticated =
+          localStorage.getItem("isAuthenticated") === "true";
+        if (isAuthenticated) {
+          document.getElementById(
+            "help_home_text"
+          ).textContent = `¿En qué podemos ayudarte, ${username}?`;
+
+          document.getElementById("help_email_support_input").value = email;
+
+          form.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (form.checkValidity()) {
+              submitMsg.classList.add("show");
+            }
+          });
+        } else {
+          form.style.display = "none";
+          document.getElementById("help_home_text").textContent =
+            "¿En qué podemos ayudarte?";
+        }
       });
     </script>
     <!-- FOOTER -->
