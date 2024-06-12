@@ -53,6 +53,10 @@ function generateGameHTML(juego) {
       : juego.origen === "editorSalePage"
       ? "editorSalePage"
       : "gamesCards";
+
+  const preorderNow =
+    juego.nombreMaincap === "Call of Duty®: Black Ops 6" ? true : false;
+
   let precioHTML = "";
 
   if (juego.descuento && juego.precioOriginal && juego.precioDescuento) {
@@ -99,7 +103,9 @@ function generateGameHTML(juego) {
             .join("")}
         </div>
         <div class="reason">
-          <div class="main default">Ya disponible</div>
+          <div class="main default">${
+            preorderNow ? "Precómpralo ahora" : "Ya disponible"
+          }</div>
           <div class="additional">
             <div class="bg-gradient blur">Lo más vendido</div>
           </div>
