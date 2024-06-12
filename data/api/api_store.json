@@ -3854,7 +3854,7 @@
     },
     {
       "id": 44,
-      "nombre": " Código de Steam GLOBAL",
+      "nombre": "Código de Steam GLOBAL",
       "nombreMaincap": "Fallout 76",
       "dlc": false,
       "imagen": "https://store-megagames.onrender.com/../assets/public/cards-juegos/44.webp",
@@ -3915,6 +3915,81 @@
           "lanzamiento": "14 de noviembre de 2018",
           "editor": "Bethesda Softworks",
           "desarrolladores": "Bethesda Game Studios"
+        }
+      ],
+      "restriccion": "PEGI 18",
+      "restriccionImg": "https://store-megagames.onrender.com/../assets/public/pegi_18.svg",
+      "origen": "gamesCards",
+      "stock": 10
+    },
+    {
+      "id": 45,
+      "nombre": "Call of Duty: Black Ops 6 Steam Key Pre-order",
+      "nombreMaincap": "Call of Duty®: Black Ops 6",
+      "dlc": false,
+      "imagen": "https://store-megagames.onrender.com/../assets/public/cards-juegos/45.webp",
+      "imagenAlternativa": "https://store-megagames.onrender.com/../assets/public/cards-juegos/grids/45.webp",
+      "background": " https://store-megagames.onrender.com/../assets/public/cards-juegos/backgrounds/45.webp",
+      "descuento": "",
+      "precioOriginal": "64.990",
+      "precioDescuento": "",
+      "plataforma": "",
+      "plataforma_2": "",
+      "disponibleEn": ["steam", "xbox", "playstation"],
+      "key": "Steam",
+      "keyImg": "https://store-megagames.onrender.com/../assets/public/steam.svg",
+      "keyLink": "https://store.steampowered.com/",
+      "likes": 78341,
+      "galeria": [
+        "https://store-megagames.onrender.com/../assets/public/cards-juegos/galery/45-01.webp",
+        "https://store-megagames.onrender.com/../assets/public/cards-juegos/galery/45-02.webp",
+        "https://store-megagames.onrender.com/../assets/public/cards-juegos/galery/45-03.webp",
+        "https://store-megagames.onrender.com/../assets/public/cards-juegos/galery/45-04.webp",
+        "https://store-megagames.onrender.com/../assets/public/cards-juegos/galery/45-05.webp",
+        "https://store-megagames.onrender.com/../assets/public/cards-juegos/galery/45-06.webp",
+        "https://store-megagames.onrender.com/../assets/public/cards-juegos/galery/45-07.webp",
+        "https://store-megagames.onrender.com/../assets/public/cards-juegos/galery/45-08.webp"
+      ],
+      "generos": [
+        "Acción",
+        "Un solo jugador",
+        "Multijugador",
+        "Primera persona",
+        "FPS",
+        "Cooperativo"
+      ],
+      "descripcion": "Obligados a rebelarse. Perseguidos desde dentro. Esto es Call of Duty®: Black Ops 6.",
+      "adicional": true,
+      "introCaracteristicas": "Desarrollado por Treyarch y Raven, Black Ops 6 es un thriller de acción y espionaje ambientado a principios de los 90, un periodo de transición y agitación en el ámbito político mundial caracterizado por el fin de la Guerra Fría y el auge de Estados Unidos como superpotencia. Con una apasionante narrativa y libre de ataduras, presentamos el inconfundible Black Ops.",
+      "caracteristicas": [
+        {
+          "descripcion": "Desarrollado por Treyarch y Raven, Black Ops 6 es un thriller de acción y espionaje ambientado a principios de los 90, un periodo de transición y agitación en el ámbito político mundial caracterizado por el fin de la Guerra Fría y el auge de Estados Unidos como superpotencia. Con una apasionante narrativa y libre de ataduras, presentamos el inconfundible Black Ops."
+        },
+        {
+          "descripcion": "La campaña de Black Ops 6 ofrece una mecánica dinámica a cada momento, distintos espacios de juego con escenas impactantes y situaciones, asaltos de alto riesgo y actividades de espionaje clandestinas cargados de acción."
+        },
+        {
+          "descripcion": "En una experiencia Multijugador de primera clase, los jugadores pondrán a prueba sus habilidades en 16 nuevos mapas en el lanzamiento, incluidos 12 mapas principales 6c6 y 4 mapas de asalto que pueden jugarse 2c2 o 6c6."
+        },
+        {
+          "descripcion": "Black Ops 6 también marca el épico regreso de Zombis basado en rondas, el modo favorito de los fans en el que los jugadores acabarán con hordas de no muertos en dos nuevos mapas disponibles en el lanzamiento. Más adelante, los jugadores podrán disfrutar de mapas aún más emocionantes y experiencias innovadoras tanto en el modo Multijugador como en el de Zombis."
+        }
+      ],
+      "descripcionAdicional": [],
+      "requisitos": [
+        "Sí",
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "No especificado",
+        "No especificado"
+      ],
+      "detalles": [
+        {
+          "idiomas": ["Alemán, Español, Francés, Inglés, Italiano, Ruso"],
+          "lanzamiento": "24 de octubre de 2024",
+          "editor": "Activision",
+          "desarrolladores": "Treyarch, Raven Software"
         }
       ],
       "restriccion": "PEGI 18",
