@@ -5,6 +5,7 @@ async function loadGames() {
     const carruselContainer = document.getElementById("carouselMaincapItems");
 
     const selectedGames = [
+      { id: 45, origen: "gamesCards" },
       { id: 8, origen: "offerCards" },
       { id: 10, origen: "offerCards" },
       { id: 1, origen: "editorSalePage" },
